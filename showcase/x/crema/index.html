@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tidewater Crema</title>
+<meta name="description" content="Tidewater Roasters' October subscription as a cup of coffee you can stir: two small lots from Kiambu and Huila, roasted Monday 12 October and shipped within 48 hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="../../vendor/lenis.css">
+<link rel="preload" as="image" href="media/poster-cup.webp" fetchpriority="high">
+<script>
+  (function () {
+    var d = document.documentElement; d.classList.add('js');
+    try { if (matchMedia('(prefers-reduced-motion: reduce)').matches && !/[?&]capture=/.test(location.search)) d.classList.add('rm'); } catch (e) {}
+    if (/[?&]capture=/.test(location.search)) d.classList.add('capture');
+  })();
+</script>
+<style>
+  :root {
+    --gutter: clamp(1rem, 4vw, 3.5rem);
+    --step-poster: clamp(5.25rem, 15.2vw, 14rem);
+    --ink-veil: color-mix(in oklch, var(--c-bg) 84%, transparent);
+    --hair: color-mix(in oklch, var(--c-text) 22%, transparent);
+  }
+  html { background: var(--c-bg); scrollbar-color: var(--c-border-strong) var(--c-bg); }
+  body { overflow-x: clip; min-height: 100%; }
+  ::selection { background: var(--c-accent); color: var(--c-accent-ink); }
+
+  /* ── the cup: fixed stage under everything ── */
+  .stage { position: fixed; inset: 0 0 auto 0; height: 100lvh; z-index: 0; overflow: hidden; background: var(--c-bg); }
+  .stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; opacity: 0; transition: opacity 900ms var(--ease); touch-action: pan-y; -webkit-touch-callout: none; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; }
+  html.gl-live .stage canvas { opacity: 1; }
+  .poster { position: absolute; display: block; max-width: none; pointer-events: none; }
+  .poster--cup { width: 144vh; height: 144vh; left: calc(66.5vw - 72vh); top: calc(52vh - 72vh); }
+  html.gl-live .stage .poster { opacity: 0; transition: opacity 600ms var(--ease) 300ms; }
+  html.capture .stage .poster, html.capture main, html.capture .chrome { display: none; }
+
+  /* ── chrome ── */
+  .chrome { position: fixed; z-index: 50; inset: 0 0 auto 0; display: flex; justify-content: space-between; align-items: center; gap: var(--space-s);
+    padding: max(14px, env(safe-area-inset-top)) var(--gutter) 0; pointer-events: none; }
+  .chrome > * { pointer-events: auto; }
+  .ctl, .back { display: inline-flex; align-items: center; gap: .55em; min-height: 40px; padding: 0 1.05em; border-radius: var(--r-control);
+    font: 500 var(--step-m1)/1 var(--font-body); letter-spacing: .01em; color: var(--c-text); text-decoration: none; cursor: pointer;
+    background: color-mix(in oklch, var(--c-bg) 86%, transparent); border: 1px solid var(--c-border-strong);
+    transition: background-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease); }
+  .ctl:hover, .back:hover { background: var(--c-surface); border-color: var(--c-text); }
+  .ctl:active { transform: scale(.97); }
+  .ctl[aria-pressed="true"] { background: var(--c-text); color: var(--c-bg); border-color: var(--c-text); }
+  .ctl[disabled] { opacity: .55; cursor: progress; }
+  .ctl .glyph { width: .62em; height: .62em; border-radius: 50%; border: 1.5px solid currentColor; display: inline-block; }
+  .ctl .glyph--pause { border: 0; border-radius: 0; width: .6em; background: linear-gradient(90deg, currentColor 0 34%, transparent 34% 66%, currentColor 66%); }
+  .ctl[aria-pressed="true"] .glyph--pause { background: none; width: 0; height: 0; border-style: solid; border-color: transparent transparent transparent currentColor; border-width: .34em 0 .34em .58em; }
+  .dock { display: flex; gap: var(--space-2xs); }
+  html.rm .dock, html.no-gl .dock { display: none; }
+  .skip { position: fixed; z-index: 70; left: var(--gutter); top: -60px; }
+  .skip:focus { top: 64px; }
+
+  /* ── scenes ── */
+  main { position: relative; z-index: 1; overflow-x: clip; pointer-events: none; }
+  /* the page is transparent to pointers except where there is something to read or press, so the cup underneath can be stirred */
+  .scene { position: relative; pointer-events: none; }
+  .solid, .solid * { pointer-events: auto; }
+  .wrap { width: min(100% - 2 * var(--gutter), 1360px); margin-inline: auto; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); }
+
+  .gl-word { font-family: var(--font-display); font-weight: 300; letter-spacing: -0.03em; line-height: .86; white-space: nowrap; display: inline-block; color: var(--c-text); }
+  html.gl-type .gl-word { color: transparent; }
+  .mb { display: none; }
+
+  /* intro */
+  .intro { min-height: 100svh; }
+  .intro .wrap { min-height: 100svh; grid-template-rows: 1fr auto auto 1.3fr auto; padding-block: 5.5rem var(--space-xl); }
+  .mark { grid-column: 1 / -1; grid-row: 2; font-size: var(--step-poster); margin: 0 0 0 -.04em; }
+  .mark .gl-word { display: inline-block; }
+  .mark-sub { display: block; margin: var(--space-s) 0 0 .3rem; font: 500 var(--step-0)/1 var(--font-body); letter-spacing: .32em; text-transform: uppercase; color: var(--c-text); }
+  .intro-copy { grid-column: 1 / span 5; grid-row: 4; align-self: end; }
+  .lede { font-size: var(--step-1); line-height: 1.38; margin: 0 0 var(--space-l); max-width: 30ch; }
+  .hint { grid-column: 8 / -1; grid-row: 5; justify-self: end; margin: var(--space-l) 0 0; font-size: var(--step-m1); color: var(--c-text); transition: opacity var(--dur-slow) var(--ease); }
+  .hint .t { display: none; }
+  html.touch .hint .m { display: none; } html.touch .hint .t { display: inline; }
+  html.stirred .hint { opacity: 0; }
+  html.rm .hint, html.no-gl .hint { display: none; }
+
+  .btn { min-height: 52px; padding-inline: 1.6em; font-weight: 600; letter-spacing: .01em; }
+  .btn:focus-visible { outline-offset: 4px; }
+
+  /* shared copy blocks */
+  .copy { position: relative; }
+  .copy p { margin: 0 0 var(--space-m); }
+  .notes { font-family: var(--font-display); font-style: italic; font-weight: 300; font-size: var(--step-3); line-height: 1.04; letter-spacing: -0.015em; margin: 0 0 var(--space-l); text-wrap: balance; max-width: 20ch; }
+  .origin { display: block; font: 500 var(--step-1)/1.2 var(--font-body); margin: 0 0 var(--space-xs) .12em; }
+  .lot h2 > .gl-word { display: block; width: max-content; }
+  .kiambu h2 > .gl-word { margin-left: auto; }
+  .origin .gl-word { letter-spacing: .3em; text-transform: uppercase; font-size: var(--step-0); }
+  .specs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 var(--gap); margin: 0 0 var(--space-m); padding: 0; max-width: 34rem; font-variant-numeric: tabular-nums lining-nums; }
+  .specs div { border-top: 1px solid var(--hair); padding: var(--space-xs) 0 var(--space-s); }
+  .specs dt { font-size: var(--step-m1); color: var(--c-text-muted); margin: 0 0 .2rem; }
+  .specs dd { margin: 0; font-size: var(--step-1); line-height: 1.2; }
+  .story { max-width: 38ch; }
+
+  /* october */
+  .october { min-height: 122svh; }
+  .october .wrap { min-height: 122svh; grid-template-rows: 26svh auto auto minmax(var(--space-xl), 1fr) auto 26svh; }
+  .duo { grid-column: 1 / -1; grid-row: 2 / 4; display: grid; grid-template-columns: subgrid; margin: 0; }
+  .duo .pre { display: table; font: 500 var(--step-1)/1.2 var(--font-body); letter-spacing: .01em; margin-bottom: var(--space-xs); }
+  .gl-word.pre, .origin .gl-word { font-family: var(--font-body); font-weight: 500; letter-spacing: .01em; line-height: 1.2; }
+  .duo .d1 { grid-column: 1 / span 7; font-size: var(--step-6); }
+  .duo .d2 { grid-column: 5 / -1; font-size: var(--step-6); margin-top: var(--space-xl); }
+  .duo .d1 .gl-word:not(.pre), .duo .d2 .gl-word:not(.pre) { display: block; width: max-content; }
+  .october .copy { grid-column: 8 / span 5; grid-row: 5; }
+
+  /* lots */
+  .lot { min-height: 160svh; }
+  .lot .wrap { min-height: 160svh; grid-template-rows: 33svh auto auto 1fr; }
+  .lot h2 { margin: 0; font-size: var(--step-6); }
+  .huila h2 { grid-column: 6 / -1; grid-row: 2; justify-self: start; }
+  .huila .copy { grid-column: 8 / -1; grid-row: 3; padding-top: var(--space-l); }
+  .kiambu h2 { grid-column: 4 / -1; grid-row: 2; justify-self: end; text-align: right; }
+  .kiambu .copy { grid-column: 1 / span 6; grid-row: 3; padding-top: var(--space-m); }
+
+  /* brew + plans */
+  .brew { min-height: 140svh; }
+  .brew .wrap { min-height: 140svh; align-content: center; padding-block: var(--section-pad); }
+  fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+  legend { padding: 0; }
+  .brew fieldset { grid-column: 1 / span 7; }
+  .q { font-family: var(--font-display); font-weight: 300; font-size: var(--step-4); line-height: 1; letter-spacing: -0.02em; margin: 0 0 var(--space-xs); }
+  .q-sub { margin: 0 0 var(--space-xl); color: var(--c-text); max-width: 40ch; }
+  .methods { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--hair); }
+  .methods li { max-width: none; border-bottom: 1px solid var(--hair); }
+  .opt { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .method { display: grid; grid-template-columns: 2.2rem minmax(0, 1fr) auto; align-items: baseline; gap: var(--space-s); padding: var(--space-s) 0; cursor: pointer; color: var(--c-text-muted); transition: color var(--dur) var(--ease); }
+  .method .nm { font-family: var(--font-display); font-weight: 300; font-size: var(--step-3); line-height: 1.05; letter-spacing: -0.02em; }
+  .method .ds { font-size: var(--step-m1); text-align: right; max-width: 22ch; }
+  .dot { width: 1.05rem; height: 1.05rem; border-radius: 50%; border: 1.5px solid currentColor; align-self: center; position: relative; }
+  .dot::after { content: ''; position: absolute; inset: 3px; border-radius: 50%; background: currentColor; transform: scale(0); transition: transform var(--dur) var(--ease); }
+  .method:hover { color: var(--c-text); }
+  .opt:checked + .method { color: var(--c-text); }
+  .opt:checked + .method .dot { border-color: var(--c-accent); }
+  .opt:checked + .method .dot::after { transform: scale(1); background: var(--c-accent); }
+  .opt:focus-visible + .method { outline: 3px solid var(--c-focus); outline-offset: 2px; border-radius: 4px; }
+
+  .choose { min-height: 130svh; }
+  .choose .wrap { min-height: 130svh; align-content: center; padding-block: var(--section-pad); }
+  .choose fieldset { grid-column: 1 / span 6; }
+  .plans { display: grid; gap: 0; border-top: 1px solid var(--hair); margin-bottom: var(--space-xl); }
+  .plan { display: grid; grid-template-columns: 2.2rem minmax(0, 1fr) auto; gap: var(--space-2xs) var(--space-s); align-items: center; padding: var(--space-m) 0; border-bottom: 1px solid var(--hair); cursor: pointer; color: var(--c-text); }
+  .plan .nm { font: 600 var(--step-1)/1.1 var(--font-body); align-self: end; }
+  .plan .pr { font-family: var(--font-display); font-weight: 300; font-size: var(--step-4); line-height: .9; letter-spacing: -0.03em; font-variant-numeric: lining-nums; grid-row: 1 / span 2; grid-column: 3; text-align: right; }
+  .plan .pr small { display: block; font: 400 var(--step-m1)/1.3 var(--font-body); letter-spacing: 0; color: var(--c-text-muted); margin-top: .35rem; }
+  .plan .ds { grid-column: 2; align-self: start; font-size: var(--step-m1); color: var(--c-text-muted); max-width: 30ch; }
+  .plan .dot { grid-row: 1; align-self: end; margin-bottom: .2em; }
+  .opt:checked + .plan .dot { border-color: var(--c-accent); }
+  .opt:checked + .plan .dot::after { transform: scale(1); background: var(--c-accent); }
+  .opt:focus-visible + .plan { outline: 3px solid var(--c-focus); outline-offset: 2px; border-radius: 4px; }
+  .fine { font-size: var(--step-m1); color: var(--c-text); margin: var(--space-m) 0 0; max-width: 46ch; }
+  .done { margin: var(--space-m) 0 0; min-height: 1.5em; max-width: 46ch; }
+  .done:empty { display: none; }
+  .done { border-left: 2px solid var(--c-accent); padding: var(--space-2xs) 0 var(--space-2xs) var(--space-s); }
+
+  /* end */
+  .end { min-height: 110svh; }
+  .end .wrap { min-height: 110svh; grid-template-rows: auto 38svh auto auto; padding-block: 18svh var(--space-xl); }
+  .end h2 { grid-column: 1 / -1; font-size: var(--step-poster); justify-self: center; text-align: center; margin: 0; }
+  .end .pre { display: block; font: 500 var(--step-0)/1 var(--font-body); letter-spacing: .02em; margin-bottom: var(--space-s); }
+  .end .next { grid-column: 4 / span 6; grid-row: 3; text-align: center; justify-self: center; margin: 0; }
+  .colophon { grid-column: 1 / -1; grid-row: 4; display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-s) var(--space-l); margin-top: 10svh; padding: var(--space-m) 0 var(--space-3xl) 0; border-top: 1px solid var(--hair); font-size: var(--step-m1); }
+  .colophon p { margin: 0; }
+  .colophon a { color: var(--c-text); }
+
+  /* scrims: drawn by the shader when the cup is live; CSS fallback over posters */
+  html:not(.gl-live) [data-scrim] { position: relative; isolation: isolate; }
+  html:not(.gl-live) [data-scrim]::before { content: ''; position: absolute; z-index: -1; inset: -1.5rem -2rem; border-radius: 4rem; background: var(--ink-veil); filter: blur(30px); }
+
+  /* stills: reduced motion and no-WebGL */
+  .still { display: none; }
+  html.rm .still, html.no-gl .still { display: block; position: absolute; z-index: -1; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+  html.rm .stage canvas, html.no-gl .stage canvas { display: none; }
+  html.rm .stage, html.no-gl .stage { position: absolute; height: 100svh; }
+  html.rm .gl-word, html.no-gl .gl-word { color: var(--c-text); text-shadow: 0 0 .06em var(--c-bg), 0 0 .22em color-mix(in oklch, var(--c-bg) 75%, transparent), 0 0 .5em color-mix(in oklch, var(--c-bg) 45%, transparent); }
+  .still--edge { mask-image: linear-gradient(transparent, var(--c-text) 18%, var(--c-text) 82%, transparent); -webkit-mask-image: linear-gradient(transparent, var(--c-text) 18%, var(--c-text) 82%, transparent); }
+  .still--cup { object-fit: contain; }
+  html.rm .huila .still, html.no-gl .huila .still { inset: 8svh auto auto 0; width: min(92vw, 110svh); height: auto; aspect-ratio: 1; left: -10vw; }
+  html.rm .choose .still, html.no-gl .choose .still { inset: auto -8vw auto auto; top: 50%; translate: 0 -50%; width: min(80vw, 80svh); height: auto; aspect-ratio: 1; }
+
+  /* stirring ring (touch feedback) */
+  .ring { position: fixed; z-index: 40; left: 0; top: 0; width: 76px; height: 76px; margin: -38px 0 0 -38px; border-radius: 50%; border: 1.5px solid var(--c-text); pointer-events: none; opacity: 0; transform: scale(.6); transition: opacity var(--dur-fast) var(--ease), transform var(--dur) var(--ease); }
+  .ring.on { opacity: .9; transform: scale(1); }
+
+  @media (max-width: 899px) {
+    .mb { display: inline; }
+    .intro .wrap { grid-template-rows: auto 1fr auto auto; padding-block: 5rem var(--space-l); }
+    .mark { grid-row: 1; font-size: 31vw; line-height: .8; }
+    .mark-sub { font-size: var(--step-m1); margin-top: var(--space-xs); }
+    .intro-copy { grid-column: 1 / -1; grid-row: 3; padding-bottom: 4.5rem; }
+    .lede { font-size: var(--step-0); max-width: 34ch; margin-bottom: var(--space-m); }
+    .hint { grid-column: 1 / -1; grid-row: 2; align-self: end; justify-self: end; margin: 0 0 var(--space-m); max-width: 15rem; text-align: right; }
+    .october .wrap { grid-template-rows: 18svh auto auto 1fr auto 12svh; }
+    .duo .d1, .duo .d2 { grid-column: 1 / -1; font-size: 17vw; }
+    .duo .d2 { justify-self: end; margin-top: var(--space-l); }
+    .october .copy, .huila .copy, .kiambu .copy { grid-column: 1 / -1; }
+    .lot .wrap { grid-template-rows: 36svh auto auto 14svh; }
+    .lot h2 { font-size: 27vw; }
+    .huila h2, .kiambu h2 { grid-column: 1 / -1; justify-self: start; text-align: left; }
+    .kiambu h2 { justify-self: end; text-align: right; }
+    .huila .copy, .kiambu .copy { padding-top: var(--space-xl); }
+    .notes { font-size: var(--step-3); }
+    .specs dd { font-size: var(--step-0); }
+    .brew .wrap, .choose .wrap { padding-top: 46svh; align-content: start; }
+    .brew fieldset, .choose fieldset { grid-column: 1 / -1; }
+    .method { grid-template-columns: 1.6rem minmax(0, 1fr); }
+    .method .ds { grid-column: 2; text-align: left; }
+    .plan .pr { font-size: var(--step-3); }
+    .end h2 { font-size: 17vw; }
+    .end .wrap { grid-template-rows: auto 34svh auto auto; padding-top: 16svh; }
+    .end .next { grid-column: 1 / -1; }
+    .colophon { flex-direction: column; padding-bottom: 5.5rem; }
+    .poster--cup { width: 201.6vw; height: 201.6vw; left: calc(60vw - 100.8vw); top: calc(40lvh - 100.8vw); }
+  }
+  @media (prefers-reduced-motion: reduce) { .ring { display: none; } }
+</style>
+</head>
+<body>
+<a class="skip ctl" href="#main">Skip to content</a>
+
+<div class="stage" aria-hidden="true">
+  <img class="poster poster--cup" src="media/poster-cup.webp" alt="" width="1400" height="1400" fetchpriority="high" decoding="async">
+  <canvas id="liquid"></canvas>
+</div>
+<div class="ring" aria-hidden="true"></div>
+
+<header class="chrome">
+  <a class="back" href="../../">All showcases</a>
+  <div class="dock" role="group" aria-label="The cup">
+    <button type="button" class="ctl" id="pour" aria-describedby="cup-help"><span class="glyph" aria-hidden="true"></span>Pour milk</button>
+    <button type="button" class="ctl" id="pause" aria-pressed="false"><span class="glyph glyph--pause" aria-hidden="true"></span><span class="lbl">Pause</span></button>
+  </div>
+  <p id="cup-help" hidden>Behind the page is a cup of coffee seen from above. Move your pointer to stir it, or press and hold on touch screens. Pour milk adds latte art to the cup.</p>
+</header>
+
+<main id="main" tabindex="-1">
+  <section class="scene intro" data-scene="intro" aria-labelledby="mark">
+    <div class="wrap">
+      <h1 class="mark" id="mark" aria-label="Tidewater Roasters"><span class="gl-word" data-speed=".06">Tide<br class="mb">water</span><span class="mark-sub" aria-hidden="true">Roasters</span></h1>
+      <div class="intro-copy copy solid" data-scrim>
+        <p class="lede">Two small-lot coffees every month, roasted in one 18&nbsp;kg batch and shipped within 48&nbsp;hours, with notes on who grew them.</p>
+        <a class="btn" href="#choose">Choose your first bag</a>
+      </div>
+      <p class="hint" data-scrim><span class="m">Move to stir the cup. Click to pour milk.</span><span class="t">Touch and hold to stir. Tap to pour milk.</span></p>
+    </div>
+  </section>
+
+  <section class="scene october" data-scene="october" aria-labelledby="oct-h">
+    <img class="still still--edge" src="media/still-crema.webp" alt="" loading="lazy" decoding="async" width="1600" height="1000">
+    <div class="wrap">
+      <h2 class="duo" id="oct-h">
+        <span class="d1"><span class="pre gl-word" data-speed=".1">Roasted</span><span class="gl-word" data-speed=".1">Monday</span></span>
+        <span class="d2"><span class="pre gl-word" data-speed="-.06">and shipped by</span><span class="gl-word" data-speed="-.06">Wednesday</span></span>
+      </h2>
+      <div class="copy solid" data-scrim>
+        <p>October’s two lots go into the roaster on Monday 12&nbsp;October as batch 041, 18&nbsp;kg in all.</p>
+        <p>By Wednesday 14&nbsp;October they leave in resealable valve bags that fit through your letterbox, each with notes on the farm and a recipe.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene lot huila" data-scene="huila" aria-labelledby="huila-h">
+    <img class="still still--cup" src="media/still-huila.webp" alt="" loading="lazy" decoding="async" width="1400" height="1400">
+    <div class="wrap">
+      <h2 id="huila-h"><span class="origin"><span class="gl-word" data-speed=".08">Colombia</span></span><span class="gl-word" data-speed=".08">Huila</span></h2>
+      <div class="copy solid" data-scrim="muted">
+        <p class="notes">Red apple, panela, cocoa nib.</p>
+        <dl class="specs">
+          <div><dt>Variety</dt><dd>Caturra</dd></div>
+          <div><dt>Process</dt><dd>Honey</dd></div>
+          <div><dt>Altitude</dt><dd>1,750 m</dd></div>
+          <div><dt>Roast</dt><dd>Medium-light</dd></div>
+        </dl>
+        <p class="story">Grown on a family farm that dries its coffee slowly on raised beds under shade cloth, for about two weeks.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene lot kiambu" data-scene="kiambu" aria-labelledby="kiambu-h">
+    <img class="still still--edge" src="media/still-kiambu.webp" alt="" loading="lazy" decoding="async" width="1600" height="1000">
+    <div class="wrap">
+      <h2 id="kiambu-h"><span class="origin"><span class="gl-word" data-speed=".08">Kenya</span></span><span class="gl-word" data-speed=".08">Kiambu</span></h2>
+      <div class="copy solid" data-scrim="muted">
+        <p class="notes">Blackcurrant, grapefruit, cane sugar.</p>
+        <dl class="specs">
+          <div><dt>Varieties</dt><dd>SL28 and SL34</dd></div>
+          <div><dt>Process</dt><dd>Washed</dd></div>
+          <div><dt>Altitude</dt><dd>1,800 m</dd></div>
+          <div><dt>Roast</dt><dd>Light</dd></div>
+        </dl>
+        <p class="story">Grown by smallholder families who deliver ripe cherries to a cooperative washing station in the hills north of Nairobi.</p>
+      </div>
+    </div>
+  </section>
+
+  <form id="order" novalidate>
+    <section class="scene brew" data-scene="brew" aria-labelledby="brew-h">
+      <div class="wrap">
+        <fieldset class="solid" data-scrim="muted">
+          <legend><h2 class="q" id="brew-h">How do you brew?</h2></legend>
+          <p class="q-sub">Every bag comes whole bean or ground for your brewer. Pick one and the cup changes with it.</p>
+          <ul class="methods">
+            <li><input class="opt" type="radio" name="grind" id="g-bean" value="bean"><label class="method" for="g-bean"><span class="dot" aria-hidden="true"></span><span class="nm">Whole bean</span><span class="ds">For your own grinder</span></label></li>
+            <li><input class="opt" type="radio" name="grind" id="g-filter" value="filter" checked><label class="method" for="g-filter"><span class="dot" aria-hidden="true"></span><span class="nm">Filter</span><span class="ds">Pour-over and drip</span></label></li>
+            <li><input class="opt" type="radio" name="grind" id="g-espresso" value="espresso"><label class="method" for="g-espresso"><span class="dot" aria-hidden="true"></span><span class="nm">Espresso</span><span class="ds">Fine, for a machine</span></label></li>
+            <li><input class="opt" type="radio" name="grind" id="g-moka" value="moka"><label class="method" for="g-moka"><span class="dot" aria-hidden="true"></span><span class="nm">Moka pot</span><span class="ds">For the stovetop</span></label></li>
+            <li><input class="opt" type="radio" name="grind" id="g-press" value="press"><label class="method" for="g-press"><span class="dot" aria-hidden="true"></span><span class="nm">French press</span><span class="ds">Coarse, for steeping</span></label></li>
+          </ul>
+        </fieldset>
+      </div>
+    </section>
+
+    <section class="scene choose" data-scene="choose" id="choose" tabindex="-1" aria-labelledby="choose-h">
+      <img class="still still--cup" src="media/still-calm.webp" alt="" loading="lazy" decoding="async" width="1400" height="1400">
+      <div class="wrap">
+        <fieldset class="solid" data-scrim="muted">
+          <legend><h2 class="q" id="choose-h">One bag or two</h2></legend>
+          <p class="q-sub">Skip, pause or cancel any month up to the Sunday before roasting.</p>
+          <div class="plans">
+            <div><input class="opt" type="radio" name="plan" id="p-one" value="one"><label class="plan" for="p-one"><span class="dot" aria-hidden="true"></span><span class="nm">One bag</span><span class="pr">€14<small>a month</small></span><span class="ds">250 g a month, alternating between the two coffees.</span></label></div>
+            <div><input class="opt" type="radio" name="plan" id="p-two" value="two" checked><label class="plan" for="p-two"><span class="dot" aria-hidden="true"></span><span class="nm">Two bags</span><span class="pr">€26<small>a month</small></span><span class="ds">2 × 250 g: both coffees, to taste side by side.</span></label></div>
+          </div>
+          <button class="btn" type="submit">Choose your first bag</button>
+          <p class="fine">For October’s roast, changes close on Sunday 11 October. Your bag ships by Wednesday 14 October.</p>
+          <p class="done" id="done" role="status" aria-live="polite"></p>
+        </fieldset>
+      </div>
+    </section>
+  </form>
+
+  <footer class="scene end" data-scene="end" aria-labelledby="end-h">
+    <div class="wrap">
+      <h2 id="end-h"><span class="pre">The next lots arrive in</span><span class="gl-word" data-speed=".05">November</span></h2>
+      <p class="next solid" data-scrim>We announce them on 2&nbsp;November, with the growers’ notes.</p>
+      <div class="colophon solid" data-scrim>
+        <p>Demo page for the unclawdesign skill. Tidewater is a fictional roastery.</p>
+        <p><a href="../../">All showcases</a></p>
+      </div>
+    </div>
+  </footer>
+</main>
+
+<script src="../../vendor/lenis.min.js"></script>
+<script src="../../shared/palette-engine.js"></script><script src="../../shared/customizer.js"></script>
+<script type="module" src="crema.js"></script>
+</body>
+</html>

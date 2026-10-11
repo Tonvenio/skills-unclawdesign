@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en-GB" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tidewater OS</title>
+<meta name="description" content="Tidewater Roasters as a desktop operating system: open October's two small-lot coffees, watch the roast, work out your brew and choose your first bag.">
+<script>document.documentElement.className = 'js';</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Silkscreen&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="os.css">
+<style>
+  /* critical: focus ring and heading wrap even if os.css is slow */
+  :focus-visible { outline: 3px solid var(--c-focus); outline-offset: 2px; }
+  h1, h2, h3, h4 { text-wrap: balance; }
+</style>
+</head>
+<body>
+<a class="skip" href="#icons">Skip to the desktop icons</a>
+
+<!-- ───────────── menu bar ───────────── -->
+<header class="menubar" id="menubar">
+  <ul class="mb" role="menubar" aria-label="Tidewater OS menu bar">
+    <li role="none" class="mb-li">
+      <button type="button" role="menuitem" class="mb-top mb-top--logo" id="mt-tide" aria-haspopup="menu" aria-expanded="false" aria-controls="m-tide" tabindex="0"><span class="spr spr--16" data-sprite="bean"></span><span class="mb-brand">Tidewater</span></button>
+      <ul role="menu" id="m-tide" class="mb-menu" aria-labelledby="mt-tide" hidden>
+        <li role="none"><button type="button" role="menuitem" class="mb-item" data-cmd="about">About Tidewater OS</button></li>
+        <li role="none"><button type="button" role="menuitem" class="mb-item" data-cmd="welcome">Welcome</button></li>
+        <li role="none"><button type="button" role="menuitem" class="mb-item" data-cmd="control">Control Panel</button></li>
+        <li role="separator" class="mb-sep"></li>
+        <li role="none"><button type="button" role="menuitem" class="mb-item mb-item--strong" data-cmd="plans">Choose your first bag</button></li>
+        <li role="separator" class="mb-sep"></li>
+        <li role="none"><a role="menuitem" class="mb-item" href="../../">All showcases</a></li>
+      </ul>
+    </li>
+    <li role="none" class="mb-li">
+      <button type="button" role="menuitem" class="mb-top" id="mt-file" aria-haspopup="menu" aria-expanded="false" aria-controls="m-file" tabindex="-1">File</button>
+      <ul role="menu" id="m-file" class="mb-menu" aria-labelledby="mt-file" hidden>
+        <li role="none"><button type="button" role="menuitem" class="mb-item" data-cmd="open">Open <kbd>Enter</kbd></button></li>
+        <li role="none"><button type="button" role="menuitem" class="mb-item" data-cmd="close">Close Window <kbd>Esc</kbd></button></li>
+        <li role="separator" class="mb-sep"></li>
+        <li role="none"><button type="button" role="menuitem" class="mb-item" data-cmd="trash">Move to Trash <kbd>Del</kbd></button></li>
+        <li role="none"><button type="button" role="menuitem" class="mb-item" data-cmd="putback">Put Back All</button></li>
+      </ul>
+    </li>
+    <li role="none" class="mb-li">
+      <button type="button" role="menuitem" class="mb-top" id="mt-edit" aria-haspopup="menu" aria-expanded="false" aria-controls="m-edit" tabindex="-1">Edit</button>
+      <ul role="menu" id="m-edit" class="mb-menu" aria-labelledby="mt-edit" hidden>
+        <li role="none"><button type="button" role="menuitem" class="mb-item" aria-disabled="true">Can’t Undo</button></li>
+        <li role="separator" class="mb-sep"></li>
+        <li role="none"><button type="button" role="menuitem" class="mb-item" data-cmd="copy">Copy October’s Lots</button></li>
+        <li role="none"><button type="button" role="menuitem" class="mb-item" data-cmd="selectall">Select All Icons</button></li>
+      </ul>
+    </li>
+    <li role="none" class="mb-li">
+      <button type="button" role="menuitem" class="mb-top" id="mt-view" aria-haspopup="menu" aria-expanded="false" aria-controls="m-view" tabindex="-1">View</button>
+      <ul role="menu" id="m-view" class="mb-menu" aria-labelledby="mt-view" hidden>
+        <li role="none"><button type="button" role="menuitem" class="mb-item" data-cmd="cleanup">Clean Up Desktop</button></li>
+        <li role="none"><button type="button" role="menuitem" class="mb-item" data-cmd="tile">Tile Windows</button></li>
+        <li role="separator" class="mb-sep"></li>
+        <li role="none"><button type="button" role="menuitemcheckbox" class="mb-item" data-cmd="large" aria-checked="false">Larger Text</button></li>
+        <li role="none"><button type="button" role="menuitemcheckbox" class="mb-item" data-cmd="parallax" aria-checked="true">Wallpaper Parallax</button></li>
+        <li role="separator" class="mb-sep" data-winlist></li>
+      </ul>
+    </li>
+    <li role="none" class="mb-li">
+      <button type="button" role="menuitem" class="mb-top" id="mt-special" aria-haspopup="menu" aria-expanded="false" aria-controls="m-special" tabindex="-1">Special</button>
+      <ul role="menu" id="m-special" class="mb-menu" aria-labelledby="mt-special" hidden>
+        <li role="none"><button type="button" role="menuitem" class="mb-item" data-cmd="empty">Empty Trash…</button></li>
+        <li role="none"><button type="button" role="menuitem" class="mb-item" data-cmd="restore">Restore Desktop</button></li>
+        <li role="none"><button type="button" role="menuitem" class="mb-item" data-cmd="saver">Start Screensaver</button></li>
+        <li role="none"><button type="button" role="menuitemcheckbox" class="mb-item" data-cmd="sound" aria-checked="false">Sound Effects</button></li>
+        <li role="separator" class="mb-sep"></li>
+        <li role="none"><button type="button" role="menuitem" class="mb-item" data-cmd="restart">Restart</button></li>
+        <li role="none"><button type="button" role="menuitem" class="mb-item" data-cmd="shutdown">Shut Down…</button></li>
+      </ul>
+    </li>
+    <li role="none" class="mb-li mb-li--status">
+      <button type="button" role="menuitem" class="mb-top mb-top--status" id="mt-batch" aria-haspopup="menu" aria-expanded="false" aria-controls="m-batch" tabindex="-1"><span class="spr spr--16 flicker" data-sprite="flame"></span><span>Batch 041 roasting Monday</span></button>
+      <ul role="menu" id="m-batch" class="mb-menu mb-menu--right" aria-labelledby="mt-batch" hidden>
+        <li role="none"><button type="button" role="menuitem" class="mb-item" data-cmd="roast"><span>Roasts Monday 12 October, 18 kg</span><span class="mb-rel" data-roast-rel></span></button></li>
+        <li role="none"><button type="button" role="menuitem" class="mb-item" data-cmd="ship">Ships by Wednesday 14 October</button></li>
+        <li role="none"><button type="button" role="menuitem" class="mb-item" data-cmd="changes">Skip or pause by Sunday 11 October</button></li>
+        <li role="none"><button type="button" role="menuitem" class="mb-item" data-cmd="next">Next lots announced 2 November</button></li>
+      </ul>
+    </li>
+  </ul>
+  <div class="mb-dock" data-palette-dock><span class="mb-dock-end" aria-hidden="true"></span></div>
+  <button type="button" class="mb-clock" id="clock" aria-label="Clock. Press to show the date.">--:--</button>
+</header>
+
+<!-- ───────────── desktop ───────────── -->
+<main class="desktop" id="desktop">
+  <h1 class="sr-only">Tidewater OS, the desktop of Tidewater Roasters</h1>
+  <div class="wall" id="wall" aria-hidden="true"></div>
+
+  <div class="home" id="home">
+    <section class="widget" aria-labelledby="widget-t">
+      <div class="widget-head"><span class="spr spr--32" data-sprite="flame"></span><h2 id="widget-t">Batch 041</h2><span class="widget-rel" data-roast-rel></span></div>
+      <p class="widget-lede">Tidewater Roasters roasts two small-lot coffees a month and ships them within 48 hours of roasting, with notes on who grew them. Open the apps to meet October’s lots.</p>
+      <p class="widget-dates">Roasts Monday 12 October. Ships by Wednesday 14 October.</p>
+      <button type="button" class="btn widget-cta" data-open="plans">Choose your first bag</button>
+    </section>
+
+    <ul class="icons" id="icons" aria-label="Desktop" tabindex="-1">
+      <li class="slot" data-id="kiambu"><button type="button" class="icon" data-app="kiambu" aria-describedby="icon-hint"><span class="spr spr--icon" data-sprite="doc"></span><span class="icon-label">Kiambu.txt</span></button></li>
+      <li class="slot" data-id="huila"><button type="button" class="icon" data-app="huila" aria-describedby="icon-hint"><span class="spr spr--icon" data-sprite="doc" data-remap="a:c"></span><span class="icon-label">Huila.txt</span></button></li>
+      <li class="slot" data-id="roast"><button type="button" class="icon" data-app="roast" aria-describedby="icon-hint"><span class="spr spr--icon" data-sprite="movie"></span><span class="icon-label">Roast.mov</span></button></li>
+      <li class="slot" data-id="brew" data-dock><button type="button" class="icon" data-app="brew" aria-describedby="icon-hint"><span class="spr spr--icon" data-sprite="calc"></span><span class="icon-label">Brew Calculator</span></button></li>
+      <li class="slot" data-id="plans" data-dock><button type="button" class="icon" data-app="plans" aria-describedby="icon-hint"><span class="spr spr--icon" data-sprite="bag"></span><span class="icon-label">Plans</span></button></li>
+      <li class="slot" data-id="questions" data-dock><button type="button" class="icon" data-app="questions" aria-describedby="icon-hint"><span class="spr spr--icon" data-sprite="help"></span><span class="icon-label">Questions</span></button></li>
+      <li class="slot slot--phone" data-id="control"><button type="button" class="icon" data-app="control" aria-describedby="icon-hint"><span class="spr spr--icon" data-sprite="control"></span><span class="icon-label">Control Panel</span></button></li>
+      <li class="slot slot--trash" data-id="trash"><button type="button" class="icon" data-app="trash" aria-describedby="icon-hint"><span class="spr spr--icon" data-sprite="trash"></span><span class="icon-label">Trash</span></button></li>
+    </ul>
+    <ul class="dock" id="dock" aria-label="Dock"></ul>
+    <p class="watermark">Tidewater OS 041. Demo page for the unclawdesign skill. Tidewater is a fictional roastery. <a href="../../">All showcases</a></p>
+  </div>
+  <p class="sr-only" id="icon-hint">Press Enter to open. With a mouse, double-click to open or drag to move.</p>
+  <p class="sr-only" id="win-hint">Arrow keys move this window, Escape closes it.</p>
+
+  <!-- Welcome -->
+  <section class="win win--welcome" id="win-welcome" data-app="welcome" role="dialog" aria-labelledby="t-welcome" aria-describedby="win-hint" tabindex="-1" hidden>
+    <div class="win-bar"><button type="button" class="wb wb-close" aria-label="Close Welcome"></button><h2 class="win-title" id="t-welcome">Welcome</h2><button type="button" class="wb wb-min" aria-label="Minimise Welcome"></button><button type="button" class="wb wb-zoom" aria-label="Zoom Welcome"></button></div>
+    <div class="win-body welcome">
+      <div class="welcome-mast">
+        <span class="spr spr--hero" data-sprite="bean"></span>
+        <p class="welcome-os">Tidewater&nbsp;OS<span class="welcome-rel">release 041</span></p>
+      </div>
+      <p class="welcome-lede">This desktop is Tidewater Roasters, a small-batch coffee roastery with a monthly subscription. Every month we roast two small-lot coffees, ship them within 48 hours of roasting and include notes on who grew them. Open the files on the right to meet October’s two lots, watch a roast, work out your brew, then pick a plan.</p>
+      <div class="actions">
+        <button type="button" class="btn" data-open="plans">Choose your first bag</button>
+        <button type="button" class="btn btn--quiet" data-open="kiambu">Read Kiambu.txt</button>
+      </div>
+      <p class="welcome-tip">Drag windows by their title bar, or press the arrow keys to move the window you’re in.</p>
+    </div>
+    <button type="button" class="win-grip" aria-label="Resize Welcome with the arrow keys"></button>
+  </section>
+
+  <!-- Kiambu.txt -->
+  <section class="win win--doc" id="win-kiambu" data-app="kiambu" role="dialog" aria-labelledby="t-kiambu" aria-describedby="win-hint" tabindex="-1" hidden>
+    <div class="win-bar"><button type="button" class="wb wb-close" aria-label="Close Kiambu.txt"></button><h2 class="win-title" id="t-kiambu">Kiambu.txt</h2><button type="button" class="wb wb-min" aria-label="Minimise Kiambu.txt"></button><button type="button" class="wb wb-zoom" aria-label="Zoom Kiambu.txt"></button></div>
+    <div class="win-tools"><span class="tool-app">TideText</span><span class="tool-sp"></span><button type="button" class="tool-btn" data-size="-1" aria-label="Smaller text">A−</button><button type="button" class="tool-btn" data-size="1" aria-label="Larger text">A+</button></div>
+    <div class="win-body doc">
+      <figure class="doc-hero"><div class="doc-art" data-art="kiambu" role="img" aria-label="Pixel illustration: terraced hills north of Nairobi with a cooperative washing station and its water channel."></div></figure>
+      <div class="doc-text">
+        <h3 class="doc-title">Kiambu, Kenya</h3>
+        <dl class="spec">
+          <div><dt>Varieties</dt><dd>SL28 and SL34</dd></div>
+          <div><dt>Process</dt><dd>Washed</dd></div>
+          <div><dt>Altitude</dt><dd>1,800 m</dd></div>
+          <div><dt>Roast</dt><dd>Light</dd></div>
+        </dl>
+        <div class="roastbar" role="img" aria-label="Roast level: light">
+          <div class="roastbar-track" style="--pos: 1.5"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><b class="roastbar-pin"></b></div>
+          <div class="roastbar-legend" aria-hidden="true"><span>Light</span><span>Medium</span><span>Dark</span></div>
+        </div>
+        <h4>Tastes of</h4>
+        <ul class="notes">
+          <li><span class="spr spr--32" data-sprite="currant"></span>Blackcurrant</li>
+          <li><span class="spr spr--32" data-sprite="grapefruit"></span>Grapefruit</li>
+          <li><span class="spr spr--32" data-sprite="sugar"></span>Cane sugar</li>
+        </ul>
+        <h4>Who grew it</h4>
+        <p>Smallholder families who deliver ripe cherries to a cooperative washing station in the hills north of Nairobi.</p>
+        <h4>In the bag</h4>
+        <p>Roasted on Monday 12 October in batch 041, shipped by Wednesday 14 October, with notes on the farm and a recipe.</p>
+        <div class="actions"><button type="button" class="btn" data-open="plans">Choose your first bag</button><button type="button" class="btn btn--quiet" data-open="huila">Next: Huila.txt</button></div>
+      </div>
+    </div>
+    <button type="button" class="win-grip" aria-label="Resize Kiambu.txt with the arrow keys"></button>
+  </section>
+
+  <!-- Huila.txt -->
+  <section class="win win--doc" id="win-huila" data-app="huila" role="dialog" aria-labelledby="t-huila" aria-describedby="win-hint" tabindex="-1" hidden>
+    <div class="win-bar"><button type="button" class="wb wb-close" aria-label="Close Huila.txt"></button><h2 class="win-title" id="t-huila">Huila.txt</h2><button type="button" class="wb wb-min" aria-label="Minimise Huila.txt"></button><button type="button" class="wb wb-zoom" aria-label="Zoom Huila.txt"></button></div>
+    <div class="win-tools"><span class="tool-app">TideText</span><span class="tool-sp"></span><button type="button" class="tool-btn" data-size="-1" aria-label="Smaller text">A−</button><button type="button" class="tool-btn" data-size="1" aria-label="Larger text">A+</button></div>
+    <div class="win-body doc">
+      <figure class="doc-hero"><div class="doc-art" data-art="huila" role="img" aria-label="Pixel illustration: a family farm in the Andes with coffee drying on raised beds under shade cloth."></div></figure>
+      <div class="doc-text">
+        <h3 class="doc-title">Huila, Colombia</h3>
+        <dl class="spec">
+          <div><dt>Variety</dt><dd>Caturra</dd></div>
+          <div><dt>Process</dt><dd>Honey</dd></div>
+          <div><dt>Altitude</dt><dd>1,750 m</dd></div>
+          <div><dt>Roast</dt><dd>Medium-light</dd></div>
+        </dl>
+        <div class="roastbar" role="img" aria-label="Roast level: medium-light">
+          <div class="roastbar-track" style="--pos: 2.6"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><b class="roastbar-pin"></b></div>
+          <div class="roastbar-legend" aria-hidden="true"><span>Light</span><span>Medium</span><span>Dark</span></div>
+        </div>
+        <h4>Tastes of</h4>
+        <ul class="notes">
+          <li><span class="spr spr--32" data-sprite="apple"></span>Red apple</li>
+          <li><span class="spr spr--32" data-sprite="panela"></span>Panela</li>
+          <li><span class="spr spr--32" data-sprite="nib"></span>Cocoa nib</li>
+        </ul>
+        <h4>Who grew it</h4>
+        <p>A family farm that dries its coffee slowly on raised beds under shade cloth, for about two weeks.</p>
+        <h4>In the bag</h4>
+        <p>Roasted on Monday 12 October in batch 041, shipped by Wednesday 14 October, with notes on the farm and a recipe.</p>
+        <div class="actions"><button type="button" class="btn" data-open="plans">Choose your first bag</button><button type="button" class="btn btn--quiet" data-open="roast">Watch Roast.mov</button></div>
+      </div>
+    </div>
+    <button type="button" class="win-grip" aria-label="Resize Huila.txt with the arrow keys"></button>
+  </section>
+
+  <!-- Roast.mov -->
+  <section class="win win--movie" id="win-roast" data-app="roast" role="dialog" aria-labelledby="t-roast" aria-describedby="win-hint" tabindex="-1" hidden>
+    <div class="win-bar"><button type="button" class="wb wb-close" aria-label="Close Roast.mov"></button><h2 class="win-title" id="t-roast">Roast.mov</h2><button type="button" class="wb wb-min" aria-label="Minimise Roast.mov"></button><button type="button" class="wb wb-zoom" aria-label="Zoom Roast.mov"></button></div>
+    <div class="win-body player">
+      <div class="screen duo">
+        <video id="roast-video" muted loop playsinline preload="none" poster="media/roast-poster.png" aria-describedby="roast-desc" width="960" height="720">
+          <source src="media/roast.webm" type="video/webm">
+          <source src="media/roast.mp4" type="video/mp4">
+        </video>
+        <span class="duo-ink" aria-hidden="true"></span>
+        <button type="button" class="screen-hit" tabindex="-1" aria-hidden="true"></button>
+      </div>
+      <div class="transport">
+        <button type="button" class="tbtn" id="vplay" aria-label="Play"><span class="tbtn-ico" aria-hidden="true"></span></button>
+        <input type="range" id="vscrub" class="scrub" min="0" max="1000" step="1" value="0" aria-label="Position in the video" aria-valuetext="0.0 of 9.0 seconds">
+        <output id="vtime" class="vtime" for="vscrub">0:00 / 0:09</output>
+      </div>
+      <p class="caption" id="roast-desc">Green beans tumble in the drum, crack and turn brown, then cool on the stirring tray. A rendering, silent and looped. Batch 041 is 18 kg and roasts on Monday 12 October.</p>
+    </div>
+    <button type="button" class="win-grip" aria-label="Resize Roast.mov with the arrow keys"></button>
+  </section>
+
+  <!-- Brew Calculator -->
+  <section class="win win--calc" id="win-brew" data-app="brew" role="dialog" aria-labelledby="t-brew" aria-describedby="win-hint" tabindex="-1" hidden>
+    <div class="win-bar"><button type="button" class="wb wb-close" aria-label="Close Brew Calculator"></button><h2 class="win-title" id="t-brew">Brew Calculator</h2><button type="button" class="wb wb-min" aria-label="Minimise Brew Calculator"></button><button type="button" class="wb wb-zoom" aria-label="Zoom Brew Calculator"></button></div>
+    <div class="win-body calc">
+      <fieldset class="methods">
+        <legend>Method</legend>
+        <label class="method"><input type="radio" name="method" value="filter" checked><span class="spr spr--32" data-sprite="dripper"></span><span>Filter</span></label>
+        <label class="method"><input type="radio" name="method" value="espresso"><span class="spr spr--32" data-sprite="espresso"></span><span>Espresso</span></label>
+        <label class="method"><input type="radio" name="method" value="moka"><span class="spr spr--32" data-sprite="moka"></span><span>Moka pot</span></label>
+        <label class="method"><input type="radio" name="method" value="press"><span class="spr spr--32" data-sprite="press"></span><span>French press</span></label>
+      </fieldset>
+      <div class="cups" role="group" aria-labelledby="cups-l">
+        <span class="cups-l" id="cups-l">Cups</span>
+        <button type="button" class="step" data-d="-1" aria-label="One cup fewer">−</button>
+        <output class="cups-n" id="cups-n" aria-live="polite">2</output>
+        <button type="button" class="step" data-d="1" aria-label="One cup more">+</button>
+        <span class="cups-vis" id="cups-vis" aria-hidden="true"></span>
+      </div>
+      <div class="lcd" id="lcd" aria-live="polite">
+        <dl class="lcd-grid">
+          <div><dt>Coffee</dt><dd id="o-dose"></dd></div>
+          <div><dt id="o-water-l">Water</dt><dd id="o-water"></dd></div>
+          <div><dt>Water temp</dt><dd id="o-temp"></dd></div>
+          <div><dt>Brew time</dt><dd id="o-time"></dd></div>
+        </dl>
+        <p class="lcd-note" id="o-note">Grind medium-fine.</p>
+      </div>
+      <div class="timer">
+        <button type="button" class="btn" id="t-start">Start brew timer</button>
+        <div class="tbar" id="t-bar" role="progressbar" aria-label="Brew timer" aria-valuemin="0" aria-valuemax="180" aria-valuenow="0" aria-valuetext="0:00 of 3:00"><span></span></div>
+        <output class="tclock" id="t-clock">0:00</output>
+      </div>
+    </div>
+    <button type="button" class="win-grip" aria-label="Resize Brew Calculator with the arrow keys"></button>
+  </section>
+
+  <!-- Plans -->
+  <section class="win win--plans" id="win-plans" data-app="plans" role="dialog" aria-labelledby="t-plans" aria-describedby="win-hint" tabindex="-1" hidden>
+    <div class="win-bar"><button type="button" class="wb wb-close" aria-label="Close Plans"></button><h2 class="win-title" id="t-plans">Plans</h2><button type="button" class="wb wb-min" aria-label="Minimise Plans"></button><button type="button" class="wb wb-zoom" aria-label="Zoom Plans"></button></div>
+    <div class="win-body wizard">
+      <aside class="wz-side">
+        <ol class="wz-steps" id="wz-steps" aria-label="Subscription steps">
+          <li data-s="1" aria-current="step">Plan</li><li data-s="2">Grind</li><li data-s="3">Start</li><li data-s="4">Review</li>
+        </ol>
+        <div class="wz-box" aria-live="polite">
+          <div class="wz-bags" id="wz-bags"><span class="spr spr--hero" data-sprite="bag"></span></div>
+          <p class="wz-sum" id="wz-sum">Pick a plan to see your box.</p>
+        </div>
+      </aside>
+      <form class="wz" id="wz" novalidate>
+        <fieldset class="wz-page" data-step="1">
+          <legend class="wz-h" tabindex="-1">Choose a plan</legend>
+          <div class="plans">
+            <label class="plan"><input type="radio" name="plan" value="one"><span class="plan-card"><span class="plan-name">One bag</span><span class="plan-price"><span class="cur">€</span><span class="num">14</span><small> a month</small></span><span class="plan-desc">250 g, alternating between the two coffees.</span></span></label>
+            <label class="plan"><input type="radio" name="plan" value="two"><span class="plan-card"><span class="plan-name">Two bags</span><span class="plan-price"><span class="cur">€</span><span class="num">26</span><small> a month</small></span><span class="plan-desc">2 × 250 g: both coffees, to taste side by side.</span></span></label>
+          </div>
+          <p class="wz-err" role="alert" data-err="plan"></p>
+        </fieldset>
+        <fieldset class="wz-page" data-step="2" hidden>
+          <legend class="wz-h" tabindex="-1">How should we send it?</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="grind" value="Whole bean"><span>Whole bean</span></label>
+            <label class="opt"><input type="radio" name="grind" value="Ground for filter"><span>Ground for filter</span></label>
+            <label class="opt"><input type="radio" name="grind" value="Ground for espresso"><span>Ground for espresso</span></label>
+            <label class="opt"><input type="radio" name="grind" value="Ground for moka pot"><span>Ground for moka pot</span></label>
+            <label class="opt"><input type="radio" name="grind" value="Ground for French press"><span>Ground for French press</span></label>
+          </div>
+          <p class="wz-err" role="alert" data-err="grind"></p>
+        </fieldset>
+        <fieldset class="wz-page" data-step="3" hidden>
+          <legend class="wz-h" tabindex="-1">When should it start?</legend>
+          <div class="opts">
+            <label class="opt opt--tall"><input type="radio" name="start" value="041" checked><span><b>October, batch 041</b>Roasted Monday 12 October, shipped by Wednesday 14 October.</span></label>
+            <label class="opt opt--tall"><input type="radio" name="start" value="nov"><span><b>November’s lots</b>The next two coffees are announced on 2 November.</span></label>
+          </div>
+          <p class="wz-note">Skip, pause or cancel any month, up to the Sunday before roasting.</p>
+        </fieldset>
+        <div class="wz-page" data-step="4" hidden>
+          <h3 class="wz-h" tabindex="-1">Your first bag</h3>
+          <div class="receipt">
+            <dl id="wz-review"></dl>
+            <p>Arrives in a resealable valve bag that fits through the letterbox, with notes on the farm and a recipe.</p>
+          </div>
+        </div>
+        <div class="wz-nav">
+          <button type="button" class="btn btn--quiet" id="wz-back" disabled>Back</button>
+          <button type="button" class="btn" id="wz-next">Continue</button>
+        </div>
+      </form>
+    </div>
+    <button type="button" class="win-grip" aria-label="Resize Plans with the arrow keys"></button>
+  </section>
+
+  <!-- Questions -->
+  <section class="win win--help" id="win-questions" data-app="questions" role="dialog" aria-labelledby="t-questions" aria-describedby="win-hint" tabindex="-1" hidden>
+    <div class="win-bar"><button type="button" class="wb wb-close" aria-label="Close Questions"></button><h2 class="win-title" id="t-questions">Questions</h2><button type="button" class="wb wb-min" aria-label="Minimise Questions"></button><button type="button" class="wb wb-zoom" aria-label="Zoom Questions"></button></div>
+    <div class="win-body help">
+      <div class="help-tabs" role="tablist" aria-orientation="vertical" aria-label="Questions">
+        <button type="button" role="tab" id="q1" aria-controls="qp1" aria-selected="true">When will it arrive?</button>
+        <button type="button" role="tab" id="q2" aria-controls="qp2" aria-selected="false" tabindex="-1">Will it fit my letterbox?</button>
+        <button type="button" role="tab" id="q3" aria-controls="qp3" aria-selected="false" tabindex="-1">What comes with it?</button>
+        <button type="button" role="tab" id="q4" aria-controls="qp4" aria-selected="false" tabindex="-1">One bag or two?</button>
+        <button type="button" role="tab" id="q5" aria-controls="qp5" aria-selected="false" tabindex="-1">Can I get it ground?</button>
+        <button type="button" role="tab" id="q6" aria-controls="qp6" aria-selected="false" tabindex="-1">Can I skip or cancel?</button>
+        <button type="button" role="tab" id="q7" aria-controls="qp7" aria-selected="false" tabindex="-1">What’s next?</button>
+        <button type="button" role="tab" id="q8" aria-controls="qp8" aria-selected="false" tabindex="-1">Is Tidewater real?</button>
+      </div>
+      <div class="help-panels">
+        <div role="tabpanel" id="qp1" aria-labelledby="q1" tabindex="0"><h3>When will it arrive?</h3><p>We roast batch 041 on Monday 12 October and ship it by Wednesday 14 October. Every bag leaves within 48 hours of roasting.</p></div>
+        <div role="tabpanel" id="qp2" aria-labelledby="q2" tabindex="0" hidden><h3>Will it fit my letterbox?</h3><p>Yes. Each 250 g bag is a resealable valve bag that fits through the letterbox, so nobody needs to be home.</p></div>
+        <div role="tabpanel" id="qp3" aria-labelledby="q3" tabindex="0" hidden><h3>What comes with it?</h3><p>Notes on the farm and the people who grew the coffee, and a recipe.</p></div>
+        <div role="tabpanel" id="qp4" aria-labelledby="q4" tabindex="0" hidden><h3>One bag or two?</h3><p>One bag is 250 g for €14 a month and alternates between the two coffees. Two bags is 2 × 250 g for €26 a month: both coffees, to taste side by side.</p><p><button type="button" class="btn" data-open="plans">Choose your first bag</button></p></div>
+        <div role="tabpanel" id="qp5" aria-labelledby="q5" tabindex="0" hidden><h3>Can I get it ground?</h3><p>Whole bean, or ground for filter, espresso, moka pot or French press. The Brew Calculator works out the dose for each.</p></div>
+        <div role="tabpanel" id="qp6" aria-labelledby="q6" tabindex="0" hidden><h3>Can I skip or cancel?</h3><p>Yes. Skip a month, pause or cancel up to the Sunday before roasting. For batch 041 that is Sunday 11 October.</p></div>
+        <div role="tabpanel" id="qp7" aria-labelledby="q7" tabindex="0" hidden><h3>What’s next?</h3><p>The next two lots are announced on 2 November.</p></div>
+        <div role="tabpanel" id="qp8" aria-labelledby="q8" tabindex="0" hidden><h3>Is Tidewater real?</h3><p>No. Tidewater is a fictional roastery, and this desktop is a demo page for the unclawdesign skill. Nothing here takes an order or a payment.</p><p><a href="../../">See all showcases</a></p></div>
+      </div>
+    </div>
+    <button type="button" class="win-grip" aria-label="Resize Questions with the arrow keys"></button>
+  </section>
+
+  <!-- Trash -->
+  <section class="win win--trash" id="win-trash" data-app="trash" role="dialog" aria-labelledby="t-trash" aria-describedby="win-hint" tabindex="-1" hidden>
+    <div class="win-bar"><button type="button" class="wb wb-close" aria-label="Close Trash"></button><h2 class="win-title" id="t-trash">Trash</h2><button type="button" class="wb wb-min" aria-label="Minimise Trash"></button><button type="button" class="wb wb-zoom" aria-label="Zoom Trash"></button></div>
+    <div class="win-tools"><span class="tool-app" id="trash-count">Empty</span><span class="tool-sp"></span><button type="button" class="tool-btn" id="trash-empty" disabled>Empty Trash</button></div>
+    <div class="win-body trash">
+      <ul class="trash-list" id="trash-list"></ul>
+      <p class="trash-empty" id="trash-hint">The Trash is empty. Drag a desktop icon here, or select one and choose File, Move to Trash.</p>
+    </div>
+    <button type="button" class="win-grip" aria-label="Resize Trash with the arrow keys"></button>
+  </section>
+
+  <!-- Control Panel -->
+  <section class="win win--control" id="win-control" data-app="control" role="dialog" aria-labelledby="t-control" aria-describedby="win-hint" tabindex="-1" hidden>
+    <div class="win-bar"><button type="button" class="wb wb-close" aria-label="Close Control Panel"></button><h2 class="win-title" id="t-control">Control Panel</h2><button type="button" class="wb wb-min" aria-label="Minimise Control Panel"></button><button type="button" class="wb wb-zoom" aria-label="Zoom Control Panel"></button></div>
+    <div class="win-body control">
+      <label class="chk"><input type="checkbox" data-set="sound"><span>Sound effects</span><small>Small beeps when windows open and close.</small></label>
+      <label class="chk"><input type="checkbox" data-set="saver"><span>Screensaver after one minute</span><small data-motion-note>Coffee beans fall until the tide comes in.</small></label>
+      <label class="chk"><input type="checkbox" data-set="parallax"><span>Wallpaper parallax</span><small data-motion-note>The hills shift a little as the pointer moves.</small></label>
+      <label class="chk"><input type="checkbox" data-set="large"><span>Larger text</span><small>Bigger type in every window.</small></label>
+      <div class="cp-row"><span class="cp-l">Palette</span><button type="button" class="btn btn--quiet" id="cp-palette">Change colours</button></div>
+      <div class="cp-row"><span class="cp-l">About</span><button type="button" class="btn btn--quiet" data-open="about">About Tidewater OS</button></div>
+      <p class="cp-foot"><a href="../../">All showcases</a></p>
+    </div>
+    <button type="button" class="win-grip" aria-label="Resize Control Panel with the arrow keys"></button>
+  </section>
+
+  <!-- About -->
+  <section class="win win--about" id="win-about" data-app="about" role="dialog" aria-labelledby="t-about" aria-describedby="win-hint" tabindex="-1" hidden>
+    <div class="win-bar"><button type="button" class="wb wb-close" aria-label="Close About Tidewater OS"></button><h2 class="win-title" id="t-about">About Tidewater OS</h2><button type="button" class="wb wb-min" aria-label="Minimise About Tidewater OS"></button><button type="button" class="wb wb-zoom" aria-label="Zoom About Tidewater OS"></button></div>
+    <div class="win-body about">
+      <span class="spr spr--hero" data-sprite="bean"></span>
+      <div>
+        <p class="about-name">Tidewater OS</p>
+        <p>Release 041: a new release every month, with two new coffees.</p>
+        <div class="mem" role="img" aria-label="Batch 041 holds 18 kilograms of coffee."><span class="mem-l">Batch 041</span><span class="mem-bar"><i></i></span><span class="mem-v">18 kg</span></div>
+        <p class="about-fine">Demo page for the unclawdesign skill. Tidewater is a fictional roastery. <a href="../../">All showcases</a></p>
+      </div>
+    </div>
+    <button type="button" class="win-grip" aria-label="Resize About Tidewater OS with the arrow keys"></button>
+  </section>
+</main>
+
+<div class="zoomlayer" id="zoomlayer" aria-hidden="true"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- modal alert -->
+<div class="modal" id="modal" hidden>
+  <div class="alert" role="alertdialog" aria-modal="true" aria-labelledby="al-t" aria-describedby="al-d" tabindex="-1">
+    <span class="spr spr--hero" id="al-ico" data-sprite="bag"></span>
+    <div class="alert-txt"><h2 id="al-t"></h2><p id="al-d"></p></div>
+    <div class="alert-btns" id="al-btns"></div>
+  </div>
+</div>
+
+<div class="boot" id="boot" hidden>
+  <div class="boot-card" role="status">
+    <span class="spr spr--boot" data-sprite="bean"></span>
+    <p class="boot-name">Tidewater OS</p>
+    <div class="boot-bar" aria-hidden="true"><span></span></div>
+    <p class="boot-msg" id="boot-msg">Warming the drum</p>
+  </div>
+</div>
+
+<div class="saver" id="saver" hidden aria-hidden="true">
+  <canvas id="saver-c"></canvas>
+  <p class="saver-hint">Move the mouse or press a key to wake Tidewater OS</p>
+</div>
+
+<div class="shutdown" id="shutdown" hidden>
+  <div class="shutdown-card" role="dialog" aria-modal="true" aria-labelledby="sd-t" tabindex="-1">
+    <span class="spr spr--hero" data-sprite="cup"></span>
+    <h2 id="sd-t">It is now safe to put the kettle on.</h2>
+    <div class="actions"><button type="button" class="btn" id="sd-restart">Restart</button><a class="btn btn--quiet" href="../../">All showcases</a></div>
+  </div>
+</div>
+
+<script src="sprites.js"></script>
+<script src="../../vendor/gsap.min.js"></script>
+<script src="../../vendor/matter.min.js" defer></script>
+<script src="os.js"></script>
+<script src="../../shared/palette-engine.js"></script><script src="../../shared/customizer.js"></script>
+</body>
+</html>

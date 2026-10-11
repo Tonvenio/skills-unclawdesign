@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>unclawdesign · Showcase</title>
+<style>
+:root {
+  --bg: oklch(0.965 0.008 95); --panel: oklch(0.99 0.004 95); --line: oklch(0.86 0.01 95);
+  --ink: oklch(0.2 0.015 260); --muted: oklch(0.45 0.015 260); --hi: oklch(0.55 0.2 28);
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.55 ui-sans-serif, -apple-system, "SF Pro Text", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--hi); outline-offset: 3px; border-radius: 6px; }
+.wrap { width: min(1320px, 100% - 32px); margin-inline: auto; }
+header { padding: clamp(40px, 7vw, 96px) 0 36px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: end; border-bottom: 2px solid var(--ink); }
+.kicker { margin: 0 0 12px; color: var(--muted); font-size: 15px; }
+h1 { margin: 0; font: 800 clamp(44px, 7vw, 104px)/.92 ui-serif, "New York", Georgia, serif; letter-spacing: -.03em; }
+h1 span { color: var(--hi); font-style: italic; font-weight: 400; }
+header p { margin: 0 0 10px; color: var(--muted); max-width: 54ch; }
+header p b { color: var(--ink); }
+h2 { font: 700 clamp(24px, 2.4vw, 32px)/1.1 ui-serif, "New York", Georgia, serif; margin: 56px 0 6px; }
+.sub { margin: 0 0 22px; color: var(--muted); max-width: 70ch; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 24px; }
+.grid.one { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); align-items: center; }
+.card { display: block; text-decoration: none; }
+.card img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border-radius: 10px; box-shadow: 0 0 0 1px var(--line), 0 24px 40px -28px oklch(0.2 0.02 260 / .6); transition: transform .3s; }
+.card:hover img { transform: translateY(-3px); }
+.card h3 { margin: 14px 0 2px; font-size: 19px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+.card .exp { display: inline-block; margin-top: 8px; font-size: 13px; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); }
+.js { margin-top: 56px; padding: 28px; border-radius: 14px; background: var(--ink); color: var(--bg); display: grid; grid-template-columns: 1fr auto; gap: 16px 32px; align-items: center; }
+.js h2 { margin: 0 0 6px; color: var(--bg); }
+.js p { margin: 0; color: oklch(0.82 0.01 95); max-width: 70ch; }
+.js code { font: 14px ui-monospace, "SF Mono", Menlo, monospace; background: oklch(0.3 0.015 260); padding: 2px 6px; border-radius: 4px; }
+footer { margin-top: 64px; padding: 24px 0 56px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+@media (max-width: 900px) { header, .grid.one, .js { grid-template-columns: 1fr; } .grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .card img { transition: none; } .card:hover img { transform: none; } }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <div>
+    <p class="kicker">Skill-Showcase · Stand 11.10.2026</p>
+    <h1>unclaw<span>design</span></h1>
+  </div>
+  <div>
+    <p>Was der Skill aus einem einzigen Brief macht: eine fiktive Rösterei, Tidewater Roasters, einmal als sechs umschaltbare Stilrichtungen und einmal als sechs Erlebnisse jenseits der Landingpage.</p>
+    <p>Jede Seite hat unten links einen <b>Palette</b>-Knopf mit den 348 Farbkombinationen aus Sanzo Wadas <i>A Dictionary of Color Combinations</i>.</p>
+  </div>
+</header>
+<main class="wrap">
+  <h2>Sechs Richtungen, eine Seite</h2>
+  <p class="sub">Dieselben Inhalte in sechs gewürfelten Genomen (Stil × Palette × Schriftpaar × Gene). Unten im Dock umschalten, rechts das Genom ansehen.</p>
+  <div class="grid one">
+    <a class="card" href="directions/"><img src="gallery/directions.webp" width="1440" height="900" alt="Tidewater in der Richtung Solarpunk mit Dock zum Umschalten"></a>
+    <div class="card"><h3><a href="directions/">Tidewater: Six Directions</a></h3><p>Solarpunk, Swiss, Japanisches Ma, 70er Groovy, Neo-Brutalismus und Dark Luxury, live umschaltbar, mit Genom-Panel und Paletten-Editor.</p><span class="exp">landing-classic × 6 Stile</span></div>
+  </div>
+
+  <h2>Sechs Erlebnisse</h2>
+  <p class="sub">Derselbe Brief als Erlebnis gebaut: jede Seite ein anderer Archetyp aus der Recherche, mit eigener Bewegung, eigenen Medien und einer Fassung für reduzierte Bewegung.</p>
+  <div class="grid">
+    <a class="card" href="x/journey/"><img src="gallery/x-journey.webp" width="1440" height="900" alt="Cherry to Cup: illustrierte Hügellandschaft mit Kaffeezweig" loading="lazy"><h3>Cherry to Cup</h3><p>Von der Kirsche bis zum Briefkasten als Reise in Parallax-Kapiteln.</p><span class="exp">Parallax-Scrollytelling</span></a>
+    <a class="card" href="x/roast/"><img src="gallery/x-roast.webp" width="1440" height="900" alt="The Roast: eine grüne Kaffeebohne mit Röstzeit und Temperatur" loading="lazy"><h3>The Roast</h3><p>Eine Bohne röstet Bild für Bild beim Scrollen, mit Zeit und Temperatur.</p><span class="exp">Scroll-Sequenz</span></a>
+    <a class="card" href="x/playground/"><img src="gallery/x-playground.webp" width="1440" height="900" alt="Bean Box: Überschrift aus Kästen, Kaffeebohnen fallen in einen Trichter" loading="lazy"><h3>Bean Box</h3><p>Wörter und Bohnen mit Masse: werfen, stapeln, in den Trichter füllen.</p><span class="exp">Physik-Spielplatz</span></a>
+    <a class="card" href="x/os/"><img src="gallery/x-os.webp" width="1440" height="900" alt="Tidewater OS: Pixel-Desktop mit Fenstern und Röstvideo" loading="lazy"><h3>Tidewater OS</h3><p>Die Rösterei als Betriebssystem mit Fenstern, Dateien und Papierkorb.</p><span class="exp">OS-Desktop</span></a>
+    <a class="card" href="x/crema/"><img src="gallery/x-crema.webp" width="1440" height="900" alt="Crema: Tasse Kaffee von oben, Schriftzug Tidewater" loading="lazy"><h3>Crema</h3><p>Eine simulierte Crema als Seitengrund, die man mit der Maus umrührt.</p><span class="exp">WebGL-Flüssigkeit</span></a>
+    <a class="card" href="x/issue/"><img src="gallery/x-issue.webp" width="1440" height="900" alt="Issue 041: Magazin-Cover mit Inhaltsverzeichnis und Video" loading="lazy"><h3>Issue 041</h3><p>Ein Magazinheft, durch das man seitwärts blättert.</p><span class="exp">Horizontales Magazin</span></a>
+  </div>
+
+  <section class="js" aria-labelledby="js-h">
+    <div>
+      <h2 id="js-h">Und angewendet: jurasongs.de</h2>
+      <p>Sechs vollständige Varianten der echten Website (Reel-Feed, Karaoke-Bühne, Großkommentar, Plattenkiste, Examens-Weltkarte, Radio-Skala) liegen im Mobot-Repo unter <code>jurasongs/variants/</code>. Ansehen über den Mobot-Hub oder mit <code>python3 jurasongs/variants/tools/serve.py</code>.</p>
+    </div>
+  </section>
+</main>
+<footer class="wrap">Tidewater Roasters ist eine fiktive Rösterei. Alle Bilder und Videos sind im Code erzeugt, die Schriften stammen von Google Fonts.</footer>
+</body>
+</html>

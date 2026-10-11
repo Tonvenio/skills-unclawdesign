@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tidewater Issue 041</title>
+<meta name="description" content="Tidewater Roasters, Issue 041, October 2026: a magazine issue you turn sideways. Two small-lot coffees from Kiambu, Kenya and Huila, Colombia.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:ital,wdth,wght@0,50..150,100..900;1,50..150,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="../../vendor/lenis.css">
+<style>
+/* ── Issue 041 · riso-zine × wada-250 × Anybody/Newsreader ─────────────────────────── */
+:root {
+  --font-body: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-ui: 'Anybody', system-ui, sans-serif;
+  /* tones for media: JS swaps these when a palette has a dark ground */
+  --tone-dark: var(--c-text);
+  --tone-light: var(--c-bg);
+  --overprint: multiply;
+  --ink-on-dark: var(--c-accent);   /* JS swaps in a contrasting accent when a palette's accent is dark */
+  --mid-1: var(--c-accent); --mid-2: var(--c-accent-2); --mid-3: var(--c-accent-3);
+  --gut: clamp(16px, 2.6vw, 44px);
+  --rh: 3.4rem;               /* running-head zone */
+  --foot: 4.75rem;            /* folio + scrubber zone */
+  --rule: var(--border-w) dashed color-mix(in oklch, currentColor 45%, transparent);
+  --body-size: calc(var(--step-0) * 1.125);
+  /* poster scale: display sizes beyond --step-6, one family of clamps */
+  --poster-xl: clamp(4rem, 19.4vw, 30rem);
+  --poster-l: clamp(3.4rem, 12vw, 12.5rem);
+  --poster-m: clamp(3rem, 8.2vw, 8.4rem);
+  --poster-v: clamp(3.4rem, 15vh, 11rem);
+}
+html { background: var(--c-bg); }
+body { font-family: var(--font-body); font-size: var(--body-size); font-optical-sizing: auto; overflow-x: clip; }
+.ui, .rh, .folio, .scrub, .btn, legend, .lot, .cap, .meta-line { font-family: var(--font-ui); }
+h1, h2, h3 { font-family: var(--font-display); }
+p { hanging-punctuation: first; }
+.sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skip { position: fixed; z-index: 90; left: 12px; top: 12px; transform: translateY(-200%); background: var(--c-text); color: var(--c-bg); padding: .6em 1em; font: 700 var(--step-m1)/1 var(--font-ui); border-radius: var(--r-control); text-decoration: none; }
+.skip:focus-visible { transform: none; }
+.defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.fl-dark { flood-color: var(--tone-dark); } .fl-light { flood-color: var(--tone-light); }
+.fl-a1 { flood-color: var(--mid-1); } .fl-a2 { flood-color: var(--mid-2); } .fl-a3 { flood-color: var(--mid-3); }
+
+/* tinted plates: grayscale files, token inks via SVG gradient-map filters */
+.plate { position: relative; margin: 0; overflow: hidden; background: var(--tone-dark); }
+.plate img { width: 100%; height: 100%; object-fit: cover; }
+.ink-1 { filter: url(#ink-a1); } .ink-2 { filter: url(#ink-a2); } .ink-3 { filter: url(#ink-a3); }
+
+/* running heads + folios (print furniture) */
+.page { position: relative; }
+.spread { overflow-x: clip; }
+.rh { position: absolute; z-index: 3; top: 0; left: var(--gut); right: var(--gut); height: var(--rh); display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  font-size: var(--step-m1); font-variation-settings: "wdth" 80; font-weight: 600; border-bottom: var(--rule); }
+.rh b { font-weight: 900; font-variation-settings: "wdth" 130; }
+.folio { position: absolute; z-index: 3; bottom: 4.1rem; font-weight: 800; font-variation-settings: "wdth" 60; font-size: var(--step-1); line-height: 1; font-variant-numeric: tabular-nums; }
+.folio--l { left: var(--gut); } .folio--r { right: var(--gut); }
+/* binding: the soft fold where two pages meet */
+.fold-r::after, .fold-l::before { content: ""; position: absolute; top: 0; bottom: 0; width: 7%; pointer-events: none; z-index: 2; }
+.fold-r::after { right: 0; background: linear-gradient(to left, color-mix(in oklch, var(--c-text) 13%, transparent), transparent); }
+.fold-l::before { left: 0; background: linear-gradient(to right, color-mix(in oklch, var(--c-text) 9%, transparent), transparent); }
+
+/* registration: a second ink printed slightly off, which comes into register as a spread arrives */
+.reg { font-kerning: none; position: relative; isolation: isolate; --rx: .045em; --ry: .03em; }
+.reg::before { content: attr(data-ink) / ""; position: absolute; inset: 0; z-index: -1; color: var(--ink2, var(--c-accent)); transform: translate(var(--rx), var(--ry)); mix-blend-mode: var(--overprint); pointer-events: none; }
+
+/* stamp motif */
+.stamp { width: var(--size, 11rem); height: auto; color: var(--stamp, var(--c-accent-text)); rotate: var(--rot, -12deg); overflow: visible; }
+.stamp text { font-family: var(--font-ui); fill: currentColor; }
+.stamp .s-ring { font-weight: 800; font-variation-settings: "wdth" 70; letter-spacing: .02em; }
+.stamp .s-big { font-weight: 900; font-variation-settings: "wdth" 120; }
+.stamp .s-sub { font-weight: 700; font-variation-settings: "wdth" 90; }
+
+/* buttons and links */
+a { color: inherit; }
+a:hover { text-decoration-thickness: .14em; }
+:focus-visible { outline: 3px solid var(--c-focus); outline-offset: 3px; }
+.on-dark :focus-visible, .on-accent :focus-visible { outline-color: currentColor; }
+.btn { font: 800 var(--step-0)/1 var(--font-ui); font-variation-settings: "wdth" 110; padding: 1em 1.5em; border: 3px solid var(--c-accent-ink); box-shadow: 4px 4px 0 var(--c-accent-ink); min-height: 48px; }
+.btn:hover { background: var(--c-accent-hover); box-shadow: 6px 6px 0 var(--c-accent-ink); transform: translate(-2px, -2px); }
+.btn:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--c-accent-ink); }
+.btn svg { width: 1.3em; height: 1.3em; flex: none; }
+.ctl { appearance: none; display: inline-flex; align-items: center; gap: .55em; min-height: 44px; padding: .5em 1em .5em .6em; border-radius: var(--r-control); cursor: pointer;
+  font: 700 var(--step-m1)/1 var(--font-ui); font-variation-settings: "wdth" 85; color: var(--tone-light); background: color-mix(in oklch, var(--tone-dark) 72%, transparent); border: 1.5px solid color-mix(in oklch, var(--tone-light) 60%, transparent); }
+.ctl:hover { background: var(--tone-dark); border-color: var(--tone-light); }
+.ctl svg { width: 1.6em; height: 1.6em; }
+.ctl .i-play { display: none; } .ctl[data-state="paused"] .i-play { display: block; } .ctl[data-state="paused"] .i-pause { display: none; }
+
+/* ═════════════ SPREAD 1 · COVER ═════════════ */
+.cover { color: var(--tone-light); background: var(--tone-dark); overflow: hidden; }
+.cover__media, .cover__media > * { position: absolute; inset: 0; width: 100%; height: 100%; }
+.cover__media video, .cover__media img { object-fit: cover; object-position: 50% 50%; filter: url(#ink-cover); }
+.cover__media canvas { display: none; }
+.has-gl .cover__media canvas { display: block; }
+.has-gl .cover__media video, .has-gl .cover__media img { opacity: 0; }
+.cover__scrim { position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(100deg, color-mix(in oklch, var(--tone-dark) 82%, transparent) 0 26%, transparent 52%),
+              linear-gradient(to top, color-mix(in oklch, var(--tone-dark) 70%, transparent), transparent 34%); }
+.cover__inner { position: relative; z-index: 2; height: 100%; display: grid; grid-template-rows: auto 1fr auto; padding: 0 var(--gut) var(--foot); }
+.issue-line { display: flex; justify-content: space-between; align-items: center; gap: 1rem; height: var(--rh); border-bottom: 1.5px solid color-mix(in oklch, var(--tone-light) 50%, transparent);
+  font: 700 var(--step-m1)/1 var(--font-ui); font-variation-settings: "wdth" 85; }
+.issue-line .home { text-decoration: none; border: 1.5px solid currentColor; padding: .45em .8em; border-radius: var(--r-control); }
+.issue-line .home:hover { background: var(--tone-light); color: var(--tone-dark); }
+.cover__col { align-self: center; display: grid; gap: clamp(1.2rem, 3.4vh, 2.4rem); justify-items: start; }
+.cover-lines { list-style: none; margin: 0; padding: 0; display: grid; gap: clamp(1rem, 3.2vh, 2.2rem); max-width: 30rem; }
+.cover-lines a { display: block; text-decoration: none; }
+.cover-lines .cl-t { display: block; font: 800 var(--step-2)/.95 var(--font-ui); font-variation-settings: "wdth" 72; text-transform: uppercase; text-wrap: balance; }
+.cover-lines .cl-d { display: block; margin-top: .35em; font-style: italic; font-size: var(--step-0); max-width: 30ch; color: color-mix(in oklch, var(--tone-light) 88%, var(--tone-dark)); }
+.cover-lines .cl-p { font: 800 var(--step-m1)/1 var(--font-ui); font-style: normal; font-variant-numeric: tabular-nums; margin-left: .3em; color: var(--ink-on-dark); white-space: nowrap; }
+.cover-lines a:hover .cl-t, .cover-lines a:focus-visible .cl-t { text-decoration: underline; text-decoration-thickness: .08em; text-underline-offset: .12em; }
+.masthead { font-size: var(--poster-xl); line-height: .78; letter-spacing: -.01em; margin: 0 0 0 -.03em; white-space: nowrap; font-variation-settings: "wdth" 150; font-weight: 900; color: var(--tone-light); --ink2: var(--ink-on-dark); --rx: .025em; --ry: .02em; }
+.masthead .ch { display: inline-block; }
+.cover__stamp { position: absolute; z-index: 2; left: 36%; top: 47%; --size: clamp(7rem, 12vw, 12.5rem); --stamp: var(--ink-on-dark); --rot: -14deg; }
+.cover__cta { display: flex; align-items: center; gap: 1rem; }
+.cover__cta .price { font: 700 var(--step-m1)/1.3 var(--font-ui); font-variation-settings: "wdth" 85; margin: 0; }
+.issue-line > span:nth-child(2) { margin-right: auto; }
+.ctl--sm { min-height: 36px; padding: .3em .8em .3em .4em; }
+.cover__inner { width: 100%; }
+.turn { margin: 0;  font: 700 var(--step-m1)/1 var(--font-ui); font-variation-settings: "wdth" 85; display: flex; align-items: center; gap: .5em; }
+.turn svg { width: 2.4em; height: 1em; }
+
+/* ═════════════ SPREAD 2 · CONTENTS ═════════════ */
+.contents { background: var(--c-bg); }
+.toc-page { padding: calc(var(--rh) + 2rem) var(--gut) calc(var(--foot) + 1rem); }
+.toc-title { font-size: var(--poster-l); font-variation-settings: "wdth" 50; line-height: .8; margin-bottom: 1.2rem; }
+.toc { list-style: none; margin: 0; padding: 0; border-top: var(--rule); }
+.toc li { border-bottom: var(--rule); max-width: none; }
+.toc a { display: grid; grid-template-columns: 4.2rem 1fr; gap: .2rem 1rem; padding: .9rem 0; text-decoration: none; align-items: baseline; transition: transform var(--dur) var(--ease); }
+.toc .n { grid-row: span 2; font: 900 var(--step-3)/.8 var(--font-ui); font-variation-settings: "wdth" 50; color: var(--c-accent-text); font-variant-numeric: tabular-nums; }
+.toc .t { font: 800 var(--step-1)/1 var(--font-ui); font-variation-settings: "wdth" 85; text-transform: uppercase; }
+.toc .d { font-style: italic; color: var(--c-text-muted); font-size: var(--step-0); }
+.toc a:hover, .toc a:focus-visible { transform: translateX(.75rem); }
+.toc a:hover .t, .toc a:focus-visible .t { color: var(--c-accent-text); }
+.note-page { padding: calc(var(--rh) + 2rem) var(--gut) calc(var(--foot) + 1rem); display: grid; gap: 1.4rem; align-content: start; }
+.thumb { aspect-ratio: 16 / 10; width: 100%; }
+.thumb img { transition: opacity var(--dur-slow) ease, scale var(--dur-slow) ease; }
+.thumb img[data-k]:not(.on) { opacity: 0; scale: 1.06; }
+.thumb img[data-k] { position: absolute; inset: 0; }
+.letter { font-size: var(--step-1); line-height: 1.3; font-weight: 350; max-width: 34ch; margin: 0; text-wrap: pretty; }
+.letter em { font-weight: 450; }
+.colophon { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 1.5rem; margin: 0; border-top: 3px solid var(--c-text); }
+.colophon div { border-bottom: var(--rule); padding: .55rem 0; }
+.colophon dt { font: 700 var(--step-m1)/1.2 var(--font-ui); font-variation-settings: "wdth" 85; color: var(--c-text-muted); }
+.colophon dd { margin: .15rem 0 0; font: 800 var(--step-0)/1.25 var(--font-ui); font-variation-settings: "wdth" 95; font-variant-numeric: tabular-nums; }
+
+/* ═════════════ SPREAD 3 · KIAMBU ═════════════ */
+.k-open { color: var(--tone-light); background: var(--tone-dark); overflow: hidden; }
+.k-open .plate { position: absolute; inset: 0; }
+.k-open .plate img { object-position: 50% 62%; }
+.k-open::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to top, color-mix(in oklch, var(--tone-dark) 86%, transparent) 4%, transparent 58%); }
+.k-open .rh { border-color: color-mix(in oklch, var(--tone-light) 50%, transparent); }
+.k-open__copy { position: absolute; z-index: 3; left: var(--gut); right: var(--gut); bottom: calc(var(--foot) + .5rem); display: grid; gap: 1rem; }
+.lot { display: flex; flex-wrap: wrap; gap: .4rem .6rem; font: 700 var(--step-m1)/1 var(--font-ui); font-variation-settings: "wdth" 85; }
+.lot span { border: 1.5px solid currentColor; border-radius: var(--r-control); padding: .45em .8em; }
+.on-dark .lot span { background: color-mix(in oklch, var(--tone-dark) 78%, transparent); }
+.lot span:first-child { background: var(--c-accent); color: var(--c-accent-ink); border-color: var(--c-accent); }
+.feat-title { font-size: var(--poster-l); line-height: .82; font-variation-settings: "wdth" 112; --ink2: var(--ink-on-dark); max-width: 15ch; }
+.k-text { background: var(--c-surface); }
+.k-text__inner { padding: calc(var(--rh) + 2.2rem) clamp(var(--gut), 5vw, 5.5rem) calc(var(--foot) + 1rem); }
+.standfirst { font-size: var(--step-1); line-height: 1.22; font-style: italic; font-weight: 340; margin: 0 0 1.4rem; max-width: 30ch; }
+.body p { margin: 0 0 .95em; max-width: 58ch; }
+.k-text .body p:first-child::first-letter { initial-letter: 3; -webkit-initial-letter: 3; font-family: var(--font-ui); font-weight: 900; font-variation-settings: "wdth" 150; color: var(--c-accent-text); margin-right: .12em; }
+@supports not (initial-letter: 3) { @supports not (-webkit-initial-letter: 3) {
+  .k-text .body p:first-child::first-letter { float: left; font-size: 3.6em; line-height: .82; padding: .05em .1em 0 0; } } }
+.pull { margin: 0 0 2rem; padding: 0; font-family: var(--font-body); font-style: italic; font-weight: 300; font-size: var(--step-3); line-height: 1.02; letter-spacing: -.01em; max-width: 16ch; text-wrap: balance; position: relative; }
+.pull::before { content: "\201C"; position: absolute; left: -.5em; top: -.05em; color: var(--c-accent-text); font-style: normal; font-weight: 700; }
+.pull mark { background: linear-gradient(var(--c-accent-soft), var(--c-accent-soft)) 0 88% / var(--hl, 100%) .38em no-repeat; color: inherit; }
+.facts > div { display: contents; }
+.facts { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 0; border-top: 3px solid currentColor; max-width: 30rem; }
+.facts dt, .facts dd { border-bottom: var(--rule); padding: .55rem 0; margin: 0; }
+.facts dt { font: 700 var(--step-m1)/1.3 var(--font-ui); font-variation-settings: "wdth" 85; padding-right: 1.4rem; color: var(--c-text-muted); }
+.facts dd { font: 800 var(--step-0)/1.3 var(--font-ui); font-variation-settings: "wdth" 95; }
+.facts .notes dd { font-family: var(--font-body); font-style: italic; font-weight: 500; font-size: var(--step-1); line-height: 1.1; }
+.k-c__stamp { --size: clamp(6.5rem, 9vw, 9.5rem); --rot: 11deg; margin-top: 1.4rem; }
+
+/* ═════════════ SPREAD 4 · HUILA ═════════════ */
+.huila { background: var(--c-bg); }
+.h-a__inner { padding: calc(var(--rh) + 2.2rem) clamp(var(--gut), 4vw, 4.5rem) calc(var(--foot) + 1rem); }
+.h-title { font-size: var(--poster-m); line-height: .8; font-variation-settings: "wdth" 56; --ink2: var(--c-accent-3); margin-bottom: 1.4rem; }
+.h-a .lot { margin-bottom: 1.4rem; }
+.h-a .lot span:first-child { background: var(--c-accent-3); color: var(--c-accent-3-ink); border-color: var(--c-accent-3); }
+.fig { margin: 0; }
+.fig .plate { width: 100%; }
+.cap { font-size: var(--step-m1); font-weight: 600; font-variation-settings: "wdth" 85; line-height: 1.35; margin-top: .55rem; max-width: 34ch; }
+.cap b { font-weight: 900; color: var(--c-accent-text); margin-right: .3em; }
+.f-beds .plate { aspect-ratio: 16 / 10; } .f-cloth .plate { aspect-ratio: 3 / 4; } .f-honey .plate { aspect-ratio: 1; } .f-rake .plate { aspect-ratio: 20 / 9; }
+.h-c__card { background: var(--c-surface); padding: 1.4rem; border: 1.5px solid var(--c-border-strong); box-shadow: 8px 8px 0 var(--c-accent-3); position: relative; max-width: 30rem; }
+.h-c__card .stamp { position: absolute; right: -2.6rem; bottom: -2.4rem; --size: 7.5rem; --rot: 9deg; --stamp: var(--c-text); }
+.ruler { --p: 0; position: relative; height: 3.2rem; color: var(--tone-light); }
+.ruler__bar { position: absolute; left: 0; right: 0; top: 1.1rem; height: 4px; background: color-mix(in oklch, currentColor 35%, transparent); }
+.ruler__bar i { position: absolute; inset: 0; background: currentColor; transform-origin: left; transform: scaleX(var(--p)); }
+.ruler__ticks { position: absolute; left: 0; right: 0; top: .6rem; height: 1.2rem; background: repeating-linear-gradient(to right, currentColor 0 2px, transparent 2px calc(100% / 14)); -webkit-mask: linear-gradient(#000, #000); }
+.ruler__lab { position: absolute; top: 2rem; font: 800 var(--step-m1)/1 var(--font-ui); font-variation-settings: "wdth" 85; }
+.ruler__lab:last-child { right: 0; }
+
+/* ═════════════ SPREAD 5 · BREW (gatefold) ═════════════ */
+.brew { background: var(--c-accent); color: var(--c-accent-ink); overflow: hidden; }
+.brew .rh { border-color: color-mix(in oklch, var(--c-accent-ink) 45%, transparent); }
+.brew__head { padding: calc(var(--rh) + 1.6rem) var(--gut) 0; max-width: 34rem; position: relative; z-index: 2; }
+.brew__head h2 { font-size: var(--step-3); font-variation-settings: "wdth" 70; line-height: .9; margin-bottom: .8rem; }
+.brew__head p { margin: 0 0 .6rem; max-width: 38ch; }
+.methods { list-style: none; margin: 0; padding: 0; }
+.methods li { max-width: none; }
+.m-word { display: inline-block; font-family: var(--font-display); font-weight: 900; text-transform: uppercase; white-space: nowrap; line-height: .8; letter-spacing: -.01em;
+  font-size: var(--poster-v); font-variation-settings: "wdth" var(--wd, 100), "wght" var(--wt, 900); contain: layout style; }
+.m-grind { display: flex; align-items: center; gap: .6rem; margin-top: .5rem; font: 700 var(--step-m1)/1.2 var(--font-ui); font-variation-settings: "wdth" 85; }
+.grind { width: 2.2rem; height: 2.2rem; border-radius: 50%; border: 1.5px solid currentColor; background: radial-gradient(currentColor var(--g, 1.4px), transparent calc(var(--g, 1.4px) + .5px)) 0 0 / var(--gs, 6px) var(--gs, 6px); }
+.band { position: relative; z-index: 3; background: var(--tone-dark); color: var(--tone-light); rotate: -2.2deg; margin-inline: -4vw; padding: .9rem 0; overflow: hidden; display: flex; align-items: center; }
+.band__track { display: flex; width: max-content; will-change: transform; }
+.band__track span { display: inline-flex; align-items: center; gap: 1.6rem; padding-right: 1.6rem; white-space: nowrap; font: 900 var(--step-2)/1 var(--font-ui); font-variation-settings: "wdth" 70; text-transform: uppercase; }
+.band__track svg { width: .8em; height: .8em; color: var(--ink-on-dark); flex: none; }
+.band__ctl { position: absolute; right: var(--gut); z-index: 4; background: var(--tone-dark); box-shadow: 0 0 0 .6rem var(--tone-dark); }
+.band-wrap { position: relative; }
+.is-h .brew .folio { display: none; }
+
+/* ═════════════ SPREAD 6 · BACK COVER ═════════════ */
+.back { background: var(--c-accent-3); color: var(--c-accent-3-ink); overflow: hidden; }
+.back .rh { border-color: color-mix(in oklch, var(--c-accent-3-ink) 45%, transparent); }
+.back__poster { padding: calc(var(--rh) + 1.8rem) var(--gut) 0; position: relative; z-index: 1; }
+.back__poster h2 { font-size: var(--step-2); font-variation-settings: "wdth" 80; line-height: 1; margin-bottom: 1.2rem; max-width: 22ch; }
+.plan { border-top: 4px solid currentColor; padding-top: .6rem; margin-bottom: 1.4rem; display: grid; grid-template-columns: auto 1fr; align-items: end; gap: 0 1.2rem; }
+.plan h3 { font-size: var(--step-3); font-variation-settings: "wdth" 60; line-height: .85; }
+.plan .eur { font-family: var(--font-display); font-weight: 900; font-variation-settings: "wdth" 150; font-size: var(--poster-l); line-height: .78; letter-spacing: -.02em; justify-self: end; margin: 0; font-variant-numeric: tabular-nums; }
+.plan .eur small { font-size: var(--step-1); font-weight: 800; font-variation-settings: "wdth" 80; letter-spacing: 0; color: inherit; margin-left: .2em; }
+.plan p:not(.eur) { grid-column: 1 / -1; margin: .5rem 0 0; font-style: italic; max-width: 44ch; font-size: var(--step-1); line-height: 1.15; }
+.poster-line { font: 800 var(--step-1)/1.1 var(--font-ui); font-variation-settings: "wdth" 75; text-transform: uppercase; max-width: 30ch; margin: 1.6rem 0 0; }
+.coupon { position: relative; background: var(--c-bg); color: var(--c-text); padding: 1.4rem 1.4rem 1.2rem; border: 3px dashed var(--c-text); max-width: 31rem; }
+.coupon .scissors { position: absolute; top: -.95rem; left: 1.6rem; width: 1.8rem; height: 1.8rem; background: var(--c-accent-3); color: var(--c-accent-3-ink); padding: .1rem; }
+.coupon h3 { font-size: var(--step-2); font-variation-settings: "wdth" 80; margin-bottom: .8rem; line-height: 1; }
+.coupon fieldset { border: 0; margin: 0 0 .9rem; padding: 0; }
+.coupon legend { font: 800 var(--step-m1)/1 var(--font-ui); font-variation-settings: "wdth" 85; margin-bottom: .45rem; padding: 0; }
+.opts { display: flex; flex-wrap: wrap; gap: .4rem; }
+.opt { position: relative; }
+.opt input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.opt span { display: inline-flex; align-items: center; min-height: 44px; padding: .5em .95em; border: 2px solid var(--c-text); border-radius: var(--r-control); font: 700 var(--step-m1)/1.15 var(--font-ui); font-variation-settings: "wdth" 88; cursor: pointer; transition: background-color var(--dur-fast), color var(--dur-fast); }
+.opt span b { font-weight: 900; margin-left: .35em; font-variant-numeric: tabular-nums; }
+.opt input:hover + span { background: var(--c-accent-soft); }
+.opt input:checked + span { background: var(--c-text); color: var(--c-bg); }
+.opt input:focus-visible + span { outline: 3px solid var(--c-focus); outline-offset: 3px; }
+.coupon .btn { width: 100%; justify-content: center; margin-top: .3rem; }
+.fine { font-size: var(--step-m1); font-family: var(--font-ui); font-variation-settings: "wdth" 88; font-weight: 600; margin: .8rem 0 0; color: var(--c-text-muted); max-width: 44ch; }
+.result { margin: .8rem 0 0; font-size: var(--step-0); font-style: italic; }
+.result:empty { display: none; }
+.coupon__stamp { position: absolute; right: -1.6rem; bottom: -2.6rem; --size: 8.6rem; --rot: -16deg; --stamp: var(--c-accent-text); pointer-events: none; opacity: 0; }
+.coupon__stamp.is-on { opacity: 1; }
+.colo-foot { position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: .6rem 1.4rem; align-items: center; font: 600 var(--step-m1)/1.35 var(--font-ui); font-variation-settings: "wdth" 88; }
+.colo-foot p { margin: 0; max-width: 60ch; }
+.colo-foot a { font-weight: 800; }
+
+/* ═════════════ fixed chrome: issue scrubber ═════════════ */
+.scrub { position: fixed; z-index: 50; left: 152px; right: 14px; bottom: 12px; display: none; background: var(--c-text); color: var(--c-bg); border-radius: 22px; padding: 4px 6px 4px 6px; box-shadow: 0 10px 30px -14px color-mix(in oklch, var(--c-text) 60%, transparent); }
+.scrub ol { list-style: none; margin: 0; padding: 0; display: flex; gap: 2px; }
+.scrub li { flex: var(--w) 1 0; min-width: 0; max-width: none; }
+.scrub a { display: flex; align-items: center; gap: .5em; height: 36px; padding: 0 .7em; border-radius: 17px; text-decoration: none; font: 700 var(--step-m1)/1 var(--font-ui); font-variation-settings: "wdth" 80; white-space: nowrap; overflow: hidden; }
+.scrub a b { font-weight: 900; font-variant-numeric: tabular-nums; min-width: 1.4em; }
+.scrub a span { overflow: hidden; text-overflow: ellipsis; }
+.scrub a:hover { background: color-mix(in oklch, var(--c-bg) 16%, transparent); }
+.scrub a[aria-current="true"] { background: var(--c-bg); color: var(--c-text); }
+.scrub a:focus-visible { outline: 2px solid var(--c-bg); outline-offset: 2px; }
+.scrub__bar { position: absolute; left: 22px; right: 22px; top: -7px; height: 3px; border-radius: 3px; background: color-mix(in oklch, var(--c-text) 25%, transparent); pointer-events: none; }
+.scrub__bar i { position: absolute; inset: 0; background: var(--c-accent); transform-origin: left; transform: scaleX(var(--p, 0)); border-radius: inherit; }
+.m-jump { position: fixed; z-index: 50; right: 12px; bottom: 12px; display: none; text-decoration: none; }
+
+/* ═════════════ VERTICAL PAGES (mobile, reduced motion, no JS) ═════════════ */
+.page { min-height: 100svh; }
+.cover { height: 100svh; min-height: 34rem; }
+.k-open { height: 100svh; min-height: 34rem; }
+.h-b, .h-c { padding: calc(var(--rh) + 1.6rem) var(--gut) calc(var(--foot) + 1rem); display: grid; gap: 1.6rem; align-content: start; }
+.h-d { background: var(--tone-dark); color: var(--tone-light); }
+.h-d .rh { border-color: color-mix(in oklch, var(--tone-light) 45%, transparent); }
+.h-d .cap b { color: var(--ink-on-dark); }
+.brew { padding-bottom: calc(var(--foot) + 1rem); }
+.methods { padding: 2rem var(--gut) 1.5rem; display: grid; gap: 1.6rem; }
+.back__poster { padding-bottom: 2rem; }
+.back__coupon { padding: 2rem var(--gut) calc(var(--foot) + 1rem); display: grid; gap: 2.4rem; align-content: start; }
+
+@media (max-width: 899px) {
+  html:not(.no-snap) { scroll-snap-type: y mandatory; }
+  .page { scroll-snap-align: start; }
+  .back__coupon { scroll-snap-align: start; }
+  .k-text .rh, .note-page .rh { position: relative; left: 0; right: 0; margin: 0 var(--gut); }
+  .m-jump { display: inline-flex; }
+  .cover { display: flex; flex-direction: column; }
+  .cover__inner { grid-template-rows: auto auto 1fr auto; padding-bottom: .4rem; flex: 1; height: auto; min-height: 0; }
+  .masthead { margin-top: .9rem; order: -1; }
+  .cover__inner > .issue-line { order: -2; }
+  .cover__col { align-self: end; gap: 1rem; margin-bottom: 4.4rem; }
+  .cover-lines { gap: .9rem; }
+  .cover-lines .cl-t { font-size: var(--step-1); }
+  .cover-lines .cl-d { font-size: var(--step-m1); }
+  .cover__scrim { background: linear-gradient(to bottom, color-mix(in oklch, var(--tone-dark) 76%, transparent) 0 22%, transparent 42%, color-mix(in oklch, var(--tone-dark) 84%, transparent) 70%); }
+  .cover__media video, .cover__media img { object-position: 70% 40%; }
+  .cover__stamp { left: auto; right: 5%; top: 30%; --size: 6.2rem; --stamp: var(--tone-light); }
+  .cover__cta .price { text-align: left; }
+  .issue-line .home, .turn { display: none; }
+  .issue-line > span:nth-child(2) { margin-right: 0; }
+  .k-open .plate img { object-position: 30% 60%; }
+  :root { --poster-l: 15.5vw; --poster-v: clamp(2.6rem, 15.5vw, 5rem); }
+  .folio { bottom: 1rem; }
+  .page .folio--l + .folio--r { display: none; }
+  .scrub { display: none !important; }
+  .fold-r::after, .fold-l::before { display: none; }
+  .band__track span { font-size: var(--step-1); }
+  .band-wrap { display: flex; flex-direction: column; }
+  .band__ctl { position: relative; display: flex; width: max-content; order: -1; margin: 0 var(--gut) 1.4rem auto; }
+  .brew { padding-bottom: 6rem; }
+  .colophon { grid-template-columns: 1fr 1fr; }
+  .h-c__card .stamp { right: -.6rem; bottom: -3rem; --size: 6rem; }
+  .coupon__stamp { right: -.4rem; --size: 7rem; }
+  .h-d .ruler { bottom: 3.6rem; }
+  .h-c { padding-bottom: 5rem; }
+}
+
+/* desktop flat plan (reduced motion or no JS): spreads side by side, stacked down the page */
+@media (min-width: 900px) {
+  .spread:not(.cover):not(.back):not(.brew) { display: grid; grid-template-columns: 1fr 1fr; }
+  .spread > .page--wide { grid-column: 1 / -1; }
+  .h-b, .h-c, .h-d { min-height: 100svh; }
+  .back { display: grid; grid-template-columns: 1.2fr 1fr; min-height: 100svh; }
+  .back__coupon { padding-top: calc(var(--rh) + 1.8rem); }
+  .brew { display: grid; grid-template-columns: 1fr; }
+}
+
+/* ═════════════ HORIZONTAL ISSUE (desktop, motion allowed; class set by issue.js) ═════════════ */
+.is-h body { overflow: hidden auto; }
+.is-h .scrub { display: block; }
+.is-h .issue { height: 100svh; overflow: clip; }
+.is-h .track { display: flex; height: 100svh; width: max-content; will-change: transform; }
+.is-h .spread { display: flex !important; height: 100%; flex: none; position: relative; }
+.is-h .page { height: 100%; min-height: 0; flex: none; width: 50vw; overflow: clip; }
+.is-h .page--wide { width: 100vw; }
+.is-h .cover, .is-h .back { width: 100vw; }
+.is-h .k-open { width: 100vw; }
+/* contents */
+.is-h .toc-page { display: flex; flex-direction: column; justify-content: flex-end; }
+.is-h .note-page { padding-left: clamp(2rem, 4vw, 4.5rem); grid-template-rows: minmax(0, 1fr) auto auto; }
+.is-h .thumb { aspect-ratio: auto; height: 100%; }
+/* kiambu */
+.is-h .k-b .k-text__inner { padding-top: calc(var(--rh) + 3rem); }
+.is-h .k-c .k-text__inner { display: flex; flex-direction: column; justify-content: center; height: 100%; padding-top: var(--rh); }
+/* huila: broken grid across four pages */
+.is-h .huila .page { overflow: visible; }
+.is-h .h-a { z-index: 1; }
+.is-h .h-b, .is-h .h-c, .is-h .h-d { display: block; padding: 0; }
+.is-h .f-beds { position: absolute; z-index: 2; left: 4vw; top: 15vh; width: 42vw; }
+.is-h .f-cloth { position: absolute; z-index: 3; left: 36vw; top: 42vh; width: 21vw; }
+.is-h .f-cloth .plate { aspect-ratio: auto; height: 46vh; }
+.is-h .f-cloth .cap { position: absolute; right: calc(100% + 1.2rem); bottom: 0; width: 14vw; text-align: right; }
+.is-h .f-honey { position: absolute; z-index: 2; left: 14vw; top: 11vh; width: 26vw; }
+.is-h .f-honey .plate { aspect-ratio: auto; height: 42vh; }
+.is-h .h-c__card { position: absolute; z-index: 4; left: 9vw; top: 62vh; width: 30vw; }
+.is-h .h-c__card .facts dt, .is-h .h-c__card .facts dd { padding: .4rem 0; }
+.h-d .f-rake { position: absolute; inset: 0; }
+.h-d .f-rake .plate { position: absolute; inset: 0; aspect-ratio: auto; }
+.h-d .f-rake .cap { position: absolute; z-index: 3; left: var(--gut); top: calc(var(--rh) + 1.5rem); background: var(--tone-dark); color: var(--tone-light); padding: .5rem .7rem; margin: 0; }
+.h-d .ruler { position: absolute; z-index: 3; left: var(--gut); right: var(--gut); bottom: calc(var(--foot) + 3.4rem); }
+/* brew gatefold */
+.is-h .brew { width: 150vw; display: block !important; }
+.is-h .brew__head { position: absolute; left: 0; top: 0; width: 30vw; }
+.is-h .methods { position: absolute; inset: 0; padding: 0; display: block; }
+.is-h .methods li { position: absolute; left: var(--x); top: var(--y); }
+.is-h .band-wrap { position: absolute; left: 0; right: 0; bottom: calc(var(--foot) + .6rem); }
+.is-h .band__ctl { top: 50%; transform: translateY(-50%); right: auto; left: calc(75vw - 4.5rem); }
+/* back cover */
+.is-h .back { display: grid !important; grid-template-columns: 56fr 44fr; }
+.is-h .back__poster { padding-right: 0; }
+.is-h .back__coupon { padding: calc(var(--rh) + 1.8rem) var(--gut) calc(var(--foot) + .6rem); grid-template-rows: 1fr auto; }
+.is-h .coupon { align-self: center; }
+
+@media (prefers-reduced-motion: reduce) {
+  .band__track { transform: none !important; flex-wrap: wrap; width: auto; padding-inline: 5vw; }
+  .band__track span { white-space: normal; flex-wrap: wrap; row-gap: .5rem; }
+  .band__track span[aria-hidden] { display: none; }
+  .band__ctl { display: none; }
+  .toc a:hover, .toc a:focus-visible { transform: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#contents">Skip to contents</a>
+
+<!-- token-driven inks: 3-stop gradient maps (dark → accent → paper). Colours come from CSS, so the palette customizer re-inks every plate live. -->
+<svg class="defs" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="ink-cover" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.4252 1.4304 0.1444 0 0" result="m1"/>
+      <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.4252 1.4304 0.1444 0 -1" result="m2"/>
+      <feFlood class="fl-dark" result="d"/><feFlood class="fl-a1" result="a"/><feFlood class="fl-light" result="l"/>
+      <feComposite in="a" in2="m1" operator="in" result="am"/><feComposite in="l" in2="m2" operator="in" result="lm"/>
+      <feMerge><feMergeNode in="d"/><feMergeNode in="am"/><feMergeNode in="lm"/></feMerge>
+    </filter>
+    <filter id="ink-a1" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.5315 1.788 0.1805 0 -0.15" result="m1"/>
+      <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.5315 1.788 0.1805 0 -1.25" result="m2"/>
+      <feFlood class="fl-dark" result="d"/><feFlood class="fl-a1" result="a"/><feFlood class="fl-light" result="l"/>
+      <feComposite in="a" in2="m1" operator="in" result="am"/><feComposite in="l" in2="m2" operator="in" result="lm"/>
+      <feMerge><feMergeNode in="d"/><feMergeNode in="am"/><feMergeNode in="lm"/></feMerge>
+    </filter>
+    <filter id="ink-a2" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.4252 1.4304 0.1444 0 -0.05" result="m1"/>
+      <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.4252 1.4304 0.1444 0 -1.0" result="m2"/>
+      <feFlood class="fl-dark" result="d"/><feFlood class="fl-a2" result="a"/><feFlood class="fl-light" result="l"/>
+      <feComposite in="a" in2="m1" operator="in" result="am"/><feComposite in="l" in2="m2" operator="in" result="lm"/>
+      <feMerge><feMergeNode in="d"/><feMergeNode in="am"/><feMergeNode in="lm"/></feMerge>
+    </filter>
+    <filter id="ink-a3" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.4252 1.4304 0.1444 0 -0.05" result="m1"/>
+      <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.4252 1.4304 0.1444 0 -1.0" result="m2"/>
+      <feFlood class="fl-dark" result="d"/><feFlood class="fl-a3" result="a"/><feFlood class="fl-light" result="l"/>
+      <feComposite in="a" in2="m1" operator="in" result="am"/><feComposite in="l" in2="m2" operator="in" result="lm"/>
+      <feMerge><feMergeNode in="d"/><feMergeNode in="am"/><feMergeNode in="lm"/></feMerge>
+    </filter>
+    <!-- rubber-stamp ink: speckled, uneven -->
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="41" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -5 0 0 0 3.35" result="m"/>
+      <feComposite in="SourceGraphic" in2="m" operator="in"/>
+    </filter>
+    <symbol id="sep" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="10" cy="10" r="3" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<header class="sr-only">
+  <p>Tidewater Roasters, Issue 041, October 2026. On wide screens, scroll down to turn the pages sideways; use the page list at the bottom or the left and right arrow keys to jump between pages.</p>
+</header>
+
+<a class="ctl m-jump" href="#contents">Contents</a>
+
+<div class="issue" id="issue">
+<main class="track" id="track">
+
+  <!-- ═══ COVER ═══ -->
+  <article class="spread cover page page--wide on-dark" id="cover" data-label="Cover" aria-labelledby="mast">
+    <div class="cover__media" aria-hidden="true">
+      <img src="media/cover-poster.jpg" alt="" width="1280" height="720" class="cover__poster">
+      <video id="coverVideo" muted loop playsinline preload="none" poster="media/cover-poster.jpg" width="1280" height="720">
+        <source src="media/cover.webm" type="video/webm">
+        <source src="media/cover.mp4" type="video/mp4">
+      </video>
+      <canvas id="coverGL" width="1280" height="720"></canvas>
+    </div>
+    <div class="cover__scrim" aria-hidden="true"></div>
+    <svg class="stamp cover__stamp" viewBox="0 0 240 240" aria-hidden="true">
+      <defs><path id="sp-cover" d="M120 120 m-90 0 a90 90 0 1 1 180 0 a90 90 0 1 1 -180 0"/></defs>
+      <g filter="url(#rough)">
+        <circle cx="120" cy="120" r="114" fill="none" stroke="currentColor" stroke-width="7"/>
+        <circle cx="120" cy="120" r="70" fill="none" stroke="currentColor" stroke-width="3"/>
+        <text class="s-ring" font-size="17"><textPath href="#sp-cover" textLength="560" lengthAdjust="spacingAndGlyphs">ROASTED MON 12 OCT 2026 • BATCH 041 • 18 KG •</textPath></text>
+        <text class="s-big" font-size="64" x="120" y="128" text-anchor="middle">041</text>
+        <text class="s-sub" font-size="15" x="120" y="156" text-anchor="middle">SMALL BATCH</text>
+      </g>
+    </svg>
+    <div class="cover__inner">
+      <div class="issue-line">
+        <span>Issue 041</span>
+        <span>October 2026</span>
+      <button class="ctl ctl--sm" type="button" id="videoBtn" aria-controls="coverVideo">
+        <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9.5 7.5v9M14.5 7.5v9" stroke="currentColor" stroke-width="2.4"/></svg>
+        <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 7.8v8.4l6.5-4.2z" fill="currentColor"/></svg>
+        <span class="lab">Pause video</span>
+      </button>
+        <a class="home" href="../../">All showcases</a>
+      </div>
+      <div class="cover__col">
+        <ul class="cover-lines" aria-label="In this issue">
+        <li><a href="#kiambu"><span class="cl-t">The hills north of Nairobi</span><span class="cl-d">Kiambu, Kenya: washed SL28 and SL34 from 1,800&nbsp;m. <span class="cl-p">p.&nbsp;4</span></span></a></li>
+        <li><a href="#huila"><span class="cl-t">Two weeks under shade cloth</span><span class="cl-d">Huila, Colombia: a honey-process Caturra. <span class="cl-p">p.&nbsp;8</span></span></a></li>
+        <li><a href="#brew"><span class="cl-t">Four ways to brew it</span><span class="cl-d">Whole bean, or ground for your pot. <span class="cl-p">p.&nbsp;12</span></span></a></li>
+      </ul>
+        <div class="cover__cta">
+      <a class="btn" href="#subscribe"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z M9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>Choose your first bag</a>
+      <p class="price">One bag €14 a month<br>Two bags €26 a month</p>
+        </div>
+        <p class="turn ui" aria-hidden="true">Scroll to turn the page <svg viewBox="0 0 48 16"><path d="M0 8h44m-7-7 8 7-8 7" fill="none" stroke="currentColor" stroke-width="2.4"/></svg></p>
+      </div>
+      <h1 class="masthead reg" id="mast" data-ink="Tidewater">Tidewater</h1>
+    </div>
+  </article>
+
+  <!-- ═══ CONTENTS (pp. 2–3) ═══ -->
+  <section class="spread contents" id="contents" data-label="Contents" aria-labelledby="toc-h">
+    <div class="page toc-page fold-r">
+      <div class="rh" aria-hidden="true"><span><b>Tidewater</b> Issue 041</span><span>Contents</span></div>
+      <h2 class="toc-title reg" id="toc-h" data-ink="Contents" style="--ink2: var(--c-accent-3)">Contents</h2>
+      <ol class="toc">
+        <li><a href="#kiambu" data-thumb="kiambu"><span class="n">4</span><span class="t">The hills north of Nairobi</span><span class="d">Lot one: smallholder coffee from Kiambu, Kenya.</span></a></li>
+        <li><a href="#huila" data-thumb="huila"><span class="n">8</span><span class="t">Two weeks under shade cloth</span><span class="d">Lot two: a family farm in Huila, Colombia.</span></a></li>
+        <li><a href="#brew" data-thumb="brew"><span class="n">12</span><span class="t">Four ways to brew</span><span class="d">Filter, espresso, moka pot, French press.</span></a></li>
+        <li><a href="#subscribe" data-thumb="back"><span class="n">16</span><span class="t">Choose your first bag</span><span class="d">One bag or two, every month.</span></a></li>
+      </ol>
+      <span class="folio folio--l" aria-hidden="true">2</span>
+    </div>
+    <div class="page note-page fold-l">
+      <div class="rh" aria-hidden="true"><span>October 2026</span><span>From the roastery</span></div>
+      <figure class="plate thumb" aria-hidden="true">
+        <img data-k="kiambu" class="on ink-1" src="media/kiambu.jpg" alt="" loading="lazy" width="2400" height="1500">
+        <img data-k="huila" class="ink-3" src="media/huila-beds.jpg" alt="" loading="lazy" width="2000" height="1250">
+        <img data-k="brew" class="ink-1" src="media/cover-poster.jpg" alt="" loading="lazy" width="1280" height="720">
+        <img data-k="back" class="ink-2" src="media/huila-honey.jpg" alt="" loading="lazy" width="1500" height="1500">
+      </figure>
+      <p class="letter">Every month we roast two small-lot coffees, ship them within 48&nbsp;hours of roasting, and tuck in notes on who grew them. October’s pair: <em>washed SL28 and SL34 from Kiambu, Kenya</em>, and <em>a honey-process Caturra from Huila, Colombia</em>.</p>
+      <dl class="colophon">
+        <div><dt>Roasting</dt><dd>Monday 12 October 2026</dd></div>
+        <div><dt>Batch</dt><dd>041, 18&nbsp;kg</dd></div>
+        <div><dt>Ships by</dt><dd>Wednesday 14 October</dd></div>
+        <div><dt>Next lots announced</dt><dd>2 November</dd></div>
+      </dl>
+      <span class="folio folio--r" aria-hidden="true">3</span>
+    </div>
+  </section>
+
+  <!-- ═══ KIAMBU (pp. 4–7) ═══ -->
+  <article class="spread kiambu" id="kiambu" data-label="Kiambu" aria-labelledby="k-h">
+    <div class="page page--wide k-open on-dark">
+      <figure class="plate">
+        <img class="ink-1" src="media/kiambu.jpg" alt="A heap of ripe coffee cherries, glossy and round, with a dark coffee leaf lying across one corner." width="2400" height="1500" fetchpriority="low">
+      </figure>
+      <div class="rh" aria-hidden="true"><span><b>Tidewater</b> Issue 041</span><span>Origin: Kenya</span></div>
+      <div class="k-open__copy">
+        <p class="lot"><span>Lot one</span><span>Kiambu, Kenya</span><span>SL28 and SL34</span><span>Washed</span><span>1,800&nbsp;m</span></p>
+        <h2 class="feat-title reg split-me" id="k-h" data-ink="The hills north of Nairobi">The hills north of Nairobi</h2>
+      </div>
+      <span class="folio folio--l" aria-hidden="true">4</span><span class="folio folio--r" aria-hidden="true">5</span>
+    </div>
+    <div class="page k-text k-b fold-r">
+      <div class="rh" aria-hidden="true"><span><b>Tidewater</b> Issue 041</span><span>Lot one</span></div>
+      <div class="k-text__inner">
+        <p class="standfirst">Our first October coffee comes from smallholder families in Kiambu, just north of Nairobi. It is bright, it is juicy, and we roast it light so you can taste where it came from.</p>
+        <div class="body">
+          <p>Kiambu’s coffee doesn’t come from one big estate. It comes from many family plots in the hills. Each family picks its ripe cherries and delivers them to a cooperative washing station, where the coffee from all those small farms is processed.</p>
+          <p>At the station the coffee is washed: the fruit is taken off before the beans are dried, which tends to leave a clean, clear cup. This lot is two varieties, SL28 and SL34, grown at 1,800&nbsp;metres.</p>
+          <p>We roast it light, on purpose. Brew it and look for blackcurrant first, then grapefruit, with cane sugar underneath. If you take two bags this month, drink it next to the Huila and taste how differently the two were grown and dried.</p>
+        </div>
+      </div>
+      <span class="folio folio--l" aria-hidden="true">6</span>
+    </div>
+    <div class="page k-text k-c fold-l">
+      <div class="rh" aria-hidden="true"><span>October 2026</span><span>Kiambu, Kenya</span></div>
+      <div class="k-text__inner">
+        <blockquote class="pull"><p style="margin:0">Ripe cherries, <mark>carried in by smallholder families</mark>, to a washing station in the hills.</p></blockquote>
+        <dl class="facts">
+          <div><dt>Variety</dt><dd>SL28 and SL34</dd></div>
+          <div><dt>Process</dt><dd>Washed</dd></div>
+          <div><dt>Altitude</dt><dd>1,800&nbsp;m</dd></div>
+          <div><dt>Roast</dt><dd>Light</dd></div>
+          <div class="notes"><dt>Tastes of</dt><dd>blackcurrant, grapefruit, cane sugar</dd></div>
+        </dl>
+        <svg class="stamp k-c__stamp" viewBox="0 0 240 240" aria-hidden="true">
+          <defs><path id="sp-k" d="M120 120 m-90 0 a90 90 0 1 1 180 0 a90 90 0 1 1 -180 0"/></defs>
+          <g filter="url(#rough)">
+            <circle cx="120" cy="120" r="114" fill="none" stroke="currentColor" stroke-width="7"/>
+            <circle cx="120" cy="120" r="70" fill="none" stroke="currentColor" stroke-width="3"/>
+            <text class="s-ring" font-size="17"><textPath href="#sp-k" textLength="560" lengthAdjust="spacingAndGlyphs">LOT ONE • KIAMBU • KENYA • WASHED • LIGHT ROAST •</textPath></text>
+            <text class="s-big" font-size="64" x="120" y="128" text-anchor="middle">KE</text>
+            <text class="s-sub" font-size="15" x="120" y="156" text-anchor="middle">1,800 M</text>
+          </g>
+        </svg>
+      </div>
+      <span class="folio folio--r" aria-hidden="true">7</span>
+    </div>
+  </article>
+
+  <!-- ═══ HUILA (pp. 8–11) ═══ -->
+  <article class="spread huila" id="huila" data-label="Huila" aria-labelledby="h-h">
+    <div class="page h-a fold-r">
+      <div class="rh" aria-hidden="true"><span><b>Tidewater</b> Issue 041</span><span>Origin: Colombia</span></div>
+      <div class="h-a__inner">
+        <p class="lot"><span>Lot two</span><span>Huila, Colombia</span><span>Caturra</span><span>Honey process</span><span>1,750&nbsp;m</span></p>
+        <h2 class="h-title reg split-me" id="h-h" data-ink="Two weeks under shade cloth">Two weeks under shade cloth</h2>
+        <p class="standfirst">Our second coffee is grown on a family farm in Huila, Colombia, and dried slowly: on raised beds, under shade cloth, for about two weeks.</p>
+        <div class="body">
+          <p>It is a honey process. The skin of the cherry comes off, but some of the sticky fruit stays on the bean while it dries. Done slowly, in shade rather than full sun, that takes patience. The coffee is Caturra, grown at 1,750&nbsp;metres, and we roast it medium-light: expect red apple and panela, with cocoa nib at the finish.</p>
+        </div>
+      </div>
+      <span class="folio folio--l" aria-hidden="true">8</span>
+    </div>
+    <div class="page h-b fold-l">
+      <div class="rh" aria-hidden="true"><span>October 2026</span><span>Huila, Colombia</span></div>
+      <figure class="fig f-beds" data-speed="-0.06">
+        <div class="plate"><img class="ink-3" src="media/huila-beds.jpg" alt="Long raised drying beds receding into the distance, dappled with shade-cloth shadow." loading="lazy" width="2000" height="1250"></div>
+        <figcaption class="cap"><b>Fig. 1</b>Raised beds keep the coffee off the ground while it dries.</figcaption>
+      </figure>
+      <figure class="fig f-cloth" data-speed="0.08">
+        <div class="plate"><img class="ink-2" src="media/huila-cloth.jpg" alt="Close-up of knitted shade cloth with sunlight coming through the gaps." loading="lazy" width="1200" height="1600"></div>
+        <figcaption class="cap"><b>Fig. 2</b>Shade cloth slows the drying down.</figcaption>
+      </figure>
+      <span class="folio folio--r" aria-hidden="true">9</span>
+    </div>
+    <div class="page h-c fold-r">
+      <div class="rh" aria-hidden="true"><span><b>Tidewater</b> Issue 041</span><span>Lot two</span></div>
+      <figure class="fig f-honey" data-speed="-0.1">
+        <div class="plate"><img class="ink-1" src="media/huila-honey.jpg" alt="Glossy honey-process coffee beans packed together, each with its centre crease." loading="lazy" width="1500" height="1500"></div>
+        <figcaption class="cap"><b>Fig. 3</b>Honey process: the skin comes off, some of the sticky fruit stays on.</figcaption>
+      </figure>
+      <div class="h-c__card">
+        <dl class="facts">
+          <div><dt>Variety</dt><dd>Caturra</dd></div>
+          <div><dt>Process</dt><dd>Honey</dd></div>
+          <div><dt>Altitude</dt><dd>1,750&nbsp;m</dd></div>
+          <div><dt>Roast</dt><dd>Medium-light</dd></div>
+          <div class="notes"><dt>Tastes of</dt><dd>red apple, panela, cocoa nib</dd></div>
+        </dl>
+        <svg class="stamp" viewBox="0 0 240 240" aria-hidden="true">
+          <defs><path id="sp-h" d="M120 120 m-90 0 a90 90 0 1 1 180 0 a90 90 0 1 1 -180 0"/></defs>
+          <g filter="url(#rough)">
+            <circle cx="120" cy="120" r="114" fill="none" stroke="currentColor" stroke-width="7"/>
+            <circle cx="120" cy="120" r="70" fill="none" stroke="currentColor" stroke-width="3"/>
+            <text class="s-ring" font-size="17"><textPath href="#sp-h" textLength="560" lengthAdjust="spacingAndGlyphs">LOT TWO • HUILA • COLOMBIA • HONEY • MEDIUM-LIGHT •</textPath></text>
+            <text class="s-big" font-size="64" x="120" y="128" text-anchor="middle">CO</text>
+            <text class="s-sub" font-size="15" x="120" y="156" text-anchor="middle">1,750 M</text>
+          </g>
+        </svg>
+      </div>
+      <span class="folio folio--l" aria-hidden="true">10</span>
+    </div>
+    <div class="page h-d fold-l on-dark">
+      <div class="rh" aria-hidden="true"><span>October 2026</span><span>Huila, Colombia</span></div>
+      <figure class="fig f-rake">
+        <div class="plate"><img class="ink-3" src="media/huila-rake.jpg" alt="A bed of drying beans raked into long, even furrows." loading="lazy" width="2000" height="900"></div>
+        <figcaption class="cap"><b>Fig. 4</b>Spread thin and dried slowly, for about two weeks.</figcaption>
+      </figure>
+      <div class="ruler" aria-hidden="true"><div class="ruler__ticks"></div><div class="ruler__bar"><i></i></div><span class="ruler__lab">Picked</span><span class="ruler__lab">About two weeks</span></div>
+      <span class="folio folio--r" aria-hidden="true">11</span>
+    </div>
+  </article>
+
+  <!-- ═══ BREW GATEFOLD (pp. 12–14) ═══ -->
+  <article class="spread brew page page--wide on-accent" id="brew" data-label="Brew" aria-labelledby="b-h">
+    <div class="rh" aria-hidden="true"><span><b>Tidewater</b> Issue 041</span><span>Gatefold: brewing</span></div>
+    <div class="brew__head">
+      <h2 id="b-h" class="reg" data-ink="Four ways to brew" style="--ink2: var(--c-accent-3)">Four ways to brew</h2>
+      <p>Tell us how you brew and we grind for it. Or take it whole bean and grind it yourself. Every bag comes with a recipe card.</p>
+    </div>
+    <ol class="methods" aria-label="Brew methods we grind for">
+      <li style="--x: 36vw; --y: 8vh"><span class="m-word" data-wd="150" data-wt="900" data-to="58">Filter</span><span class="m-grind"><i class="grind" style="--g:1.5px; --gs:5px" aria-hidden="true"></i>Medium grind, for pour-over and batch brewers</span></li>
+      <li style="--x: 66vw; --y: 25vh"><span class="m-word" data-wd="54" data-wt="900" data-to="150">Espresso</span><span class="m-grind"><i class="grind" style="--g:.8px; --gs:3px" aria-hidden="true"></i>Fine grind</span></li>
+      <li style="--x: 20vw; --y: 42vh"><span class="m-word" data-wd="120" data-wt="300" data-to="60">Moka pot</span><span class="m-grind"><i class="grind" style="--g:1.1px; --gs:4px" aria-hidden="true"></i>Fine to medium grind</span></li>
+      <li style="--x: 56vw; --y: 59vh; z-index: 1"><span class="m-word" data-wd="72" data-wt="900" data-to="150">French press</span><span class="m-grind"><i class="grind" style="--g:2.6px; --gs:8px" aria-hidden="true"></i>Coarse grind</span></li>
+    </ol>
+    <div class="band-wrap">
+      <div class="band" aria-label="This month">
+        <div class="band__track">
+          <span>Roasted Monday 12 October 2026 <svg aria-hidden="true"><use href="#sep"/></svg> Ships by Wednesday 14 October <svg aria-hidden="true"><use href="#sep"/></svg> Whole bean or ground <svg aria-hidden="true"><use href="#sep"/></svg> Skip, pause or cancel up to the Sunday before roasting <svg aria-hidden="true"><use href="#sep"/></svg> Next lots announced 2 November <svg aria-hidden="true"><use href="#sep"/></svg></span>
+          <span aria-hidden="true">Roasted Monday 12 October 2026 <svg><use href="#sep"/></svg> Ships by Wednesday 14 October <svg><use href="#sep"/></svg> Whole bean or ground <svg><use href="#sep"/></svg> Skip, pause or cancel up to the Sunday before roasting <svg><use href="#sep"/></svg> Next lots announced 2 November <svg><use href="#sep"/></svg></span>
+        </div>
+      </div>
+      <button class="ctl band__ctl" type="button" id="bandBtn">
+        <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9.5 7.5v9M14.5 7.5v9" stroke="currentColor" stroke-width="2.4"/></svg>
+        <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 7.8v8.4l6.5-4.2z" fill="currentColor"/></svg>
+        <span class="lab">Pause ticker</span>
+      </button>
+    </div>
+    <span class="folio folio--l" aria-hidden="true">12</span><span class="folio folio--r" aria-hidden="true">14</span>
+  </article>
+
+  <!-- ═══ BACK COVER ═══ -->
+  <section class="spread back page page--wide" id="subscribe" data-label="Back cover" aria-labelledby="s-h">
+    <div class="rh" aria-hidden="true"><span><b>Tidewater</b> Subscriptions</span><span>Back cover</span></div>
+    <div class="back__poster">
+      <h2 id="s-h">Two coffees a month, roasted to order</h2>
+      <div class="plan">
+        <h3>One bag</h3><p class="eur">€14<small>/month</small></p>
+        <p>250&nbsp;g, alternating between the two coffees.</p>
+      </div>
+      <div class="plan">
+        <h3>Two bags</h3><p class="eur">€26<small>/month</small></p>
+        <p>2&nbsp;×&nbsp;250&nbsp;g: both coffees, to taste side by side.</p>
+      </div>
+      <p class="poster-line">Whole bean, or ground for filter, espresso, moka pot or French press.</p>
+    </div>
+    <div class="back__coupon">
+      <form class="coupon" id="order" novalidate>
+        <svg class="scissors" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="18" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.5 7.5 21 17M8.5 16.5 21 7" stroke="currentColor" stroke-width="2"/></svg>
+        <h3>Fill in, cut out, drink</h3>
+        <fieldset>
+          <legend>Plan</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="plan" value="One bag" checked><span>One bag<b>€14</b></span></label>
+            <label class="opt"><input type="radio" name="plan" value="Two bags"><span>Two bags<b>€26</b></span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Grind</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="grind" value="whole bean" checked><span>Whole bean</span></label>
+            <label class="opt"><input type="radio" name="grind" value="ground for filter"><span>Filter</span></label>
+            <label class="opt"><input type="radio" name="grind" value="ground for espresso"><span>Espresso</span></label>
+            <label class="opt"><input type="radio" name="grind" value="ground for moka pot"><span>Moka pot</span></label>
+            <label class="opt"><input type="radio" name="grind" value="ground for French press"><span>French press</span></label>
+          </div>
+        </fieldset>
+        <button class="btn" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z M9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>Choose your first bag</button>
+        <p class="fine">Ships within 48 hours of roasting in a resealable valve bag that fits through the letterbox, with notes on the farm and a recipe. Skip, pause or cancel up to the Sunday before roasting.</p>
+        <p class="result" id="result" role="status" aria-live="polite"></p>
+        <svg class="stamp coupon__stamp" viewBox="0 0 240 240" aria-hidden="true">
+          <defs><path id="sp-c" d="M120 120 m-90 0 a90 90 0 1 1 180 0 a90 90 0 1 1 -180 0"/></defs>
+          <g filter="url(#rough)">
+            <circle cx="120" cy="120" r="114" fill="none" stroke="currentColor" stroke-width="7"/>
+            <circle cx="120" cy="120" r="70" fill="none" stroke="currentColor" stroke-width="3"/>
+            <text class="s-ring" font-size="17"><textPath href="#sp-c" textLength="560" lengthAdjust="spacingAndGlyphs">SHIPS BY WED 14 OCT • THROUGH YOUR LETTERBOX •</textPath></text>
+            <text class="s-big" font-size="64" x="120" y="128" text-anchor="middle">48H</text>
+            <text class="s-sub" font-size="15" x="120" y="156" text-anchor="middle">FROM ROAST</text>
+          </g>
+        </svg>
+      </form>
+      <footer class="colo-foot">
+        <p>Demo page for the unclawdesign skill. Tidewater is a fictional roastery. Plates and cover film were generated for this issue.</p>
+        <a href="../../">All showcases</a>
+      </footer>
+    </div>
+  </section>
+
+</main>
+</div>
+
+<nav class="scrub" id="scrub" aria-label="Pages in this issue">
+  <div class="scrub__bar" aria-hidden="true"><i></i></div>
+  <ol>
+    <li style="--w: 1"><a href="#cover"><b>1</b><span>Cover</span></a></li>
+    <li style="--w: 1"><a href="#contents"><b>2</b><span>Contents</span></a></li>
+    <li style="--w: 2"><a href="#kiambu"><b>4</b><span>The hills north of Nairobi</span></a></li>
+    <li style="--w: 2"><a href="#huila"><b>8</b><span>Two weeks under shade cloth</span></a></li>
+    <li style="--w: 1.5"><a href="#brew"><b>12</b><span>Four ways to brew</span></a></li>
+    <li style="--w: 1"><a href="#subscribe"><b>16</b><span>Back cover</span></a></li>
+  </ol>
+</nav>
+
+<script src="../../vendor/gsap.min.js"></script>
+<script src="../../vendor/ScrollTrigger.min.js"></script>
+<script src="../../vendor/SplitText.min.js"></script>
+<script src="../../vendor/lenis.min.js"></script>
+<script src="issue.js"></script>
+<script src="../../shared/palette-engine.js"></script><script src="../../shared/customizer.js"></script>
+</body>
+</html>

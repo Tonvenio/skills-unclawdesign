@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Roast, batch 041</title>
+<meta name="description" content="Tidewater Roasters: follow one Kiambu bean through the roast of batch 041, from green coffee to drop, then choose your first bag.">
+<meta name="theme-color" content="#112f2c">
+<script>
+  /* motion is opt-in: no JS or reduced motion keeps the static, stepped version */
+  (function () {
+    try {
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      document.documentElement.classList.add('motion');
+      var l = document.createElement('link');          /* first frame of the sequence, as early as possible */
+      l.rel = 'preload'; l.as = 'image'; l.type = 'image/webp';
+      l.href = Math.min(innerWidth, screen.width || innerWidth) < 760 ? 'media/m/f000.webp' : 'media/d/f000.webp';
+      document.head.appendChild(l);
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wdth,wght@62.5..100,300..400&family=Albert+Sans:wght@400..600&family=Azeret+Mono:wght@400..500&display=swap">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="roast.css">
+</head>
+<body>
+<a class="skip" href="#lots">Skip the roast</a>
+
+<main>
+  <section class="roast" id="roast" aria-labelledby="roast-title">
+    <div class="stage">
+      <div class="mast">
+        <a class="mark" href="#roast" aria-label="Tidewater Roasters, back to the start of the roast">Tidewater<span> Roasters</span></a>
+        <a class="all" href="../../">All showcases</a>
+</div>
+      <svg class="chart" aria-hidden="true" focusable="false"></svg>
+
+      <div class="readout" aria-hidden="true">
+        <p class="ro ro-time"><span class="ro-k">Roast time</span><span class="ro-v" data-ro="time">0:00</span></p>
+        <p class="ro ro-temp"><span class="ro-k">Bean temperature</span><span class="ro-v"><span data-ro="temp">200</span><span class="ro-u"> °C</span></span></p>
+      </div>
+
+      <p class="chart-note">Batch 041’s roast curve, illustrated and rounded.</p>
+
+      <header class="beat beat--intro" data-phase="still" data-say="Before the roast. A green Kiambu bean; the drum is preheated to about 200 °C.">
+        <figure class="kf"><img src="media/d/f000.webp" width="1200" height="1200" loading="lazy" decoding="async" alt="A pale grey-green coffee bean, crease side up, before roasting."></figure>
+        <div class="beat-body">
+          <p class="span"><span class="m">0:00</span>, drum at 200 °C</p>
+          <h1 class="beat-t" id="roast-title">The roast of batch&nbsp;041</h1>
+          <p class="beat-p">One Kiambu bean, followed from green coffee to drop. Eighteen kilos of it, roasted on Monday 12&nbsp;October.</p>
+          <p class="cue" aria-hidden="true">Scroll to charge the roaster</p>
+        </div>
+      </header>
+
+      <figure class="film">
+        <video controls muted playsinline preload="none" poster="media/roast-poster.webp" width="1280" height="720"
+               aria-describedby="film-cap">
+          <source src="media/roast.mp4" type="video/mp4">
+        </video>
+        <figcaption id="film-cap">The whole of batch 041 in eight seconds: green coffee to drop, beside its roast curve. No sound.</figcaption>
+      </figure>
+
+      <ol class="beats">
+        <li class="beat" data-phase="charge" data-say="Charge, 0:00 to 1:05. The probe reading falls from 200 to 95 °C, the turning point.">
+          <figure class="kf"><img src="media/d/f022.webp" width="1200" height="1200" loading="lazy" decoding="async" alt="The green bean seen edge on, its flat face and domed back visible, still unchanged in colour."></figure>
+          <div class="beat-body">
+            <p class="span"><span class="m">0:00 to 1:05</span>, 200 to 95 °C</p>
+            <h2 class="beat-t">Charge</h2>
+            <p class="beat-p">The green beans drop into a drum preheated to about 200&nbsp;°C. The probe now sits among cold beans, so its reading falls fast and turns at about 95&nbsp;°C.</p>
+            <p class="beat-p beat-why">How much heat goes in now sets the pace for the whole roast.</p>
+          </div>
+        </li>
+        <li class="beat" data-phase="drying" data-say="Drying, 1:05 to 4:20, up to 150 °C. The bean loses water and stays green.">
+          <figure class="kf"><img src="media/d/f040.webp" width="1200" height="1200" loading="lazy" decoding="async" alt="The bean turning yellow-green, seen from its domed side."></figure>
+          <div class="beat-body">
+            <p class="span"><span class="m">1:05 to 4:20</span>, 95 to 150 °C</p>
+            <h2 class="beat-t">Drying</h2>
+            <p class="beat-p">Green coffee holds about 10 to 12&nbsp;% water. For the next three minutes the heat mostly drives it out; the bean stays green and smells of hay.</p>
+            <p class="beat-p beat-why">Even drying lets the centre keep pace with the surface.</p>
+          </div>
+        </li>
+        <li class="beat" data-phase="maillard" data-say="Maillard, 4:20 to 8:10, 150 to 196 °C. The bean turns yellow, tan, then cinnamon.">
+          <figure class="kf"><img src="media/d/f068.webp" width="1200" height="1200" loading="lazy" decoding="async" alt="The bean now tan to cinnamon brown, its crease visible."></figure>
+          <div class="beat-body">
+            <p class="span"><span class="m">4:20 to 8:10</span>, 150 to 196 °C</p>
+            <h2 class="beat-t">Maillard</h2>
+            <p class="beat-p">Above about 150&nbsp;°C, sugars and amino acids react. The bean turns yellow, then tan, then cinnamon, and the drum smells of toasted bread.</p>
+            <p class="beat-p beat-why">This stretch builds the sweetness and body in the cup.</p>
+          </div>
+        </li>
+        <li class="beat" data-phase="crack" data-say="First crack at 8:10 and 196 °C. The bean splits along its centre cut and sheds chaff.">
+          <figure class="kf"><img src="media/d/f088.webp" width="1200" height="1200" loading="lazy" decoding="async" alt="A light brown bean with its centre cut opening, flakes of pale chaff lifting off."></figure>
+          <div class="beat-body">
+            <p class="span"><span class="m">8:10</span>, 196 °C</p>
+            <h2 class="beat-t">First crack</h2>
+            <p class="beat-p">Steam and carbon dioxide build up until the bean splits along its centre cut with an audible crack. It swells and sheds the last of its chaff.</p>
+            <p class="beat-p beat-why">From here on, every few seconds shift the flavour.</p>
+          </div>
+        </li>
+        <li class="beat" data-phase="development" data-say="Development, 8:10 to 9:40. The rise slows; Kiambu keeps its bright fruit.">
+          <figure class="kf"><img src="media/d/f112.webp" width="1200" height="1200" loading="lazy" decoding="async" alt="The bean slightly swollen and an even light brown."></figure>
+          <div class="beat-body">
+            <p class="span"><span class="m">8:10 to 9:40</span>, 196 to 204 °C</p>
+            <h2 class="beat-t">Development</h2>
+            <p class="beat-p">We keep the heat gentle for a minute and a half while the rise slows. Kiambu’s blackcurrant and grapefruit stay bright.</p>
+            <p class="beat-p beat-why">A longer development would trade that fruit for roast flavour.</p>
+          </div>
+        </li>
+        <li class="beat" data-phase="drop" data-say="Drop at 9:40 and 204 °C. Batch 041 is a light roast.">
+          <figure class="kf"><img src="media/d/f139.webp" width="1200" height="1200" loading="lazy" decoding="async" alt="The finished light-roast bean at rest, crease side up."></figure>
+          <div class="beat-body">
+            <p class="span"><span class="m">9:40</span>, 204 °C</p>
+            <h2 class="beat-t">Drop</h2>
+            <p class="beat-p">At 204&nbsp;°C the beans fall into the cooling tray, where stirring and air stop the roast within minutes. Batch 041 is a light roast.</p>
+          </div>
+        </li>
+      </ol>
+
+      <figure class="overview">
+        <div class="ov-wrap" tabindex="0" role="region" aria-label="Roast curve chart, scrolls sideways on small screens">
+        <!--OVERVIEW-->
+        </div>
+        <figcaption>Batch 041, bean temperature over roast time. An illustration with rounded values.</figcaption>
+      </figure>
+
+      <table class="keypoints">
+        <caption>Key points of batch 041 (illustrative)</caption>
+        <thead><tr><th scope="col">Moment</th><th scope="col">Roast time</th><th scope="col">Bean temperature</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Charge</th><td>0:00</td><td>200 °C</td></tr>
+          <tr><th scope="row">Turning point</th><td>1:05</td><td>95 °C</td></tr>
+          <tr><th scope="row">End of drying</th><td>4:20</td><td>150 °C</td></tr>
+          <tr><th scope="row">First crack</th><td>8:10</td><td>196 °C</td></tr>
+          <tr><th scope="row">Drop</th><td>9:40</td><td>204 °C</td></tr>
+        </tbody>
+      </table>
+
+      <p class="sr-only" aria-live="polite" id="phase-live"></p>
+    </div>
+  </section>
+
+  <section class="lots" id="lots" aria-labelledby="lots-title">
+    <div class="lots-head">
+      <h2 id="lots-title">Two lots this month</h2>
+      <p>Every month we roast two small lots and ship them within 48 hours. The bean you just followed is one of October’s.</p>
+    </div>
+    <div class="lots-grid">
+      <article class="lot" aria-labelledby="lot-kiambu">
+        <div class="niche">
+          <img class="niche-bean slot" src="media/d/f139.webp" width="1200" height="1200" loading="lazy" decoding="async"
+               alt="A light-roast Kiambu bean from batch 041, crease side up.">
+        </div>
+        <div class="lot-body">
+          <h3 id="lot-kiambu">Kiambu, Kenya</h3>
+          <p class="notes">Blackcurrant, grapefruit, cane sugar</p>
+          <dl class="facts">
+            <div><dt>Variety</dt><dd>SL28 and SL34</dd></div>
+            <div><dt>Process</dt><dd>Washed</dd></div>
+            <div><dt>Altitude</dt><dd>1,800 m</dd></div>
+            <div><dt>Roast</dt><dd>Light</dd></div>
+          </dl>
+          <p>Grown by smallholder families who deliver ripe cherries to a cooperative washing station in the hills north of Nairobi.</p>
+        </div>
+      </article>
+      <article class="lot" aria-labelledby="lot-huila">
+        <div class="niche">
+          <img class="niche-bean" src="media/huila.webp" width="1200" height="1200" loading="lazy" decoding="async"
+               alt="A medium-light roast Huila bean, slightly darker and rounder, crease side up.">
+        </div>
+        <div class="lot-body">
+          <h3 id="lot-huila">Huila, Colombia</h3>
+          <p class="notes">Red apple, panela, cocoa nib</p>
+          <dl class="facts">
+            <div><dt>Variety</dt><dd>Caturra</dd></div>
+            <div><dt>Process</dt><dd>Honey</dd></div>
+            <div><dt>Altitude</dt><dd>1,750 m</dd></div>
+            <div><dt>Roast</dt><dd>Medium-light</dd></div>
+          </dl>
+          <p>Grown on a family farm that dries its coffee slowly on raised beds under shade cloth for about two weeks.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="ship" aria-labelledby="ship-title">
+    <h2 id="ship-title">Roasted Monday. <span>Ships Wednesday.</span></h2>
+    <ol class="dates">
+      <li><time datetime="2026-10-12">Monday 12 October</time><p>Batch 041 goes into the drum: 18&nbsp;kg.</p></li>
+      <li><time datetime="2026-10-14">Wednesday 14 October</time><p>It ships within 48 hours of roasting, in a resealable valve bag that fits through the letterbox, with notes on the farm and a recipe.</p></li>
+      <li><time datetime="2026-11-02">Monday 2 November</time><p>We announce the next two lots.</p></li>
+    </ol>
+  </section>
+
+  <section class="plans" id="plans" aria-labelledby="plans-title">
+    <h2 id="plans-title">Your first bag</h2>
+    <form class="pick" id="pick" novalidate>
+      <fieldset class="plan-set">
+        <legend>Plan</legend>
+        <label class="plan">
+          <input type="radio" name="plan" value="one" checked>
+          <span class="plan-name">One bag</span>
+          <span class="plan-price"><span class="eur">€14</span> a month</span>
+          <span class="plan-desc">250&nbsp;g each month, alternating between the two coffees.</span>
+        </label>
+        <label class="plan">
+          <input type="radio" name="plan" value="two">
+          <span class="plan-name">Two bags</span>
+          <span class="plan-price"><span class="eur">€26</span> a month</span>
+          <span class="plan-desc">2&nbsp;×&nbsp;250&nbsp;g each month: both coffees, to taste side by side.</span>
+        </label>
+      </fieldset>
+      <fieldset class="grind-set">
+        <legend>Whole bean or ground for</legend>
+        <div class="grinds">
+          <label class="grind"><input type="radio" name="grind" value="Whole bean" checked><span>Whole bean</span></label>
+          <label class="grind"><input type="radio" name="grind" value="Filter"><span>Filter</span></label>
+          <label class="grind"><input type="radio" name="grind" value="Espresso"><span>Espresso</span></label>
+          <label class="grind"><input type="radio" name="grind" value="Moka pot"><span>Moka pot</span></label>
+          <label class="grind"><input type="radio" name="grind" value="French press"><span>French press</span></label>
+        </div>
+      </fieldset>
+      <div class="go">
+        <button class="btn" type="submit">Choose your first bag</button>
+        <p class="terms">Skip, pause or cancel up to the Sunday before roasting.</p>
+      </div>
+      <p class="done" id="done" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Demo page for the unclawdesign skill. Tidewater is a fictional roastery.</p>
+  <a class="all" href="../../">All showcases</a>
+</footer>
+
+<canvas class="bean" role="img" aria-label="A single Kiambu coffee bean that turns from green to light brown and swells as the roast progresses."></canvas>
+
+<script>/*ROASTDATA*/</script>
+<script src="../../vendor/gsap.min.js"></script>
+<script src="../../vendor/ScrollTrigger.min.js"></script>
+<script src="roast.js"></script>
+<script src="../../shared/palette-engine.js"></script><script src="../../shared/customizer.js"></script>
+</body>
+</html>

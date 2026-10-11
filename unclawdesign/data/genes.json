@@ -1,0 +1,158 @@
+{
+ "version": "2026-10",
+ "genes": {
+  "shape": {
+   "sharp": "radius 0 everywhere; edges do the work",
+   "crisp": "radius 2–4px; engineered, not cute",
+   "soft": "radius 8–12px on cards, 6–8px on controls",
+   "round": "radius 16–28px; friendly, pillowy surfaces",
+   "pill-controls": "controls/tags fully pill-shaped, structure square or lightly rounded — contrast between the two",
+   "tiered": "radius tied to size tier: 4px small, 12px medium, 28px large; outer = inner + padding when nested",
+   "organic": "blobby/asymmetric border-radius (e.g. 62% 38% 46% 54% / 50% 40% 60% 50%) on images and accent shapes",
+   "chamfered": "cut corners via clip-path polygon (8–16px) — HUD/industrial",
+   "arched": "arch-topped images and panels (border-radius: 999px 999px 0 0) as the signature shape"
+  },
+  "edge": {
+   "none": "no borders; separation by space and tone",
+   "hairline": "1px borders in border token; tables and dividers",
+   "thick-ink": "2–4px solid text-colored borders on cards, buttons, images",
+   "double": "double rules (border-style: double 4–6px) — period print feel",
+   "dashed": "dashed/dotted rules as a motif (coupons, blueprints, forms)",
+   "inset-frame": "a frame inset from the viewport/card edge (outline + outline-offset) like a mat around a print"
+  },
+  "elevation": {
+   "flat": "no shadows at all",
+   "tonal": "depth only from surface/surface-2 lightness steps",
+   "soft-layered": "two-part shadow: tight dark + wide soft, low opacity, one light source",
+   "hard-offset": "solid offset shadow (4–8px, no blur) in ink or an accent color",
+   "emboss": "inner highlight + inner shadow; tactile buttons",
+   "glow": "colored glow (box-shadow with accent at 30–50% alpha) — use on 1–2 elements only",
+   "paper-stack": "slightly rotated stacked sheets with soft shadow"
+  },
+  "texture": {
+   "none": "clean surfaces",
+   "grain": "SVG feTurbulence noise at 4–8% opacity over backgrounds",
+   "halftone": "radial-gradient dot screen on images or color fields",
+   "paper": "warm fiber/noise + very slight vignette — printed matter",
+   "dot-grid": "radial-gradient dot grid background (16–24px pitch)",
+   "graph-grid": "linear-gradient line grid (graph paper/blueprint)",
+   "scanlines": "repeating-linear-gradient 2–3px scanlines at low opacity",
+   "mesh-gradient": "multi-stop blurred color mesh — confined to one hero object, never the whole page",
+   "riso-misregister": "duplicated shapes/type offset 2–4px in a second ink with mix-blend-mode: multiply",
+   "noise-gradient": "smooth gradient with grain to prevent banding"
+  },
+  "hero": {
+   "split-asymmetric": "7/5 or 8/4 split: copy one side, real product/visual the other",
+   "poster-type": "headline set enormous (clamp to ~12–18vw), image secondary or absent",
+   "centered-statement": "one centered statement + one action; only when the message is a single strong line",
+   "full-bleed-image": "edge-to-edge photograph/illustration; copy in a calm area or a solid caption block",
+   "editorial-cover": "magazine cover: masthead, issue line, cover lines arranged around one image",
+   "bento-hero": "hero as a bento of 3–5 tiles each showing a real facet",
+   "product-demo": "live or animated product UI as the hero, copy compact above/left",
+   "split-screen": "two full-height halves with contrasting grounds (color/photo vs text)",
+   "index-list": "hero is a large typographic index/list of work/items with hover previews",
+   "horizontal-scroll": "hero is a horizontally scrolling strip of items",
+   "collage": "overlapping cutouts, scraps and type layered with deliberate rotation",
+   "kinetic-marquee": "moving type band(s) as the hero signature (respect reduced motion)",
+   "interactive-object": "one manipulable object (slider, dial, configurator, toy) is the hero",
+   "data-wall": "dense live-looking numbers/charts as the opening statement",
+   "letter-intro": "opens like a letter/manifesto: a few paragraphs of large text, no visual"
+  },
+  "grid": {
+   "asymmetric-12": "12-col with uneven spans (5/7, 4/8, 3/9) and deliberate empty columns",
+   "modular": "square/rectangular modules with strict gutters; content snaps to modules",
+   "narrow-column": "single ~65ch column, generous margins",
+   "editorial-margins": "main column + side margin for notes, captions, pull quotes",
+   "bento": "irregular tile grid (grid-auto-flow: dense) of varied spans",
+   "broken-overlap": "elements deliberately overlap across grid lines (negative margins, grid-area overlap)",
+   "swiss-hangline": "content hangs from a common top line; flush-left columns, large left margin",
+   "alternating-bands": "full-width bands alternating ground colors; content contained inside",
+   "horizontal": "sections arranged horizontally (scroll-snap) — use for portfolios/catalogs",
+   "sidebar-doc": "persistent side navigation + reading column (docs/handbooks)"
+  },
+  "motif": {
+   "circle": "circles/dots as recurring device",
+   "arch": "arches",
+   "diagonal": "diagonal cuts/slanted bands",
+   "stripes": "stripes/racing lines",
+   "sticker": "rotated sticker badges",
+   "scribble": "hand-drawn underline/circle marks (max 2 per page)",
+   "frame-box": "boxed frames around content",
+   "numerals": "oversized numerals (ONLY for real sequences/data)",
+   "cutout": "cut-out photography",
+   "primitives": "geometric primitives (circle/square/triangle)",
+   "rules": "horizontal rules as structure",
+   "stamp": "seals/stamps",
+   "tape-scraps": "tape, torn paper, scraps",
+   "registration-marks": "crop/registration marks",
+   "blob-wave": "blobs and wave dividers",
+   "tile-pattern": "repeating tile/pattern",
+   "outline-type": "outlined (stroked) display type",
+   "starburst": "starbursts/rays",
+   "pixel": "pixel blocks",
+   "ornament": "period ornaments/fleurons/deco fans",
+   "orbit-lines": "orbits/ellipses/concentric lines",
+   "none": "no motif; type and space only"
+  },
+  "imagery": {
+   "color-photo": "full-color photography, one consistent grade",
+   "duotone-photo": "photos mapped to two palette colors",
+   "bw-photo": "black-and-white photography",
+   "cutout-photo": "isolated subjects with no background",
+   "flat-illustration": "flat-color illustration in palette",
+   "line-illustration": "single-weight line drawings",
+   "3d-render": "soft 3D objects/renders",
+   "typographic-only": "no images; typography carries everything",
+   "product-ui": "real product UI crops",
+   "generative-svg": "code-generated SVG patterns/shapes",
+   "halftone-photo": "halftone-screened photos",
+   "collage-mixed": "mixed media collage",
+   "pixel-art": "pixel art"
+  },
+  "icons": {
+   "none": "no icons",
+   "line": "1.5px line icons",
+   "solid": "filled icons",
+   "duotone": "two-tone icons",
+   "hand-drawn": "hand-drawn icons",
+   "pixel": "pixel icons",
+   "geometric-glyph": "simple geometric glyphs/symbols instead of icons"
+  },
+  "motion": {
+   "still": "no ambient motion; only state feedback",
+   "subtle": "one load sequence + 150–250ms state transitions",
+   "snappy": "spring/overshoot micro-interactions (150–220ms)",
+   "kinetic-type": "type moves: marquees, variable-axis animation",
+   "playful": "bounces, wiggles, cursor-reactive bits",
+   "cinematic": "slow scroll-linked reveals, parallax depth (sparingly)",
+   "mechanical": "stepped/ticker/typewriter motion (steps())"
+  },
+  "density": {
+   "airy": "big whitespace, few items per view",
+   "balanced": "standard",
+   "dense": "information-rich, tight but ordered"
+  },
+  "align": {
+   "flush-left": "everything flush-left, ragged-right",
+   "centered": "centered axis (short texts only)",
+   "mixed-deliberate": "a clear, repeated mix (e.g. headings centered on a stage, body flush-left in columns)",
+   "justified-blocks": "justified text blocks with hyphens: auto (print feel; needs good hyphenation and lang attr)"
+  },
+  "scale": {
+   "1.2": "minor third — dense UI",
+   "1.25": "major third — product/editorial",
+   "1.333": "perfect fourth — balanced marketing",
+   "1.5": "perfect fifth — expressive",
+   "1.618": "golden — dramatic",
+   "2.0": "octave — poster/brutal"
+  },
+  "color_use": {
+   "neutral-plus-accent": "neutrals + accent ≤10% of surface",
+   "color-blocking": "whole sections/blocks in palette colors",
+   "monochrome": "one hue family only",
+   "duotone": "two inks; overprint where they meet",
+   "inverted-bands": "alternating light and dark sections from the two variants",
+   "full-ground": "saturated ground color as the page (color-mode palette)"
+  }
+ }
+}

@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Roast, batch 041</title>
+<meta name="description" content="Tidewater Roasters: follow one Kiambu bean through the roast of batch 041, from green coffee to drop, then choose your first bag.">
+<meta name="theme-color" content="#112f2c">
+<script>
+  /* motion is opt-in: no JS or reduced motion keeps the static, stepped version */
+  (function () {
+    try {
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      document.documentElement.classList.add('motion');
+      var l = document.createElement('link');          /* first frame of the sequence, as early as possible */
+      l.rel = 'preload'; l.as = 'image'; l.type = 'image/webp';
+      l.href = Math.min(innerWidth, screen.width || innerWidth) < 760 ? 'media/m/f000.webp' : 'media/d/f000.webp';
+      document.head.appendChild(l);
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wdth,wght@62.5..100,300..400&family=Albert+Sans:wght@400..600&family=Azeret+Mono:wght@400..500&display=swap">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="roast.css">
+</head>
+<body>
+<a class="skip" href="#lots">Skip the roast</a>
+
+<main>
+  <section class="roast" id="roast" aria-labelledby="roast-title">
+    <div class="stage">
+      <div class="mast">
+        <a class="mark" href="#roast" aria-label="Tidewater Roasters, back to the start of the roast">Tidewater<span> Roasters</span></a>
+        <a class="all" href="../../">All showcases</a>
+</div>
+      <svg class="chart" aria-hidden="true" focusable="false"></svg>
+
+      <div class="readout" aria-hidden="true">
+        <p class="ro ro-time"><span class="ro-k">Roast time</span><span class="ro-v" data-ro="time">0:00</span></p>
+        <p class="ro ro-temp"><span class="ro-k">Bean temperature</span><span class="ro-v"><span data-ro="temp">200</span><span class="ro-u"> °C</span></span></p>
+      </div>
+
+      <p class="chart-note">Batch 041’s roast curve, illustrated and rounded.</p>
+
+      <header class="beat beat--intro" data-phase="still" data-say="Before the roast. A green Kiambu bean; the drum is preheated to about 200 °C.">
+        <figure class="kf"><img src="media/d/f000.webp" width="1200" height="1200" loading="lazy" decoding="async" alt="A pale grey-green coffee bean, crease side up, before roasting."></figure>
+        <div class="beat-body">
+          <p class="span"><span class="m">0:00</span>, drum at 200 °C</p>
+          <h1 class="beat-t" id="roast-title">The roast of batch&nbsp;041</h1>
+          <p class="beat-p">One Kiambu bean, followed from green coffee to drop. Eighteen kilos of it, roasted on Monday 12&nbsp;October.</p>
+          <p class="cue" aria-hidden="true">Scroll to charge the roaster</p>
+        </div>
+      </header>
+
+      <figure class="film">
+        <video controls muted playsinline preload="none" poster="media/roast-poster.webp" width="1280" height="720"
+               aria-describedby="film-cap">
+          <source src="media/roast.mp4" type="video/mp4">
+        </video>
+        <figcaption id="film-cap">The whole of batch 041 in eight seconds: green coffee to drop, beside its roast curve. No sound.</figcaption>
+      </figure>
+
+      <ol class="beats">
+        <li class="beat" data-phase="charge" data-say="Charge, 0:00 to 1:05. The probe reading falls from 200 to 95 °C, the turning point.">
+          <figure class="kf"><img src="media/d/f022.webp" width="1200" height="1200" loading="lazy" decoding="async" alt="The green bean seen edge on, its flat face and domed back visible, still unchanged in colour."></figure>
+          <div class="beat-body">
+            <p class="span"><span class="m">0:00 to 1:05</span>, 200 to 95 °C</p>
+            <h2 class="beat-t">Charge</h2>
+            <p class="beat-p">The green beans drop into a drum preheated to about 200&nbsp;°C. The probe now sits among cold beans, so its reading falls fast and turns at about 95&nbsp;°C.</p>
+            <p class="beat-p beat-why">How much heat goes in now sets the pace for the whole roast.</p>
+          </div>
+        </li>
+        <li class="beat" data-phase="drying" data-say="Drying, 1:05 to 4:20, up to 150 °C. The bean loses water and stays green.">
+          <figure class="kf"><img src="media/d/f040.webp" width="1200" height="1200" loading="lazy" decoding="async" alt="The bean turning yellow-green, seen from its domed side."></figure>
+          <div class="beat-body">
+            <p class="span"><span class="m">1:05 to 4:20</span>, 95 to 150 °C</p>
+            <h2 class="beat-t">Drying</h2>
+            <p class="beat-p">Green coffee holds about 10 to 12&nbsp;% water. For the next three minutes the heat mostly drives it out; the bean stays green and smells of hay.</p>
+            <p class="beat-p beat-why">Even drying lets the centre keep pace with the surface.</p>
+          </div>
+        </li>
+        <li class="beat" data-phase="maillard" data-say="Maillard, 4:20 to 8:10, 150 to 196 °C. The bean turns yellow, tan, then cinnamon.">
+          <figure class="kf"><img src="media/d/f068.webp" width="1200" height="1200" loading="lazy" decoding="async" alt="The bean now tan to cinnamon brown, its crease visible."></figure>
+          <div class="beat-body">
+            <p class="span"><span class="m">4:20 to 8:10</span>, 150 to 196 °C</p>
+            <h2 class="beat-t">Maillard</h2>
+            <p class="beat-p">Above about 150&nbsp;°C, sugars and amino acids react. The bean turns yellow, then tan, then cinnamon, and the drum smells of toasted bread.</p>
+            <p class="beat-p beat-why">This stretch builds the sweetness and body in the cup.</p>
+          </div>
+        </li>
+        <li class="beat" data-phase="crack" data-say="First crack at 8:10 and 196 °C. The bean splits along its centre cut and sheds chaff.">
+          <figure class="kf"><img src="media/d/f088.webp" width="1200" height="1200" loading="lazy" decoding="async" alt="A light brown bean with its centre cut opening, flakes of pale chaff lifting off."></figure>
+          <div class="beat-body">
+            <p class="span"><span class="m">8:10</span>, 196 °C</p>
+            <h2 class="beat-t">First crack</h2>
+            <p class="beat-p">Steam and carbon dioxide build up until the bean splits along its centre cut with an audible crack. It swells and sheds the last of its chaff.</p>
+            <p class="beat-p beat-why">From here on, every few seconds shift the flavour.</p>
+          </div>
+        </li>
+        <li class="beat" data-phase="development" data-say="Development, 8:10 to 9:40. The rise slows; Kiambu keeps its bright fruit.">
+          <figure class="kf"><img src="media/d/f112.webp" width="1200" height="1200" loading="lazy" decoding="async" alt="The bean slightly swollen and an even light brown."></figure>
+          <div class="beat-body">
+            <p class="span"><span class="m">8:10 to 9:40</span>, 196 to 204 °C</p>
+            <h2 class="beat-t">Development</h2>
+            <p class="beat-p">We keep the heat gentle for a minute and a half while the rise slows. Kiambu’s blackcurrant and grapefruit stay bright.</p>
+            <p class="beat-p beat-why">A longer development would trade that fruit for roast flavour.</p>
+          </div>
+        </li>
+        <li class="beat" data-phase="drop" data-say="Drop at 9:40 and 204 °C. Batch 041 is a light roast.">
+          <figure class="kf"><img src="media/d/f139.webp" width="1200" height="1200" loading="lazy" decoding="async" alt="The finished light-roast bean at rest, crease side up."></figure>
+          <div class="beat-body">
+            <p class="span"><span class="m">9:40</span>, 204 °C</p>
+            <h2 class="beat-t">Drop</h2>
+            <p class="beat-p">At 204&nbsp;°C the beans fall into the cooling tray, where stirring and air stop the roast within minutes. Batch 041 is a light roast.</p>
+          </div>
+        </li>
+      </ol>
+
+      <figure class="overview">
+        <div class="ov-wrap" tabindex="0" role="region" aria-label="Roast curve chart, scrolls sideways on small screens">
+        <svg class="ov" viewBox="0 0 1000 480" role="img" aria-labelledby="ov-title ov-desc">
+<title id="ov-title">Roast curve of batch 041 (illustration)</title>
+<desc id="ov-desc">Bean temperature starts at 200 °C at charge, falls to 95 °C at 1:05, reaches 150 °C at 4:20, first crack at 196 °C at 8:10 and drop at 204 °C at 9:40.</desc>
+<line class="ov-rule" x1="64" x2="908" y1="207.4" y2="207.4"/>
+<text class="ov-num" x="914" y="211.4">150 °C</text>
+<line class="ov-rule" x1="64" x2="908" y1="86.1" y2="86.1"/>
+<text class="ov-num" x="914" y="98.1">196 °C</text>
+<line class="ov-rule" x1="64" x2="908" y1="65.0" y2="65.0"/>
+<text class="ov-num" x="914" y="69.0">204 °C</text>
+<line class="ov-axis" x1="64" x2="900" y1="418" y2="418"/>
+<line class="ov-tick" x1="64.0" x2="64.0" y1="412" y2="424"/>
+<text class="ov-num ov-t" x="64.0" y="444" text-anchor="middle">0:00</text>
+<line class="ov-tick" x1="147.6" x2="147.6" y1="412" y2="424"/>
+<text class="ov-num ov-t" x="147.6" y="444" text-anchor="middle">1:00</text>
+<line class="ov-tick" x1="231.2" x2="231.2" y1="412" y2="424"/>
+<text class="ov-num ov-t" x="231.2" y="444" text-anchor="middle">2:00</text>
+<line class="ov-tick" x1="314.8" x2="314.8" y1="412" y2="424"/>
+<text class="ov-num ov-t" x="314.8" y="444" text-anchor="middle">3:00</text>
+<line class="ov-tick" x1="398.4" x2="398.4" y1="412" y2="424"/>
+<text class="ov-num ov-t" x="398.4" y="444" text-anchor="middle">4:00</text>
+<line class="ov-tick" x1="482.0" x2="482.0" y1="412" y2="424"/>
+<text class="ov-num ov-t" x="482.0" y="444" text-anchor="middle">5:00</text>
+<line class="ov-tick" x1="565.6" x2="565.6" y1="412" y2="424"/>
+<text class="ov-num ov-t" x="565.6" y="444" text-anchor="middle">6:00</text>
+<line class="ov-tick" x1="649.2" x2="649.2" y1="412" y2="424"/>
+<text class="ov-num ov-t" x="649.2" y="444" text-anchor="middle">7:00</text>
+<line class="ov-tick" x1="732.8" x2="732.8" y1="412" y2="424"/>
+<text class="ov-num ov-t" x="732.8" y="444" text-anchor="middle">8:00</text>
+<line class="ov-tick" x1="816.4" x2="816.4" y1="412" y2="424"/>
+<text class="ov-num ov-t" x="816.4" y="444" text-anchor="middle">9:00</text>
+<line class="ov-tick" x1="900.0" x2="900.0" y1="412" y2="424"/>
+<text class="ov-num ov-t" x="900.0" y="444" text-anchor="middle">10:00</text>
+<line class="ov-span" x1="67.0" x2="423.3" y1="462" y2="462"/>
+<text class="ov-lab" x="245.1" y="478" text-anchor="middle">Drying</text>
+<line class="ov-span" x1="429.3" x2="743.7" y1="462" y2="462"/>
+<text class="ov-lab" x="586.5" y="478" text-anchor="middle">Maillard</text>
+<line class="ov-span" x1="749.7" x2="869.1" y1="462" y2="462"/>
+<text class="ov-lab" x="809.4" y="478" text-anchor="middle">Dev.</text>
+<polyline class="ov-curve" points="64.0,75.6 71.0,127.6 77.9,173.1 84.9,212.5 91.9,246.0 98.8,274.1 105.8,297.1 112.8,315.4 119.7,329.4 126.7,339.5 133.7,346.3 140.6,350.3 147.6,352.1 154.6,352.4 161.5,352.1 168.5,351.1 175.5,349.4 182.4,347.1 189.4,344.2 196.4,340.7 203.3,336.6 210.3,332.1 217.3,327.8 224.2,323.4 231.2,319.1 238.2,314.8 245.1,310.5 252.1,306.2 259.1,302.0 266.0,297.8 273.0,293.6 280.0,289.4 286.9,285.3 293.9,281.2 300.9,277.1 307.8,273.0 314.8,269.0 321.8,264.9 328.7,260.9 335.7,257.0 342.7,253.0 349.6,249.1 356.6,245.2 363.6,241.3 370.5,237.4 377.5,233.6 384.5,229.8 391.4,226.0 398.4,222.2 405.4,218.5 412.3,214.8 419.3,211.1 426.3,207.4 433.2,203.7 440.2,200.0 447.2,196.4 454.1,192.8 461.1,189.3 468.1,185.8 475.0,182.4 482.0,179.0 489.0,175.7 495.9,172.4 502.9,169.2 509.9,166.0 516.8,162.9 523.8,159.8 530.8,156.7 537.7,153.7 544.7,150.8 551.7,147.9 558.6,145.0 565.6,142.2 572.6,139.5 579.5,136.8 586.5,134.1 593.5,131.5 600.4,128.9 607.4,126.4 614.4,123.9 621.3,121.5 628.3,119.1 635.3,116.8 642.2,114.5 649.2,112.3 656.2,110.1 663.1,108.0 670.1,105.9 677.1,103.9 684.0,101.9 691.0,99.9 698.0,98.0 704.9,96.2 711.9,94.4 718.9,92.6 725.8,90.9 732.8,89.3 739.8,87.7 746.7,86.1 753.7,84.6 760.7,83.2 767.6,81.8 774.6,80.4 781.6,79.1 788.5,77.8 795.5,76.5 802.5,75.3 809.4,74.1 816.4,73.0 823.4,71.8 830.3,70.8 837.3,69.7 844.3,68.7 851.2,67.7 858.2,66.8 865.2,65.9 872.1,65.0"/>
+<circle class="ov-dot" cx="64.0" cy="75.6" r="5"/>
+<text class="ov-lab ov-ev" x="76.0" y="65.6" text-anchor="start">Charge, 0:00</text>
+<circle class="ov-dot" cx="154.6" cy="352.4" r="5"/>
+<text class="ov-lab ov-ev" x="166.6" y="374.4" text-anchor="start">Turning point, 1:05</text>
+<circle class="ov-dot" cx="426.3" cy="207.4" r="5"/>
+<text class="ov-lab ov-ev" x="438.3" y="227.4" text-anchor="start">Dry end, 4:20</text>
+<circle class="ov-dot" cx="746.7" cy="86.1" r="5"/>
+<text class="ov-lab ov-ev" x="734.7" y="74.1" text-anchor="end">First crack, 8:10</text>
+<circle class="ov-dot" cx="872.1" cy="65.0" r="5"/>
+<text class="ov-lab ov-ev" x="884.1" y="85.0" text-anchor="start">Drop, 9:40</text>
+</svg>
+        </div>
+        <figcaption>Batch 041, bean temperature over roast time. An illustration with rounded values.</figcaption>
+      </figure>
+
+      <table class="keypoints">
+        <caption>Key points of batch 041 (illustrative)</caption>
+        <thead><tr><th scope="col">Moment</th><th scope="col">Roast time</th><th scope="col">Bean temperature</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Charge</th><td>0:00</td><td>200 °C</td></tr>
+          <tr><th scope="row">Turning point</th><td>1:05</td><td>95 °C</td></tr>
+          <tr><th scope="row">End of drying</th><td>4:20</td><td>150 °C</td></tr>
+          <tr><th scope="row">First crack</th><td>8:10</td><td>196 °C</td></tr>
+          <tr><th scope="row">Drop</th><td>9:40</td><td>204 °C</td></tr>
+        </tbody>
+      </table>
+
+      <p class="sr-only" aria-live="polite" id="phase-live"></p>
+    </div>
+  </section>
+
+  <section class="lots" id="lots" aria-labelledby="lots-title">
+    <div class="lots-head">
+      <h2 id="lots-title">Two lots this month</h2>
+      <p>Every month we roast two small lots and ship them within 48 hours. The bean you just followed is one of October’s.</p>
+    </div>
+    <div class="lots-grid">
+      <article class="lot" aria-labelledby="lot-kiambu">
+        <div class="niche">
+          <img class="niche-bean slot" src="media/d/f139.webp" width="1200" height="1200" loading="lazy" decoding="async"
+               alt="A light-roast Kiambu bean from batch 041, crease side up.">
+        </div>
+        <div class="lot-body">
+          <h3 id="lot-kiambu">Kiambu, Kenya</h3>
+          <p class="notes">Blackcurrant, grapefruit, cane sugar</p>
+          <dl class="facts">
+            <div><dt>Variety</dt><dd>SL28 and SL34</dd></div>
+            <div><dt>Process</dt><dd>Washed</dd></div>
+            <div><dt>Altitude</dt><dd>1,800 m</dd></div>
+            <div><dt>Roast</dt><dd>Light</dd></div>
+          </dl>
+          <p>Grown by smallholder families who deliver ripe cherries to a cooperative washing station in the hills north of Nairobi.</p>
+        </div>
+      </article>
+      <article class="lot" aria-labelledby="lot-huila">
+        <div class="niche">
+          <img class="niche-bean" src="media/huila.webp" width="1200" height="1200" loading="lazy" decoding="async"
+               alt="A medium-light roast Huila bean, slightly darker and rounder, crease side up.">
+        </div>
+        <div class="lot-body">
+          <h3 id="lot-huila">Huila, Colombia</h3>
+          <p class="notes">Red apple, panela, cocoa nib</p>
+          <dl class="facts">
+            <div><dt>Variety</dt><dd>Caturra</dd></div>
+            <div><dt>Process</dt><dd>Honey</dd></div>
+            <div><dt>Altitude</dt><dd>1,750 m</dd></div>
+            <div><dt>Roast</dt><dd>Medium-light</dd></div>
+          </dl>
+          <p>Grown on a family farm that dries its coffee slowly on raised beds under shade cloth for about two weeks.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="ship" aria-labelledby="ship-title">
+    <h2 id="ship-title">Roasted Monday. <span>Ships Wednesday.</span></h2>
+    <ol class="dates">
+      <li><time datetime="2026-10-12">Monday 12 October</time><p>Batch 041 goes into the drum: 18&nbsp;kg.</p></li>
+      <li><time datetime="2026-10-14">Wednesday 14 October</time><p>It ships within 48 hours of roasting, in a resealable valve bag that fits through the letterbox, with notes on the farm and a recipe.</p></li>
+      <li><time datetime="2026-11-02">Monday 2 November</time><p>We announce the next two lots.</p></li>
+    </ol>
+  </section>
+
+  <section class="plans" id="plans" aria-labelledby="plans-title">
+    <h2 id="plans-title">Your first bag</h2>
+    <form class="pick" id="pick" novalidate>
+      <fieldset class="plan-set">
+        <legend>Plan</legend>
+        <label class="plan">
+          <input type="radio" name="plan" value="one" checked>
+          <span class="plan-name">One bag</span>
+          <span class="plan-price"><span class="eur">€14</span> a month</span>
+          <span class="plan-desc">250&nbsp;g each month, alternating between the two coffees.</span>
+        </label>
+        <label class="plan">
+          <input type="radio" name="plan" value="two">
+          <span class="plan-name">Two bags</span>
+          <span class="plan-price"><span class="eur">€26</span> a month</span>
+          <span class="plan-desc">2&nbsp;×&nbsp;250&nbsp;g each month: both coffees, to taste side by side.</span>
+        </label>
+      </fieldset>
+      <fieldset class="grind-set">
+        <legend>Whole bean or ground for</legend>
+        <div class="grinds">
+          <label class="grind"><input type="radio" name="grind" value="Whole bean" checked><span>Whole bean</span></label>
+          <label class="grind"><input type="radio" name="grind" value="Filter"><span>Filter</span></label>
+          <label class="grind"><input type="radio" name="grind" value="Espresso"><span>Espresso</span></label>
+          <label class="grind"><input type="radio" name="grind" value="Moka pot"><span>Moka pot</span></label>
+          <label class="grind"><input type="radio" name="grind" value="French press"><span>French press</span></label>
+        </div>
+      </fieldset>
+      <div class="go">
+        <button class="btn" type="submit">Choose your first bag</button>
+        <p class="terms">Skip, pause or cancel up to the Sunday before roasting.</p>
+      </div>
+      <p class="done" id="done" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Demo page for the unclawdesign skill. Tidewater is a fictional roastery.</p>
+  <a class="all" href="../../">All showcases</a>
+</footer>
+
+<canvas class="bean" role="img" aria-label="A single Kiambu coffee bean that turns from green to light brown and swells as the roast progresses."></canvas>
+
+<script>window.ROAST={"keys":[[0.0,0],[0.07,0],[0.2,65],[0.38,260],[0.58,490],[0.7,525],[0.86,580],[1.0,580]],"phases":[{"id":"still","p0":0.0,"p1":0.07},{"id":"charge","p0":0.07,"p1":0.2},{"id":"drying","p0":0.2,"p1":0.38},{"id":"maillard","p0":0.38,"p1":0.58},{"id":"crack","p0":0.58,"p1":0.7},{"id":"development","p0":0.7,"p1":0.86},{"id":"drop","p0":0.86,"p1":1.0}],"events":{"charge":0,"turning":65,"dry_end":260,"first_crack":490,"drop":580},"bt":[200.0,180.27,163.01,148.08,135.36,124.71,116.0,109.06,103.76,99.9,97.32,95.81,95.13,95.0,95.14,95.53,96.15,97.01,98.11,99.45,101.03,102.7,104.36,106.01,107.65,109.28,110.91,112.52,114.13,115.73,117.31,118.89,120.46,122.03,123.58,125.12,126.66,128.18,129.7,131.21,132.71,134.2,135.68,137.15,138.61,140.07,141.51,142.95,144.38,145.8,147.21,148.61,150.0,151.41,152.8,154.17,155.52,156.86,158.18,159.48,160.76,162.02,163.27,164.49,165.7,166.89,168.07,169.22,170.36,171.47,172.57,173.66,174.72,175.76,176.79,177.8,178.79,179.76,180.72,181.66,182.57,183.47,184.36,185.22,186.07,186.89,187.7,188.49,189.27,190.02,190.76,191.48,192.18,192.86,193.52,194.17,194.8,195.41,196.0,196.56,197.11,197.64,198.16,198.66,199.15,199.63,200.1,200.55,200.98,201.41,201.82,202.22,202.6,202.97,203.33,203.67,204.0]};</script>
+<script src="../../vendor/gsap.min.js"></script>
+<script src="../../vendor/ScrollTrigger.min.js"></script>
+<script src="roast.js"></script>
+<script src="../../shared/palette-engine.js"></script><script src="../../shared/customizer.js"></script>
+</body>
+</html>

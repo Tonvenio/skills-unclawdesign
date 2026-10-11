@@ -1,0 +1,4934 @@
+{
+ "version": "2026-10",
+ "overused": [
+  {
+   "family": "Inter",
+   "reason": "The default of AI-generated and template UI; invisible as a brand choice."
+  },
+  {
+   "family": "Roboto",
+   "reason": "Android/system default; reads as un-designed."
+  },
+  {
+   "family": "Open Sans",
+   "reason": "2010s template default."
+  },
+  {
+   "family": "Lato",
+   "reason": "2010s template default."
+  },
+  {
+   "family": "Poppins",
+   "reason": "Ubiquitous in AI and Canva-style designs."
+  },
+  {
+   "family": "Montserrat",
+   "reason": "Overused geometric default on template sites."
+  },
+  {
+   "family": "Space Grotesk",
+   "reason": "The default 'techy' AI choice since 2023."
+  },
+  {
+   "family": "Playfair Display",
+   "reason": "The default 'elegant serif' in generated pages."
+  },
+  {
+   "family": "Fraunces",
+   "reason": "Became the go-to 'warm editorial' AI serif."
+  },
+  {
+   "family": "Instrument Serif",
+   "reason": "The 2024–26 AI-landing-page italic serif cliché."
+  },
+  {
+   "family": "DM Sans",
+   "reason": "Frequent AI default sans."
+  },
+  {
+   "family": "DM Serif Display",
+   "reason": "Frequent AI default display serif."
+  },
+  {
+   "family": "Cormorant Garamond",
+   "reason": "Default 'luxury' serif in generated pages."
+  },
+  {
+   "family": "Lora",
+   "reason": "Default blog serif."
+  },
+  {
+   "family": "Merriweather",
+   "reason": "Default blog serif."
+  },
+  {
+   "family": "IBM Plex Sans / Mono",
+   "reason": "Default 'serious tech' choice; mono labels are an AI tell."
+  },
+  {
+   "family": "JetBrains Mono",
+   "reason": "Default for small monospace labels in AI pages."
+  }
+ ],
+ "pairs": [
+  {
+   "id": "newsreader-hanken",
+   "name": "Morning Edition",
+   "cluster": "editorial-literary",
+   "source": "google",
+   "display": {
+    "family": "Newsreader",
+    "category": "serif",
+    "italic": true,
+    "variable_axes": {
+     "opsz": [
+      6,
+      72
+     ],
+     "wght": [
+      200,
+      800
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Newsreader', Georgia, 'Times New Roman', serif"
+   },
+   "body": {
+    "family": "Hanken Grotesk",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200..800;1,200..800&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.015,
+    "weight": 500,
+    "line_height": 1.05
+   },
+   "moods": [
+    "literate",
+    "measured",
+    "trustworthy",
+    "journalistic"
+   ],
+   "fits": [
+    "magazines",
+    "long-form",
+    "newsletters",
+    "think tanks",
+    "law firms"
+   ],
+   "avoid_for": [
+    "playful consumer apps"
+   ],
+   "contrast_logic": "Optical-size text serif with real italics for voice; quiet grotesk carries UI and captions.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "gloock-sourceserif",
+   "name": "Ink & Margin",
+   "cluster": "editorial-literary",
+   "source": "google",
+   "display": {
+    "family": "Gloock",
+    "category": "display",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Gloock', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Source Serif 4",
+    "category": "serif",
+    "italic": true,
+    "variable_axes": {
+     "opsz": [
+      8,
+      60
+     ],
+     "wght": [
+      200,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Source Serif 4', Georgia, 'Times New Roman', serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Gloock&family=Source+Serif+4:ital,wght@0,200..900;1,200..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.01,
+    "weight": 400,
+    "line_height": 1.0
+   },
+   "moods": [
+    "dramatic",
+    "literary",
+    "confident",
+    "cultured"
+   ],
+   "fits": [
+    "publishers",
+    "culture magazines",
+    "book launches",
+    "essays"
+   ],
+   "avoid_for": [
+    "dense dashboards"
+   ],
+   "contrast_logic": "High-contrast display serif for headlines against a sturdy, low-contrast reading serif.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "spectral-schibsted",
+   "name": "Field Notes",
+   "cluster": "editorial-literary",
+   "source": "google",
+   "display": {
+    "family": "Spectral",
+    "category": "serif",
+    "italic": true,
+    "variable_axes": null,
+    "static_weights": [
+     200,
+     300,
+     400,
+     500,
+     600,
+     700,
+     800
+    ],
+    "stack": "'Spectral', Georgia, 'Times New Roman', serif"
+   },
+   "body": {
+    "family": "Schibsted Grotesk",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      400,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Schibsted Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;1,400&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.01,
+    "weight": 300,
+    "line_height": 1.1
+   },
+   "moods": [
+    "thoughtful",
+    "airy",
+    "intellectual",
+    "calm"
+   ],
+   "fits": [
+    "research labs",
+    "foundations",
+    "academic projects",
+    "podcasts"
+   ],
+   "avoid_for": [
+    "loud retail"
+   ],
+   "contrast_logic": "Light screen-first serif headlines; a newsroom grotesk with sturdy figures for body.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "caslon-duo",
+   "name": "Old Press",
+   "cluster": "editorial-literary",
+   "source": "google",
+   "display": {
+    "family": "Libre Caslon Display",
+    "category": "serif",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Libre Caslon Display', Georgia, 'Times New Roman', serif"
+   },
+   "body": {
+    "family": "Libre Caslon Text",
+    "category": "serif",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      400,
+      700
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Libre Caslon Text', Georgia, 'Times New Roman', serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400..700;1,400..700&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.005,
+    "weight": 400,
+    "line_height": 1.05
+   },
+   "moods": [
+    "traditional",
+    "bookish",
+    "heritage",
+    "authoritative"
+   ],
+   "fits": [
+    "law firms",
+    "heritage brands",
+    "literary prizes",
+    "wine"
+   ],
+   "avoid_for": [
+    "tech startups"
+   ],
+   "contrast_logic": "Same Caslon DNA at two optical sizes — the classic print move, rare on the web.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "crimson-work",
+   "name": "Broadside",
+   "cluster": "editorial-literary",
+   "source": "google",
+   "display": {
+    "family": "Crimson Pro",
+    "category": "serif",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      200,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Crimson Pro', Georgia, 'Times New Roman', serif"
+   },
+   "body": {
+    "family": "Work Sans",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Work Sans', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.01,
+    "weight": 600,
+    "line_height": 1.05
+   },
+   "moods": [
+    "warm",
+    "literate",
+    "approachable",
+    "classic"
+   ],
+   "fits": [
+    "blogs",
+    "newsletters",
+    "nonprofits",
+    "education"
+   ],
+   "avoid_for": [
+    "luxury"
+   ],
+   "contrast_logic": "Garamond-like serif with weight range for headlines; open grotesk for body and UI.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "youngserif-onest",
+   "name": "Corner Bookshop",
+   "cluster": "editorial-literary",
+   "source": "google",
+   "display": {
+    "family": "Young Serif",
+    "category": "serif",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Young Serif', Georgia, 'Times New Roman', serif"
+   },
+   "body": {
+    "family": "Onest",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Onest', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Young+Serif&family=Onest:wght@100..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.015,
+    "weight": 400,
+    "line_height": 1.05
+   },
+   "moods": [
+    "friendly",
+    "crafted",
+    "independent",
+    "warm"
+   ],
+   "fits": [
+    "indie bookshops",
+    "cafés",
+    "small publishers",
+    "food writing"
+   ],
+   "avoid_for": [
+    "enterprise SaaS"
+   ],
+   "contrast_logic": "Chunky, soft-edged serif with personality; neutral modern sans keeps it legible.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "archivo-superfamily",
+   "name": "Zurich Bulletin",
+   "cluster": "swiss-neutral-precise",
+   "source": "google",
+   "display": {
+    "family": "Archivo",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wdth": [
+      62,
+      125
+     ],
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Archivo",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wdth": [
+      62,
+      125
+     ],
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.03,
+    "weight": 800,
+    "line_height": 0.95
+   },
+   "moods": [
+    "precise",
+    "objective",
+    "confident",
+    "modern"
+   ],
+   "fits": [
+    "architecture",
+    "engineering",
+    "consultancies",
+    "annual reports"
+   ],
+   "avoid_for": [
+    "romance",
+    "wellness"
+   ],
+   "contrast_logic": "One grotesk superfamily: contrast comes from width and weight extremes, the Swiss way.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "geist-mono",
+   "name": "Control Room",
+   "cluster": "swiss-neutral-precise",
+   "source": "google",
+   "display": {
+    "family": "Geist",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Geist', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Geist",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Geist', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "mono": {
+    "family": "Geist Mono",
+    "category": "mono",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Geist Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Geist+Mono:wght@100..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.035,
+    "weight": 600,
+    "line_height": 1.0
+   },
+   "moods": [
+    "technical",
+    "clean",
+    "developer",
+    "crisp"
+   ],
+   "fits": [
+    "developer tools",
+    "APIs",
+    "infra",
+    "AI products"
+   ],
+   "avoid_for": [
+    "heritage",
+    " craft"
+   ],
+   "contrast_logic": "Sans and mono designed as a pair; tight display tracking, mono for code and figures.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "hostgrotesk-redhatmono",
+   "name": "Platform",
+   "cluster": "swiss-neutral-precise",
+   "source": "google",
+   "display": {
+    "family": "Host Grotesk",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      300,
+      800
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Host Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Host Grotesk",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      300,
+      800
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Host Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "mono": {
+    "family": "Red Hat Mono",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      300,
+      700
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Red Hat Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Red+Hat+Mono:wght@300..700&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.03,
+    "weight": 700,
+    "line_height": 1.0
+   },
+   "moods": [
+    "neutral",
+    "contemporary",
+    "systematic",
+    "clear"
+   ],
+   "fits": [
+    "B2B",
+    "fintech",
+    "logistics",
+    "product sites"
+   ],
+   "avoid_for": [
+    "storybook brands"
+   ],
+   "contrast_logic": "Contemporary grotesk does all text work; mono accent for data marks the system feel.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "chivo-chivomono",
+   "name": "Signal Grid",
+   "cluster": "swiss-neutral-precise",
+   "source": "google",
+   "display": {
+    "family": "Chivo",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Chivo', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Chivo",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Chivo', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "mono": {
+    "family": "Chivo Mono",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Chivo Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Chivo+Mono:wght@100..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.03,
+    "weight": 800,
+    "line_height": 0.95
+   },
+   "moods": [
+    "bold",
+    "grotesk",
+    "editorial",
+    "systematic"
+   ],
+   "fits": [
+    "agencies",
+    "tech editorial",
+    "events",
+    "reports"
+   ],
+   "avoid_for": [
+    "spa",
+    "children"
+   ],
+   "contrast_logic": "Heavy grotesk display weights against regular text; matching mono for metadata.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "instrument-sans-solo",
+   "name": "White Cube",
+   "cluster": "swiss-neutral-precise",
+   "source": "google",
+   "display": {
+    "family": "Instrument Sans",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wdth": [
+      75,
+      100
+     ],
+     "wght": [
+      400,
+      700
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Instrument Sans",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wdth": [
+      75,
+      100
+     ],
+     "wght": [
+      400,
+      700
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.02,
+    "weight": 600,
+    "line_height": 1.05
+   },
+   "moods": [
+    "restrained",
+    "precise",
+    "contemporary",
+    "gallery"
+   ],
+   "fits": [
+    "galleries",
+    "portfolios",
+    "architecture",
+    "design studios"
+   ],
+   "avoid_for": [
+    "loud promotions"
+   ],
+   "contrast_logic": "Single neo-grotesk with width axis — hierarchy purely through size, weight and space.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "unbounded-manrope",
+   "name": "Orbit",
+   "cluster": "geometric-modern",
+   "source": "google",
+   "display": {
+    "family": "Unbounded",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": {
+     "wght": [
+      200,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Unbounded', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Manrope",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": {
+     "wght": [
+      200,
+      800
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&family=Manrope:wght@200..800&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.02,
+    "weight": 700,
+    "line_height": 1.0
+   },
+   "moods": [
+    "wide",
+    "bold",
+    "futuristic",
+    "energetic"
+   ],
+   "fits": [
+    "web3",
+    "events",
+    "music tech",
+    "product launches"
+   ],
+   "avoid_for": [
+    "law",
+    "healthcare"
+   ],
+   "contrast_logic": "Extra-wide rounded-geometric display against a compact, highly legible geometric body.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "outfit-figtree",
+   "name": "Clear Day",
+   "cluster": "geometric-modern",
+   "source": "google",
+   "display": {
+    "family": "Outfit",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Outfit', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Figtree",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      300,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.02,
+    "weight": 600,
+    "line_height": 1.05
+   },
+   "moods": [
+    "friendly",
+    "clean",
+    "optimistic",
+    "modern"
+   ],
+   "fits": [
+    "consumer apps",
+    "fintech",
+    "health tech",
+    "SaaS"
+   ],
+   "avoid_for": [
+    "luxury",
+    "heritage"
+   ],
+   "contrast_logic": "Pure geometric headings; slightly warmer geometric body that reads better small.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "redhat-display-text",
+   "name": "Open Source",
+   "cluster": "geometric-modern",
+   "source": "google",
+   "display": {
+    "family": "Red Hat Display",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      300,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Red Hat Display', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Red Hat Text",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      300,
+      700
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Red Hat Text', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "mono": {
+    "family": "Red Hat Mono",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      300,
+      700
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Red Hat Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Red+Hat+Mono:wght@300..700&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.02,
+    "weight": 700,
+    "line_height": 1.05
+   },
+   "moods": [
+    "approachable",
+    "technical",
+    "systematic",
+    "open"
+   ],
+   "fits": [
+    "open-source",
+    "enterprise",
+    "documentation",
+    "education"
+   ],
+   "avoid_for": [
+    "fashion"
+   ],
+   "contrast_logic": "Display and text optical cuts of one family plus mono — a full system with no clashes.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "krona-albert",
+   "name": "Wide Angle",
+   "cluster": "geometric-modern",
+   "source": "google",
+   "display": {
+    "family": "Krona One",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Krona One', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Albert Sans",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Albert Sans', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Krona+One&family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap",
+   "display_treatment": {
+    "case": "upper",
+    "tracking_em": 0.02,
+    "weight": 400,
+    "line_height": 1.1
+   },
+   "moods": [
+    "wide",
+    "architectural",
+    "sporty",
+    "assertive"
+   ],
+   "fits": [
+    "architecture",
+    "automotive",
+    "sports brands",
+    "events"
+   ],
+   "avoid_for": [
+    "long reading"
+   ],
+   "contrast_logic": "Extended single-weight display used sparingly; Scandinavian geometric body.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "syne-onest",
+   "name": "Gallery Night",
+   "cluster": "geometric-modern",
+   "source": "google",
+   "display": {
+    "family": "Syne",
+    "category": "display",
+    "italic": false,
+    "variable_axes": {
+     "wght": [
+      400,
+      800
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Syne', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Onest",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Onest', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Onest:wght@100..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.02,
+    "weight": 700,
+    "line_height": 1.0
+   },
+   "moods": [
+    "artsy",
+    "eccentric",
+    "contemporary",
+    "expressive"
+   ],
+   "fits": [
+    "art spaces",
+    "creative agencies",
+    "festivals",
+    "fashion tech"
+   ],
+   "avoid_for": [
+    "banking"
+   ],
+   "contrast_logic": "Syne's weight axis morphs from quirky to wide-heavy; Onest stays calm underneath.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "sora-rethink",
+   "name": "Daylight",
+   "cluster": "geometric-modern",
+   "source": "google",
+   "display": {
+    "family": "Sora",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": {
+     "wght": [
+      100,
+      800
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Sora', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Rethink Sans",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      400,
+      800
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Rethink Sans', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.02,
+    "weight": 600,
+    "line_height": 1.05
+   },
+   "moods": [
+    "crisp",
+    "tech-friendly",
+    "open",
+    "optimistic"
+   ],
+   "fits": [
+    "startups",
+    "climate tech",
+    "mobility",
+    "product pages"
+   ],
+   "avoid_for": [
+    "editorial"
+   ],
+   "contrast_logic": "Geometric display with tech roots; Rethink Sans adds a touch of warmth for paragraphs.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "alegreya-duo",
+   "name": "Story Circle",
+   "cluster": "humanist-warm",
+   "source": "google",
+   "display": {
+    "family": "Alegreya",
+    "category": "serif",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      400,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Alegreya', Georgia, 'Times New Roman', serif"
+   },
+   "body": {
+    "family": "Alegreya Sans",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": null,
+    "static_weights": [
+     100,
+     300,
+     400,
+     500,
+     700,
+     800,
+     900
+    ],
+    "stack": "'Alegreya Sans', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.005,
+    "weight": 700,
+    "line_height": 1.1
+   },
+   "moods": [
+    "literary",
+    "warm",
+    "humane",
+    "calligraphic"
+   ],
+   "fits": [
+    "education",
+    "nonprofits",
+    "storytelling",
+    "cultural heritage"
+   ],
+   "avoid_for": [
+    "hard tech"
+   ],
+   "contrast_logic": "Calligraphic serif and its humanist sans sibling — harmonious by construction.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "petrona-karla",
+   "name": "Kitchen Table",
+   "cluster": "humanist-warm",
+   "source": "google",
+   "display": {
+    "family": "Petrona",
+    "category": "serif",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Petrona', Georgia, 'Times New Roman', serif"
+   },
+   "body": {
+    "family": "Karla",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      200,
+      800
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Karla', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.01,
+    "weight": 600,
+    "line_height": 1.1
+   },
+   "moods": [
+    "warm",
+    "homely",
+    "trustworthy",
+    "approachable"
+   ],
+   "fits": [
+    "food",
+    "family businesses",
+    "community",
+    "local services"
+   ],
+   "avoid_for": [
+    "high fashion"
+   ],
+   "contrast_logic": "Soft-wedge serif with a big weight range; quirky grotesque Karla keeps it unpretentious.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "gelasio-karla",
+   "name": "Parlour",
+   "cluster": "humanist-warm",
+   "source": "google",
+   "display": {
+    "family": "Gelasio",
+    "category": "serif",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      400,
+      700
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Gelasio', Georgia, 'Times New Roman', serif"
+   },
+   "body": {
+    "family": "Mulish",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      200,
+      1000
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Mulish', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.01,
+    "weight": 600,
+    "line_height": 1.1
+   },
+   "moods": [
+    "classic",
+    "warm",
+    "gentle",
+    "reliable"
+   ],
+   "fits": [
+    "therapists",
+    "clinics",
+    "family law",
+    "coaching"
+   ],
+   "avoid_for": [
+    "tech"
+   ],
+   "contrast_logic": "Georgia-metric serif for familiar warmth; minimalist sans for clean UI.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "bitter-sourcesans",
+   "name": "Workbench",
+   "cluster": "humanist-warm",
+   "source": "google",
+   "display": {
+    "family": "Bitter",
+    "category": "serif",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Bitter', Georgia, 'Times New Roman', serif"
+   },
+   "body": {
+    "family": "Source Sans 3",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      200,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Source Sans 3', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.01,
+    "weight": 700,
+    "line_height": 1.1
+   },
+   "moods": [
+    "sturdy",
+    "honest",
+    "practical",
+    "craft"
+   ],
+   "fits": [
+    "trades",
+    "tools",
+    "civic services",
+    "manuals"
+   ],
+   "avoid_for": [
+    "luxury"
+   ],
+   "contrast_logic": "Screen-built slab serif for headings that feel built, humanist sans for clear reading.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "figtree-literata",
+   "name": "Long Table",
+   "cluster": "humanist-warm",
+   "source": "google",
+   "display": {
+    "family": "Figtree",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      300,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Literata",
+    "category": "serif",
+    "italic": true,
+    "variable_axes": {
+     "opsz": [
+      7,
+      72
+     ],
+     "wght": [
+      200,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Literata', Georgia, 'Times New Roman', serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Literata:ital,wght@0,200..900;1,200..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.02,
+    "weight": 700,
+    "line_height": 1.05
+   },
+   "moods": [
+    "friendly",
+    "readable",
+    "thoughtful",
+    "warm"
+   ],
+   "fits": [
+    "blogs",
+    "course platforms",
+    "documentation with personality"
+   ],
+   "avoid_for": [
+    "dashboards"
+   ],
+   "contrast_logic": "Inverted pairing: friendly sans headlines over a serif made for e-book reading.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "bricolage-instrument",
+   "name": "Concrete Poster",
+   "cluster": "grotesk-brutal",
+   "source": "google",
+   "display": {
+    "family": "Bricolage Grotesque",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": {
+     "opsz": [
+      12,
+      96
+     ],
+     "wdth": [
+      75,
+      100
+     ],
+     "wght": [
+      200,
+      800
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Bricolage Grotesque', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Instrument Sans",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wdth": [
+      75,
+      100
+     ],
+     "wght": [
+      400,
+      700
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@200..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.04,
+    "weight": 800,
+    "line_height": 0.9
+   },
+   "moods": [
+    "raw",
+    "characterful",
+    "loud",
+    "contemporary"
+   ],
+   "fits": [
+    "creative studios",
+    "music",
+    "independent media",
+    "launches"
+   ],
+   "avoid_for": [
+    "banking"
+   ],
+   "contrast_logic": "Bricolage's ink-trapped heavy cuts carry the shout; Instrument Sans stays orderly.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "archivoblack-spacemono",
+   "name": "Zine Machine",
+   "cluster": "grotesk-brutal",
+   "source": "google",
+   "display": {
+    "family": "Archivo Black",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Archivo Black', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Archivo",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wdth": [
+      62,
+      125
+     ],
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "mono": {
+    "family": "Space Mono",
+    "category": "mono",
+    "italic": true,
+    "variable_axes": null,
+    "static_weights": [
+     400,
+     700
+    ],
+    "stack": "'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,100..900;1,100..900&family=Space+Mono:wght@400&display=swap",
+   "display_treatment": {
+    "case": "upper",
+    "tracking_em": -0.01,
+    "weight": 400,
+    "line_height": 0.9
+   },
+   "moods": [
+    "brutal",
+    "direct",
+    "punk",
+    "utilitarian"
+   ],
+   "fits": [
+    "zines",
+    "activism",
+    "record labels",
+    "hackathons"
+   ],
+   "avoid_for": [
+    "luxury",
+    "wellness"
+   ],
+   "contrast_logic": "Single heavy weight for slabs of type, regular grotesk body, mono for metadata.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "darker-work",
+   "name": "Night Shift",
+   "cluster": "grotesk-brutal",
+   "source": "google",
+   "display": {
+    "family": "Darker Grotesque",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": {
+     "wght": [
+      300,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Darker Grotesque', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Work Sans",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Work Sans', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.02,
+    "weight": 800,
+    "line_height": 0.9
+   },
+   "moods": [
+    "dense",
+    "stylish",
+    "urban",
+    "nocturnal"
+   ],
+   "fits": [
+    "fashion",
+    "nightlife",
+    "photography",
+    "music"
+   ],
+   "avoid_for": [
+    "children"
+   ],
+   "contrast_logic": "Narrow, tall grotesk at heavy weights makes dense headline blocks; Work Sans is wider and calm.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "familjen-azeret",
+   "name": "Utility Room",
+   "cluster": "grotesk-brutal",
+   "source": "google",
+   "display": {
+    "family": "Familjen Grotesk",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      400,
+      700
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Familjen Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Familjen Grotesk",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      400,
+      700
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Familjen Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "mono": {
+    "family": "Azeret Mono",
+    "category": "mono",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Azeret Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Azeret+Mono:wght@100..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.03,
+    "weight": 700,
+    "line_height": 0.95
+   },
+   "moods": [
+    "functional",
+    "quirky",
+    "Scandinavian",
+    "honest"
+   ],
+   "fits": [
+    "studios",
+    "small software",
+    "architecture",
+    "collectives"
+   ],
+   "avoid_for": [
+    "romance"
+   ],
+   "contrast_logic": "Grotesk with odd details as the whole voice; Azeret Mono for tags and numbers.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "anybody-hanken",
+   "name": "Stretch Goal",
+   "cluster": "grotesk-brutal",
+   "source": "google",
+   "display": {
+    "family": "Anybody",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wdth": [
+      50,
+      150
+     ],
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Anybody', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Hanken Grotesk",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap",
+   "display_treatment": {
+    "case": "upper",
+    "tracking_em": 0.0,
+    "weight": 900,
+    "line_height": 0.9
+   },
+   "moods": [
+    "elastic",
+    "sporty",
+    "experimental",
+    "loud"
+   ],
+   "fits": [
+    "sports",
+    "festivals",
+    "gaming",
+    "campaigns"
+   ],
+   "avoid_for": [
+    "long reading"
+   ],
+   "contrast_logic": "Width axis from ultra-condensed to extra-expanded makes type a graphic device.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "bodoni-jost",
+   "name": "Maison",
+   "cluster": "luxury-high-contrast",
+   "source": "google",
+   "display": {
+    "family": "Bodoni Moda",
+    "category": "serif",
+    "italic": true,
+    "variable_axes": {
+     "opsz": [
+      6,
+      96
+     ],
+     "wght": [
+      400,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Bodoni Moda', Georgia, 'Times New Roman', serif"
+   },
+   "body": {
+    "family": "Jost",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Jost', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.01,
+    "weight": 500,
+    "line_height": 1.0
+   },
+   "moods": [
+    "elegant",
+    "fashion",
+    "refined",
+    "dramatic"
+   ],
+   "fits": [
+    "fashion",
+    "jewellery",
+    "perfume",
+    "hotels"
+   ],
+   "avoid_for": [
+    "utilities",
+    "SaaS"
+   ],
+   "contrast_logic": "True Didone with optical sizes; Futura-like Jost answers with geometric restraint.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "italiana-tenor",
+   "name": "Atelier",
+   "cluster": "luxury-high-contrast",
+   "source": "google",
+   "display": {
+    "family": "Italiana",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Italiana', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Tenor Sans",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Tenor Sans', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Italiana&family=Tenor+Sans&display=swap",
+   "display_treatment": {
+    "case": "upper",
+    "tracking_em": 0.08,
+    "weight": 400,
+    "line_height": 1.15
+   },
+   "moods": [
+    "delicate",
+    "sophisticated",
+    "quiet",
+    "couture"
+   ],
+   "fits": [
+    "boutiques",
+    "bridal",
+    "interiors",
+    "salons"
+   ],
+   "avoid_for": [
+    "anything data-heavy"
+   ],
+   "contrast_logic": "Hairline Didone caps tracked wide over a calm humanist sans.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "gilda-mulish",
+   "name": "Gallery Opening",
+   "cluster": "luxury-high-contrast",
+   "source": "google",
+   "display": {
+    "family": "Gilda Display",
+    "category": "serif",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Gilda Display', Georgia, 'Times New Roman', serif"
+   },
+   "body": {
+    "family": "Mulish",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      200,
+      1000
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Mulish', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Gilda+Display&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": 0.0,
+    "weight": 400,
+    "line_height": 1.1
+   },
+   "moods": [
+    "graceful",
+    "classic",
+    "understated",
+    "feminine"
+   ],
+   "fits": [
+    "galleries",
+    "wedding",
+    "restaurants",
+    "wine"
+   ],
+   "avoid_for": [
+    "tech"
+   ],
+   "contrast_logic": "Single-weight high-contrast serif for display; minimalist sans keeps details airy.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "notoserifdisplay-albert",
+   "name": "Private Client",
+   "cluster": "luxury-high-contrast",
+   "source": "google",
+   "display": {
+    "family": "Noto Serif Display",
+    "category": "display",
+    "italic": true,
+    "variable_axes": {
+     "wdth": [
+      62.5,
+      100
+     ],
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Noto Serif Display', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Albert Sans",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Albert Sans', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.02,
+    "weight": 300,
+    "line_height": 1.0
+   },
+   "moods": [
+    "quiet luxury",
+    "precise",
+    "expensive",
+    "calm"
+   ],
+   "fits": [
+    "private banks",
+    "family offices",
+    "architecture",
+    "premium services"
+   ],
+   "avoid_for": [
+    "kids"
+   ],
+   "contrast_logic": "Light-weight display serif at large size reads expensive; Albert Sans adds Nordic clarity.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "prata-nunitosans",
+   "name": "Salon",
+   "cluster": "luxury-high-contrast",
+   "source": "google",
+   "display": {
+    "family": "Prata",
+    "category": "serif",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Prata', Georgia, 'Times New Roman', serif"
+   },
+   "body": {
+    "family": "Nunito Sans",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "YTLC": [
+      440,
+      540
+     ],
+     "opsz": [
+      6,
+      12
+     ],
+     "wdth": [
+      75,
+      125
+     ],
+     "wght": [
+      200,
+      1000
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Nunito Sans', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Prata&family=Nunito+Sans:ital,wght@0,200..1000;1,200..1000&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": 0.0,
+    "weight": 400,
+    "line_height": 1.1
+   },
+   "moods": [
+    "elegant",
+    "soft",
+    "hospitable",
+    "classic"
+   ],
+   "fits": [
+    "spas",
+    "boutique hotels",
+    "cosmetics",
+    "florists"
+   ],
+   "avoid_for": [
+    "industrial"
+   ],
+   "contrast_logic": "Didone-inspired Prata with rounded-terminal sans for softness.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "shrikhand-rubik",
+   "name": "Disco Biscuit",
+   "cluster": "retro-70s-groovy",
+   "source": "google",
+   "display": {
+    "family": "Shrikhand",
+    "category": "display",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Shrikhand', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Rubik",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      300,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Rubik', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Shrikhand&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": 0.0,
+    "weight": 400,
+    "line_height": 1.0
+   },
+   "moods": [
+    "groovy",
+    "joyful",
+    "bold",
+    "nostalgic"
+   ],
+   "fits": [
+    "food trucks",
+    "ice cream",
+    "festivals",
+    "record shops"
+   ],
+   "avoid_for": [
+    "finance",
+    "legal"
+   ],
+   "contrast_logic": "Swashy italic display with heavy curves; rounded-corner Rubik matches its softness.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "bagel-figtree",
+   "name": "Sunday Bakery",
+   "cluster": "retro-70s-groovy",
+   "source": "google",
+   "display": {
+    "family": "Bagel Fat One",
+    "category": "display",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Bagel Fat One', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Figtree",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      300,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": 0.0,
+    "weight": 400,
+    "line_height": 1.0
+   },
+   "moods": [
+    "chunky",
+    "cheerful",
+    "retro",
+    "snackable"
+   ],
+   "fits": [
+    "bakeries",
+    "snacks",
+    "kids' brands",
+    "pop-ups"
+   ],
+   "avoid_for": [
+    "serious B2B"
+   ],
+   "contrast_logic": "Ultra-fat rounded display used big and short; Figtree keeps body text neat.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "righteous-nunito",
+   "name": "Drive-In",
+   "cluster": "retro-70s-groovy",
+   "source": "google",
+   "display": {
+    "family": "Righteous",
+    "category": "display",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Righteous', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Nunito",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      200,
+      1000
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Righteous&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": 0.0,
+    "weight": 400,
+    "line_height": 1.05
+   },
+   "moods": [
+    "retro",
+    "streamlined",
+    "fun",
+    "diner"
+   ],
+   "fits": [
+    "diners",
+    "retro games",
+    "car culture",
+    "events"
+   ],
+   "avoid_for": [
+    "luxury"
+   ],
+   "contrast_logic": "Art-deco-meets-70s display; rounded Nunito echoes its terminals.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "abril-work",
+   "name": "Vinyl Sleeve",
+   "cluster": "retro-70s-groovy",
+   "source": "google",
+   "display": {
+    "family": "Abril Fatface",
+    "category": "display",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Abril Fatface', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Work Sans",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Work Sans', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.01,
+    "weight": 400,
+    "line_height": 1.0
+   },
+   "moods": [
+    "dramatic",
+    "retro",
+    "editorial",
+    "poster"
+   ],
+   "fits": [
+    "music",
+    "magazines",
+    "events",
+    "bars"
+   ],
+   "avoid_for": [
+    "UI-heavy apps"
+   ],
+   "contrast_logic": "Fat-face Didone for poster headlines; plain grotesk body lets it shout alone.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "michroma-saira",
+   "name": "Mission Control",
+   "cluster": "retro-futurist-tech",
+   "source": "google",
+   "display": {
+    "family": "Michroma",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Michroma', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Saira",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wdth": [
+      50,
+      125
+     ],
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Saira', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Michroma&family=Saira:ital,wght@0,100..900;1,100..900&display=swap",
+   "display_treatment": {
+    "case": "upper",
+    "tracking_em": 0.06,
+    "weight": 400,
+    "line_height": 1.15
+   },
+   "moods": [
+    "space-age",
+    "technical",
+    "precise",
+    "cool"
+   ],
+   "fits": [
+    "aerospace",
+    "automotive",
+    "hardware",
+    "sci-fi"
+   ],
+   "avoid_for": [
+    "warm community"
+   ],
+   "contrast_logic": "Extended square display recalls 60s space age; Saira's squared forms carry the theme quietly.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "majormono-spacemono",
+   "name": "Terminal Poetry",
+   "cluster": "retro-futurist-tech",
+   "source": "google",
+   "display": {
+    "family": "Major Mono Display",
+    "category": "mono",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Major Mono Display', ui-monospace, 'SFMono-Regular', Menlo, monospace"
+   },
+   "body": {
+    "family": "Space Mono",
+    "category": "mono",
+    "italic": true,
+    "variable_axes": null,
+    "static_weights": [
+     400,
+     700
+    ],
+    "stack": "'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap",
+   "display_treatment": {
+    "case": "lower",
+    "tracking_em": 0.0,
+    "weight": 400,
+    "line_height": 1.15
+   },
+   "moods": [
+    "cryptic",
+    "hacker",
+    "experimental",
+    "lo-fi"
+   ],
+   "fits": [
+    "dev portfolios",
+    "art-tech",
+    "crypto art",
+    "experimental"
+   ],
+   "avoid_for": [
+    "accessibility-critical"
+   ],
+   "contrast_logic": "Geometric mono display with mixed-case quirks over a retro-futurist mono body.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "chakra-barlow",
+   "name": "Cockpit",
+   "cluster": "retro-futurist-tech",
+   "source": "google",
+   "display": {
+    "family": "Chakra Petch",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": null,
+    "static_weights": [
+     300,
+     400,
+     500,
+     600,
+     700
+    ],
+    "stack": "'Chakra Petch', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Barlow",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": null,
+    "static_weights": [
+     100,
+     200,
+     300,
+     400,
+     500,
+     600,
+     700,
+     800,
+     900
+    ],
+    "stack": "'Barlow', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;1,400&family=Barlow:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+   "display_treatment": {
+    "case": "upper",
+    "tracking_em": 0.02,
+    "weight": 600,
+    "line_height": 1.0
+   },
+   "moods": [
+    "angular",
+    "gaming",
+    "technical",
+    "energetic"
+   ],
+   "fits": [
+    "gaming",
+    "esports",
+    "drones",
+    "robotics"
+   ],
+   "avoid_for": [
+    "editorial"
+   ],
+   "contrast_logic": "Chamfered-corner display that hints at HUD interfaces; slightly rounded grotesk body.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "turret-exo",
+   "name": "Neon Arcade",
+   "cluster": "retro-futurist-tech",
+   "source": "google",
+   "display": {
+    "family": "Turret Road",
+    "category": "display",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     200,
+     300,
+     400,
+     500,
+     700,
+     800
+    ],
+    "stack": "'Turret Road', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Exo 2",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Exo 2', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Turret+Road:wght@700&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap",
+   "display_treatment": {
+    "case": "upper",
+    "tracking_em": 0.04,
+    "weight": 700,
+    "line_height": 1.0
+   },
+   "moods": [
+    "synthwave",
+    "futuristic",
+    "playful",
+    "electric"
+   ],
+   "fits": [
+    "game studios",
+    "music producers",
+    "VR",
+    "events"
+   ],
+   "avoid_for": [
+    "serious finance"
+   ],
+   "contrast_logic": "Geometric display with stencil-like breaks; Exo 2 keeps the futurist voice in body.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "fredoka-nunito",
+   "name": "Playground",
+   "cluster": "playful-rounded",
+   "source": "google",
+   "display": {
+    "family": "Fredoka",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": {
+     "wdth": [
+      75,
+      125
+     ],
+     "wght": [
+      300,
+      700
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Fredoka', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Nunito",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      200,
+      1000
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.01,
+    "weight": 600,
+    "line_height": 1.05
+   },
+   "moods": [
+    "friendly",
+    "childlike",
+    "soft",
+    "happy"
+   ],
+   "fits": [
+    "kids' apps",
+    "education",
+    "pets",
+    "toys"
+   ],
+   "avoid_for": [
+    "legal",
+    "luxury"
+   ],
+   "contrast_logic": "Rounded display with a width axis; Nunito's rounded terminals keep body friendly.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "baloo-mulish",
+   "name": "Bubble Tea",
+   "cluster": "playful-rounded",
+   "source": "google",
+   "display": {
+    "family": "Baloo 2",
+    "category": "display",
+    "italic": false,
+    "variable_axes": {
+     "wght": [
+      400,
+      800
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Baloo 2', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Mulish",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      200,
+      1000
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Mulish', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.01,
+    "weight": 700,
+    "line_height": 1.05
+   },
+   "moods": [
+    "bouncy",
+    "cheerful",
+    "casual",
+    "inclusive"
+   ],
+   "fits": [
+    "consumer apps",
+    "food delivery",
+    "games",
+    "community"
+   ],
+   "avoid_for": [
+    "corporate"
+   ],
+   "contrast_logic": "Heavy rounded display with personality; clean minimalist sans balances it.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "grandstander-lexend",
+   "name": "Recess",
+   "cluster": "playful-rounded",
+   "source": "google",
+   "display": {
+    "family": "Grandstander",
+    "category": "display",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Grandstander', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Lexend",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Lexend', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Lexend:wght@100..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": 0.0,
+    "weight": 800,
+    "line_height": 1.05
+   },
+   "moods": [
+    "goofy",
+    "energetic",
+    "childlike",
+    "warm"
+   ],
+   "fits": [
+    "children's education",
+    "reading apps",
+    "camps"
+   ],
+   "avoid_for": [
+    "anything formal"
+   ],
+   "contrast_logic": "Bouncy hand-feel display for headlines; Lexend designed for reading proficiency.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "rubik-solo",
+   "name": "Soft Corners",
+   "cluster": "playful-rounded",
+   "source": "google",
+   "display": {
+    "family": "Rubik",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      300,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Rubik', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Rubik",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      300,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Rubik', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.02,
+    "weight": 800,
+    "line_height": 1.0
+   },
+   "moods": [
+    "rounded",
+    "solid",
+    "approachable",
+    "modern"
+   ],
+   "fits": [
+    "apps",
+    "startups",
+    "games",
+    "community tools"
+   ],
+   "avoid_for": [
+    "luxury"
+   ],
+   "contrast_logic": "One family with slightly rounded corners; hierarchy from its wide weight range.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "gluten-varela",
+   "name": "Gummy",
+   "cluster": "playful-rounded",
+   "source": "google",
+   "display": {
+    "family": "Gluten",
+    "category": "display",
+    "italic": false,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Gluten', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Varela Round",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Varela Round', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&family=Varela+Round&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": 0.0,
+    "weight": 700,
+    "line_height": 1.0
+   },
+   "moods": [
+    "squishy",
+    "cute",
+    "sweet",
+    "cheerful"
+   ],
+   "fits": [
+    "candy",
+    "stationery",
+    "illustration shops",
+    "kids"
+   ],
+   "avoid_for": [
+    "professional services"
+   ],
+   "contrast_logic": "Soft blobby display with a slant axis; Varela Round is the calm rounded body.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "caveatbrush-karla",
+   "name": "Market Stall",
+   "cluster": "handmade-craft",
+   "source": "google",
+   "display": {
+    "family": "Caveat Brush",
+    "category": "handwriting",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Caveat Brush', 'Comic Sans MS', cursive"
+   },
+   "body": {
+    "family": "Karla",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      200,
+      800
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Karla', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Karla:ital,wght@0,200..800;1,200..800&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": 0.0,
+    "weight": 400,
+    "line_height": 1.0
+   },
+   "moods": [
+    "handmade",
+    "casual",
+    "authentic",
+    "local"
+   ],
+   "fits": [
+    "farmers markets",
+    "cafés",
+    "workshops",
+    "crafts"
+   ],
+   "avoid_for": [
+    "fintech"
+   ],
+   "contrast_logic": "Brush handwriting for short headings only; Karla keeps the rest tidy.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "shantell-literata",
+   "name": "Sketchbook",
+   "cluster": "handmade-craft",
+   "source": "google",
+   "display": {
+    "family": "Shantell Sans",
+    "category": "display",
+    "italic": true,
+    "variable_axes": {
+     "INFM": [
+      0,
+      100
+     ],
+     "SPAC": [
+      0,
+      100
+     ],
+     "wght": [
+      300,
+      800
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Shantell Sans', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Literata",
+    "category": "serif",
+    "italic": true,
+    "variable_axes": {
+     "opsz": [
+      7,
+      72
+     ],
+     "wght": [
+      200,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Literata', Georgia, 'Times New Roman', serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Literata:ital,wght@0,200..900;1,200..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": 0.0,
+    "weight": 700,
+    "line_height": 1.1
+   },
+   "moods": [
+    "informal",
+    "personal",
+    "honest",
+    "friendly"
+   ],
+   "fits": [
+    "personal blogs",
+    "teachers",
+    "illustrators",
+    "newsletters"
+   ],
+   "avoid_for": [
+    "luxury"
+   ],
+   "contrast_logic": "Variable marker-style sans (with bounce axis) over a refined reading serif.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "kalam-sourceserif",
+   "name": "Margin Notes",
+   "cluster": "handmade-craft",
+   "source": "google",
+   "display": {
+    "family": "Kalam",
+    "category": "handwriting",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     300,
+     400,
+     700
+    ],
+    "stack": "'Kalam', 'Comic Sans MS', cursive"
+   },
+   "body": {
+    "family": "Source Serif 4",
+    "category": "serif",
+    "italic": true,
+    "variable_axes": {
+     "opsz": [
+      8,
+      60
+     ],
+     "wght": [
+      200,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Source Serif 4', Georgia, 'Times New Roman', serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Source+Serif+4:ital,wght@0,200..900;1,200..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": 0.0,
+    "weight": 700,
+    "line_height": 1.1
+   },
+   "moods": [
+    "annotated",
+    "scholarly-casual",
+    "warm",
+    "personal"
+   ],
+   "fits": [
+    "tutoring",
+    "study tools",
+    "recipes",
+    "journals"
+   ],
+   "avoid_for": [
+    "tech"
+   ],
+   "contrast_logic": "Handwritten display reads like a note in the margin of a serious serif text.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "architects-inconsolata",
+   "name": "Drafting Table",
+   "cluster": "handmade-craft",
+   "source": "google",
+   "display": {
+    "family": "Architects Daughter",
+    "category": "handwriting",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Architects Daughter', 'Comic Sans MS', cursive"
+   },
+   "body": {
+    "family": "Inconsolata",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": {
+     "wdth": [
+      50,
+      200
+     ],
+     "wght": [
+      200,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Inconsolata', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inconsolata:wght@200..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": 0.0,
+    "weight": 400,
+    "line_height": 1.15
+   },
+   "moods": [
+    "blueprint",
+    "technical-casual",
+    "maker",
+    "sketchy"
+   ],
+   "fits": [
+    "makers",
+    "architecture students",
+    "hardware hobbyists",
+    "DIY"
+   ],
+   "avoid_for": [
+    "formal finance"
+   ],
+   "contrast_logic": "Architect's hand lettering plus a clean mono — a sketched-blueprint feel.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "poiret-josefin",
+   "name": "Gatsby",
+   "cluster": "art-deco-gilded",
+   "source": "google",
+   "display": {
+    "family": "Poiret One",
+    "category": "display",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Poiret One', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Josefin Sans",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      700
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Josefin Sans', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Poiret+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap",
+   "display_treatment": {
+    "case": "upper",
+    "tracking_em": 0.12,
+    "weight": 400,
+    "line_height": 1.15
+   },
+   "moods": [
+    "deco",
+    "glamorous",
+    "vintage",
+    "elegant"
+   ],
+   "fits": [
+    "cocktail bars",
+    "jazz",
+    "weddings",
+    "theatres"
+   ],
+   "avoid_for": [
+    "data-heavy apps"
+   ],
+   "contrast_logic": "Thin geometric deco display; Josefin's 1920s geometry continues the period.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "limelight-questrial",
+   "name": "Picture Palace",
+   "cluster": "art-deco-gilded",
+   "source": "google",
+   "display": {
+    "family": "Limelight",
+    "category": "display",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Limelight', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Questrial",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Questrial', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Limelight&family=Questrial&display=swap",
+   "display_treatment": {
+    "case": "upper",
+    "tracking_em": 0.04,
+    "weight": 400,
+    "line_height": 1.05
+   },
+   "moods": [
+    "cinematic",
+    "deco",
+    "showbiz",
+    "bold"
+   ],
+   "fits": [
+    "cinemas",
+    "theatres",
+    "events",
+    "bars"
+   ],
+   "avoid_for": [
+    "healthcare"
+   ],
+   "contrast_logic": "High-contrast deco display with marquee drama; simple geometric body.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "cinzel-fauna",
+   "name": "Marble Hall",
+   "cluster": "art-deco-gilded",
+   "source": "google",
+   "display": {
+    "family": "Cinzel",
+    "category": "serif",
+    "italic": false,
+    "variable_axes": {
+     "wght": [
+      400,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Cinzel', Georgia, 'Times New Roman', serif"
+   },
+   "body": {
+    "family": "Fauna One",
+    "category": "serif",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Fauna One', Georgia, 'Times New Roman', serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Fauna+One&display=swap",
+   "display_treatment": {
+    "case": "upper",
+    "tracking_em": 0.1,
+    "weight": 600,
+    "line_height": 1.15
+   },
+   "moods": [
+    "classical",
+    "monumental",
+    "ceremonial",
+    "timeless"
+   ],
+   "fits": [
+    "museums",
+    "awards",
+    "premium spirits",
+    "historic venues"
+   ],
+   "avoid_for": [
+    "casual apps"
+   ],
+   "contrast_logic": "Roman inscriptional capitals for titles; soft serif body for warmth.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "federo-didact",
+   "name": "Ocean Liner",
+   "cluster": "art-deco-gilded",
+   "source": "google",
+   "display": {
+    "family": "Federo",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Federo', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Didact Gothic",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Didact Gothic', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Federo&family=Didact+Gothic&display=swap",
+   "display_treatment": {
+    "case": "upper",
+    "tracking_em": 0.06,
+    "weight": 400,
+    "line_height": 1.1
+   },
+   "moods": [
+    "streamline",
+    "vintage",
+    "travel",
+    "elegant"
+   ],
+   "fits": [
+    "travel",
+    "hotels",
+    "heritage brands",
+    "barbers"
+   ],
+   "avoid_for": [
+    "fintech"
+   ],
+   "contrast_logic": "Machine-age deco display; plain geometric gothic body like period signage.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "ebgaramond-franklin",
+   "name": "Faculty",
+   "cluster": "scholarly-institutional",
+   "source": "google",
+   "display": {
+    "family": "EB Garamond",
+    "category": "serif",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      400,
+      800
+     ]
+    },
+    "static_weights": null,
+    "stack": "'EB Garamond', Georgia, 'Times New Roman', serif"
+   },
+   "body": {
+    "family": "Libre Franklin",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Libre Franklin', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.005,
+    "weight": 500,
+    "line_height": 1.1
+   },
+   "moods": [
+    "academic",
+    "classical",
+    "credible",
+    "serious"
+   ],
+   "fits": [
+    "universities",
+    "journals",
+    "law",
+    "foundations"
+   ],
+   "avoid_for": [
+    "gaming"
+   ],
+   "contrast_logic": "Garamond revival for authority; American gothic Franklin for navigation and UI.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "sourceserif-sourcesans",
+   "name": "Public Record",
+   "cluster": "scholarly-institutional",
+   "source": "google",
+   "display": {
+    "family": "Source Serif 4",
+    "category": "serif",
+    "italic": true,
+    "variable_axes": {
+     "opsz": [
+      8,
+      60
+     ],
+     "wght": [
+      200,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Source Serif 4', Georgia, 'Times New Roman', serif"
+   },
+   "body": {
+    "family": "Source Sans 3",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      200,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Source Sans 3', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "mono": {
+    "family": "Source Code Pro",
+    "category": "mono",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      200,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Source Code Pro', ui-monospace, 'SFMono-Regular', Menlo, monospace"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Source+Code+Pro:wght@200..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.01,
+    "weight": 600,
+    "line_height": 1.1
+   },
+   "moods": [
+    "credible",
+    "systematic",
+    "neutral",
+    "readable"
+   ],
+   "fits": [
+    "government",
+    "policy",
+    "research",
+    "documentation"
+   ],
+   "avoid_for": [
+    "fashion"
+   ],
+   "contrast_logic": "Superfamily trio designed together — maximum coherence for institutional sites.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "publicsans-literata",
+   "name": "Civic",
+   "cluster": "scholarly-institutional",
+   "source": "google",
+   "display": {
+    "family": "Public Sans",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Public Sans', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Literata",
+    "category": "serif",
+    "italic": true,
+    "variable_axes": {
+     "opsz": [
+      7,
+      72
+     ],
+     "wght": [
+      200,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Literata', Georgia, 'Times New Roman', serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Literata:ital,wght@0,200..900;1,200..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.02,
+    "weight": 700,
+    "line_height": 1.05
+   },
+   "moods": [
+    "civic",
+    "accessible",
+    "neutral",
+    "serious"
+   ],
+   "fits": [
+    "public sector",
+    "NGOs",
+    "health information",
+    "legal aid"
+   ],
+   "avoid_for": [
+    "lifestyle"
+   ],
+   "contrast_logic": "Strong neutral sans headlines (US gov heritage) over a highly readable serif.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "oldstandard-ptsans",
+   "name": "Archive",
+   "cluster": "scholarly-institutional",
+   "source": "google",
+   "display": {
+    "family": "Old Standard TT",
+    "category": "serif",
+    "italic": true,
+    "variable_axes": null,
+    "static_weights": [
+     400,
+     700
+    ],
+    "stack": "'Old Standard TT', Georgia, 'Times New Roman', serif"
+   },
+   "body": {
+    "family": "PT Sans",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": null,
+    "static_weights": [
+     400,
+     700
+    ],
+    "stack": "'PT Sans', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,700;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": 0.0,
+    "weight": 700,
+    "line_height": 1.1
+   },
+   "moods": [
+    "historic",
+    "archival",
+    "scholarly",
+    "austere"
+   ],
+   "fits": [
+    "archives",
+    "historical societies",
+    "libraries",
+    "museums"
+   ],
+   "avoid_for": [
+    "startups"
+   ],
+   "contrast_logic": "19th-century modern serif evokes archives; PT Sans is a sober public-signage sans.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "anton-barlow",
+   "name": "Stadium",
+   "cluster": "condensed-poster-sport",
+   "source": "google",
+   "display": {
+    "family": "Anton",
+    "category": "display",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Anton', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Barlow",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": null,
+    "static_weights": [
+     100,
+     200,
+     300,
+     400,
+     500,
+     600,
+     700,
+     800,
+     900
+    ],
+    "stack": "'Barlow', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+   "display_treatment": {
+    "case": "upper",
+    "tracking_em": 0.0,
+    "weight": 400,
+    "line_height": 0.95
+   },
+   "moods": [
+    "loud",
+    "athletic",
+    "urgent",
+    "bold"
+   ],
+   "fits": [
+    "sports",
+    "fitness",
+    "campaigns",
+    "events"
+   ],
+   "avoid_for": [
+    "luxury",
+    "reading"
+   ],
+   "contrast_logic": "Ultra-condensed impact headlines; Barlow's slightly rounded grotesk for body.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "bigshoulders-archivo",
+   "name": "Lakefront",
+   "cluster": "condensed-poster-sport",
+   "source": "google",
+   "display": {
+    "family": "Big Shoulders Display",
+    "category": "display",
+    "italic": false,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Big Shoulders Display', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Archivo",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wdth": [
+      62,
+      125
+     ],
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap",
+   "display_treatment": {
+    "case": "upper",
+    "tracking_em": 0.01,
+    "weight": 800,
+    "line_height": 0.95
+   },
+   "moods": [
+    "industrial",
+    "civic",
+    "muscular",
+    "urban"
+   ],
+   "fits": [
+    "city projects",
+    "breweries",
+    "construction",
+    "sports clubs"
+   ],
+   "avoid_for": [
+    "beauty"
+   ],
+   "contrast_logic": "Chicago-inspired condensed display; Archivo body shares its grotesk bones.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "bebas-saira",
+   "name": "Matchday",
+   "cluster": "condensed-poster-sport",
+   "source": "google",
+   "display": {
+    "family": "Bebas Neue",
+    "category": "display",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Bebas Neue', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Saira",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wdth": [
+      50,
+      125
+     ],
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Saira', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Saira:ital,wght@0,100..900;1,100..900&display=swap",
+   "display_treatment": {
+    "case": "upper",
+    "tracking_em": 0.02,
+    "weight": 400,
+    "line_height": 0.95
+   },
+   "moods": [
+    "punchy",
+    "poster",
+    "sporty",
+    "direct"
+   ],
+   "fits": [
+    "gyms",
+    "esports",
+    "promotions",
+    "ticketing"
+   ],
+   "avoid_for": [
+    "editorial"
+   ],
+   "contrast_logic": "All-caps condensed poster face with a squarish technical body.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "barlowcondensed-barlow",
+   "name": "Trackside",
+   "cluster": "condensed-poster-sport",
+   "source": "google",
+   "display": {
+    "family": "Barlow Condensed",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": null,
+    "static_weights": [
+     100,
+     200,
+     300,
+     400,
+     500,
+     600,
+     700,
+     800,
+     900
+    ],
+    "stack": "'Barlow Condensed', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Barlow",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": null,
+    "static_weights": [
+     100,
+     200,
+     300,
+     400,
+     500,
+     600,
+     700,
+     800,
+     900
+    ],
+    "stack": "'Barlow', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;1,400&family=Barlow:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+   "display_treatment": {
+    "case": "upper",
+    "tracking_em": 0.01,
+    "weight": 700,
+    "line_height": 0.95
+   },
+   "moods": [
+    "functional",
+    "road-sign",
+    "sporty",
+    "clean"
+   ],
+   "fits": [
+    "transport",
+    "outdoor",
+    "motorsport",
+    "wayfinding"
+   ],
+   "avoid_for": [
+    "romance"
+   ],
+   "contrast_logic": "Condensed and normal widths of one California-highway-inspired family.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "teko-hanken",
+   "name": "Scoreboard",
+   "cluster": "condensed-poster-sport",
+   "source": "google",
+   "display": {
+    "family": "Teko",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": {
+     "wght": [
+      300,
+      700
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Teko', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Hanken Grotesk",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Teko:wght@300..700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap",
+   "display_treatment": {
+    "case": "upper",
+    "tracking_em": 0.02,
+    "weight": 600,
+    "line_height": 0.9
+   },
+   "moods": [
+    "squared",
+    "sporty",
+    "digital",
+    "energetic"
+   ],
+   "fits": [
+    "fitness apps",
+    "sports data",
+    "racing",
+    "gaming"
+   ],
+   "avoid_for": [
+    "literary"
+   ],
+   "contrast_logic": "Squared condensed display reads like a scoreboard; neutral grotesk body.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "martian-hanken",
+   "name": "Readout",
+   "cluster": "monospace-technical",
+   "source": "google",
+   "display": {
+    "family": "Martian Mono",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": {
+     "wdth": [
+      75,
+      112.5
+     ],
+     "wght": [
+      100,
+      800
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Martian Mono', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Hanken Grotesk",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.02,
+    "weight": 700,
+    "line_height": 1.0
+   },
+   "moods": [
+    "technical",
+    "wide",
+    "instrumental",
+    "precise"
+   ],
+   "fits": [
+    "dev tools",
+    "hardware",
+    "science",
+    "data products"
+   ],
+   "avoid_for": [
+    "wedding"
+   ],
+   "contrast_logic": "Wide mono with a width axis as display; grotesk body avoids mono fatigue.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "azeret-instrument",
+   "name": "Spec Sheet",
+   "cluster": "monospace-technical",
+   "source": "google",
+   "display": {
+    "family": "Azeret Mono",
+    "category": "mono",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Azeret Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace"
+   },
+   "body": {
+    "family": "Instrument Sans",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wdth": [
+      75,
+      100
+     ],
+     "wght": [
+      400,
+      700
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.02,
+    "weight": 600,
+    "line_height": 1.05
+   },
+   "moods": [
+    "precise",
+    "engineered",
+    "minimal",
+    "data"
+   ],
+   "fits": [
+    "engineering",
+    "AI research",
+    "changelogs",
+    "open data"
+   ],
+   "avoid_for": [
+    "children"
+   ],
+   "contrast_logic": "Thin-to-heavy variable mono for headings and labels; crisp grotesk body.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "spacemono-work",
+   "name": "Lab Report",
+   "cluster": "monospace-technical",
+   "source": "google",
+   "display": {
+    "family": "Space Mono",
+    "category": "mono",
+    "italic": true,
+    "variable_axes": null,
+    "static_weights": [
+     400,
+     700
+    ],
+    "stack": "'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace"
+   },
+   "body": {
+    "family": "Work Sans",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Work Sans', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,400&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.02,
+    "weight": 700,
+    "line_height": 1.05
+   },
+   "moods": [
+    "retro-tech",
+    "editorial",
+    "quirky",
+    "technical"
+   ],
+   "fits": [
+    "tech editorial",
+    "indie software",
+    "portfolios"
+   ],
+   "avoid_for": [
+    "luxury"
+   ],
+   "contrast_logic": "Retro-futurist mono headings; humanist-leaning grotesk for readable paragraphs.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "splinemono-spline",
+   "name": "Schematic",
+   "cluster": "monospace-technical",
+   "source": "google",
+   "display": {
+    "family": "Spline Sans Mono",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      300,
+      700
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Spline Sans Mono', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Spline Sans",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": {
+     "wght": [
+      300,
+      700
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Spline Sans', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&family=Spline+Sans:wght@300..700&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.02,
+    "weight": 600,
+    "line_height": 1.05
+   },
+   "moods": [
+    "modern",
+    "technical",
+    "friendly",
+    "systematic"
+   ],
+   "fits": [
+    "3D tools",
+    "creative tech",
+    "APIs",
+    "product docs"
+   ],
+   "avoid_for": [
+    "heritage"
+   ],
+   "contrast_logic": "Mono and sans cut from the same skeleton for a coherent tech voice.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "shippori-zenkaku",
+   "name": "Ma",
+   "cluster": "japanese-minimal",
+   "source": "google",
+   "display": {
+    "family": "Shippori Mincho",
+    "category": "serif",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400,
+     500,
+     600,
+     700,
+     800
+    ],
+    "stack": "'Shippori Mincho', Georgia, 'Times New Roman', serif"
+   },
+   "body": {
+    "family": "Zen Kaku Gothic New",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     300,
+     400,
+     500,
+     700,
+     900
+    ],
+    "stack": "'Zen Kaku Gothic New', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": 0.02,
+    "weight": 500,
+    "line_height": 1.2
+   },
+   "moods": [
+    "calm",
+    "spacious",
+    "refined",
+    "contemplative"
+   ],
+   "fits": [
+    "ceramics",
+    "tea",
+    "architecture",
+    "mindful brands"
+   ],
+   "avoid_for": [
+    "loud promotions"
+   ],
+   "contrast_logic": "Mincho serif with brush-born contrast and a gentle gothic sans; generous tracking and leading.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "zenoldmincho-mplus",
+   "name": "Washi",
+   "cluster": "japanese-minimal",
+   "source": "google",
+   "display": {
+    "family": "Zen Old Mincho",
+    "category": "serif",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400,
+     500,
+     600,
+     700,
+     900
+    ],
+    "stack": "'Zen Old Mincho', Georgia, 'Times New Roman', serif"
+   },
+   "body": {
+    "family": "M PLUS 1p",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     100,
+     300,
+     400,
+     500,
+     700,
+     800,
+     900
+    ],
+    "stack": "'M PLUS 1p', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400&family=M+PLUS+1p:wght@400;500;700&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": 0.03,
+    "weight": 400,
+    "line_height": 1.25
+   },
+   "moods": [
+    "quiet",
+    "traditional",
+    "soft",
+    "artisanal"
+   ],
+   "fits": [
+    "craft shops",
+    "ryokan",
+    "interiors",
+    "stationery"
+   ],
+   "avoid_for": [
+    "tech"
+   ],
+   "contrast_logic": "Old-style Mincho for headings, light rounded-geometric gothic for body.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "zenmaru-mulish",
+   "name": "Morning Mist",
+   "cluster": "japanese-minimal",
+   "source": "google",
+   "display": {
+    "family": "Zen Maru Gothic",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     300,
+     400,
+     500,
+     700,
+     900
+    ],
+    "stack": "'Zen Maru Gothic', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Mulish",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      200,
+      1000
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Mulish', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": 0.02,
+    "weight": 500,
+    "line_height": 1.2
+   },
+   "moods": [
+    "soft",
+    "serene",
+    "gentle",
+    "minimal"
+   ],
+   "fits": [
+    "wellness",
+    "skincare",
+    "baby products",
+    "calm apps"
+   ],
+   "avoid_for": [
+    "industrial"
+   ],
+   "contrast_logic": "Rounded gothic with very soft edges; Mulish matches its calm, airy texture.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "sawarabi-duo",
+   "name": "Paper Lantern",
+   "cluster": "japanese-minimal",
+   "source": "google",
+   "display": {
+    "family": "Sawarabi Mincho",
+    "category": "serif",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Sawarabi Mincho', Georgia, 'Times New Roman', serif"
+   },
+   "body": {
+    "family": "Sawarabi Gothic",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Sawarabi Gothic', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&family=Sawarabi+Gothic&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": 0.04,
+    "weight": 400,
+    "line_height": 1.25
+   },
+   "moods": [
+    "humble",
+    "plain",
+    "serene",
+    "honest"
+   ],
+   "fits": [
+    "small studios",
+    "poetry",
+    "food",
+    "minimal portfolios"
+   ],
+   "avoid_for": [
+    "bold campaigns"
+   ],
+   "contrast_logic": "Single-weight Mincho/Gothic pair — restraint enforced by the fonts themselves.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "climatecrisis-familjen",
+   "name": "Heat Map",
+   "cluster": "expressive-display",
+   "source": "google",
+   "display": {
+    "family": "Climate Crisis",
+    "category": "display",
+    "italic": false,
+    "variable_axes": {
+     "YEAR": [
+      1979,
+      2050
+     ]
+    },
+    "static_weights": [
+     400
+    ],
+    "stack": "'Climate Crisis', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Familjen Grotesk",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      400,
+      700
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Familjen Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap",
+   "display_treatment": {
+    "case": "upper",
+    "tracking_em": 0.0,
+    "weight": 400,
+    "line_height": 0.9
+   },
+   "moods": [
+    "urgent",
+    "activist",
+    "variable",
+    "data-driven"
+   ],
+   "fits": [
+    "climate",
+    "activism",
+    "reports with a message",
+    "campaigns"
+   ],
+   "avoid_for": [
+    "luxury"
+   ],
+   "contrast_logic": "Variable YEAR axis melts the letterforms — a typeface with a story; plain grotesk body.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "rubikmono-rubik",
+   "name": "Arcade Block",
+   "cluster": "expressive-display",
+   "source": "google",
+   "display": {
+    "family": "Rubik Mono One",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Rubik Mono One', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "body": {
+    "family": "Rubik",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      300,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Rubik', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap",
+   "display_treatment": {
+    "case": "upper",
+    "tracking_em": 0.0,
+    "weight": 400,
+    "line_height": 0.95
+   },
+   "moods": [
+    "blocky",
+    "playful",
+    "loud",
+    "geometric"
+   ],
+   "fits": [
+    "games",
+    "toys",
+    "street food",
+    "events"
+   ],
+   "avoid_for": [
+    "reading-heavy sites"
+   ],
+   "contrast_logic": "Monospaced heavy caps for headlines; Rubik family continuity for body.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "tiltwarp-outfit",
+   "name": "Perspective",
+   "cluster": "expressive-display",
+   "source": "google",
+   "display": {
+    "family": "Tilt Warp",
+    "category": "display",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Tilt Warp', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Outfit",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Outfit', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Tilt+Warp&family=Outfit:wght@100..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": 0.0,
+    "weight": 400,
+    "line_height": 0.95
+   },
+   "moods": [
+    "dimensional",
+    "playful",
+    "bold",
+    "dynamic"
+   ],
+   "fits": [
+    "creative tools",
+    "kids tech",
+    "campaigns",
+    "motion studios"
+   ],
+   "avoid_for": [
+    "legal"
+   ],
+   "contrast_logic": "Display with a rotation axis for 3D-tilted letters; clean geometric body.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "bungee-chivo",
+   "name": "Street Sign",
+   "cluster": "expressive-display",
+   "source": "google",
+   "display": {
+    "family": "Bungee",
+    "category": "display",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Bungee', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Chivo",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Chivo', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Bungee&family=Chivo:ital,wght@0,100..900;1,100..900&display=swap",
+   "display_treatment": {
+    "case": "upper",
+    "tracking_em": 0.02,
+    "weight": 400,
+    "line_height": 0.95
+   },
+   "moods": [
+    "urban",
+    "signage",
+    "vertical",
+    "bold"
+   ],
+   "fits": [
+    "street culture",
+    "city guides",
+    "food halls",
+    "events"
+   ],
+   "avoid_for": [
+    "wellness"
+   ],
+   "contrast_logic": "Signage display built for vertical and horizontal setting; sturdy grotesk body.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "delagothic-hanken",
+   "name": "Tokyo Neon",
+   "cluster": "expressive-display",
+   "source": "google",
+   "display": {
+    "family": "Dela Gothic One",
+    "category": "display",
+    "italic": false,
+    "variable_axes": null,
+    "static_weights": [
+     400
+    ],
+    "stack": "'Dela Gothic One', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Hanken Grotesk",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      100,
+      900
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.01,
+    "weight": 400,
+    "line_height": 1.0
+   },
+   "moods": [
+    "heavy",
+    "urban",
+    "Japanese-pop",
+    "graphic"
+   ],
+   "fits": [
+    "music",
+    "streetwear",
+    "anime-adjacent",
+    "gaming"
+   ],
+   "avoid_for": [
+    "conservative"
+   ],
+   "contrast_logic": "Ultra-heavy Japanese gothic display; light grotesk body creates a sharp contrast.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "syne-heavy-spline",
+   "name": "Club Flyer",
+   "cluster": "expressive-display",
+   "source": "google",
+   "display": {
+    "family": "Syne",
+    "category": "display",
+    "italic": false,
+    "variable_axes": {
+     "wght": [
+      400,
+      800
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Syne', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Spline Sans",
+    "category": "sans",
+    "italic": false,
+    "variable_axes": {
+     "wght": [
+      300,
+      700
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Spline Sans', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Spline+Sans:wght@300..700&display=swap",
+   "display_treatment": {
+    "case": "upper",
+    "tracking_em": -0.02,
+    "weight": 800,
+    "line_height": 0.9
+   },
+   "moods": [
+    "experimental",
+    "nightlife",
+    "artsy",
+    "wide"
+   ],
+   "fits": [
+    "clubs",
+    "DJ sites",
+    "art collectives",
+    "fashion"
+   ],
+   "avoid_for": [
+    "finance"
+   ],
+   "contrast_logic": "Syne's heaviest extended cut as poster type; Spline Sans keeps info legible.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  },
+  {
+   "id": "funnel-figtree",
+   "name": "Funnel Cake",
+   "cluster": "expressive-display",
+   "source": "google",
+   "display": {
+    "family": "Funnel Display",
+    "category": "display",
+    "italic": false,
+    "variable_axes": {
+     "wght": [
+      300,
+      800
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Funnel Display', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Funnel Sans",
+    "category": "sans",
+    "italic": true,
+    "variable_axes": {
+     "wght": [
+      300,
+      800
+     ]
+    },
+    "static_weights": null,
+    "stack": "'Funnel Sans', system-ui, -apple-system, 'Segoe UI', sans-serif"
+   },
+   "google_css": "https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.03,
+    "weight": 800,
+    "line_height": 0.95
+   },
+   "moods": [
+    "quirky",
+    "contemporary",
+    "bold",
+    "friendly"
+   ],
+   "fits": [
+    "startups with personality",
+    "consumer brands",
+    "podcasts"
+   ],
+   "avoid_for": [
+    "formal"
+   ],
+   "contrast_logic": "Display cut with funnel-shaped quirks and its matching text sans.",
+   "verified_via": "google/fonts METADATA.pb (GitHub)"
+  }
+ ],
+ "fontshare_pairs": [
+  {
+   "id": "clash-satoshi",
+   "name": "Neon Grotesk",
+   "cluster": "grotesk-brutal",
+   "source": "fontshare",
+   "display": {
+    "family": "Clash Display",
+    "stack": "'Clash Display', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Satoshi",
+    "stack": "'Satoshi', system-ui, sans-serif"
+   },
+   "fontshare_css": "https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@400,500,700&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.03,
+    "weight": 600,
+    "line_height": 0.95
+   },
+   "moods": [
+    "bold",
+    "contemporary",
+    "sharp",
+    "trendy"
+   ],
+   "fits": [
+    "agencies",
+    "startups",
+    "fashion tech"
+   ],
+   "avoid_for": [
+    "conservative"
+   ],
+   "note": "Fontshare CSS is blocked inside claude.ai artifacts; use only for real projects / Claude Code."
+  },
+  {
+   "id": "cabinet-general",
+   "name": "Studio Shelf",
+   "cluster": "geometric-modern",
+   "source": "fontshare",
+   "display": {
+    "family": "Cabinet Grotesk",
+    "stack": "'Cabinet Grotesk', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "General Sans",
+    "stack": "'General Sans', system-ui, sans-serif"
+   },
+   "fontshare_css": "https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,600,700&f[]=general-sans@400,500,700&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.03,
+    "weight": 800,
+    "line_height": 0.95
+   },
+   "moods": [
+    "confident",
+    "friendly",
+    "modern",
+    "editorial"
+   ],
+   "fits": [
+    "studios",
+    "SaaS",
+    "portfolios"
+   ],
+   "avoid_for": [
+    "luxury"
+   ],
+   "note": "Fontshare CSS is blocked inside claude.ai artifacts; use only for real projects / Claude Code."
+  },
+  {
+   "id": "zodiak-switzer",
+   "name": "Constellation",
+   "cluster": "editorial-literary",
+   "source": "fontshare",
+   "display": {
+    "family": "Zodiak",
+    "stack": "'Zodiak', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Switzer",
+    "stack": "'Switzer', system-ui, sans-serif"
+   },
+   "fontshare_css": "https://api.fontshare.com/v2/css?f[]=zodiak@400,500,600,700&f[]=switzer@400,500,700&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.02,
+    "weight": 700,
+    "line_height": 1.0
+   },
+   "moods": [
+    "editorial",
+    "contemporary",
+    "sharp",
+    "cultured"
+   ],
+   "fits": [
+    "magazines",
+    "culture",
+    "publishers"
+   ],
+   "avoid_for": [
+    "kids"
+   ],
+   "note": "Fontshare CSS is blocked inside claude.ai artifacts; use only for real projects / Claude Code."
+  },
+  {
+   "id": "gambetta-supreme",
+   "name": "Gazette",
+   "cluster": "editorial-literary",
+   "source": "fontshare",
+   "display": {
+    "family": "Gambetta",
+    "stack": "'Gambetta', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Supreme",
+    "stack": "'Supreme', system-ui, sans-serif"
+   },
+   "fontshare_css": "https://api.fontshare.com/v2/css?f[]=gambetta@400,500,600,700&f[]=supreme@400,500,700&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.02,
+    "weight": 500,
+    "line_height": 1.05
+   },
+   "moods": [
+    "classic",
+    "crisp",
+    "reliable",
+    "editorial"
+   ],
+   "fits": [
+    "news",
+    "newsletters",
+    "agencies"
+   ],
+   "avoid_for": [
+    "gaming"
+   ],
+   "note": "Fontshare CSS is blocked inside claude.ai artifacts; use only for real projects / Claude Code."
+  },
+  {
+   "id": "sentient-satoshi",
+   "name": "Considered",
+   "cluster": "humanist-warm",
+   "source": "fontshare",
+   "display": {
+    "family": "Sentient",
+    "stack": "'Sentient', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Satoshi",
+    "stack": "'Satoshi', system-ui, sans-serif"
+   },
+   "fontshare_css": "https://api.fontshare.com/v2/css?f[]=sentient@400,500,600,700&f[]=satoshi@400,500,700&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.01,
+    "weight": 500,
+    "line_height": 1.05
+   },
+   "moods": [
+    "thoughtful",
+    "calm",
+    "modern",
+    "warm"
+   ],
+   "fits": [
+    "consultancies",
+    "wellbeing",
+    "research"
+   ],
+   "avoid_for": [
+    "loud retail"
+   ],
+   "note": "Fontshare CSS is blocked inside claude.ai artifacts; use only for real projects / Claude Code."
+  },
+  {
+   "id": "erode-general",
+   "name": "Riverstone",
+   "cluster": "humanist-warm",
+   "source": "fontshare",
+   "display": {
+    "family": "Erode",
+    "stack": "'Erode', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "General Sans",
+    "stack": "'General Sans', system-ui, sans-serif"
+   },
+   "fontshare_css": "https://api.fontshare.com/v2/css?f[]=erode@400,500,600,700&f[]=general-sans@400,500,700&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.01,
+    "weight": 600,
+    "line_height": 1.05
+   },
+   "moods": [
+    "earthy",
+    "sturdy",
+    "warm",
+    "crafted"
+   ],
+   "fits": [
+    "outdoor",
+    "food",
+    "sustainability"
+   ],
+   "avoid_for": [
+    "fashion"
+   ],
+   "note": "Fontshare CSS is blocked inside claude.ai artifacts; use only for real projects / Claude Code."
+  },
+  {
+   "id": "boska-switzer",
+   "name": "Couture Note",
+   "cluster": "luxury-high-contrast",
+   "source": "fontshare",
+   "display": {
+    "family": "Boska",
+    "stack": "'Boska', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Switzer",
+    "stack": "'Switzer', system-ui, sans-serif"
+   },
+   "fontshare_css": "https://api.fontshare.com/v2/css?f[]=boska@400,500,600,700&f[]=switzer@400,500,700&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.01,
+    "weight": 500,
+    "line_height": 1.0
+   },
+   "moods": [
+    "elegant",
+    "sharp",
+    "fashion",
+    "contemporary"
+   ],
+   "fits": [
+    "fashion",
+    "beauty",
+    "galleries"
+   ],
+   "avoid_for": [
+    "utilities"
+   ],
+   "note": "Fontshare CSS is blocked inside claude.ai artifacts; use only for real projects / Claude Code."
+  },
+  {
+   "id": "panchang-satoshi",
+   "name": "Billboard",
+   "cluster": "condensed-poster-sport",
+   "source": "fontshare",
+   "display": {
+    "family": "Panchang",
+    "stack": "'Panchang', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Satoshi",
+    "stack": "'Satoshi', system-ui, sans-serif"
+   },
+   "fontshare_css": "https://api.fontshare.com/v2/css?f[]=panchang@400,500,600,700&f[]=satoshi@400,500,700&display=swap",
+   "display_treatment": {
+    "case": "upper",
+    "tracking_em": 0.0,
+    "weight": 800,
+    "line_height": 0.95
+   },
+   "moods": [
+    "wide",
+    "loud",
+    "graphic",
+    "energetic"
+   ],
+   "fits": [
+    "events",
+    "sports",
+    "music"
+   ],
+   "avoid_for": [
+    "reading-heavy"
+   ],
+   "note": "Fontshare CSS is blocked inside claude.ai artifacts; use only for real projects / Claude Code."
+  },
+  {
+   "id": "tanker-switzer",
+   "name": "Heavy Haul",
+   "cluster": "expressive-display",
+   "source": "fontshare",
+   "display": {
+    "family": "Tanker",
+    "stack": "'Tanker', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Switzer",
+    "stack": "'Switzer', system-ui, sans-serif"
+   },
+   "fontshare_css": "https://api.fontshare.com/v2/css?f[]=tanker@400,500,600,700&f[]=switzer@400,500,700&display=swap",
+   "display_treatment": {
+    "case": "upper",
+    "tracking_em": 0.0,
+    "weight": 400,
+    "line_height": 0.9
+   },
+   "moods": [
+    "massive",
+    "poster",
+    "brutal",
+    "confident"
+   ],
+   "fits": [
+    "campaigns",
+    "streetwear",
+    "festivals"
+   ],
+   "avoid_for": [
+    "subtle brands"
+   ],
+   "note": "Fontshare CSS is blocked inside claude.ai artifacts; use only for real projects / Claude Code."
+  },
+  {
+   "id": "chillax-satoshi",
+   "name": "Weekend",
+   "cluster": "playful-rounded",
+   "source": "fontshare",
+   "display": {
+    "family": "Chillax",
+    "stack": "'Chillax', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Satoshi",
+    "stack": "'Satoshi', system-ui, sans-serif"
+   },
+   "fontshare_css": "https://api.fontshare.com/v2/css?f[]=chillax@400,500,600,700&f[]=satoshi@400,500,700&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.02,
+    "weight": 600,
+    "line_height": 1.0
+   },
+   "moods": [
+    "relaxed",
+    "friendly",
+    "modern",
+    "soft"
+   ],
+   "fits": [
+    "lifestyle apps",
+    "travel",
+    "food"
+   ],
+   "avoid_for": [
+    "legal"
+   ],
+   "note": "Fontshare CSS is blocked inside claude.ai artifacts; use only for real projects / Claude Code."
+  },
+  {
+   "id": "bespoke-supreme",
+   "name": "Tailor",
+   "cluster": "luxury-high-contrast",
+   "source": "fontshare",
+   "display": {
+    "family": "Bespoke Serif",
+    "stack": "'Bespoke Serif', system-ui, sans-serif"
+   },
+   "body": {
+    "family": "Supreme",
+    "stack": "'Supreme', system-ui, sans-serif"
+   },
+   "fontshare_css": "https://api.fontshare.com/v2/css?f[]=bespoke-serif@400,500,600,700&f[]=supreme@400,500,700&display=swap",
+   "display_treatment": {
+    "case": "sentence",
+    "tracking_em": -0.02,
+    "weight": 500,
+    "line_height": 1.0
+   },
+   "moods": [
+    "refined",
+    "editorial",
+    "premium",
+    "modern"
+   ],
+   "fits": [
+    "hospitality",
+    "interiors",
+    "premium DTC"
+   ],
+   "avoid_for": [
+    "kids"
+   ],
+   "note": "Fontshare CSS is blocked inside claude.ai artifacts; use only for real projects / Claude Code."
+  }
+ ]
+}

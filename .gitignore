@@ -1,0 +1,6 @@
+# packaged skill (build with tools/package.sh)
+dist/
+__pycache__/
+*.pyc
+.DS_Store
+node_modules/

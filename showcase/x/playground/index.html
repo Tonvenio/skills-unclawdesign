@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tidewater Bean Box</title>
+<meta name="description" content="Tidewater Roasters, a fictional small-batch coffee subscription, as a toy: beans and headline words are physical, a grinder counts what you feed it, and the October lots come as a deck of cards to flick through.">
+<script>document.documentElement.classList.add('js');try{if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('still')}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap">
+<style>/* critical: keyboard focus and headline wrapping hold even before the stylesheets arrive */
+:focus-visible { outline: 3px solid var(--c-focus, currentColor); outline-offset: 3px; }
+h1, h2, h3 { text-wrap: balance; }</style>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<a class="skip" href="#deck-title">Skip to October’s box</a>
+
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-bean" viewBox="0 0 32 22"><ellipse cx="16" cy="11" rx="14" ry="9" fill="currentColor"/><path d="M4.5 12.5C10 4 22 18 27.5 9.5" fill="none" stroke="var(--crease, var(--c-bg))" stroke-width="2.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-blackcurrant" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6c-1 6-5 9-9 12M24 6c2 6 6 9 10 11"/><path d="M24 6c4-2 8-1 10 1"/><circle cx="15" cy="26" r="7.5"/><circle cx="31" cy="25" r="7"/><circle cx="23" cy="37" r="7.2"/><path d="M13 24.5l2 1.5M29 23l2 1.6M21 35.2l2 1.6"/></symbol>
+  <symbol id="i-grapefruit" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 25.5c.5 10 8.5 17 18.8 16.8 10-.2 18-7.6 18.2-17.6z"/><path d="M10.5 26c.8 7 6.6 11.4 13.6 11.3 7-.1 12.6-4.8 13.5-11.6"/><path d="M24 26.2l.1 10.8M24 26.4l-8 7.4M24 26.4l8.4 7"/><path d="M14 18c2-6 7-9 12-9"/></symbol>
+  <symbol id="i-sugar" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17.5l15-7.5 15.5 7.3-15 7.6z"/><path d="M9 17.5v15.6l15.4 7.6V24.9"/><path d="M39.5 17.3v15.9l-15.1 7.5"/><path d="M15 21.6l.1 1M31.8 28.5l.1 1M19.3 31.5l.1 1"/></symbol>
+  <symbol id="i-apple" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 15.5c-4-3.4-12.5-3-14.6 4.8-2.3 8.5 3.6 21.4 9.6 21.6 2.3.1 3.3-1.3 5-1.3s2.8 1.4 5.1 1.3c6-.2 11.5-13.4 9.1-21.7C36 12.5 28 12.3 24 15.5z"/><path d="M24 15c0-4 1-7 3.5-9"/><path d="M27 9.5c3.5-3.6 8.4-3.3 9.8-2.5-1 3.8-5.6 6-9.8 2.5z"/></symbol>
+  <symbol id="i-panela" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20.5l9.5-8.5h24.5l-9.3 8.6z"/><path d="M7 20.5v14.3h24.6V20.6"/><path d="M31.6 34.8l9.3-8.9V12"/><path d="M12 26.5h8M14 30.2h11"/></symbol>
+  <symbol id="i-cocoa" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 30.2l7.6-15.7 13.4-4.4 7 12.4-6.6 13.6-14.2 3.4z"/><path d="M18.1 14.5l4.3 12.4 16.1-4.4M22.4 26.9l-4.7 12.6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10c30-6 66 2 84 22 9 10 13 25 12 46"/><path d="M90 64l14 16 10-19"/></symbol>
+</svg>
+
+<header class="topbar">
+  <p class="mark"><svg class="mark__bean" aria-hidden="true"><use href="#i-bean"/></svg>Tidewater Roasters</p>
+  <a class="back" href="../../">All showcases</a>
+</header>
+
+<main>
+  <section class="stage" id="toy" aria-labelledby="headline">
+    <div class="stage__tex" aria-hidden="true"></div>
+
+    <div class="grinder" aria-hidden="true">
+      <svg class="grinder__art" viewBox="0 0 200 300" preserveAspectRatio="none">
+        <path class="g-hopper" d="M2 2H198L132 112H68Z"/>
+        <path class="g-rim" d="M2 2H198"/>
+        <rect class="g-body" x="42" y="112" width="116" height="186"/>
+        <rect class="g-screen" x="56" y="128" width="88" height="46"/>
+        <rect class="g-bin" x="60" y="190" width="80" height="86"/>
+        <rect class="g-fill" x="60" y="190" width="80" height="86"/>
+        <path class="g-bin-line" d="M60 190h80v86H60z"/>
+      </svg>
+      <span class="grinder__grams"><span class="grinder__num">0</span>&#8239;g</span>
+    </div>
+
+    <p class="grinder-hint" aria-hidden="true"><svg class="grinder-hint__arrow"><use href="#i-arrow"/></svg><span>Throw beans in here. Fifteen make a cup.</span></p>
+
+    <svg class="ramp" viewBox="0 0 200 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0L200 70H0Z"/><path class="ramp__edge" d="M0 0L200 70"/></svg>
+
+    <canvas class="beans" aria-hidden="true"></canvas>
+
+    <h1 class="headline" id="headline"><span class="w">Coffee</span> <span class="w">roasted</span> <span class="w">the</span> <span class="w">week</span> <span class="w">you</span> <span class="w">drink</span> <span class="w w--last">it<span class="w__dot">.</span></span></h1>
+    <span class="dotball" aria-hidden="true"></span>
+
+    <div class="slab">
+      <div class="slab__copy">
+        <p class="lede">Two small-lot coffees a month, roasted on a Monday and posted within 48 hours, with notes on who grew them.</p>
+        <p class="slab__when">October is Kiambu, Kenya and Huila, Colombia. From €14 a month.</p>
+      </div>
+      <div class="slab__act">
+        <a class="btn btn--cta" href="#plans" data-goto="plans">Choose your first bag</a>
+        <div class="tools" role="group" aria-label="Bean box controls">
+          <button type="button" class="tool" id="drop">Drop a bean in</button>
+          <button type="button" class="tool" id="restack">Restack headline</button>
+          <button type="button" class="tool" id="pause" aria-pressed="false">Pause beans</button>
+          <button type="button" class="tool" id="tilt" aria-pressed="false" hidden>Tilt to pour</button>
+        </div>
+      </div>
+      <a class="pit-cue" href="#box">Five cards under the counter</a>
+      <span class="slab__lip" aria-hidden="true"></span>
+      <span class="leg leg--a" aria-hidden="true"></span>
+      <span class="leg leg--b" aria-hidden="true"></span>
+    </div>
+
+    <section class="reward" id="reward" aria-labelledby="reward-title" hidden>
+      <button type="button" class="reward__x" aria-label="Close the recipe">Close</button>
+      <h2 id="reward-title" class="reward__title" tabindex="-1">15&#8239;g. Enough for one cup.</h2>
+      <p class="reward__sub">You ground it, so here’s how to brew it.</p>
+      <div class="seg" role="radiogroup" aria-label="Brew method">
+        <label><input type="radio" name="brew" value="filter" checked><span>Filter</span></label>
+        <label><input type="radio" name="brew" value="espresso"><span>Espresso</span></label>
+        <label><input type="radio" name="brew" value="moka"><span>Moka pot</span></label>
+        <label><input type="radio" name="brew" value="press"><span>French press</span></label>
+      </div>
+      <div class="recipe" data-brew="filter"><p><strong>15&#8239;g, medium-fine, 250&#8239;g water just off the boil.</strong> Pour 40&#8239;g and wait 30 seconds, then pour the rest in slow circles. It should finish dripping around three minutes.</p></div>
+      <div class="recipe" data-brew="espresso" hidden><p><strong>18&#8239;g, fine.</strong> Espresso wants a few more beans. Pull about 36&#8239;g into the cup in 27 to 32 seconds; grind finer if it runs fast.</p></div>
+      <div class="recipe" data-brew="moka" hidden><p><strong>15&#8239;g, a little coarser than espresso.</strong> Hot water up to the valve, coffee levelled, not pressed. Medium-low heat, lid open; take it off the moment it starts to sputter.</p></div>
+      <div class="recipe" data-brew="press" hidden><p><strong>15&#8239;g, coarse, 250&#8239;g water off the boil.</strong> Stir, wait four minutes, skim the crust, wait five more. Press gently, just to the surface, and pour.</p></div>
+    </section>
+
+    <p class="sr-only" id="toy-status" aria-live="polite"></p>
+  </section>
+
+  <section class="deck-zone" id="box" aria-labelledby="deck-title">
+    <div class="deck-intro">
+      <h2 id="deck-title">October’s box, card by card</h2>
+      <p class="deck-intro__how">Flick the top card off the pile to read the next one, or use the buttons.</p>
+      <ol class="deck-index" aria-label="Cards">
+        <li><button type="button" data-card="0"><span class="deck-index__n">1</span>Kiambu, Kenya</button></li>
+        <li><button type="button" data-card="1"><span class="deck-index__n">2</span>Huila, Colombia</button></li>
+        <li><button type="button" data-card="2"><span class="deck-index__n">3</span>Roast week</button></li>
+        <li><button type="button" data-card="3"><span class="deck-index__n">4</span>Questions</button></li>
+        <li><button type="button" data-card="4"><span class="deck-index__n">5</span>Plans</button></li>
+      </ol>
+      <div class="deck-nav">
+        <button type="button" class="tool" id="prev">Previous card</button>
+        <p class="deck-nav__pos" id="deck-pos" aria-live="polite">Card 1 of 5</p>
+        <button type="button" class="tool tool--go" id="next">Next card</button>
+      </div>
+    </div>
+
+    <div class="deck" id="deck">
+      <article class="card card--kiambu" id="kiambu" aria-labelledby="kiambu-t">
+        <div class="card__pat" aria-hidden="true"></div>
+        <p class="card__no">1/5</p>
+        <h3 class="card__title" id="kiambu-t">Kiambu <span>Kenya</span></h3>
+        <ul class="notes" aria-label="Tasting notes">
+          <li><svg aria-hidden="true"><use href="#i-blackcurrant"/></svg>Blackcurrant</li>
+          <li><svg aria-hidden="true"><use href="#i-grapefruit"/></svg>Grapefruit</li>
+          <li><svg aria-hidden="true"><use href="#i-sugar"/></svg>Cane sugar</li>
+        </ul>
+        <dl class="facts">
+          <div><dt>Variety</dt><dd>SL28 and SL34</dd></div>
+          <div><dt>Process</dt><dd>Washed</dd></div>
+          <div><dt>Altitude</dt><dd>1,800&#8239;m</dd></div>
+          <div><dt>Roast</dt><dd><span class="roast" data-level="1" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Light</dd></div>
+        </dl>
+        <p class="card__story">Grown by smallholder families who deliver ripe cherries to a cooperative washing station in the hills north of Nairobi.</p>
+      </article>
+
+      <article class="card card--huila" id="huila" aria-labelledby="huila-t">
+        <div class="card__pat" aria-hidden="true"></div>
+        <p class="card__no">2/5</p>
+        <h3 class="card__title" id="huila-t">Huila <span>Colombia</span></h3>
+        <ul class="notes" aria-label="Tasting notes">
+          <li><svg aria-hidden="true"><use href="#i-apple"/></svg>Red apple</li>
+          <li><svg aria-hidden="true"><use href="#i-panela"/></svg>Panela</li>
+          <li><svg aria-hidden="true"><use href="#i-cocoa"/></svg>Cocoa nib</li>
+        </ul>
+        <dl class="facts">
+          <div><dt>Variety</dt><dd>Caturra</dd></div>
+          <div><dt>Process</dt><dd>Honey</dd></div>
+          <div><dt>Altitude</dt><dd>1,750&#8239;m</dd></div>
+          <div><dt>Roast</dt><dd><span class="roast" data-level="2" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Medium-light</dd></div>
+        </dl>
+        <p class="card__story">Grown on a family farm that dries its coffee slowly on raised beds under shade cloth, for about two weeks.</p>
+      </article>
+
+      <article class="card card--week" id="week" aria-labelledby="week-t">
+        <div class="card__pat" aria-hidden="true"></div>
+        <p class="card__no">3/5</p>
+        <h3 class="card__title" id="week-t">Roast week</h3>
+        <ol class="days">
+          <li><p class="days__d"><span>Sun</span>11</p><p>Last day to skip, pause or cancel October.</p></li>
+          <li class="days__roast"><p class="days__d"><span>Mon</span>12</p><p>Roast day. Batch 041, 18&#8239;kg, both lots.</p></li>
+          <li><p class="days__d"><span>Wed</span>14</p><p>Posted by today, in a resealable valve bag that fits through the letterbox.</p></li>
+        </ol>
+        <p class="card__story">Each bag comes with notes on the farm and a recipe. November’s lots are announced on 2 November.</p>
+      </article>
+
+      <article class="card card--faq" id="faq" aria-labelledby="faq-t">
+        <div class="card__pat" aria-hidden="true"></div>
+        <p class="card__no">4/5</p>
+        <h3 class="card__title" id="faq-t">Questions</h3>
+        <dl class="qa">
+          <div><dt>Whole bean or ground?</dt><dd>Either. We grind for filter, espresso, moka pot or French press.</dd></div>
+          <div><dt>Can I skip a month?</dt><dd>Skip, pause or cancel any time up to the Sunday before roasting.</dd></div>
+          <div><dt>Do I need to be in?</dt><dd>No. The bag fits through the letterbox.</dd></div>
+          <div><dt>How fresh is it?</dt><dd>It leaves us within 48 hours of roasting.</dd></div>
+        </dl>
+      </article>
+
+      <article class="card card--plans" id="plans" aria-labelledby="plans-t">
+        <div class="card__pat" aria-hidden="true"></div>
+        <p class="card__no">5/5</p>
+        <h3 class="card__title" id="plans-t">Pick a plan</h3>
+        <form class="plan-form" id="plan-form">
+          <fieldset class="plans">
+            <legend class="sr-only">Plan</legend>
+            <label class="plan" data-clickable="true"><input type="radio" name="plan" value="one" checked>
+              <span class="plan__name">One bag</span><span class="plan__price">€14<small>/month</small></span>
+              <span class="plan__what">250&#8239;g. Alternates between the two coffees.</span></label>
+            <label class="plan" data-clickable="true"><input type="radio" name="plan" value="two">
+              <span class="plan__name">Two bags</span><span class="plan__price">€26<small>/month</small></span>
+              <span class="plan__what">2 × 250&#8239;g. Both coffees, to taste side by side.</span></label>
+          </fieldset>
+          <fieldset class="grind">
+            <legend>Grind</legend>
+            <div class="chips">
+              <label data-clickable="true"><input type="radio" name="grind" value="whole bean" checked><span>Whole bean</span></label>
+              <label data-clickable="true"><input type="radio" name="grind" value="filter"><span>Filter</span></label>
+              <label data-clickable="true"><input type="radio" name="grind" value="espresso"><span>Espresso</span></label>
+              <label data-clickable="true"><input type="radio" name="grind" value="moka pot"><span>Moka pot</span></label>
+              <label data-clickable="true"><input type="radio" name="grind" value="French press"><span>French press</span></label>
+            </div>
+          </fieldset>
+          <button type="submit" class="btn btn--cta">Choose your first bag</button>
+          <p class="plan-form__note" id="plan-note" aria-live="polite">Skip, pause or cancel up to the Sunday before roasting.</p>
+        </form>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__band" aria-hidden="true"></div>
+  <p>Demo page for the unclawdesign skill. Tidewater is a fictional roastery.</p>
+  <p class="foot__links"><a class="foot__top" href="#toy">Back to the beans</a> <a class="back" href="../../">All showcases</a></p>
+</footer>
+
+<script src="../../vendor/matter.min.js"></script>
+<script src="../../vendor/gsap.min.js"></script>
+<script src="../../vendor/Draggable.min.js"></script>
+<script src="../../vendor/InertiaPlugin.min.js"></script>
+<script src="../../vendor/ScrollTrigger.min.js"></script>
+<script src="toy.js"></script>
+<script src="deck.js"></script>
+<script src="../../shared/palette-engine.js"></script><script src="../../shared/customizer.js"></script>
+</body>
+</html>

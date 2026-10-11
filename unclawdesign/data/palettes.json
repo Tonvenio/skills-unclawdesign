@@ -1,0 +1,6332 @@
+{
+ "version": "2026-10",
+ "generator": "scripts/colorlib.py make_palette()",
+ "palettes": [
+  {
+   "id": "rhine-slate",
+   "name": "Rhine Slate",
+   "primary_mode": "light",
+   "moods": [
+    "serious",
+    "cool",
+    "technical",
+    "trustworthy"
+   ],
+   "strategy": "complementary",
+   "story": "Cool slate neutrals, a deep cobalt doing all the work, a signal-orange spark for one moment per page.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.48,
+     0.18,
+     262
+    ],
+    "bg": [
+     0.955,
+     0.012,
+     250
+    ],
+    "neutral": [
+     0.012,
+     250
+    ],
+    "accent2": [
+     0.72,
+     0.17,
+     62
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#eaf1f8",
+     "surface": "#f1f4f8",
+     "surface-2": "#dae4ef",
+     "border": "#becbd8",
+     "border-strong": "#738496",
+     "text": "#14202d",
+     "text-muted": "#556576",
+     "accent": "#1d54c1",
+     "accent-hover": "#063ea9",
+     "accent-ink": "#fcfeff",
+     "accent-text": "#1d54c1",
+     "accent-soft": "#cfe0ff",
+     "accent-2": "#ec8800",
+     "accent-2-ink": "#0f171f",
+     "focus": "#1d54c1"
+    },
+    "dark": {
+     "bg": "#101a25",
+     "surface": "#1b2632",
+     "surface-2": "#07101a",
+     "border": "#2e3b48",
+     "border-strong": "#64707e",
+     "text": "#e2ecf7",
+     "text-muted": "#8894a0",
+     "accent": "#679cff",
+     "accent-hover": "#8bb4ff",
+     "accent-ink": "#0b121a",
+     "accent-text": "#679cff",
+     "accent-soft": "#1d2c48",
+     "accent-2": "#ec8800",
+     "accent-2-ink": "#0b121a",
+     "focus": "#679cff"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 12.81,
+     "text ok": true,
+     "text-muted min": 4.65,
+     "text-muted ok": true,
+     "accent-text min": 5.28,
+     "accent-text ok": true,
+     "accent/bg": 5.97,
+     "accent/bg ok": true,
+     "accent-ink/accent": 6.72,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.37,
+     "border-strong ok": true,
+     "text on accent-soft": 12.37,
+     "apca text/bg": 94.5,
+     "accent-2-ink/accent-2": 6.96,
+     "accent-2/bg": 2.28,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.83,
+     "text ok": true,
+     "text-muted min": 4.96,
+     "text-muted ok": true,
+     "accent-text min": 5.68,
+     "accent-text ok": true,
+     "accent/bg": 6.5,
+     "accent/bg ok": true,
+     "accent-ink/accent": 6.97,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.48,
+     "border-strong ok": true,
+     "text on accent-soft": 11.67,
+     "apca text/bg": -93.4,
+     "accent-2-ink/accent-2": 7.25,
+     "accent-2/bg": 6.76,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "matcha-paper",
+   "name": "Matcha Paper",
+   "primary_mode": "light",
+   "moods": [
+    "calm",
+    "natural",
+    "fresh",
+    "muted"
+   ],
+   "strategy": "analogous+contrast",
+   "story": "Green-tinted paper, whisked-matcha green, a plum note for warmth.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.52,
+     0.11,
+     138
+    ],
+    "bg": [
+     0.965,
+     0.014,
+     135
+    ],
+    "neutral": [
+     0.014,
+     135
+    ],
+    "accent2": [
+     0.45,
+     0.11,
+     345
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#eff6ec",
+     "surface": "#f5f9f4",
+     "surface-2": "#e0eadc",
+     "border": "#c5d0bf",
+     "border-strong": "#7b8a73",
+     "text": "#192314",
+     "text-muted": "#5a6853",
+     "accent": "#477735",
+     "accent-hover": "#336321",
+     "accent-ink": "#fcfefc",
+     "accent-text": "#437331",
+     "accent-soft": "#d7ead1",
+     "accent-2": "#7e3963",
+     "accent-2-ink": "#fcfefc",
+     "focus": "#477735"
+    },
+    "dark": {
+     "bg": "#141c0f",
+     "surface": "#1f291a",
+     "surface-2": "#0a1206",
+     "border": "#323d2c",
+     "border-strong": "#687362",
+     "text": "#e6eee1",
+     "text-muted": "#8c9687",
+     "accent": "#7caf6a",
+     "accent-hover": "#91c580",
+     "accent-ink": "#0e140b",
+     "accent-text": "#7caf6a",
+     "accent-soft": "#23311e",
+     "accent-2": "#cf82ae",
+     "accent-2-ink": "#0e140b",
+     "focus": "#7caf6a"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 13.14,
+     "text ok": true,
+     "text-muted min": 4.79,
+     "text-muted ok": true,
+     "accent-text min": 4.54,
+     "accent-text ok": true,
+     "accent/bg": 4.82,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.24,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.33,
+     "border-strong ok": true,
+     "text on accent-soft": 12.83,
+     "apca text/bg": 96.5,
+     "accent-2-ink/accent-2": 7.81,
+     "accent-2/bg": 7.19,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.72,
+     "text ok": true,
+     "text-muted min": 4.91,
+     "text-muted ok": true,
+     "accent-text min": 5.9,
+     "accent-text ok": true,
+     "accent/bg": 6.82,
+     "accent/bg ok": true,
+     "accent-ink/accent": 7.3,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.51,
+     "border-strong ok": true,
+     "text on accent-soft": 11.56,
+     "apca text/bg": -93.8,
+     "accent-2-ink/accent-2": 6.64,
+     "accent-2/bg": 6.2,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "bauhaus-primaries",
+   "name": "Bauhaus Primaries",
+   "primary_mode": "light",
+   "moods": [
+    "bold",
+    "playful",
+    "artistic",
+    "vivid"
+   ],
+   "strategy": "primary triad",
+   "story": "Red, blue, yellow on off-white \u2014 use as flat blocks, circles and squares, never as gradients.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.46,
+     0.17,
+     262
+    ],
+    "bg": [
+     0.985,
+     0.0,
+     0
+    ],
+    "neutral": [
+     0.0,
+     0
+    ],
+    "accent2": [
+     0.58,
+     0.21,
+     28
+    ],
+    "accent3": [
+     0.87,
+     0.17,
+     95
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#fafafa",
+     "surface": "#fefefe",
+     "surface-2": "#efeced",
+     "border": "#d6d1d2",
+     "border-strong": "#90888a",
+     "text": "#231e1f",
+     "text-muted": "#686163",
+     "accent": "#1c50b5",
+     "accent-hover": "#063a9e",
+     "accent-ink": "#fffdfd",
+     "accent-text": "#1c50b5",
+     "accent-soft": "#deeaff",
+     "accent-2": "#db2d27",
+     "accent-2-ink": "#fffdfd",
+     "accent-3": "#f7d22a",
+     "accent-3-ink": "#1e1216",
+     "focus": "#1c50b5"
+    },
+    "dark": {
+     "bg": "#1d1819",
+     "surface": "#292425",
+     "surface-2": "#130e0f",
+     "border": "#3d3739",
+     "border-strong": "#736d6e",
+     "text": "#efe9eb",
+     "text-muted": "#989092",
+     "accent": "#679cff",
+     "accent-hover": "#8bb4ff",
+     "accent-ink": "#190e11",
+     "accent-text": "#679cff",
+     "accent-soft": "#1d2c48",
+     "accent-2": "#ff7f71",
+     "accent-2-ink": "#190e11",
+     "accent-3": "#f7d22a",
+     "accent-3-ink": "#190e11",
+     "focus": "#679cff"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 14.01,
+     "text ok": true,
+     "text-muted min": 5.14,
+     "text-muted ok": true,
+     "accent-text min": 6.25,
+     "accent-text ok": true,
+     "accent/bg": 7.02,
+     "accent/bg ok": true,
+     "accent-ink/accent": 7.23,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.31,
+     "border-strong ok": true,
+     "text on accent-soft": 13.56,
+     "apca text/bg": 100.4,
+     "accent-2-ink/accent-2": 4.69,
+     "accent-2/bg": 4.56,
+     "accent-3-ink/accent-3": 12.32,
+     "accent-3/bg": 1.42,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.76,
+     "text ok": true,
+     "text-muted min": 4.91,
+     "text-muted ok": true,
+     "accent-text min": 5.66,
+     "accent-text ok": true,
+     "accent/bg": 6.5,
+     "accent/bg ok": true,
+     "accent-ink/accent": 6.99,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.46,
+     "border-strong ok": true,
+     "text on accent-soft": 11.64,
+     "apca text/bg": -93.2,
+     "accent-2-ink/accent-2": 7.67,
+     "accent-2/bg": 7.12,
+     "accent-3-ink/accent-3": 12.77,
+     "accent-3/bg": 11.87,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "swiss-signal",
+   "name": "Swiss Signal",
+   "primary_mode": "light",
+   "moods": [
+    "bold",
+    "serious",
+    "precise",
+    "minimal"
+   ],
+   "strategy": "monochrome+signal",
+   "story": "Pure white, true black type, one signal red. Nothing else.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.6,
+     0.235,
+     29
+    ],
+    "bg": [
+     0.995,
+     0.0,
+     0
+    ],
+    "neutral": [
+     0.0,
+     0
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#fdfdfd",
+     "surface": "#ffffff",
+     "surface-2": "#f2eff0",
+     "border": "#d9d4d5",
+     "border-strong": "#938b8d",
+     "text": "#231e1f",
+     "text-muted": "#686163",
+     "accent": "#e8140f",
+     "accent-hover": "#c60002",
+     "accent-ink": "#fffdfd",
+     "accent-text": "#db0003",
+     "accent-soft": "#ffe6e2",
+     "focus": "#e8140f"
+    },
+    "dark": {
+     "bg": "#1d1819",
+     "surface": "#292425",
+     "surface-2": "#130e0f",
+     "border": "#3d3739",
+     "border-strong": "#736d6e",
+     "text": "#efe9eb",
+     "text-muted": "#989092",
+     "accent": "#ff8b7b",
+     "accent-hover": "#ffb0a4",
+     "accent-ink": "#190e11",
+     "accent-text": "#ff8b7b",
+     "accent-soft": "#42221e",
+     "focus": "#ff8b7b"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 14.39,
+     "text ok": true,
+     "text-muted min": 5.28,
+     "text-muted ok": true,
+     "accent-text min": 4.58,
+     "accent-text ok": true,
+     "accent/bg": 4.55,
+     "accent/bg ok": true,
+     "accent-ink/accent": 4.57,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.27,
+     "border-strong ok": true,
+     "text on accent-soft": 13.84,
+     "apca text/bg": 102.2,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.76,
+     "text ok": true,
+     "text-muted min": 4.91,
+     "text-muted ok": true,
+     "accent-text min": 6.72,
+     "accent-text ok": true,
+     "accent/bg": 7.71,
+     "accent/bg ok": true,
+     "accent-ink/accent": 8.3,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.46,
+     "border-strong ok": true,
+     "text on accent-soft": 11.85,
+     "apca text/bg": -93.2,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "hanko",
+   "name": "Hanko",
+   "primary_mode": "light",
+   "moods": [
+    "serious",
+    "elegant",
+    "calm",
+    "minimal"
+   ],
+   "strategy": "monochrome+seal",
+   "story": "Washi-white, sumi-black text and a seal-red stamp used once or twice.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.54,
+     0.2,
+     30
+    ],
+    "bg": [
+     0.982,
+     0.004,
+     100
+    ],
+    "neutral": [
+     0.004,
+     100
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#faf9f6",
+     "surface": "#fdfdfc",
+     "surface-2": "#edece6",
+     "border": "#d3d2c9",
+     "border-strong": "#8c8a7e",
+     "text": "#212015",
+     "text-muted": "#656458",
+     "accent": "#c92516",
+     "accent-hover": "#ac0a00",
+     "accent-ink": "#fefdfb",
+     "accent-text": "#c92516",
+     "accent-soft": "#ffe1db",
+     "focus": "#c92516"
+    },
+    "dark": {
+     "bg": "#1b1a12",
+     "surface": "#27251d",
+     "surface-2": "#111009",
+     "border": "#3b3a30",
+     "border-strong": "#706f66",
+     "text": "#ecebe4",
+     "text-muted": "#949389",
+     "accent": "#ff6551",
+     "accent-hover": "#ff917f",
+     "accent-ink": "#141207",
+     "accent-text": "#ff6551",
+     "accent-soft": "#491e18",
+     "focus": "#ff6551"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 13.84,
+     "text ok": true,
+     "text-muted min": 5.04,
+     "text-muted ok": true,
+     "accent-text min": 4.72,
+     "accent-text ok": true,
+     "accent/bg": 5.31,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.49,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.3,
+     "border-strong ok": true,
+     "text on accent-soft": 13.29,
+     "apca text/bg": 99.7,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.84,
+     "text ok": true,
+     "text-muted min": 4.96,
+     "text-muted ok": true,
+     "accent-text min": 5.28,
+     "accent-text ok": true,
+     "accent/bg": 6.01,
+     "accent/bg ok": true,
+     "accent-ink/accent": 6.46,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.45,
+     "border-strong ok": true,
+     "text on accent-soft": 11.85,
+     "apca text/bg": -93.3,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "riso-pink-teal",
+   "name": "Riso Pink & Teal",
+   "primary_mode": "light",
+   "moods": [
+    "playful",
+    "artistic",
+    "nostalgic",
+    "vivid"
+   ],
+   "strategy": "duotone",
+   "story": "Fluorescent pink and teal ink on grey stock \u2014 overprint where they meet.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.64,
+     0.24,
+     2
+    ],
+    "bg": [
+     0.955,
+     0.004,
+     255
+    ],
+    "neutral": [
+     0.004,
+     255
+    ],
+    "accent2": [
+     0.56,
+     0.1,
+     205
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#eef0f3",
+     "surface": "#f3f4f5",
+     "surface-2": "#dfe3e8",
+     "border": "#c4c9d1",
+     "border-strong": "#7b828d",
+     "text": "#192029",
+     "text-muted": "#5c646e",
+     "accent": "#f52781",
+     "accent-hover": "#d8006d",
+     "accent-ink": "#10171f",
+     "accent-text": "#c70063",
+     "accent-soft": "#ffd2dd",
+     "accent-2": "#00848f",
+     "accent-2-ink": "#fcfdff",
+     "focus": "#f52781"
+    },
+    "dark": {
+     "bg": "#151a20",
+     "surface": "#20262c",
+     "surface-2": "#0b1015",
+     "border": "#343a41",
+     "border-strong": "#696f77",
+     "text": "#e7ecf2",
+     "text-muted": "#8d939b",
+     "accent": "#ff9bb7",
+     "accent-hover": "#ffc0d0",
+     "accent-ink": "#0c121a",
+     "accent-text": "#ff9bb7",
+     "accent-soft": "#3f232b",
+     "accent-2": "#48b7c2",
+     "accent-2-ink": "#0c121a",
+     "focus": "#ff9bb7"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 12.73,
+     "text ok": true,
+     "text-muted min": 4.65,
+     "text-muted ok": true,
+     "accent-text min": 4.51,
+     "accent-text ok": true,
+     "accent/bg": 3.35,
+     "accent/bg ok": true,
+     "accent-ink/accent": 4.71,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.39,
+     "border-strong ok": true,
+     "text on accent-soft": 12.12,
+     "apca text/bg": 94.3,
+     "accent-2-ink/accent-2": 4.39,
+     "accent-2/bg": 3.92,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.86,
+     "text ok": true,
+     "text-muted min": 4.93,
+     "text-muted ok": true,
+     "accent-text min": 7.73,
+     "accent-text ok": true,
+     "accent/bg": 8.85,
+     "accent/bg ok": true,
+     "accent-ink/accent": 9.51,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.45,
+     "border-strong ok": true,
+     "text on accent-soft": 11.89,
+     "apca text/bg": -93.8,
+     "accent-2-ink/accent-2": 7.9,
+     "accent-2/bg": 7.35,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "solarpunk",
+   "name": "Solarpunk",
+   "primary_mode": "light",
+   "moods": [
+    "natural",
+    "fresh",
+    "optimistic",
+    "warm"
+   ],
+   "strategy": "analogous",
+   "story": "Leaf green and sunlight yellow on a sunny off-white.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.55,
+     0.15,
+     145
+    ],
+    "bg": [
+     0.972,
+     0.02,
+     115
+    ],
+    "neutral": [
+     0.02,
+     115
+    ],
+    "accent2": [
+     0.82,
+     0.16,
+     82
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#f5f8e9",
+     "surface": "#f9fbf3",
+     "surface-2": "#e7ebd6",
+     "border": "#cdd2b7",
+     "border-strong": "#858b68",
+     "text": "#1f2110",
+     "text-muted": "#626746",
+     "accent": "#278733",
+     "accent-hover": "#02721c",
+     "accent-ink": "#fdfefb",
+     "accent-text": "#137925",
+     "accent-soft": "#d1efd0",
+     "accent-2": "#f7b828",
+     "accent-2-ink": "#16170d",
+     "focus": "#278733"
+    },
+    "dark": {
+     "bg": "#191b06",
+     "surface": "#252710",
+     "surface-2": "#0f1100",
+     "border": "#383c22",
+     "border-strong": "#6e7258",
+     "text": "#eaeeda",
+     "text-muted": "#919580",
+     "accent": "#5eb964",
+     "accent-hover": "#75d079",
+     "accent-ink": "#111308",
+     "accent-text": "#5eb964",
+     "accent-soft": "#1a331b",
+     "accent-2": "#f7b828",
+     "accent-2-ink": "#111308",
+     "focus": "#5eb964"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 13.44,
+     "text ok": true,
+     "text-muted min": 4.86,
+     "text-muted ok": true,
+     "accent-text min": 4.55,
+     "accent-text ok": true,
+     "accent/bg": 4.24,
+     "accent/bg ok": true,
+     "accent-ink/accent": 4.51,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.31,
+     "border-strong ok": true,
+     "text on accent-soft": 13.22,
+     "apca text/bg": 98.1,
+     "accent-2-ink/accent-2": 10.19,
+     "accent-2/bg": 1.65,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.89,
+     "text ok": true,
+     "text-muted min": 4.95,
+     "text-muted ok": true,
+     "accent-text min": 6.25,
+     "accent-text ok": true,
+     "accent/bg": 7.16,
+     "accent/bg ok": true,
+     "accent-ink/accent": 7.67,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.51,
+     "border-strong ok": true,
+     "text on accent-soft": 11.57,
+     "apca text/bg": -94.0,
+     "accent-2-ink/accent-2": 10.57,
+     "accent-2/bg": 9.86,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "memphis-pop",
+   "name": "Memphis Pop",
+   "primary_mode": "light",
+   "moods": [
+    "playful",
+    "vivid",
+    "energetic",
+    "nostalgic"
+   ],
+   "strategy": "triad",
+   "story": "Hot pink, turquoise and yellow with black linework \u2014 squiggles, confetti, terrazzo.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.64,
+     0.25,
+     355
+    ],
+    "bg": [
+     0.985,
+     0.006,
+     250
+    ],
+    "neutral": [
+     0.006,
+     250
+    ],
+    "accent2": [
+     0.76,
+     0.13,
+     195
+    ],
+    "accent3": [
+     0.89,
+     0.17,
+     100
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#f7fafe",
+     "surface": "#fdfeff",
+     "surface-2": "#e8eef4",
+     "border": "#cbd4dc",
+     "border-strong": "#818c98",
+     "text": "#16202b",
+     "text-muted": "#5a6470",
+     "accent": "#f41f94",
+     "accent-hover": "#d5007e",
+     "accent-ink": "#0f171f",
+     "accent-text": "#d0007b",
+     "accent-soft": "#ffdfea",
+     "accent-2": "#00caca",
+     "accent-2-ink": "#0f171f",
+     "accent-3": "#f5dc3a",
+     "accent-3-ink": "#0f171f",
+     "focus": "#f41f94"
+    },
+    "dark": {
+     "bg": "#141a21",
+     "surface": "#1f262e",
+     "surface-2": "#0a1017",
+     "border": "#323a43",
+     "border-strong": "#677078",
+     "text": "#e5ecf3",
+     "text-muted": "#8b939c",
+     "accent": "#ff99c2",
+     "accent-hover": "#ffbfd7",
+     "accent-ink": "#0b121a",
+     "accent-text": "#ff99c2",
+     "accent-soft": "#3e232e",
+     "accent-2": "#00caca",
+     "accent-2-ink": "#0b121a",
+     "accent-3": "#f5dc3a",
+     "accent-3-ink": "#0b121a",
+     "focus": "#ff99c2"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 14.09,
+     "text ok": true,
+     "text-muted min": 5.15,
+     "text-muted ok": true,
+     "accent-text min": 4.53,
+     "accent-text ok": true,
+     "accent/bg": 3.67,
+     "accent/bg ok": true,
+     "accent-ink/accent": 4.7,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.27,
+     "border-strong ok": true,
+     "text on accent-soft": 13.32,
+     "apca text/bg": 100.2,
+     "accent-2-ink/accent-2": 8.86,
+     "accent-2/bg": 1.95,
+     "accent-3-ink/accent-3": 13.06,
+     "accent-3/bg": 1.32,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.82,
+     "text ok": true,
+     "text-muted min": 4.91,
+     "text-muted ok": true,
+     "accent-text min": 7.7,
+     "accent-text ok": true,
+     "accent/bg": 8.83,
+     "accent/bg ok": true,
+     "accent-ink/accent": 9.49,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.47,
+     "border-strong ok": true,
+     "text on accent-soft": 11.87,
+     "apca text/bg": -93.6,
+     "accent-2-ink/accent-2": 9.23,
+     "accent-2/bg": 8.59,
+     "accent-3-ink/accent-3": 13.61,
+     "accent-3/bg": 12.66,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "quiet-capital",
+   "name": "Quiet Capital",
+   "primary_mode": "light",
+   "moods": [
+    "serious",
+    "luxurious",
+    "muted",
+    "calm"
+   ],
+   "strategy": "monochrome",
+   "story": "Stone-grey ground, charcoal type, a bronze accent. Wealth that whispers.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.52,
+     0.08,
+     68
+    ],
+    "bg": [
+     0.955,
+     0.005,
+     200
+    ],
+    "neutral": [
+     0.005,
+     200
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#ecf1f1",
+     "surface": "#f2f5f5",
+     "surface-2": "#dce5e5",
+     "border": "#bfcccc",
+     "border-strong": "#748686",
+     "text": "#112324",
+     "text-muted": "#566768",
+     "accent": "#876033",
+     "accent-hover": "#724c1e",
+     "accent-ink": "#fbfefe",
+     "accent-text": "#845d30",
+     "accent-soft": "#ecdccc",
+     "focus": "#876033"
+    },
+    "dark": {
+     "bg": "#111c1c",
+     "surface": "#1c2828",
+     "surface-2": "#071112",
+     "border": "#2f3c3d",
+     "border-strong": "#657272",
+     "text": "#e3eeee",
+     "text-muted": "#889596",
+     "accent": "#c09567",
+     "accent-hover": "#d7ab7d",
+     "accent-ink": "#061415",
+     "accent-text": "#c09567",
+     "accent-soft": "#362a1e",
+     "focus": "#c09567"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 12.7,
+     "text ok": true,
+     "text-muted min": 4.63,
+     "text-muted ok": true,
+     "accent-text min": 4.56,
+     "accent-text ok": true,
+     "accent/bg": 4.91,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.52,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.35,
+     "border-strong ok": true,
+     "text on accent-soft": 12.15,
+     "apca text/bg": 94.2,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.82,
+     "text ok": true,
+     "text-muted min": 4.91,
+     "text-muted ok": true,
+     "accent-text min": 5.59,
+     "accent-text ok": true,
+     "accent/bg": 6.41,
+     "accent/bg ok": true,
+     "accent-ink/accent": 6.92,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.48,
+     "border-strong ok": true,
+     "text on accent-soft": 11.77,
+     "apca text/bg": -93.9,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "oxblood-library",
+   "name": "Oxblood Library",
+   "primary_mode": "light",
+   "moods": [
+    "serious",
+    "warm",
+    "elegant",
+    "scholarly"
+   ],
+   "strategy": "analogous+metal",
+   "story": "Blush-white pages, oxblood leather, a brass detail.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.4,
+     0.13,
+     20
+    ],
+    "bg": [
+     0.968,
+     0.012,
+     15
+    ],
+    "neutral": [
+     0.012,
+     15
+    ],
+    "accent2": [
+     0.68,
+     0.1,
+     82
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#fcf1f2",
+     "surface": "#fcf7f7",
+     "surface-2": "#f3e2e3",
+     "border": "#dcc7c8",
+     "border-strong": "#997e7f",
+     "text": "#2c191b",
+     "text-muted": "#755c5d",
+     "accent": "#7f1f29",
+     "accent-hover": "#680317",
+     "accent-ink": "#fffdfd",
+     "accent-text": "#7f1f29",
+     "accent-soft": "#ffd9d8",
+     "accent-2": "#b7924b",
+     "accent-2-ink": "#1e1213",
+     "focus": "#7f1f29"
+    },
+    "dark": {
+     "bg": "#241416",
+     "surface": "#312021",
+     "surface-2": "#190b0c",
+     "border": "#473334",
+     "border-strong": "#7d696a",
+     "text": "#f7e7e7",
+     "text-muted": "#9f8d8e",
+     "accent": "#ea7483",
+     "accent-hover": "#ff8d99",
+     "accent-ink": "#1a0e0f",
+     "accent-text": "#ea7483",
+     "accent-soft": "#422124",
+     "accent-2": "#ebc57d",
+     "accent-2-ink": "#1a0e0f",
+     "focus": "#ea7483"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 13.31,
+     "text ok": true,
+     "text-muted min": 4.88,
+     "text-muted ok": true,
+     "accent-text min": 7.89,
+     "accent-text ok": true,
+     "accent/bg": 8.92,
+     "accent/bg ok": true,
+     "accent-ink/accent": 9.73,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.37,
+     "border-strong ok": true,
+     "text on accent-soft": 12.81,
+     "apca text/bg": 96.6,
+     "accent-2-ink/accent-2": 6.28,
+     "accent-2/bg": 2.63,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.9,
+     "text ok": true,
+     "text-muted min": 4.91,
+     "text-muted ok": true,
+     "accent-text min": 5.39,
+     "accent-text ok": true,
+     "accent/bg": 6.17,
+     "accent/bg ok": true,
+     "accent-ink/accent": 6.58,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.46,
+     "border-strong ok": true,
+     "text on accent-soft": 11.89,
+     "apca text/bg": -93.3,
+     "accent-2-ink/accent-2": 11.51,
+     "accent-2/bg": 10.8,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "glacier-lab",
+   "name": "Glacier Lab",
+   "primary_mode": "light",
+   "moods": [
+    "fresh",
+    "technical",
+    "cool",
+    "clean"
+   ],
+   "strategy": "complementary",
+   "story": "Icy white, glacial teal-blue, coral-pink warning colour.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.52,
+     0.11,
+     218
+    ],
+    "bg": [
+     0.982,
+     0.01,
+     215
+    ],
+    "neutral": [
+     0.01,
+     215
+    ],
+    "accent2": [
+     0.68,
+     0.17,
+     12
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#f2fbfd",
+     "surface": "#fafeff",
+     "surface-2": "#e1eff3",
+     "border": "#c3d5da",
+     "border-strong": "#768f95",
+     "text": "#0c2328",
+     "text-muted": "#50686e",
+     "accent": "#00758d",
+     "accent-hover": "#006073",
+     "accent-ink": "#fbfeff",
+     "accent-text": "#00758d",
+     "accent-soft": "#d1eef7",
+     "accent-2": "#ed647c",
+     "accent-2-ink": "#0b181c",
+     "focus": "#00758d"
+    },
+    "dark": {
+     "bg": "#0c1c20",
+     "surface": "#17282d",
+     "surface-2": "#041216",
+     "border": "#2a3d41",
+     "border-strong": "#607277",
+     "text": "#e0eef2",
+     "text-muted": "#85969a",
+     "accent": "#38afcc",
+     "accent-hover": "#53c5e3",
+     "accent-ink": "#071417",
+     "accent-text": "#38afcc",
+     "accent-soft": "#133139",
+     "accent-2": "#ffb3bb",
+     "accent-2-ink": "#071417",
+     "focus": "#38afcc"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 13.87,
+     "text ok": true,
+     "text-muted min": 5.03,
+     "text-muted ok": true,
+     "accent-text min": 4.54,
+     "accent-text ok": true,
+     "accent/bg": 5.09,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.27,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.26,
+     "border-strong ok": true,
+     "text on accent-soft": 13.43,
+     "apca text/bg": 99.8,
+     "accent-2-ink/accent-2": 5.78,
+     "accent-2/bg": 2.98,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.83,
+     "text ok": true,
+     "text-muted min": 4.95,
+     "text-muted ok": true,
+     "accent-text min": 5.93,
+     "accent-text ok": true,
+     "accent/bg": 6.8,
+     "accent/bg ok": true,
+     "accent-ink/accent": 7.29,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.47,
+     "border-strong ok": true,
+     "text on accent-soft": 11.59,
+     "apca text/bg": -93.8,
+     "accent-2-ink/accent-2": 11.07,
+     "accent-2/bg": 10.33,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "nordic-birch",
+   "name": "Nordic Birch",
+   "primary_mode": "light",
+   "moods": [
+    "calm",
+    "fresh",
+    "natural",
+    "minimal"
+   ],
+   "strategy": "complementary",
+   "story": "Birch white, lingonberry red, spruce green.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.52,
+     0.17,
+     15
+    ],
+    "bg": [
+     0.985,
+     0.003,
+     230
+    ],
+    "neutral": [
+     0.003,
+     230
+    ],
+    "accent2": [
+     0.42,
+     0.06,
+     175
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#f8fafc",
+     "surface": "#fdfeff",
+     "surface-2": "#e8eef1",
+     "border": "#ccd4d8",
+     "border-strong": "#818d93",
+     "text": "#172126",
+     "text-muted": "#5a656b",
+     "accent": "#b52f48",
+     "accent-hover": "#9d1135",
+     "accent-ink": "#fbfeff",
+     "accent-text": "#b52f48",
+     "accent-soft": "#ffe1e2",
+     "accent-2": "#23584b",
+     "accent-2-ink": "#fbfeff",
+     "focus": "#b52f48"
+    },
+    "dark": {
+     "bg": "#141b1e",
+     "surface": "#1f272a",
+     "surface-2": "#0a1014",
+     "border": "#323b3f",
+     "border-strong": "#687075",
+     "text": "#e5ecf0",
+     "text-muted": "#8b9499",
+     "accent": "#f56b7c",
+     "accent-hover": "#ff8d98",
+     "accent-ink": "#081319",
+     "accent-text": "#f56b7c",
+     "accent-soft": "#461f23",
+     "accent-2": "#76ab9c",
+     "accent-2-ink": "#081319",
+     "focus": "#f56b7c"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 13.99,
+     "text ok": true,
+     "text-muted min": 5.11,
+     "text-muted ok": true,
+     "accent-text min": 5.18,
+     "accent-text ok": true,
+     "accent/bg": 5.79,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.98,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.26,
+     "border-strong ok": true,
+     "text on accent-soft": 13.35,
+     "apca text/bg": 100.2,
+     "accent-2-ink/accent-2": 8.07,
+     "accent-2/bg": 7.81,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.73,
+     "text ok": true,
+     "text-muted min": 4.92,
+     "text-muted ok": true,
+     "accent-text min": 5.27,
+     "accent-text ok": true,
+     "accent/bg": 6.04,
+     "accent/bg ok": true,
+     "accent-ink/accent": 6.51,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.45,
+     "border-strong ok": true,
+     "text on accent-soft": 11.88,
+     "apca text/bg": -93.4,
+     "accent-2-ink/accent-2": 7.23,
+     "accent-2/bg": 6.7,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "delft",
+   "name": "Delft",
+   "primary_mode": "light",
+   "moods": [
+    "classic",
+    "cool",
+    "serious",
+    "crafted"
+   ],
+   "strategy": "monochrome",
+   "story": "Tin-glaze white and cobalt blue only \u2014 patterns and illustration in one ink.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.42,
+     0.14,
+     262
+    ],
+    "bg": [
+     0.985,
+     0.006,
+     255
+    ],
+    "neutral": [
+     0.006,
+     255
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#f7fafe",
+     "surface": "#fdfeff",
+     "surface-2": "#e8edf4",
+     "border": "#ccd3dd",
+     "border-strong": "#828c98",
+     "text": "#17202c",
+     "text-muted": "#5b6470",
+     "accent": "#1e4798",
+     "accent-hover": "#0b3382",
+     "accent-ink": "#fcfdff",
+     "accent-text": "#1e4798",
+     "accent-soft": "#deeaff",
+     "focus": "#1e4798"
+    },
+    "dark": {
+     "bg": "#141a21",
+     "surface": "#1f262e",
+     "surface-2": "#0a1017",
+     "border": "#333a43",
+     "border-strong": "#686f79",
+     "text": "#e6ecf3",
+     "text-muted": "#8c939c",
+     "accent": "#6d9df5",
+     "accent-hover": "#8bb4ff",
+     "accent-ink": "#0c121a",
+     "accent-text": "#6d9df5",
+     "accent-soft": "#1f2c45",
+     "focus": "#6d9df5"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 13.95,
+     "text ok": true,
+     "text-muted min": 5.1,
+     "text-muted ok": true,
+     "accent-text min": 7.41,
+     "accent-text ok": true,
+     "accent/bg": 8.32,
+     "accent/bg ok": true,
+     "accent-ink/accent": 8.56,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.26,
+     "border-strong ok": true,
+     "text on accent-soft": 13.54,
+     "apca text/bg": 100.1,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.84,
+     "text ok": true,
+     "text-muted min": 4.92,
+     "text-muted ok": true,
+     "accent-text min": 5.67,
+     "accent-text ok": true,
+     "accent/bg": 6.5,
+     "accent/bg ok": true,
+     "accent-ink/accent": 6.97,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.45,
+     "border-strong ok": true,
+     "text on accent-soft": 11.74,
+     "apca text/bg": -93.7,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "tomato-market",
+   "name": "Tomato Market",
+   "primary_mode": "light",
+   "moods": [
+    "fresh",
+    "energetic",
+    "warm",
+    "natural"
+   ],
+   "strategy": "complementary",
+   "story": "Crisp white, ripe tomato, basil green.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.6,
+     0.21,
+     30
+    ],
+    "bg": [
+     0.972,
+     0.016,
+     140
+    ],
+    "neutral": [
+     0.016,
+     140
+    ],
+    "accent2": [
+     0.5,
+     0.12,
+     145
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#f0f9ee",
+     "surface": "#f7fbf6",
+     "surface-2": "#e0edde",
+     "border": "#c4d4c1",
+     "border-strong": "#7a8d75",
+     "text": "#182315",
+     "text-muted": "#576953",
+     "accent": "#dd3020",
+     "accent-hover": "#c20d00",
+     "accent-ink": "#fcfefc",
+     "accent-text": "#ce1d0e",
+     "accent-soft": "#ffdcd6",
+     "accent-2": "#2f7434",
+     "accent-2-ink": "#fcfefc",
+     "focus": "#dd3020"
+    },
+    "dark": {
+     "bg": "#111d0f",
+     "surface": "#1c291a",
+     "surface-2": "#081306",
+     "border": "#303e2c",
+     "border-strong": "#657462",
+     "text": "#e4efe1",
+     "text-muted": "#8a9687",
+     "accent": "#ff8b79",
+     "accent-hover": "#ffb0a3",
+     "accent-ink": "#0d140b",
+     "accent-text": "#ff8b79",
+     "accent-soft": "#42221d",
+     "accent-2": "#6cb26f",
+     "accent-2-ink": "#0d140b",
+     "focus": "#ff8b79"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 13.44,
+     "text ok": true,
+     "text-muted min": 4.88,
+     "text-muted ok": true,
+     "accent-text min": 4.55,
+     "accent-text ok": true,
+     "accent/bg": 4.31,
+     "accent/bg ok": true,
+     "accent-ink/accent": 4.59,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.31,
+     "border-strong ok": true,
+     "text on accent-soft": 12.76,
+     "apca text/bg": 98.0,
+     "accent-2-ink/accent-2": 5.65,
+     "accent-2/bg": 5.31,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.84,
+     "text ok": true,
+     "text-muted min": 4.92,
+     "text-muted ok": true,
+     "accent-text min": 6.67,
+     "accent-text ok": true,
+     "accent/bg": 7.64,
+     "accent/bg ok": true,
+     "accent-ink/accent": 8.22,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.5,
+     "border-strong ok": true,
+     "text on accent-soft": 12.0,
+     "apca text/bg": -93.9,
+     "accent-2-ink/accent-2": 7.34,
+     "accent-2/bg": 6.83,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "ocean-liner",
+   "name": "Ocean Liner",
+   "primary_mode": "light",
+   "moods": [
+    "classic",
+    "serious",
+    "nostalgic",
+    "cool"
+   ],
+   "strategy": "nautical",
+   "story": "Navy, signal red and brass \u2014 1930s transatlantic posters.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.33,
+     0.1,
+     260
+    ],
+    "bg": [
+     0.978,
+     0.006,
+     240
+    ],
+    "neutral": [
+     0.006,
+     240
+    ],
+    "accent2": [
+     0.58,
+     0.2,
+     27
+    ],
+    "accent3": [
+     0.78,
+     0.12,
+     85
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#f4f8fb",
+     "surface": "#fafcfe",
+     "surface-2": "#e4ecf1",
+     "border": "#c8d2d9",
+     "border-strong": "#7d8b95",
+     "text": "#14212a",
+     "text-muted": "#58656f",
+     "accent": "#133368",
+     "accent-hover": "#022053",
+     "accent-ink": "#fcfeff",
+     "accent-text": "#133368",
+     "accent-soft": "#dae8ff",
+     "accent-2": "#d73431",
+     "accent-2-ink": "#fcfeff",
+     "accent-3": "#dbb155",
+     "accent-3-ink": "#0e171e",
+     "focus": "#133368"
+    },
+    "dark": {
+     "bg": "#121b21",
+     "surface": "#1d272d",
+     "surface-2": "#091016",
+     "border": "#313b42",
+     "border-strong": "#667078",
+     "text": "#e4ecf3",
+     "text-muted": "#8a949b",
+     "accent": "#7a9fdd",
+     "accent-hover": "#8fb5f4",
+     "accent-ink": "#09131a",
+     "accent-text": "#7a9fdd",
+     "accent-soft": "#232d3f",
+     "accent-2": "#ff7f73",
+     "accent-2-ink": "#09131a",
+     "accent-3": "#dbb155",
+     "accent-3-ink": "#09131a",
+     "focus": "#7a9fdd"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 13.72,
+     "text ok": true,
+     "text-muted min": 5.01,
+     "text-muted ok": true,
+     "accent-text min": 10.33,
+     "accent-text ok": true,
+     "accent/bg": 11.56,
+     "accent/bg ok": true,
+     "accent-ink/accent": 12.2,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.28,
+     "border-strong ok": true,
+     "text on accent-soft": 13.25,
+     "apca text/bg": 98.8,
+     "accent-2-ink/accent-2": 4.69,
+     "accent-2/bg": 4.44,
+     "accent-3-ink/accent-3": 8.99,
+     "accent-3/bg": 1.89,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.74,
+     "text ok": true,
+     "text-muted min": 4.92,
+     "text-muted ok": true,
+     "accent-text min": 5.67,
+     "accent-text ok": true,
+     "accent/bg": 6.5,
+     "accent/bg ok": true,
+     "accent-ink/accent": 6.99,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.45,
+     "border-strong ok": true,
+     "text on accent-soft": 11.58,
+     "apca text/bg": -93.4,
+     "accent-2-ink/accent-2": 7.62,
+     "accent-2/bg": 7.09,
+     "accent-3-ink/accent-3": 9.32,
+     "accent-3/bg": 8.66,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "peach-cocoa",
+   "name": "Peach & Cocoa",
+   "primary_mode": "light",
+   "moods": [
+    "warm",
+    "soft",
+    "friendly",
+    "muted"
+   ],
+   "strategy": "analogous+teal",
+   "story": "Peach-skin ground, cocoa type and buttons, a teal counterpoint.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.38,
+     0.06,
+     45
+    ],
+    "bg": [
+     0.945,
+     0.035,
+     60
+    ],
+    "neutral": [
+     0.035,
+     60
+    ],
+    "accent2": [
+     0.55,
+     0.09,
+     195
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#ffe8d6",
+     "surface": "#faeee5",
+     "surface-2": "#f9d9c0",
+     "border": "#e3bda0",
+     "border-strong": "#a2734c",
+     "text": "#2a1c10",
+     "text-muted": "#855831",
+     "accent": "#5d3827",
+     "accent-hover": "#492515",
+     "accent-ink": "#fffdfb",
+     "accent-text": "#5d3827",
+     "accent-soft": "#e9d8d1",
+     "accent-2": "#138282",
+     "accent-2-ink": "#fffdfb",
+     "focus": "#5d3827"
+    },
+    "dark": {
+     "bg": "#2a1300",
+     "surface": "#3b1c00",
+     "surface-2": "#1c0a00",
+     "border": "#523010",
+     "border-strong": "#89664a",
+     "text": "#ffe6d3",
+     "text-muted": "#a78c77",
+     "accent": "#bf9380",
+     "accent-hover": "#d6a995",
+     "accent-ink": "#180f09",
+     "accent-text": "#bf9380",
+     "accent-soft": "#362a24",
+     "accent-2": "#53b3b3",
+     "accent-2-ink": "#180f09",
+     "focus": "#bf9380"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 12.35,
+     "text ok": true,
+     "text-muted min": 4.57,
+     "text-muted ok": true,
+     "accent-text min": 7.63,
+     "accent-text ok": true,
+     "accent/bg": 8.62,
+     "accent/bg ok": true,
+     "accent-ink/accent": 10.04,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.49,
+     "border-strong ok": true,
+     "text on accent-soft": 11.96,
+     "apca text/bg": 92.1,
+     "accent-2-ink/accent-2": 4.56,
+     "accent-2/bg": 3.91,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.95,
+     "text ok": true,
+     "text-muted min": 4.93,
+     "text-muted ok": true,
+     "accent-text min": 5.7,
+     "accent-text ok": true,
+     "accent/bg": 6.46,
+     "accent/bg ok": true,
+     "accent-ink/accent": 6.93,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.41,
+     "border-strong ok": true,
+     "text on accent-soft": 11.57,
+     "apca text/bg": -93.1,
+     "accent-2-ink/accent-2": 7.62,
+     "accent-2/bg": 7.11,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "rose-quartz",
+   "name": "Rose Quartz",
+   "primary_mode": "light",
+   "moods": [
+    "soft",
+    "romantic",
+    "calm",
+    "elegant"
+   ],
+   "strategy": "complementary",
+   "story": "Pale rose, deep rose accent, muted sage.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.52,
+     0.15,
+     5
+    ],
+    "bg": [
+     0.972,
+     0.014,
+     8
+    ],
+    "neutral": [
+     0.014,
+     8
+    ],
+    "accent2": [
+     0.64,
+     0.05,
+     150
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#fff2f4",
+     "surface": "#fef8f9",
+     "surface-2": "#f6e3e6",
+     "border": "#dfc8cb",
+     "border-strong": "#9c7e82",
+     "text": "#2c191c",
+     "text-muted": "#775a5f",
+     "accent": "#ab3a5d",
+     "accent-hover": "#94234a",
+     "accent-ink": "#fffdfd",
+     "accent-text": "#ab3a5d",
+     "accent-soft": "#ffdae1",
+     "accent-2": "#77957c",
+     "accent-2-ink": "#1e1214",
+     "focus": "#ab3a5d"
+    },
+    "dark": {
+     "bg": "#251417",
+     "surface": "#321f22",
+     "surface-2": "#1a0a0d",
+     "border": "#483236",
+     "border-strong": "#7e686b",
+     "text": "#f8e6e8",
+     "text-muted": "#a08c8f",
+     "accent": "#e97292",
+     "accent-hover": "#ff8ba8",
+     "accent-ink": "#190e10",
+     "accent-text": "#e97292",
+     "accent-soft": "#422129",
+     "accent-2": "#a8c7ad",
+     "accent-2-ink": "#190e10",
+     "focus": "#e97292"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 13.5,
+     "text ok": true,
+     "text-muted min": 5.0,
+     "text-muted ok": true,
+     "accent-text min": 4.88,
+     "accent-text ok": true,
+     "accent/bg": 5.51,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.93,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.37,
+     "border-strong ok": true,
+     "text on accent-soft": 12.96,
+     "apca text/bg": 97.5,
+     "accent-2-ink/accent-2": 5.53,
+     "accent-2/bg": 3.02,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.9,
+     "text ok": true,
+     "text-muted min": 4.9,
+     "text-muted ok": true,
+     "accent-text min": 5.38,
+     "accent-text ok": true,
+     "accent/bg": 6.12,
+     "accent/bg ok": true,
+     "accent-ink/accent": 6.55,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.43,
+     "border-strong ok": true,
+     "text on accent-soft": 11.8,
+     "apca text/bg": -93.0,
+     "accent-2-ink/accent-2": 10.29,
+     "accent-2/bg": 9.6,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "mint-tangerine",
+   "name": "Mint Condition",
+   "primary_mode": "light",
+   "moods": [
+    "fresh",
+    "playful",
+    "energetic",
+    "friendly"
+   ],
+   "strategy": "complementary",
+   "story": "Mint ground, deep teal, a tangerine pop.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.45,
+     0.08,
+     185
+    ],
+    "bg": [
+     0.972,
+     0.025,
+     165
+    ],
+    "neutral": [
+     0.025,
+     165
+    ],
+    "accent2": [
+     0.72,
+     0.17,
+     58
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#e7fcf2",
+     "surface": "#f3fdf8",
+     "surface-2": "#d4f1e3",
+     "border": "#b5d8c7",
+     "border-strong": "#64937e",
+     "text": "#11241c",
+     "text-muted": "#406e5b",
+     "accent": "#00635b",
+     "accent-hover": "#004e47",
+     "accent-ink": "#fcfefd",
+     "accent-text": "#00635b",
+     "accent-soft": "#d2ece8",
+     "accent-2": "#f1840b",
+     "accent-2-ink": "#0d1914",
+     "focus": "#00635b"
+    },
+    "dark": {
+     "bg": "#002014",
+     "surface": "#082c1f",
+     "surface-2": "#00140b",
+     "border": "#1d4133",
+     "border-strong": "#567768",
+     "text": "#d9f2e6",
+     "text-muted": "#7f998d",
+     "accent": "#60afa5",
+     "accent-hover": "#76c5bb",
+     "accent-ink": "#09140f",
+     "accent-text": "#60afa5",
+     "accent-soft": "#1c312e",
+     "accent-2": "#f1840b",
+     "accent-2-ink": "#09140f",
+     "focus": "#60afa5"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 13.53,
+     "text ok": true,
+     "text-muted min": 4.86,
+     "text-muted ok": true,
+     "accent-text min": 5.96,
+     "accent-text ok": true,
+     "accent/bg": 6.68,
+     "accent/bg ok": true,
+     "accent-ink/accent": 7.06,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.26,
+     "border-strong ok": true,
+     "text on accent-soft": 13.07,
+     "apca text/bg": 98.4,
+     "accent-2-ink/accent-2": 6.9,
+     "accent-2/bg": 2.44,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.8,
+     "text ok": true,
+     "text-muted min": 4.92,
+     "text-muted ok": true,
+     "accent-text min": 5.88,
+     "accent-text ok": true,
+     "accent/bg": 6.72,
+     "accent/bg ok": true,
+     "accent-ink/accent": 7.31,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.48,
+     "border-strong ok": true,
+     "text on accent-soft": 11.64,
+     "apca text/bg": -94.0,
+     "accent-2-ink/accent-2": 7.19,
+     "accent-2/bg": 6.61,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "brutalist-concrete",
+   "name": "Brutalist Concrete",
+   "primary_mode": "light",
+   "moods": [
+    "bold",
+    "raw",
+    "technical",
+    "serious"
+   ],
+   "strategy": "monochrome+signal",
+   "story": "Raw concrete grey, black type and black buttons, safety-orange used as big flat fills with black ink.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.25,
+     0.0,
+     0
+    ],
+    "bg": [
+     0.9,
+     0.003,
+     90
+    ],
+    "neutral": [
+     0.003,
+     90
+    ],
+    "accent2": [
+     0.7,
+     0.2,
+     48
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#dfdedc",
+     "surface": "#e2e2e1",
+     "surface-2": "#d3d1cc",
+     "border": "#bab7b0",
+     "border-strong": "#757167",
+     "text": "#221f16",
+     "text-muted": "#5d594f",
+     "accent": "#222222",
+     "accent-hover": "#121212",
+     "accent-ink": "#fefdfb",
+     "accent-text": "#222222",
+     "accent-soft": "#cecece",
+     "accent-2": "#f97000",
+     "accent-2-ink": "#1a160b",
+     "focus": "#222222"
+    },
+    "dark": {
+     "bg": "#1c1913",
+     "surface": "#28251e",
+     "surface-2": "#110f09",
+     "border": "#3c3931",
+     "border-strong": "#716e67",
+     "text": "#edebe4",
+     "text-muted": "#959289",
+     "accent": "#9e9e9e",
+     "accent-hover": "#b4b4b4",
+     "accent-ink": "#151107",
+     "accent-text": "#9e9e9e",
+     "accent-soft": "#2c2c2c",
+     "accent-2": "#f97000",
+     "accent-2-ink": "#151107",
+     "focus": "#9e9e9e"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 10.79,
+     "text ok": true,
+     "text-muted min": 4.58,
+     "text-muted ok": true,
+     "accent-text min": 10.43,
+     "accent-text ok": true,
+     "accent/bg": 11.83,
+     "accent/bg ok": true,
+     "accent-ink/accent": 15.65,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.62,
+     "border-strong ok": true,
+     "text on accent-soft": 10.46,
+     "apca text/bg": 84.1,
+     "accent-2-ink/accent-2": 6.31,
+     "accent-2/bg": 2.13,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.82,
+     "text ok": true,
+     "text-muted min": 4.91,
+     "text-muted ok": true,
+     "accent-text min": 5.71,
+     "accent-text ok": true,
+     "accent/bg": 6.54,
+     "accent/bg ok": true,
+     "accent-ink/accent": 7.03,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.45,
+     "border-strong ok": true,
+     "text on accent-soft": 11.71,
+     "apca text/bg": -93.5,
+     "accent-2-ink/accent-2": 6.59,
+     "accent-2/bg": 6.13,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "y2k-chrome",
+   "name": "Y2K Chrome",
+   "primary_mode": "light",
+   "moods": [
+    "nostalgic",
+    "vivid",
+    "playful",
+    "cool"
+   ],
+   "strategy": "duotone",
+   "story": "Icy chrome grey, electric blue, bubblegum pink \u2014 add metallic gradients only on objects.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.55,
+     0.22,
+     262
+    ],
+    "bg": [
+     0.95,
+     0.016,
+     250
+    ],
+    "neutral": [
+     0.016,
+     250
+    ],
+    "accent2": [
+     0.66,
+     0.25,
+     350
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#e7f0f9",
+     "surface": "#eff3f8",
+     "surface-2": "#d6e3f1",
+     "border": "#b9c9db",
+     "border-strong": "#6e8399",
+     "text": "#14202d",
+     "text-muted": "#51657b",
+     "accent": "#1e64ef",
+     "accent-hover": "#024dd6",
+     "accent-ink": "#fcfeff",
+     "accent-text": "#1159e3",
+     "accent-soft": "#cddfff",
+     "accent-2": "#f72fa7",
+     "accent-2-ink": "#0f171f",
+     "focus": "#1e64ef"
+    },
+    "dark": {
+     "bg": "#0e1a28",
+     "surface": "#182635",
+     "surface-2": "#05101d",
+     "border": "#2b3b4b",
+     "border-strong": "#617081",
+     "text": "#e1edfa",
+     "text-muted": "#8794a2",
+     "accent": "#6c9fff",
+     "accent-hover": "#90b7ff",
+     "accent-ink": "#0b121a",
+     "accent-text": "#6c9fff",
+     "accent-soft": "#1e2c47",
+     "accent-2": "#ffa3cf",
+     "accent-2-ink": "#0b121a",
+     "focus": "#6c9fff"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 12.65,
+     "text ok": true,
+     "text-muted min": 4.61,
+     "text-muted ok": true,
+     "accent-text min": 4.52,
+     "accent-text ok": true,
+     "accent/bg": 4.42,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.03,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.4,
+     "border-strong ok": true,
+     "text on accent-soft": 12.24,
+     "apca text/bg": 93.8,
+     "accent-2-ink/accent-2": 5.09,
+     "accent-2/bg": 3.08,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.94,
+     "text ok": true,
+     "text-muted min": 4.96,
+     "text-muted ok": true,
+     "accent-text min": 5.88,
+     "accent-text ok": true,
+     "accent/bg": 6.72,
+     "accent/bg ok": true,
+     "accent-ink/accent": 7.21,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.46,
+     "border-strong ok": true,
+     "text on accent-soft": 11.75,
+     "apca text/bg": -93.9,
+     "accent-2-ink/accent-2": 10.21,
+     "accent-2/bg": 9.52,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "aperol",
+   "name": "Aperol Spritz",
+   "primary_mode": "light",
+   "moods": [
+    "energetic",
+    "warm",
+    "festive",
+    "vivid"
+   ],
+   "strategy": "analogous+wine",
+   "story": "Bright white, deep wine for type-level accents, Aperol orange as big flat fills (with wine ink).",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.36,
+     0.11,
+     12
+    ],
+    "bg": [
+     0.988,
+     0.008,
+     70
+    ],
+    "neutral": [
+     0.008,
+     70
+    ],
+    "accent2": [
+     0.71,
+     0.19,
+     52
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#fffaf5",
+     "surface": "#ffffff",
+     "surface-2": "#f4ece4",
+     "border": "#dbd2c7",
+     "border-strong": "#96897b",
+     "text": "#281d0f",
+     "text-muted": "#6d6153",
+     "accent": "#6a1d2d",
+     "accent-hover": "#55051c",
+     "accent-ink": "#fffdfb",
+     "accent-text": "#6a1d2d",
+     "accent-soft": "#ffe2e5",
+     "accent-2": "#f77900",
+     "accent-2-ink": "#1c140c",
+     "focus": "#6a1d2d"
+    },
+    "dark": {
+     "bg": "#1f180f",
+     "surface": "#2c241a",
+     "surface-2": "#150e06",
+     "border": "#41372d",
+     "border-strong": "#766d62",
+     "text": "#f1eae1",
+     "text-muted": "#9a9187",
+     "accent": "#d9818c",
+     "accent-hover": "#f196a2",
+     "accent-ink": "#171008",
+     "accent-text": "#d9818c",
+     "accent-soft": "#3d2427",
+     "accent-2": "#f77900",
+     "accent-2-ink": "#171008",
+     "focus": "#d9818c"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 14.11,
+     "text ok": true,
+     "text-muted min": 5.15,
+     "text-muted ok": true,
+     "accent-text min": 9.84,
+     "accent-text ok": true,
+     "accent/bg": 11.08,
+     "accent/bg ok": true,
+     "accent-ink/accent": 11.33,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.29,
+     "border-strong ok": true,
+     "text on accent-soft": 13.56,
+     "apca text/bg": 100.8,
+     "accent-2-ink/accent-2": 6.66,
+     "accent-2/bg": 2.63,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.8,
+     "text ok": true,
+     "text-muted min": 4.93,
+     "text-muted ok": true,
+     "accent-text min": 5.43,
+     "accent-text ok": true,
+     "accent/bg": 6.25,
+     "accent/bg ok": true,
+     "accent-ink/accent": 6.7,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.46,
+     "border-strong ok": true,
+     "text on accent-soft": 11.89,
+     "apca text/bg": -93.5,
+     "accent-2-ink/accent-2": 6.9,
+     "accent-2/bg": 6.43,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "arctic-data",
+   "name": "Arctic Data",
+   "primary_mode": "light",
+   "moods": [
+    "technical",
+    "clean",
+    "cool",
+    "serious"
+   ],
+   "strategy": "data-categorical",
+   "story": "Clinical white with three distinguishable data hues (blue, green, amber).",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.52,
+     0.14,
+     245
+    ],
+    "bg": [
+     0.985,
+     0.004,
+     240
+    ],
+    "neutral": [
+     0.004,
+     240
+    ],
+    "accent2": [
+     0.6,
+     0.15,
+     150
+    ],
+    "accent3": [
+     0.75,
+     0.15,
+     75
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#f8fafd",
+     "surface": "#fdfeff",
+     "surface-2": "#e8eef2",
+     "border": "#ccd4da",
+     "border-strong": "#818c95",
+     "text": "#172128",
+     "text-muted": "#5a656d",
+     "accent": "#006eae",
+     "accent-hover": "#00598f",
+     "accent-ink": "#fcfeff",
+     "accent-text": "#006eae",
+     "accent-soft": "#d7ecff",
+     "accent-2": "#25984d",
+     "accent-2-ink": "#0e171e",
+     "accent-3": "#e49e22",
+     "accent-3-ink": "#0e171e",
+     "focus": "#006eae"
+    },
+    "dark": {
+     "bg": "#141a1f",
+     "surface": "#1f262c",
+     "surface-2": "#0a1015",
+     "border": "#323a41",
+     "border-strong": "#687076",
+     "text": "#e5ecf1",
+     "text-muted": "#8b949a",
+     "accent": "#46a6ef",
+     "accent-hover": "#69bcff",
+     "accent-ink": "#09131a",
+     "accent-text": "#46a6ef",
+     "accent-soft": "#152f43",
+     "accent-2": "#61cb7c",
+     "accent-2-ink": "#09131a",
+     "accent-3": "#e49e22",
+     "accent-3-ink": "#09131a",
+     "focus": "#46a6ef"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 13.97,
+     "text ok": true,
+     "text-muted min": 5.1,
+     "text-muted ok": true,
+     "accent-text min": 4.67,
+     "accent-text ok": true,
+     "accent/bg": 5.23,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.4,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.28,
+     "border-strong ok": true,
+     "text on accent-soft": 13.49,
+     "apca text/bg": 100.2,
+     "accent-2-ink/accent-2": 4.89,
+     "accent-2/bg": 3.54,
+     "accent-3-ink/accent-3": 7.94,
+     "accent-3/bg": 2.18,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.83,
+     "text ok": true,
+     "text-muted min": 4.96,
+     "text-muted ok": true,
+     "accent-text min": 5.8,
+     "accent-text ok": true,
+     "accent/bg": 6.65,
+     "accent/bg ok": true,
+     "accent-ink/accent": 7.11,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.48,
+     "border-strong ok": true,
+     "text on accent-soft": 11.58,
+     "apca text/bg": -93.5,
+     "accent-2-ink/accent-2": 9.24,
+     "accent-2/bg": 8.64,
+     "accent-3-ink/accent-3": 8.23,
+     "accent-3/bg": 7.69,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "pistachio-raspberry",
+   "name": "Pistachio Gelato",
+   "primary_mode": "light",
+   "moods": [
+    "playful",
+    "fresh",
+    "sweet",
+    "vivid"
+   ],
+   "strategy": "complementary",
+   "story": "Pistachio cream ground, raspberry-ripple accent, deep pistachio second colour.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.55,
+     0.2,
+     5
+    ],
+    "bg": [
+     0.965,
+     0.03,
+     125
+    ],
+    "neutral": [
+     0.03,
+     125
+    ],
+    "accent2": [
+     0.5,
+     0.12,
+     132
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#eff7e2",
+     "surface": "#f5f9ef",
+     "surface-2": "#e0ecce",
+     "border": "#c4d3af",
+     "border-strong": "#7b8c5d",
+     "text": "#1c2212",
+     "text-muted": "#5a6a3d",
+     "accent": "#c82462",
+     "accent-hover": "#ad004f",
+     "accent-ink": "#fdfefc",
+     "accent-text": "#c62160",
+     "accent-soft": "#ffd7df",
+     "accent-2": "#48711e",
+     "accent-2-ink": "#fdfefc",
+     "focus": "#c82462"
+    },
+    "dark": {
+     "bg": "#141d00",
+     "surface": "#1f2a08",
+     "surface-2": "#0b1200",
+     "border": "#323e1b",
+     "border-strong": "#677452",
+     "text": "#e5f0d6",
+     "text-muted": "#8c977c",
+     "accent": "#ff6391",
+     "accent-hover": "#ff91ac",
+     "accent-ink": "#101309",
+     "accent-text": "#ff6391",
+     "accent-soft": "#471c28",
+     "accent-2": "#82ae5d",
+     "accent-2-ink": "#101309",
+     "focus": "#ff6391"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 13.26,
+     "text ok": true,
+     "text-muted min": 4.79,
+     "text-muted ok": true,
+     "accent-text min": 4.5,
+     "accent-text ok": true,
+     "accent/bg": 4.91,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.34,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.32,
+     "border-strong ok": true,
+     "text on accent-soft": 12.46,
+     "apca text/bg": 96.6,
+     "accent-2-ink/accent-2": 5.68,
+     "accent-2/bg": 5.22,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.75,
+     "text ok": true,
+     "text-muted min": 4.91,
+     "text-muted ok": true,
+     "accent-text min": 5.35,
+     "accent-text ok": true,
+     "accent/bg": 6.18,
+     "accent/bg ok": true,
+     "accent-ink/accent": 6.65,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.48,
+     "border-strong ok": true,
+     "text on accent-soft": 12.13,
+     "apca text/bg": -94.1,
+     "accent-2-ink/accent-2": 7.29,
+     "accent-2/bg": 6.77,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "library-green",
+   "name": "Library Green",
+   "primary_mode": "light",
+   "moods": [
+    "serious",
+    "scholarly",
+    "calm",
+    "classic"
+   ],
+   "strategy": "analogous+metal",
+   "story": "Reading-room green lamps and brass on pale paper.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.38,
+     0.07,
+     160
+    ],
+    "bg": [
+     0.972,
+     0.008,
+     160
+    ],
+    "neutral": [
+     0.008,
+     160
+    ],
+    "accent2": [
+     0.7,
+     0.11,
+     85
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#f1f7f4",
+     "surface": "#f8fbf9",
+     "surface-2": "#e1ebe5",
+     "border": "#c5d2ca",
+     "border-strong": "#7a8c81",
+     "text": "#12241a",
+     "text-muted": "#57685e",
+     "accent": "#194e35",
+     "accent-hover": "#003b24",
+     "accent-ink": "#fcfefd",
+     "accent-text": "#194e35",
+     "accent-soft": "#d8eadf",
+     "accent-2": "#be9946",
+     "accent-2-ink": "#0e1913",
+     "focus": "#194e35"
+    },
+    "dark": {
+     "bg": "#111c16",
+     "surface": "#1c2822",
+     "surface-2": "#08120c",
+     "border": "#303d35",
+     "border-strong": "#65726b",
+     "text": "#e4eee8",
+     "text-muted": "#89968e",
+     "accent": "#78ac90",
+     "accent-hover": "#8dc2a5",
+     "accent-ink": "#0a140f",
+     "accent-text": "#78ac90",
+     "accent-soft": "#223028",
+     "accent-2": "#be9946",
+     "accent-2-ink": "#0a140f",
+     "focus": "#78ac90"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 13.32,
+     "text ok": true,
+     "text-muted min": 4.85,
+     "text-muted ok": true,
+     "accent-text min": 7.89,
+     "accent-text ok": true,
+     "accent/bg": 8.87,
+     "accent/bg ok": true,
+     "accent-ink/accent": 9.5,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.28,
+     "border-strong ok": true,
+     "text on accent-soft": 12.96,
+     "apca text/bg": 97.5,
+     "accent-2-ink/accent-2": 6.71,
+     "accent-2/bg": 2.47,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.86,
+     "text ok": true,
+     "text-muted min": 4.95,
+     "text-muted ok": true,
+     "accent-text min": 5.89,
+     "accent-text ok": true,
+     "accent/bg": 6.74,
+     "accent/bg ok": true,
+     "accent-ink/accent": 7.24,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.47,
+     "border-strong ok": true,
+     "text on accent-soft": 11.63,
+     "apca text/bg": -93.8,
+     "accent-2-ink/accent-2": 7.0,
+     "accent-2/bg": 6.52,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "cherry-blossom",
+   "name": "Cherry Blossom",
+   "primary_mode": "light",
+   "moods": [
+    "soft",
+    "calm",
+    "elegant",
+    "japanese"
+   ],
+   "strategy": "monochrome+ink",
+   "story": "Sakura-white, blossom pink, sumi ink.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.55,
+     0.14,
+     355
+    ],
+    "bg": [
+     0.976,
+     0.012,
+     350
+    ],
+    "neutral": [
+     0.012,
+     350
+    ],
+    "accent2": [
+     0.3,
+     0.01,
+     260
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#fef4f8",
+     "surface": "#fff9fc",
+     "surface-2": "#f4e5eb",
+     "border": "#ddcad2",
+     "border-strong": "#99808b",
+     "text": "#2a1921",
+     "text-muted": "#735c66",
+     "accent": "#ae4976",
+     "accent-hover": "#973462",
+     "accent-ink": "#fffdfe",
+     "accent-text": "#aa4673",
+     "accent-soft": "#ffdce8",
+     "accent-2": "#2b2e33",
+     "accent-2-ink": "#fffdfe",
+     "focus": "#ae4976"
+    },
+    "dark": {
+     "bg": "#23141b",
+     "surface": "#302027",
+     "surface-2": "#180b11",
+     "border": "#45333b",
+     "border-strong": "#7b6971",
+     "text": "#f5e7ed",
+     "text-muted": "#9d8d94",
+     "accent": "#e47aa6",
+     "accent-hover": "#fc90bc",
+     "accent-ink": "#180e13",
+     "accent-text": "#e47aa6",
+     "accent-soft": "#3f222e",
+     "accent-2": "#9b9fa5",
+     "accent-2-ink": "#180e13",
+     "focus": "#e47aa6"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 13.7,
+     "text ok": true,
+     "text-muted min": 5.0,
+     "text-muted ok": true,
+     "accent-text min": 4.5,
+     "accent-text ok": true,
+     "accent/bg": 4.86,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.16,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.36,
+     "border-strong ok": true,
+     "text on accent-soft": 13.22,
+     "apca text/bg": 98.5,
+     "accent-2-ink/accent-2": 13.45,
+     "accent-2/bg": 12.66,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.88,
+     "text ok": true,
+     "text-muted min": 4.9,
+     "text-muted ok": true,
+     "accent-text min": 5.61,
+     "accent-text ok": true,
+     "accent/bg": 6.43,
+     "accent/bg ok": true,
+     "accent-ink/accent": 6.87,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.45,
+     "border-strong ok": true,
+     "text on accent-soft": 11.85,
+     "apca text/bg": -93.3,
+     "accent-2-ink/accent-2": 7.11,
+     "accent-2/bg": 6.65,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "lagoon",
+   "name": "Lagoon",
+   "primary_mode": "light",
+   "moods": [
+    "fresh",
+    "calm",
+    "natural",
+    "cool"
+   ],
+   "strategy": "complementary",
+   "story": "Shallow-water white, deep lagoon, sand gold.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.48,
+     0.09,
+     200
+    ],
+    "bg": [
+     0.975,
+     0.012,
+     195
+    ],
+    "neutral": [
+     0.012,
+     195
+    ],
+    "accent2": [
+     0.78,
+     0.1,
+     80
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#eef9f9",
+     "surface": "#f6fcfc",
+     "surface-2": "#dceeed",
+     "border": "#bed5d4",
+     "border-strong": "#708e8e",
+     "text": "#0c2424",
+     "text-muted": "#4c6a69",
+     "accent": "#006b70",
+     "accent-hover": "#005559",
+     "accent-ink": "#fbfefe",
+     "accent-text": "#006b70",
+     "accent-soft": "#d1eced",
+     "accent-2": "#d9b06b",
+     "accent-2-ink": "#0a1919",
+     "focus": "#006b70"
+    },
+    "dark": {
+     "bg": "#091d1d",
+     "surface": "#142929",
+     "surface-2": "#021313",
+     "border": "#273e3e",
+     "border-strong": "#5e7473",
+     "text": "#deefef",
+     "text-muted": "#839796",
+     "accent": "#50afb4",
+     "accent-hover": "#67c6cb",
+     "accent-ink": "#061414",
+     "accent-text": "#50afb4",
+     "accent-soft": "#183133",
+     "accent-2": "#d9b06b",
+     "accent-2-ink": "#061414",
+     "focus": "#50afb4"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 13.53,
+     "text ok": true,
+     "text-muted min": 4.9,
+     "text-muted ok": true,
+     "accent-text min": 5.24,
+     "accent-text ok": true,
+     "accent/bg": 5.86,
+     "accent/bg ok": true,
+     "accent-ink/accent": 6.21,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.29,
+     "border-strong ok": true,
+     "text on accent-soft": 13.09,
+     "apca text/bg": 98.2,
+     "accent-2-ink/accent-2": 8.9,
+     "accent-2/bg": 1.89,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.84,
+     "text ok": true,
+     "text-muted min": 4.95,
+     "text-muted ok": true,
+     "accent-text min": 5.9,
+     "accent-text ok": true,
+     "accent/bg": 6.75,
+     "accent/bg ok": true,
+     "accent-ink/accent": 7.27,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.5,
+     "border-strong ok": true,
+     "text on accent-soft": 11.6,
+     "apca text/bg": -93.8,
+     "accent-2-ink/accent-2": 9.28,
+     "accent-2/bg": 8.61,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "sage-studio",
+   "name": "Sage Studio",
+   "primary_mode": "light",
+   "moods": [
+    "calm",
+    "natural",
+    "muted",
+    "warm"
+   ],
+   "strategy": "analogous+ochre",
+   "story": "Sage-tinted walls, deep sage, ochre detail.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.45,
+     0.06,
+     150
+    ],
+    "bg": [
+     0.955,
+     0.015,
+     145
+    ],
+    "neutral": [
+     0.015,
+     145
+    ],
+    "accent2": [
+     0.72,
+     0.12,
+     80
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#eaf3ea",
+     "surface": "#f1f5f1",
+     "surface-2": "#dae7da",
+     "border": "#becebe",
+     "border-strong": "#738873",
+     "text": "#162316",
+     "text-muted": "#556a55",
+     "accent": "#3c5f43",
+     "accent-hover": "#294b31",
+     "accent-ink": "#fcfefc",
+     "accent-text": "#3c5f43",
+     "accent-soft": "#d6e4d8",
+     "accent-2": "#cc9c42",
+     "accent-2-ink": "#101810",
+     "focus": "#3c5f43"
+    },
+    "dark": {
+     "bg": "#101d11",
+     "surface": "#1b291c",
+     "surface-2": "#071307",
+     "border": "#2e3e2e",
+     "border-strong": "#647464",
+     "text": "#e3efe3",
+     "text-muted": "#899789",
+     "accent": "#84a98b",
+     "accent-hover": "#9ac0a0",
+     "accent-ink": "#0c140c",
+     "accent-text": "#84a98b",
+     "accent-soft": "#252f27",
+     "accent-2": "#cc9c42",
+     "accent-2-ink": "#0c140c",
+     "focus": "#84a98b"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 12.77,
+     "text ok": true,
+     "text-muted min": 4.59,
+     "text-muted ok": true,
+     "accent-text min": 5.64,
+     "accent-text ok": true,
+     "accent/bg": 6.36,
+     "accent/bg ok": true,
+     "accent-ink/accent": 7.12,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.37,
+     "border-strong ok": true,
+     "text on accent-soft": 12.4,
+     "apca text/bg": 94.6,
+     "accent-2-ink/accent-2": 7.24,
+     "accent-2/bg": 2.2,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.84,
+     "text ok": true,
+     "text-muted min": 4.96,
+     "text-muted ok": true,
+     "accent-text min": 5.82,
+     "accent-text ok": true,
+     "accent/bg": 6.66,
+     "accent/bg ok": true,
+     "accent-ink/accent": 7.16,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.5,
+     "border-strong ok": true,
+     "text on accent-soft": 11.7,
+     "apca text/bg": -93.9,
+     "accent-2-ink/accent-2": 7.49,
+     "accent-2/bg": 6.97,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "lavender-butter",
+   "name": "Lavender Haze",
+   "primary_mode": "light",
+   "moods": [
+    "calm",
+    "dreamy",
+    "soft",
+    "playful"
+   ],
+   "strategy": "complementary",
+   "story": "Lavender wash, violet accent, butter-yellow highlight \u2014 never as a violet-indigo gradient.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.45,
+     0.15,
+     298
+    ],
+    "bg": [
+     0.962,
+     0.02,
+     300
+    ],
+    "neutral": [
+     0.02,
+     300
+    ],
+    "accent2": [
+     0.9,
+     0.1,
+     95
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#f4f0fe",
+     "surface": "#f7f5fc",
+     "surface-2": "#e8e1f6",
+     "border": "#cec6e0",
+     "border-strong": "#887d9e",
+     "text": "#211c2b",
+     "text-muted": "#675d7c",
+     "accent": "#613c9c",
+     "accent-hover": "#4e2786",
+     "accent-ink": "#fefdff",
+     "accent-text": "#613c9c",
+     "accent-soft": "#e5dcff",
+     "accent-2": "#f3de90",
+     "accent-2-ink": "#17141e",
+     "focus": "#613c9c"
+    },
+    "dark": {
+     "bg": "#1c1528",
+     "surface": "#282136",
+     "surface-2": "#120b1d",
+     "border": "#3c344c",
+     "border-strong": "#726a82",
+     "text": "#ede8fb",
+     "text-muted": "#958ea2",
+     "accent": "#aa88ef",
+     "accent-hover": "#bfa0ff",
+     "accent-ink": "#131019",
+     "accent-text": "#aa88ef",
+     "accent-soft": "#302643",
+     "accent-2": "#f3de90",
+     "accent-2-ink": "#131019",
+     "focus": "#aa88ef"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 13.06,
+     "text ok": true,
+     "text-muted min": 4.81,
+     "text-muted ok": true,
+     "accent-text min": 6.27,
+     "accent-text ok": true,
+     "accent/bg": 7.11,
+     "accent/bg ok": true,
+     "accent-ink/accent": 7.86,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.42,
+     "border-strong ok": true,
+     "text on accent-soft": 12.65,
+     "apca text/bg": 95.7,
+     "accent-2-ink/accent-2": 13.56,
+     "accent-2/bg": 1.2,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.88,
+     "text ok": true,
+     "text-muted min": 4.9,
+     "text-muted ok": true,
+     "accent-text min": 5.49,
+     "accent-text ok": true,
+     "accent/bg": 6.3,
+     "accent/bg ok": true,
+     "accent-ink/accent": 6.7,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.45,
+     "border-strong ok": true,
+     "text on accent-soft": 11.82,
+     "apca text/bg": -93.3,
+     "accent-2-ink/accent-2": 14.04,
+     "accent-2/bg": 13.19,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "newsprint-gray",
+   "name": "Newsprint",
+   "primary_mode": "light",
+   "moods": [
+    "serious",
+    "classic",
+    "journalistic",
+    "muted"
+   ],
+   "strategy": "monochrome+signal",
+   "story": "Newsprint grey, black ink, one red for breaking news.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.5,
+     0.19,
+     18
+    ],
+    "bg": [
+     0.93,
+     0.003,
+     250
+    ],
+    "neutral": [
+     0.003,
+     250
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#e6e8ea",
+     "surface": "#ebeced",
+     "surface-2": "#d7dbdf",
+     "border": "#bcc2c8",
+     "border-strong": "#737b84",
+     "text": "#192027",
+     "text-muted": "#5a6169",
+     "accent": "#b61537",
+     "accent-hover": "#980029",
+     "accent-ink": "#fcfeff",
+     "accent-text": "#b61537",
+     "accent-soft": "#ffc7c8",
+     "focus": "#b61537"
+    },
+    "dark": {
+     "bg": "#151a1f",
+     "surface": "#20262c",
+     "surface-2": "#0b1015",
+     "border": "#343a40",
+     "border-strong": "#696f76",
+     "text": "#e7ecf1",
+     "text-muted": "#8c939a",
+     "accent": "#fe6270",
+     "accent-hover": "#ff8e93",
+     "accent-ink": "#0b121a",
+     "accent-text": "#fe6270",
+     "accent-soft": "#481d20",
+     "focus": "#fe6270"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 11.81,
+     "text ok": true,
+     "text-muted min": 4.51,
+     "text-muted ok": true,
+     "accent-text min": 4.79,
+     "accent-text ok": true,
+     "accent/bg": 5.42,
+     "accent/bg ok": true,
+     "accent-ink/accent": 6.59,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.49,
+     "border-strong ok": true,
+     "text on accent-soft": 11.16,
+     "apca text/bg": 89.6,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.85,
+     "text ok": true,
+     "text-muted min": 4.91,
+     "text-muted ok": true,
+     "accent-text min": 5.23,
+     "accent-text ok": true,
+     "accent/bg": 6.0,
+     "accent/bg ok": true,
+     "accent-ink/accent": 6.45,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.45,
+     "border-strong ok": true,
+     "text on accent-soft": 12.0,
+     "apca text/bg": -93.8,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "monochrome-ink",
+   "name": "Monochrome Ink",
+   "primary_mode": "light",
+   "moods": [
+    "minimal",
+    "serious",
+    "elegant",
+    "precise"
+   ],
+   "strategy": "monochrome",
+   "story": "Black on white. Accent is ink itself; hierarchy from type and space only.",
+   "seed": {
+    "mode": "light",
+    "accent": [
+     0.22,
+     0.0,
+     0
+    ],
+    "bg": [
+     0.99,
+     0.0,
+     0
+    ],
+    "neutral": [
+     0.0,
+     0
+    ]
+   },
+   "primary": "light",
+   "variants": {
+    "light": {
+     "bg": "#fcfcfc",
+     "surface": "#ffffff",
+     "surface-2": "#f0eeee",
+     "border": "#d8d3d4",
+     "border-strong": "#928a8c",
+     "text": "#231e1f",
+     "text-muted": "#686163",
+     "accent": "#1b1b1b",
+     "accent-hover": "#0b0b0b",
+     "accent-ink": "#fffdfd",
+     "accent-text": "#1b1b1b",
+     "accent-soft": "#ebebeb",
+     "focus": "#1b1b1b"
+    },
+    "dark": {
+     "bg": "#1d1819",
+     "surface": "#292425",
+     "surface-2": "#130e0f",
+     "border": "#3d3739",
+     "border-strong": "#736d6e",
+     "text": "#efe9eb",
+     "text-muted": "#989092",
+     "accent": "#9e9e9e",
+     "accent-hover": "#b4b4b4",
+     "accent-ink": "#190e11",
+     "accent-text": "#9e9e9e",
+     "accent-soft": "#2d2d2d",
+     "focus": "#9e9e9e"
+    }
+   },
+   "checks": {
+    "light": {
+     "text min": 14.23,
+     "text ok": true,
+     "text-muted min": 5.22,
+     "text-muted ok": true,
+     "accent-text min": 14.9,
+     "accent-text ok": true,
+     "accent/bg": 16.79,
+     "accent/bg ok": true,
+     "accent-ink/accent": 17.0,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.28,
+     "border-strong ok": true,
+     "text on accent-soft": 13.79,
+     "apca text/bg": 101.6,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.76,
+     "text ok": true,
+     "text-muted min": 4.91,
+     "text-muted ok": true,
+     "accent-text min": 5.71,
+     "accent-text ok": true,
+     "accent/bg": 6.55,
+     "accent/bg ok": true,
+     "accent-ink/accent": 7.05,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.46,
+     "border-strong ok": true,
+     "text on accent-soft": 11.49,
+     "apca text/bg": -93.2,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "fjord-night",
+   "name": "Fjord Night",
+   "primary_mode": "dark",
+   "moods": [
+    "cool",
+    "calm",
+    "dark",
+    "serious"
+   ],
+   "strategy": "monochrome",
+   "story": "Deep fjord blue-black with glacier-cyan light.",
+   "seed": {
+    "mode": "dark",
+    "accent": [
+     0.8,
+     0.11,
+     205
+    ],
+    "bg": [
+     0.22,
+     0.03,
+     240
+    ],
+    "neutral": [
+     0.03,
+     240
+    ]
+   },
+   "primary": "dark",
+   "variants": {
+    "dark": {
+     "bg": "#0d1c27",
+     "surface": "#182934",
+     "surface-2": "#04121c",
+     "border": "#2b3d4a",
+     "border-strong": "#617380",
+     "text": "#d9efff",
+     "text-muted": "#7d96a9",
+     "accent": "#56d2df",
+     "accent-hover": "#70e9f7",
+     "accent-ink": "#09131a",
+     "accent-text": "#56d2df",
+     "accent-soft": "#123337",
+     "focus": "#56d2df"
+    },
+    "light": {
+     "bg": "#f6fbff",
+     "surface": "#fdfeff",
+     "surface-2": "#e2eff8",
+     "border": "#c5d5e1",
+     "border-strong": "#798e9e",
+     "text": "#11212c",
+     "text-muted": "#526675",
+     "accent": "#01a0ad",
+     "accent-hover": "#008994",
+     "accent-ink": "#0e171e",
+     "accent-text": "#007781",
+     "accent-soft": "#cdf2f6",
+     "focus": "#01a0ad"
+    }
+   },
+   "checks": {
+    "dark": {
+     "text min": 12.62,
+     "text ok": true,
+     "text-muted min": 4.84,
+     "text-muted ok": true,
+     "accent-text min": 8.31,
+     "accent-text ok": true,
+     "accent/bg": 9.63,
+     "accent/bg ok": true,
+     "accent-ink/accent": 10.43,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.52,
+     "border-strong ok": true,
+     "text on accent-soft": 11.41,
+     "apca text/bg": -93.9,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 14.04,
+     "text ok": true,
+     "text-muted min": 5.1,
+     "text-muted ok": true,
+     "accent-text min": 4.53,
+     "accent-text ok": true,
+     "accent/bg": 3.04,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.72,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.26,
+     "border-strong ok": true,
+     "text on accent-soft": 13.8,
+     "apca text/bg": 100.5,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "amber-terminal",
+   "name": "Amber Terminal",
+   "primary_mode": "dark",
+   "moods": [
+    "technical",
+    "nostalgic",
+    "dark",
+    "focused"
+   ],
+   "strategy": "monochrome",
+   "story": "Warm phosphor amber on a dark CRT \u2014 scanlines optional.",
+   "seed": {
+    "mode": "dark",
+    "accent": [
+     0.8,
+     0.16,
+     75
+    ],
+    "bg": [
+     0.2,
+     0.012,
+     70
+    ],
+    "neutral": [
+     0.012,
+     70
+    ]
+   },
+   "primary": "dark",
+   "variants": {
+    "dark": {
+     "bg": "#1a1510",
+     "surface": "#26211b",
+     "surface-2": "#100b07",
+     "border": "#3a342e",
+     "border-strong": "#706b64",
+     "text": "#f3e9df",
+     "text-muted": "#9b9084",
+     "accent": "#f9ad26",
+     "accent-hover": "#ffca7f",
+     "accent-ink": "#171008",
+     "accent-text": "#f9ad26",
+     "accent-soft": "#392403",
+     "focus": "#f9ad26"
+    },
+    "light": {
+     "bg": "#fcfaf7",
+     "surface": "#fffefc",
+     "surface-2": "#f1ece6",
+     "border": "#d8d1ca",
+     "border-strong": "#93897e",
+     "text": "#261d14",
+     "text-muted": "#6b6257",
+     "accent": "#c38400",
+     "accent-hover": "#a87100",
+     "accent-ink": "#1c140c",
+     "accent-text": "#916100",
+     "accent-soft": "#ffe6c4",
+     "focus": "#c38400"
+    }
+   },
+   "checks": {
+    "dark": {
+     "text min": 13.32,
+     "text ok": true,
+     "text-muted min": 5.1,
+     "text-muted ok": true,
+     "accent-text min": 8.39,
+     "accent-text ok": true,
+     "accent/bg": 9.52,
+     "accent/bg ok": true,
+     "accent-ink/accent": 9.9,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.43,
+     "border-strong ok": true,
+     "text on accent-soft": 12.28,
+     "apca text/bg": -93.6,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 14.1,
+     "text ok": true,
+     "text-muted min": 5.09,
+     "text-muted ok": true,
+     "accent-text min": 4.57,
+     "accent-text ok": true,
+     "accent/bg": 3.04,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.73,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.29,
+     "border-strong ok": true,
+     "text on accent-soft": 13.69,
+     "apca text/bg": 100.6,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "deco-noir",
+   "name": "Deco Noir",
+   "primary_mode": "dark",
+   "moods": [
+    "luxurious",
+    "elegant",
+    "dark",
+    "dramatic"
+   ],
+   "strategy": "metal+jewel",
+   "story": "Lacquer black, gold leaf, an emerald jewel.",
+   "seed": {
+    "mode": "dark",
+    "accent": [
+     0.78,
+     0.12,
+     85
+    ],
+    "bg": [
+     0.2,
+     0.008,
+     80
+    ],
+    "neutral": [
+     0.008,
+     80
+    ],
+    "accent2": [
+     0.55,
+     0.1,
+     165
+    ]
+   },
+   "primary": "dark",
+   "variants": {
+    "dark": {
+     "bg": "#181612",
+     "surface": "#24211d",
+     "surface-2": "#0e0c08",
+     "border": "#383530",
+     "border-strong": "#6e6b67",
+     "text": "#f0eae1",
+     "text-muted": "#989186",
+     "accent": "#dbb155",
+     "accent-hover": "#f2c86c",
+     "accent-ink": "#161107",
+     "accent-text": "#dbb155",
+     "accent-soft": "#33270f",
+     "accent-2": "#5fb592",
+     "accent-2-ink": "#161107",
+     "focus": "#dbb155"
+    },
+    "light": {
+     "bg": "#fbfaf7",
+     "surface": "#fffefd",
+     "surface-2": "#f0ece7",
+     "border": "#d7d2ca",
+     "border-strong": "#908a7f",
+     "text": "#241e14",
+     "text-muted": "#696258",
+     "accent": "#b28a29",
+     "accent-hover": "#9c7500",
+     "accent-ink": "#1b150b",
+     "accent-text": "#886600",
+     "accent-soft": "#f7e8ca",
+     "accent-2": "#288463",
+     "accent-2-ink": "#fefdfb",
+     "focus": "#b28a29"
+    }
+   },
+   "checks": {
+    "dark": {
+     "text min": 13.4,
+     "text ok": true,
+     "text-muted min": 5.14,
+     "text-muted ok": true,
+     "accent-text min": 7.96,
+     "accent-text ok": true,
+     "accent/bg": 8.98,
+     "accent/bg ok": true,
+     "accent-ink/accent": 9.34,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.41,
+     "border-strong ok": true,
+     "text on accent-soft": 12.21,
+     "apca text/bg": -93.7,
+     "accent-2-ink/accent-2": 7.62,
+     "accent-2/bg": 7.32,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 14.05,
+     "text ok": true,
+     "text-muted min": 5.12,
+     "text-muted ok": true,
+     "accent-text min": 4.52,
+     "accent-text ok": true,
+     "accent/bg": 3.07,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.66,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.28,
+     "border-strong ok": true,
+     "text on accent-soft": 13.65,
+     "apca text/bg": 100.5,
+     "accent-2-ink/accent-2": 4.52,
+     "accent-2/bg": 4.4,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "aubergine-jazz",
+   "name": "Aubergine Jazz",
+   "primary_mode": "dark",
+   "moods": [
+    "warm",
+    "dark",
+    "luxurious",
+    "soulful"
+   ],
+   "strategy": "complementary",
+   "story": "Late-night plum, saffron spotlight, rosewood.",
+   "seed": {
+    "mode": "dark",
+    "accent": [
+     0.8,
+     0.15,
+     80
+    ],
+    "bg": [
+     0.22,
+     0.05,
+     330
+    ],
+    "neutral": [
+     0.05,
+     330
+    ],
+    "accent2": [
+     0.7,
+     0.12,
+     20
+    ]
+   },
+   "primary": "dark",
+   "variants": {
+    "dark": {
+     "bg": "#271125",
+     "surface": "#351c33",
+     "surface-2": "#1c071b",
+     "border": "#4b3048",
+     "border-strong": "#81667e",
+     "text": "#ffe0fb",
+     "text-muted": "#a885a4",
+     "accent": "#f0b135",
+     "accent-hover": "#ffcb70",
+     "accent-ink": "#170e16",
+     "accent-text": "#f0b135",
+     "accent-soft": "#3b2a0a",
+     "accent-2": "#e67885",
+     "accent-2-ink": "#170e16",
+     "focus": "#f0b135"
+    },
+    "light": {
+     "bg": "#fff7fe",
+     "surface": "#fffdff",
+     "surface-2": "#f9e6f6",
+     "border": "#e1cbde",
+     "border-strong": "#9d8099",
+     "text": "#271a26",
+     "text-muted": "#745971",
+     "accent": "#bd8700",
+     "accent-hover": "#a37300",
+     "accent-ink": "#1b131a",
+     "accent-text": "#8d6300",
+     "accent-soft": "#fce6c2",
+     "accent-2": "#e67885",
+     "accent-2-ink": "#1b131a",
+     "focus": "#bd8700"
+    }
+   },
+   "checks": {
+    "dark": {
+     "text min": 12.68,
+     "text ok": true,
+     "text-muted min": 4.8,
+     "text-muted ok": true,
+     "accent-text min": 8.09,
+     "accent-text ok": true,
+     "accent/bg": 9.26,
+     "accent/bg ok": true,
+     "accent-ink/accent": 9.94,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.47,
+     "border-strong ok": true,
+     "text on accent-soft": 11.37,
+     "apca text/bg": -92.3,
+     "accent-2-ink/accent-2": 6.65,
+     "accent-2/bg": 6.19,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 14.01,
+     "text ok": true,
+     "text-muted min": 5.18,
+     "text-muted ok": true,
+     "accent-text min": 4.51,
+     "accent-text ok": true,
+     "accent/bg": 3.01,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.74,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.34,
+     "border-strong ok": true,
+     "text on accent-soft": 13.66,
+     "apca text/bg": 100.1,
+     "accent-2-ink/accent-2": 6.4,
+     "accent-2/bg": 2.7,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "desert-dusk",
+   "name": "Desert Dusk",
+   "primary_mode": "dark",
+   "moods": [
+    "warm",
+    "earthy",
+    "dark",
+    "calm"
+   ],
+   "strategy": "analogous+cactus",
+   "story": "Canyon dusk brown, sand gold, cactus green.",
+   "seed": {
+    "mode": "dark",
+    "accent": [
+     0.83,
+     0.08,
+     80
+    ],
+    "bg": [
+     0.24,
+     0.035,
+     45
+    ],
+    "neutral": [
+     0.035,
+     45
+    ],
+    "accent2": [
+     0.68,
+     0.09,
+     150
+    ]
+   },
+   "primary": "dark",
+   "variants": {
+    "dark": {
+     "bg": "#2d1a11",
+     "surface": "#3b251c",
+     "surface-2": "#220f07",
+     "border": "#51392f",
+     "border-strong": "#876e64",
+     "text": "#ffe5da",
+     "text-muted": "#ab8a7c",
+     "accent": "#e3c28c",
+     "accent-hover": "#fad9a2",
+     "accent-ink": "#190f0a",
+     "accent-text": "#e3c28c",
+     "accent-soft": "#3b3223",
+     "accent-2": "#a0dcac",
+     "accent-2-ink": "#190f0a",
+     "focus": "#e3c28c"
+    },
+    "light": {
+     "bg": "#fff9f6",
+     "surface": "#fffefd",
+     "surface-2": "#fae9e1",
+     "border": "#e3cec4",
+     "border-strong": "#9f8478",
+     "text": "#2b1b13",
+     "text-muted": "#765d51",
+     "accent": "#ac8d58",
+     "accent-hover": "#967843",
+     "accent-ink": "#1e130e",
+     "accent-text": "#846632",
+     "accent-soft": "#f4e8d5",
+     "accent-2": "#6fa87b",
+     "accent-2-ink": "#1e130e",
+     "focus": "#ac8d58"
+    }
+   },
+   "checks": {
+    "dark": {
+     "text min": 11.91,
+     "text ok": true,
+     "text-muted min": 4.54,
+     "text-muted ok": true,
+     "accent-text min": 8.42,
+     "accent-text ok": true,
+     "accent/bg": 9.75,
+     "accent/bg ok": true,
+     "accent-ink/accent": 11.1,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.51,
+     "border-strong ok": true,
+     "text on accent-soft": 10.48,
+     "apca text/bg": -92.3,
+     "accent-2-ink/accent-2": 11.96,
+     "accent-2/bg": 10.52,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 14.03,
+     "text ok": true,
+     "text-muted min": 5.15,
+     "text-muted ok": true,
+     "accent-text min": 4.53,
+     "accent-text ok": true,
+     "accent/bg": 3.0,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.81,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.33,
+     "border-strong ok": true,
+     "text on accent-soft": 13.67,
+     "apca text/bg": 100.5,
+     "accent-2-ink/accent-2": 6.55,
+     "accent-2/bg": 2.66,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "chalkboard",
+   "name": "Chalkboard",
+   "primary_mode": "dark",
+   "moods": [
+    "playful",
+    "nostalgic",
+    "educational",
+    "natural"
+   ],
+   "strategy": "chalk",
+   "story": "Slate-green board, chalk yellow and chalk pink.",
+   "seed": {
+    "mode": "dark",
+    "accent": [
+     0.88,
+     0.12,
+     95
+    ],
+    "bg": [
+     0.3,
+     0.045,
+     160
+    ],
+    "neutral": [
+     0.045,
+     160
+    ],
+    "accent2": [
+     0.82,
+     0.09,
+     350
+    ]
+   },
+   "primary": "dark",
+   "variants": {
+    "dark": {
+     "bg": "#173526",
+     "surface": "#234232",
+     "surface-2": "#0b291b",
+     "border": "#375846",
+     "border-strong": "#6e8d7b",
+     "text": "#cff6e0",
+     "text-muted": "#87b099",
+     "accent": "#f0d777",
+     "accent-hover": "#ffefb2",
+     "accent-ink": "#0a140f",
+     "accent-text": "#f0d777",
+     "accent-soft": "#494228",
+     "accent-2": "#f1accc",
+     "accent-2-ink": "#0a140f",
+     "focus": "#f0d777"
+    },
+    "light": {
+     "bg": "#f0fef6",
+     "surface": "#fcfffd",
+     "surface-2": "#dff3e7",
+     "border": "#c1dacb",
+     "border-strong": "#739481",
+     "text": "#12241a",
+     "text-muted": "#4c6c5a",
+     "accent": "#a88f29",
+     "accent-hover": "#927a00",
+     "accent-ink": "#0e1913",
+     "accent-text": "#806a00",
+     "accent-soft": "#f2eaca",
+     "accent-2": "#f1accc",
+     "accent-2-ink": "#0e1913",
+     "focus": "#a88f29"
+    }
+   },
+   "checks": {
+    "dark": {
+     "text min": 9.44,
+     "text ok": true,
+     "text-muted min": 4.59,
+     "text-muted ok": true,
+     "accent-text min": 7.75,
+     "accent-text ok": true,
+     "accent/bg": 9.34,
+     "accent/bg ok": true,
+     "accent-ink/accent": 13.12,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.66,
+     "border-strong ok": true,
+     "text on accent-soft": 8.56,
+     "apca text/bg": -91.0,
+     "accent-2-ink/accent-2": 10.28,
+     "accent-2/bg": 7.32,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 14.01,
+     "text ok": true,
+     "text-muted min": 5.03,
+     "text-muted ok": true,
+     "accent-text min": 4.55,
+     "accent-text ok": true,
+     "accent/bg": 3.05,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.68,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.22,
+     "border-strong ok": true,
+     "text on accent-soft": 13.46,
+     "apca text/bg": 100.5,
+     "accent-2-ink/accent-2": 9.86,
+     "accent-2/bg": 1.76,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "graphite-signal",
+   "name": "Graphite & Signal",
+   "primary_mode": "dark",
+   "moods": [
+    "bold",
+    "technical",
+    "dark",
+    "energetic"
+   ],
+   "strategy": "monochrome+signal",
+   "story": "Graphite, white type, one signal-yellow.",
+   "seed": {
+    "mode": "dark",
+    "accent": [
+     0.88,
+     0.18,
+     98
+    ],
+    "bg": [
+     0.23,
+     0.004,
+     260
+    ],
+    "neutral": [
+     0.004,
+     260
+    ]
+   },
+   "primary": "dark",
+   "variants": {
+    "dark": {
+     "bg": "#1c1d1f",
+     "surface": "#28292b",
+     "surface-2": "#121314",
+     "border": "#3c3d3f",
+     "border-strong": "#707274",
+     "text": "#e7ebf2",
+     "text-muted": "#8d939b",
+     "accent": "#f7d710",
+     "accent-hover": "#fff0a6",
+     "accent-ink": "#0c121a",
+     "accent-text": "#f7d710",
+     "accent-soft": "#393001",
+     "focus": "#f7d710"
+    },
+    "light": {
+     "bg": "#f8fafd",
+     "surface": "#fdfeff",
+     "surface-2": "#eaedf2",
+     "border": "#ced3db",
+     "border-strong": "#848b96",
+     "text": "#1a2029",
+     "text-muted": "#5d646e",
+     "accent": "#a79000",
+     "accent-hover": "#8f7b00",
+     "accent-ink": "#11161f",
+     "accent-text": "#7d6b00",
+     "accent-soft": "#f4ebbb",
+     "focus": "#a79000"
+    }
+   },
+   "checks": {
+    "dark": {
+     "text min": 12.18,
+     "text ok": true,
+     "text-muted min": 4.7,
+     "text-muted ok": true,
+     "accent-text min": 10.18,
+     "accent-text ok": true,
+     "accent/bg": 11.79,
+     "accent/bg ok": true,
+     "accent-ink/accent": 13.14,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.49,
+     "border-strong ok": true,
+     "text on accent-soft": 11.0,
+     "apca text/bg": -92.9,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 13.95,
+     "text ok": true,
+     "text-muted min": 5.09,
+     "text-muted ok": true,
+     "accent-text min": 4.5,
+     "accent-text ok": true,
+     "accent/bg": 3.03,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.73,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.28,
+     "border-strong ok": true,
+     "text on accent-soft": 13.6,
+     "apca text/bg": 100.2,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "forest-floor",
+   "name": "Forest Floor",
+   "primary_mode": "dark",
+   "moods": [
+    "earthy",
+    "natural",
+    "dark",
+    "calm"
+   ],
+   "strategy": "analogous",
+   "story": "Pine-shadow green, moss light, mushroom beige.",
+   "seed": {
+    "mode": "dark",
+    "accent": [
+     0.76,
+     0.12,
+     128
+    ],
+    "bg": [
+     0.24,
+     0.03,
+     150
+    ],
+    "neutral": [
+     0.03,
+     150
+    ],
+    "accent2": [
+     0.76,
+     0.04,
+     60
+    ]
+   },
+   "primary": "dark",
+   "variants": {
+    "dark": {
+     "bg": "#152318",
+     "surface": "#203023",
+     "surface-2": "#0a190e",
+     "border": "#334537",
+     "border-strong": "#687a6b",
+     "text": "#dbf2df",
+     "text-muted": "#819985",
+     "accent": "#9bc06a",
+     "accent-hover": "#b1d680",
+     "accent-ink": "#0b140d",
+     "accent-text": "#9bc06a",
+     "accent-soft": "#2c371f",
+     "accent-2": "#c5ac98",
+     "accent-2-ink": "#0b140d",
+     "focus": "#9bc06a"
+    },
+    "light": {
+     "bg": "#f5fdf6",
+     "surface": "#fcfffc",
+     "surface-2": "#e5f1e6",
+     "border": "#c8d7ca",
+     "border-strong": "#7d9180",
+     "text": "#152318",
+     "text-muted": "#566959",
+     "accent": "#7a9d48",
+     "accent-hover": "#658732",
+     "accent-ink": "#101911",
+     "accent-text": "#55751d",
+     "accent-soft": "#e2f0d2",
+     "accent-2": "#c5ac98",
+     "accent-2-ink": "#101911",
+     "focus": "#7a9d48"
+    }
+   },
+   "checks": {
+    "dark": {
+     "text min": 11.79,
+     "text ok": true,
+     "text-muted min": 4.53,
+     "text-muted ok": true,
+     "accent-text min": 6.72,
+     "accent-text ok": true,
+     "accent/bg": 7.89,
+     "accent/bg ok": true,
+     "accent-ink/accent": 9.05,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.57,
+     "border-strong ok": true,
+     "text on accent-soft": 10.62,
+     "apca text/bg": -93.4,
+     "accent-2-ink/accent-2": 8.69,
+     "accent-2/bg": 7.57,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 14.05,
+     "text ok": true,
+     "text-muted min": 5.07,
+     "text-muted ok": true,
+     "accent-text min": 4.57,
+     "accent-text ok": true,
+     "accent/bg": 3.0,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.77,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.25,
+     "border-strong ok": true,
+     "text on accent-soft": 13.71,
+     "apca text/bg": 100.8,
+     "accent-2-ink/accent-2": 8.32,
+     "accent-2/bg": 2.08,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "velvet-lounge",
+   "name": "Velvet Lounge",
+   "primary_mode": "dark",
+   "moods": [
+    "luxurious",
+    "dark",
+    "romantic",
+    "warm"
+   ],
+   "strategy": "metal",
+   "story": "Burgundy velvet and champagne.",
+   "seed": {
+    "mode": "dark",
+    "accent": [
+     0.86,
+     0.06,
+     85
+    ],
+    "bg": [
+     0.22,
+     0.06,
+     15
+    ],
+    "neutral": [
+     0.06,
+     15
+    ]
+   },
+   "primary": "dark",
+   "variants": {
+    "dark": {
+     "bg": "#310c11",
+     "surface": "#40181c",
+     "surface-2": "#250308",
+     "border": "#582b2f",
+     "border-strong": "#906265",
+     "text": "#ffe3e5",
+     "text-muted": "#b98184",
+     "accent": "#e3cfa5",
+     "accent-hover": "#fae6bb",
+     "accent-ink": "#1a0e0f",
+     "accent-text": "#e3cfa5",
+     "accent-soft": "#332d22",
+     "focus": "#e3cfa5"
+    },
+    "light": {
+     "bg": "#fff8f8",
+     "surface": "#fffefe",
+     "surface-2": "#ffe6e7",
+     "border": "#edc8ca",
+     "border-strong": "#ab7d7f",
+     "text": "#2c191b",
+     "text-muted": "#815659",
+     "accent": "#a28e66",
+     "accent-hover": "#8c7952",
+     "accent-ink": "#1e1213",
+     "accent-text": "#7a6841",
+     "accent-soft": "#f0e9da",
+     "focus": "#a28e66"
+    }
+   },
+   "checks": {
+    "dark": {
+     "text min": 12.72,
+     "text ok": true,
+     "text-muted min": 4.79,
+     "text-muted ok": true,
+     "accent-text min": 10.06,
+     "accent-text ok": true,
+     "accent/bg": 11.53,
+     "accent/bg ok": true,
+     "accent-ink/accent": 12.33,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.46,
+     "border-strong ok": true,
+     "text on accent-soft": 11.29,
+     "apca text/bg": -92.4,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 14.05,
+     "text ok": true,
+     "text-muted min": 5.2,
+     "text-muted ok": true,
+     "accent-text min": 4.56,
+     "accent-text ok": true,
+     "accent/bg": 3.04,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.73,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.36,
+     "border-strong ok": true,
+     "text on accent-soft": 13.77,
+     "apca text/bg": 100.2,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "tidepool",
+   "name": "Tidepool",
+   "primary_mode": "dark",
+   "moods": [
+    "cool",
+    "vivid",
+    "dark",
+    "playful"
+   ],
+   "strategy": "complementary",
+   "story": "Deep teal water, coral, sunlit yellow.",
+   "seed": {
+    "mode": "dark",
+    "accent": [
+     0.76,
+     0.14,
+     12
+    ],
+    "bg": [
+     0.23,
+     0.04,
+     200
+    ],
+    "neutral": [
+     0.04,
+     200
+    ],
+    "accent2": [
+     0.84,
+     0.1,
+     95
+    ]
+   },
+   "primary": "dark",
+   "variants": {
+    "dark": {
+     "bg": "#002224",
+     "surface": "#082f31",
+     "surface-2": "#001718",
+     "border": "#1d4446",
+     "border-strong": "#56797b",
+     "text": "#c8f5f7",
+     "text-muted": "#6e9c9e",
+     "accent": "#fc8999",
+     "accent-hover": "#ffaeb7",
+     "accent-ink": "#061415",
+     "accent-text": "#fc8999",
+     "accent-soft": "#452529",
+     "accent-2": "#dfca7d",
+     "accent-2-ink": "#061415",
+     "focus": "#fc8999"
+    },
+    "light": {
+     "bg": "#eefefe",
+     "surface": "#fbffff",
+     "surface-2": "#dbf2f3",
+     "border": "#bdd9da",
+     "border-strong": "#6d9395",
+     "text": "#0b2425",
+     "text-muted": "#466b6d",
+     "accent": "#de6f80",
+     "accent-hover": "#c6596b",
+     "accent-ink": "#0a191a",
+     "accent-text": "#b2475a",
+     "accent-soft": "#ffe1e4",
+     "accent-2": "#dfca7d",
+     "accent-2-ink": "#0a191a",
+     "focus": "#de6f80"
+    }
+   },
+   "checks": {
+    "dark": {
+     "text min": 12.22,
+     "text ok": true,
+     "text-muted min": 4.73,
+     "text-muted ok": true,
+     "accent-text min": 6.28,
+     "accent-text ok": true,
+     "accent/bg": 7.32,
+     "accent/bg ok": true,
+     "accent-ink/accent": 8.2,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.52,
+     "border-strong ok": true,
+     "text on accent-soft": 11.52,
+     "apca text/bg": -93.9,
+     "accent-2-ink/accent-2": 11.52,
+     "accent-2/bg": 10.27,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 13.92,
+     "text ok": true,
+     "text-muted min": 5.02,
+     "text-muted ok": true,
+     "accent-text min": 4.57,
+     "accent-text ok": true,
+     "accent/bg": 3.03,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.73,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.23,
+     "border-strong ok": true,
+     "text on accent-soft": 13.25,
+     "apca text/bg": 100.5,
+     "accent-2-ink/accent-2": 11.04,
+     "accent-2/bg": 1.57,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "neon-tokyo",
+   "name": "Neon Tokyo",
+   "primary_mode": "dark",
+   "moods": [
+    "vivid",
+    "nightlife",
+    "dark",
+    "futuristic"
+   ],
+   "strategy": "neon duotone",
+   "story": "Night-sky violet-black, magenta and cyan neon \u2014 glow only on signs, not on everything.",
+   "seed": {
+    "mode": "dark",
+    "accent": [
+     0.7,
+     0.25,
+     340
+    ],
+    "bg": [
+     0.2,
+     0.04,
+     285
+    ],
+    "neutral": [
+     0.04,
+     285
+    ],
+    "accent2": [
+     0.85,
+     0.13,
+     200
+    ]
+   },
+   "primary": "dark",
+   "variants": {
+    "dark": {
+     "bg": "#141327",
+     "surface": "#201f35",
+     "surface-2": "#0b091c",
+     "border": "#33324b",
+     "border-strong": "#696983",
+     "text": "#e8e9ff",
+     "text-muted": "#8e8eb0",
+     "accent": "#fb48ce",
+     "accent-hover": "#ff7fd9",
+     "accent-ink": "#11101a",
+     "accent-text": "#fb48ce",
+     "accent-soft": "#3e1933",
+     "accent-2": "#44e7ef",
+     "accent-2-ink": "#11101a",
+     "focus": "#fb48ce"
+    },
+    "light": {
+     "bg": "#f9f9ff",
+     "surface": "#fefeff",
+     "surface-2": "#ebebfd",
+     "border": "#d0d0e6",
+     "border-strong": "#8788a4",
+     "text": "#1e1d2d",
+     "text-muted": "#60607b",
+     "accent": "#f744cb",
+     "accent-hover": "#de25b4",
+     "accent-ink": "#15151f",
+     "accent-text": "#c700a0",
+     "accent-soft": "#ffdef3",
+     "accent-2": "#44e7ef",
+     "accent-2-ink": "#15151f",
+     "focus": "#f744cb"
+    }
+   },
+   "checks": {
+    "dark": {
+     "text min": 13.39,
+     "text ok": true,
+     "text-muted min": 5.08,
+     "text-muted ok": true,
+     "accent-text min": 5.29,
+     "accent-text ok": true,
+     "accent/bg": 6.01,
+     "accent/bg ok": true,
+     "accent-ink/accent": 6.22,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.43,
+     "border-strong ok": true,
+     "text on accent-soft": 12.6,
+     "apca text/bg": -93.6,
+     "accent-2-ink/accent-2": 12.51,
+     "accent-2/bg": 12.08,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 14.06,
+     "text ok": true,
+     "text-muted min": 5.16,
+     "text-muted ok": true,
+     "accent-text min": 4.53,
+     "accent-text ok": true,
+     "accent/bg": 3.01,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.73,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.29,
+     "border-strong ok": true,
+     "text on accent-soft": 13.39,
+     "apca text/bg": 100.2,
+     "accent-2-ink/accent-2": 12.01,
+     "accent-2/bg": 1.44,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "carbon-ice",
+   "name": "Carbon & Ice",
+   "primary_mode": "dark",
+   "moods": [
+    "technical",
+    "cool",
+    "dark",
+    "precise"
+   ],
+   "strategy": "monochrome",
+   "story": "Carbon grey with ice-cyan instrument light.",
+   "seed": {
+    "mode": "dark",
+    "accent": [
+     0.84,
+     0.12,
+     210
+    ],
+    "bg": [
+     0.22,
+     0.006,
+     250
+    ],
+    "neutral": [
+     0.006,
+     250
+    ]
+   },
+   "primary": "dark",
+   "variants": {
+    "dark": {
+     "bg": "#191b1d",
+     "surface": "#242729",
+     "surface-2": "#0f1113",
+     "border": "#383b3e",
+     "border-strong": "#6d7073",
+     "text": "#e5ecf3",
+     "text-muted": "#8b939c",
+     "accent": "#58e0f6",
+     "accent-hover": "#a0f1ff",
+     "accent-ink": "#0b121a",
+     "accent-text": "#58e0f6",
+     "accent-soft": "#0f343a",
+     "focus": "#58e0f6"
+    },
+    "light": {
+     "bg": "#f8fafd",
+     "surface": "#fdfeff",
+     "surface-2": "#e9edf2",
+     "border": "#cdd3da",
+     "border-strong": "#838c95",
+     "text": "#182029",
+     "text-muted": "#5c646d",
+     "accent": "#009fb3",
+     "accent-hover": "#008899",
+     "accent-ink": "#0f171f",
+     "accent-text": "#007584",
+     "accent-soft": "#caf2f9",
+     "focus": "#009fb3"
+    }
+   },
+   "checks": {
+    "dark": {
+     "text min": 12.61,
+     "text ok": true,
+     "text-muted min": 4.83,
+     "text-muted ok": true,
+     "accent-text min": 9.6,
+     "accent-text ok": true,
+     "accent/bg": 11.03,
+     "accent/bg ok": true,
+     "accent-ink/accent": 12.02,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.47,
+     "border-strong ok": true,
+     "text on accent-soft": 11.21,
+     "apca text/bg": -93.4,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 13.98,
+     "text ok": true,
+     "text-muted min": 5.1,
+     "text-muted ok": true,
+     "accent-text min": 4.61,
+     "accent-text ok": true,
+     "accent/bg": 3.04,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.69,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.27,
+     "border-strong ok": true,
+     "text on accent-soft": 13.76,
+     "apca text/bg": 100.3,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "observatory",
+   "name": "Observatory",
+   "primary_mode": "dark",
+   "moods": [
+    "calm",
+    "dark",
+    "scientific",
+    "elegant"
+   ],
+   "strategy": "complementary",
+   "story": "Midnight blue dome, starlight gold, telescope steel-blue.",
+   "seed": {
+    "mode": "dark",
+    "accent": [
+     0.86,
+     0.1,
+     85
+    ],
+    "bg": [
+     0.21,
+     0.035,
+     265
+    ],
+    "neutral": [
+     0.035,
+     265
+    ],
+    "accent2": [
+     0.72,
+     0.09,
+     220
+    ]
+   },
+   "primary": "dark",
+   "variants": {
+    "dark": {
+     "bg": "#101828",
+     "surface": "#1b2436",
+     "surface-2": "#070e1d",
+     "border": "#2e384c",
+     "border-strong": "#656f84",
+     "text": "#e2ebff",
+     "text-muted": "#8592af",
+     "accent": "#efcc83",
+     "accent-hover": "#ffe5af",
+     "accent-ink": "#0d111b",
+     "accent-text": "#efcc83",
+     "accent-soft": "#332a16",
+     "accent-2": "#5db2cc",
+     "accent-2-ink": "#0d111b",
+     "focus": "#efcc83"
+    },
+    "light": {
+     "bg": "#f8faff",
+     "surface": "#fefeff",
+     "surface-2": "#e6edfc",
+     "border": "#cad3e5",
+     "border-strong": "#7f8ba2",
+     "text": "#181f2e",
+     "text-muted": "#59637a",
+     "accent": "#ae8d44",
+     "accent-hover": "#98782d",
+     "accent-ink": "#12161f",
+     "accent-text": "#866617",
+     "accent-soft": "#f4e8d0",
+     "accent-2": "#5db2cc",
+     "accent-2-ink": "#12161f",
+     "focus": "#ae8d44"
+    }
+   },
+   "checks": {
+    "dark": {
+     "text min": 12.99,
+     "text ok": true,
+     "text-muted min": 4.98,
+     "text-muted ok": true,
+     "accent-text min": 10.08,
+     "accent-text ok": true,
+     "accent/bg": 11.52,
+     "accent/bg ok": true,
+     "accent-ink/accent": 12.25,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.52,
+     "border-strong ok": true,
+     "text on accent-soft": 11.84,
+     "apca text/bg": -93.5,
+     "accent-2-ink/accent-2": 7.82,
+     "accent-2/bg": 7.36,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 14.03,
+     "text ok": true,
+     "text-muted min": 5.12,
+     "text-muted ok": true,
+     "accent-text min": 4.55,
+     "accent-text ok": true,
+     "accent/bg": 3.0,
+     "accent/bg ok": true,
+     "accent-ink/accent": 5.77,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.29,
+     "border-strong ok": true,
+     "text on accent-soft": 13.58,
+     "apca text/bg": 100.4,
+     "accent-2-ink/accent-2": 7.5,
+     "accent-2/bg": 2.31,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "klein-field",
+   "name": "Klein Field",
+   "primary_mode": "color",
+   "moods": [
+    "bold",
+    "vivid",
+    "artistic",
+    "confident"
+   ],
+   "strategy": "complementary",
+   "story": "International Klein Blue ground, white type, lemon accent.",
+   "seed": {
+    "mode": "color",
+    "accent": [
+     0.92,
+     0.17,
+     105
+    ],
+    "bg": [
+     0.4,
+     0.23,
+     266
+    ],
+    "neutral": [
+     0.23,
+     266
+    ]
+   },
+   "primary": "color",
+   "variants": {
+    "color": {
+     "bg": "#1227c0",
+     "surface": "#0d1ca8",
+     "surface-2": "#0a0098",
+     "text": "#f8faff",
+     "text-muted": "#aac4ff",
+     "border": "#3960d4",
+     "border-strong": "#678be3",
+     "accent": "#f6ea4d",
+     "accent-hover": "#fffee2",
+     "accent-ink": "#101624",
+     "accent-text": "#f6ea4d",
+     "accent-soft": "#2f52bd",
+     "focus": "#f6ea4d"
+    },
+    "light": {
+     "bg": "#f8faff",
+     "surface": "#fefeff",
+     "surface-2": "#e9edf6",
+     "border": "#cdd3df",
+     "border-strong": "#838b9b",
+     "text": "#191f2e",
+     "text-muted": "#5c6373",
+     "accent": "#1227c0",
+     "accent-hover": "#0b00a6",
+     "accent-ink": "#fdfdff",
+     "accent-text": "#1227c0",
+     "accent-soft": "#e0eaff",
+     "accent-2": "#f6ea4d",
+     "accent-2-ink": "#12161f",
+     "focus": "#1227c0"
+    },
+    "dark": {
+     "bg": "#141926",
+     "surface": "#1f2533",
+     "surface-2": "#0a0f1b",
+     "border": "#323948",
+     "border-strong": "#686f7e",
+     "text": "#e5ebf8",
+     "text-muted": "#8c92a0",
+     "accent": "#7099ff",
+     "accent-hover": "#91b2ff",
+     "accent-ink": "#0d111b",
+     "accent-text": "#7099ff",
+     "accent-soft": "#202b48",
+     "accent-2": "#f6ea4d",
+     "accent-2-ink": "#0d111b",
+     "focus": "#7099ff"
+    }
+   },
+   "checks": {
+    "color": {
+     "text min": 9.68,
+     "text ok": true,
+     "text-muted min": 5.8,
+     "text-muted ok": true,
+     "accent-text min": 8.09,
+     "accent-text ok": true,
+     "accent/bg": 8.09,
+     "accent/bg ok": true,
+     "accent-ink/accent": 14.45,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.07,
+     "border-strong ok": true,
+     "text on accent-soft": 6.57,
+     "apca text/bg": -92.8,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 14.03,
+     "text ok": true,
+     "text-muted min": 5.14,
+     "text-muted ok": true,
+     "accent-text min": 8.62,
+     "accent-text ok": true,
+     "accent/bg": 9.68,
+     "accent/bg ok": true,
+     "accent-ink/accent": 9.95,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.28,
+     "border-strong ok": true,
+     "text on accent-soft": 13.61,
+     "apca text/bg": 100.4,
+     "accent-2-ink/accent-2": 14.47,
+     "accent-2/bg": 1.2,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.82,
+     "text ok": true,
+     "text-muted min": 4.91,
+     "text-muted ok": true,
+     "accent-text min": 5.61,
+     "accent-text ok": true,
+     "accent/bg": 6.43,
+     "accent/bg ok": true,
+     "accent-ink/accent": 6.91,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.48,
+     "border-strong ok": true,
+     "text on accent-soft": 11.71,
+     "apca text/bg": -93.4,
+     "accent-2-ink/accent-2": 15.09,
+     "accent-2/bg": 14.03,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "citrus-court",
+   "name": "Citrus Court",
+   "primary_mode": "color",
+   "moods": [
+    "playful",
+    "vivid",
+    "energetic",
+    "warm"
+   ],
+   "strategy": "complementary",
+   "story": "Tangerine ground, ink-black type, deep green accent.",
+   "seed": {
+    "mode": "color",
+    "accent": [
+     0.36,
+     0.08,
+     158
+    ],
+    "bg": [
+     0.74,
+     0.17,
+     58
+    ],
+    "neutral": [
+     0.17,
+     58
+    ]
+   },
+   "primary": "color",
+   "variants": {
+    "color": {
+     "bg": "#f88b1c",
+     "surface": "#ff9e4d",
+     "surface-2": "#ffb57b",
+     "text": "#231103",
+     "text-muted": "#5a2d00",
+     "border": "#c26e20",
+     "border-strong": "#824811",
+     "accent": "#07492c",
+     "accent-hover": "#00351e",
+     "accent-ink": "#fff9f4",
+     "accent-text": "#014529",
+     "accent-soft": "#cc7c39",
+     "focus": "#07492c"
+    },
+    "light": {
+     "bg": "#fef9f5",
+     "surface": "#fffefd",
+     "surface-2": "#f4ebe4",
+     "border": "#dcd0c7",
+     "border-strong": "#97877c",
+     "text": "#2a1c11",
+     "text-muted": "#6f6055",
+     "accent": "#07492c",
+     "accent-hover": "#00351e",
+     "accent-ink": "#fffdfb",
+     "accent-text": "#07492c",
+     "accent-soft": "#dbf0e2",
+     "accent-2": "#f88b1c",
+     "accent-2-ink": "#1d140d",
+     "focus": "#07492c"
+    },
+    "dark": {
+     "bg": "#0f1d15",
+     "surface": "#1a2920",
+     "surface-2": "#05130b",
+     "border": "#2d3e34",
+     "border-strong": "#637469",
+     "text": "#e2efe7",
+     "text-muted": "#88978d",
+     "accent": "#f88b1c",
+     "accent-hover": "#ffab68",
+     "accent-ink": "#0a140e",
+     "accent-text": "#f88b1c",
+     "accent-soft": "#42240a",
+     "accent-2": "#73ae8b",
+     "accent-2-ink": "#0a140e",
+     "focus": "#f88b1c"
+    }
+   },
+   "checks": {
+    "color": {
+     "text min": 7.55,
+     "text ok": true,
+     "text-muted min": 4.81,
+     "text-muted ok": true,
+     "accent-text min": 4.62,
+     "accent-text ok": true,
+     "accent/bg": 4.35,
+     "accent/bg ok": true,
+     "accent-ink/accent": 10.06,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.02,
+     "border-strong ok": true,
+     "text on accent-soft": 5.65,
+     "apca text/bg": 55.7,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 14.03,
+     "text ok": true,
+     "text-muted min": 5.13,
+     "text-muted ok": true,
+     "accent-text min": 8.93,
+     "accent-text ok": true,
+     "accent/bg": 10.05,
+     "accent/bg ok": true,
+     "accent-ink/accent": 10.36,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.31,
+     "border-strong ok": true,
+     "text on accent-soft": 13.81,
+     "apca text/bg": 100.3,
+     "accent-2-ink/accent-2": 7.51,
+     "accent-2/bg": 2.31,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.83,
+     "text ok": true,
+     "text-muted min": 4.96,
+     "text-muted ok": true,
+     "accent-text min": 6.3,
+     "accent-text ok": true,
+     "accent/bg": 7.21,
+     "accent/bg ok": true,
+     "accent-ink/accent": 7.77,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.51,
+     "border-strong ok": true,
+     "text on accent-soft": 11.92,
+     "apca text/bg": -93.9,
+     "accent-2-ink/accent-2": 7.29,
+     "accent-2/bg": 6.76,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "blueprint",
+   "name": "Blueprint",
+   "primary_mode": "color",
+   "moods": [
+    "technical",
+    "nostalgic",
+    "precise",
+    "cool"
+   ],
+   "strategy": "monochrome",
+   "story": "Blueprint blue with white linework and pale cyan.",
+   "seed": {
+    "mode": "color",
+    "accent": [
+     0.9,
+     0.07,
+     210
+    ],
+    "bg": [
+     0.4,
+     0.13,
+     255
+    ],
+    "neutral": [
+     0.13,
+     255
+    ]
+   },
+   "primary": "color",
+   "variants": {
+    "color": {
+     "bg": "#02468b",
+     "surface": "#003a77",
+     "surface-2": "#002f62",
+     "text": "#f7faff",
+     "text-muted": "#a8c7ef",
+     "border": "#3f6da6",
+     "border-strong": "#7396c3",
+     "accent": "#a7ebf8",
+     "accent-hover": "#e2faff",
+     "accent-ink": "#0c1723",
+     "accent-text": "#a7ebf8",
+     "accent-soft": "#355f93",
+     "focus": "#a7ebf8"
+    },
+    "light": {
+     "bg": "#f7faff",
+     "surface": "#fdfeff",
+     "surface-2": "#e7edf6",
+     "border": "#cbd3df",
+     "border-strong": "#808c9b",
+     "text": "#15202d",
+     "text-muted": "#596472",
+     "accent": "#02468b",
+     "accent-hover": "#00346b",
+     "accent-ink": "#fcfdff",
+     "accent-text": "#02468b",
+     "accent-soft": "#dbebff",
+     "accent-2": "#a7ebf8",
+     "accent-2-ink": "#10171f",
+     "focus": "#02468b"
+    },
+    "dark": {
+     "bg": "#111a25",
+     "surface": "#1c2632",
+     "surface-2": "#08101b",
+     "border": "#2f3a48",
+     "border-strong": "#65707e",
+     "text": "#e3ecf7",
+     "text-muted": "#8993a0",
+     "accent": "#64a1ee",
+     "accent-hover": "#7fb7ff",
+     "accent-ink": "#0c121a",
+     "accent-text": "#64a1ee",
+     "accent-soft": "#1c2d43",
+     "accent-2": "#a7ebf8",
+     "accent-2-ink": "#0c121a",
+     "focus": "#64a1ee"
+    }
+   },
+   "checks": {
+    "color": {
+     "text min": 8.92,
+     "text ok": true,
+     "text-muted min": 5.37,
+     "text-muted ok": true,
+     "accent-text min": 7.05,
+     "accent-text ok": true,
+     "accent/bg": 7.05,
+     "accent/bg ok": true,
+     "accent-ink/accent": 13.66,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.06,
+     "border-strong ok": true,
+     "text on accent-soft": 6.25,
+     "apca text/bg": -91.8,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 13.98,
+     "text ok": true,
+     "text-muted min": 5.11,
+     "text-muted ok": true,
+     "accent-text min": 7.92,
+     "accent-text ok": true,
+     "accent/bg": 8.92,
+     "accent/bg ok": true,
+     "accent-ink/accent": 9.16,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.27,
+     "border-strong ok": true,
+     "text on accent-soft": 13.58,
+     "apca text/bg": 100.2,
+     "accent-2-ink/accent-2": 13.64,
+     "accent-2/bg": 1.26,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.83,
+     "text ok": true,
+     "text-muted min": 4.91,
+     "text-muted ok": true,
+     "accent-text min": 5.74,
+     "accent-text ok": true,
+     "accent/bg": 6.57,
+     "accent/bg ok": true,
+     "accent-ink/accent": 7.05,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.48,
+     "border-strong ok": true,
+     "text on accent-soft": 11.69,
+     "apca text/bg": -93.5,
+     "accent-2-ink/accent-2": 14.22,
+     "accent-2/bg": 13.25,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "cyanotype",
+   "name": "Cyanotype",
+   "primary_mode": "color",
+   "moods": [
+    "artsy",
+    "nostalgic",
+    "calm",
+    "crafted"
+   ],
+   "strategy": "monochrome+ochre",
+   "story": "Prussian-blue sun print with pale ochre.",
+   "seed": {
+    "mode": "color",
+    "accent": [
+     0.86,
+     0.09,
+     85
+    ],
+    "bg": [
+     0.33,
+     0.09,
+     245
+    ],
+    "neutral": [
+     0.09,
+     245
+    ]
+   },
+   "primary": "color",
+   "variants": {
+    "color": {
+     "bg": "#00385d",
+     "surface": "#002c4b",
+     "surface-2": "#00213a",
+     "text": "#f6fbff",
+     "text-muted": "#a7c2da",
+     "border": "#376082",
+     "border-strong": "#63829c",
+     "accent": "#eccd8c",
+     "accent-hover": "#ffe5af",
+     "accent-ink": "#0a1723",
+     "accent-text": "#eccd8c",
+     "accent-soft": "#2b4e6a",
+     "focus": "#eccd8c"
+    },
+    "light": {
+     "bg": "#f6fbff",
+     "surface": "#fdfeff",
+     "surface-2": "#e6eef5",
+     "border": "#c9d4de",
+     "border-strong": "#7e8d9a",
+     "text": "#13212d",
+     "text-muted": "#576571",
+     "accent": "#00385d",
+     "accent-hover": "#002641",
+     "accent-ink": "#fcfeff",
+     "accent-text": "#00385d",
+     "accent-soft": "#daecfc",
+     "accent-2": "#eccd8c",
+     "accent-2-ink": "#0e171f",
+     "focus": "#00385d"
+    },
+    "dark": {
+     "bg": "#0f1b25",
+     "surface": "#1a2732",
+     "surface-2": "#06111a",
+     "border": "#2d3b47",
+     "border-strong": "#62717d",
+     "text": "#e2edf7",
+     "text-muted": "#87949f",
+     "accent": "#6da4d3",
+     "accent-hover": "#83bbea",
+     "accent-ink": "#0a131a",
+     "accent-text": "#6da4d3",
+     "accent-soft": "#1f2f3c",
+     "accent-2": "#eccd8c",
+     "accent-2-ink": "#0a131a",
+     "focus": "#6da4d3"
+    }
+   },
+   "checks": {
+    "color": {
+     "text min": 11.7,
+     "text ok": true,
+     "text-muted min": 6.6,
+     "text-muted ok": true,
+     "accent-text min": 7.93,
+     "accent-text ok": true,
+     "accent/bg": 7.93,
+     "accent/bg ok": true,
+     "accent-ink/accent": 11.79,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.02,
+     "border-strong ok": true,
+     "text on accent-soft": 8.4,
+     "apca text/bg": -97.7,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 13.96,
+     "text ok": true,
+     "text-muted min": 5.11,
+     "text-muted ok": true,
+     "accent-text min": 10.39,
+     "accent-text ok": true,
+     "accent/bg": 11.7,
+     "accent/bg ok": true,
+     "accent-ink/accent": 12.04,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.27,
+     "border-strong ok": true,
+     "text on accent-soft": 13.55,
+     "apca text/bg": 100.4,
+     "accent-2-ink/accent-2": 11.78,
+     "accent-2/bg": 1.47,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.82,
+     "text ok": true,
+     "text-muted min": 4.9,
+     "text-muted ok": true,
+     "accent-text min": 5.72,
+     "accent-text ok": true,
+     "accent/bg": 6.56,
+     "accent/bg ok": true,
+     "accent-ink/accent": 7.05,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.47,
+     "border-strong ok": true,
+     "text on accent-soft": 11.56,
+     "apca text/bg": -93.8,
+     "accent-2-ink/accent-2": 12.2,
+     "accent-2/bg": 11.36,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "saffron-temple",
+   "name": "Saffron Temple",
+   "primary_mode": "color",
+   "moods": [
+    "warm",
+    "vivid",
+    "spiritual",
+    "festive"
+   ],
+   "strategy": "analogous",
+   "story": "Saffron ground, maroon type and accent.",
+   "seed": {
+    "mode": "color",
+    "accent": [
+     0.38,
+     0.13,
+     20
+    ],
+    "bg": [
+     0.79,
+     0.16,
+     72
+    ],
+    "neutral": [
+     0.16,
+     72
+    ]
+   },
+   "primary": "color",
+   "variants": {
+    "color": {
+     "bg": "#f9a726",
+     "surface": "#ffba5d",
+     "surface-2": "#ffce91",
+     "text": "#211301",
+     "text-muted": "#583700",
+     "border": "#c28426",
+     "border-strong": "#865a1a",
+     "accent": "#791824",
+     "accent-hover": "#600013",
+     "accent-ink": "#fef9f3",
+     "accent-text": "#791824",
+     "accent-soft": "#d09444",
+     "focus": "#791824"
+    },
+    "light": {
+     "bg": "#fef9f4",
+     "surface": "#fffefc",
+     "surface-2": "#f3ece3",
+     "border": "#dad1c6",
+     "border-strong": "#95887a",
+     "text": "#281d0f",
+     "text-muted": "#6d6153",
+     "accent": "#791824",
+     "accent-hover": "#600013",
+     "accent-ink": "#fffdfb",
+     "accent-text": "#791824",
+     "accent-soft": "#ffe1e0",
+     "accent-2": "#f9a726",
+     "accent-2-ink": "#1c150c",
+     "focus": "#791824"
+    },
+    "dark": {
+     "bg": "#241514",
+     "surface": "#312020",
+     "surface-2": "#190b0b",
+     "border": "#473333",
+     "border-strong": "#7d6968",
+     "text": "#f7e7e6",
+     "text-muted": "#9f8d8d",
+     "accent": "#f9a726",
+     "accent-hover": "#ffc57b",
+     "accent-ink": "#1a0e0e",
+     "accent-text": "#f9a726",
+     "accent-soft": "#3e2707",
+     "accent-2": "#ea7483",
+     "accent-2-ink": "#1a0e0e",
+     "focus": "#f9a726"
+    }
+   },
+   "checks": {
+    "color": {
+     "text min": 9.14,
+     "text ok": true,
+     "text-muted min": 5.4,
+     "text-muted ok": true,
+     "accent-text min": 5.37,
+     "accent-text ok": true,
+     "accent/bg": 5.37,
+     "accent/bg ok": true,
+     "accent-ink/accent": 10.19,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.03,
+     "border-strong ok": true,
+     "text on accent-soft": 6.91,
+     "apca text/bg": 64.6,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 14.08,
+     "text ok": true,
+     "text-muted min": 5.14,
+     "text-muted ok": true,
+     "accent-text min": 9.1,
+     "accent-text ok": true,
+     "accent/bg": 10.19,
+     "accent/bg ok": true,
+     "accent-ink/accent": 10.51,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.3,
+     "border-strong ok": true,
+     "text on accent-soft": 13.43,
+     "apca text/bg": 100.3,
+     "accent-2-ink/accent-2": 9.11,
+     "accent-2/bg": 1.9,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.91,
+     "text ok": true,
+     "text-muted min": 4.91,
+     "text-muted ok": true,
+     "accent-text min": 7.79,
+     "accent-text ok": true,
+     "accent/bg": 8.88,
+     "accent/bg ok": true,
+     "accent-ink/accent": 9.51,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.43,
+     "border-strong ok": true,
+     "text on accent-soft": 11.7,
+     "apca text/bg": -93.2,
+     "accent-2-ink/accent-2": 6.58,
+     "accent-2/bg": 6.14,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "mustard-ink",
+   "name": "Mustard Seed",
+   "primary_mode": "color",
+   "moods": [
+    "retro",
+    "bold",
+    "warm",
+    "graphic"
+   ],
+   "strategy": "complementary",
+   "story": "Mustard ground with ink-blue \u2014 60s book cover.",
+   "seed": {
+    "mode": "color",
+    "accent": [
+     0.35,
+     0.11,
+     262
+    ],
+    "bg": [
+     0.81,
+     0.14,
+     92
+    ],
+    "neutral": [
+     0.14,
+     92
+    ]
+   },
+   "primary": "color",
+   "variants": {
+    "color": {
+     "bg": "#e1bd46",
+     "surface": "#eecd64",
+     "surface-2": "#fedb6f",
+     "text": "#1d1500",
+     "text-muted": "#4d3e09",
+     "border": "#b0943b",
+     "border-strong": "#7b672a",
+     "accent": "#183773",
+     "accent-hover": "#06235e",
+     "accent-ink": "#fcfaf3",
+     "accent-text": "#183773",
+     "accent-soft": "#bfa555",
+     "focus": "#183773"
+    },
+    "light": {
+     "bg": "#fcfaf4",
+     "surface": "#fffefb",
+     "surface-2": "#f0ede3",
+     "border": "#d7d2c6",
+     "border-strong": "#908a79",
+     "text": "#241f0e",
+     "text-muted": "#686353",
+     "accent": "#183773",
+     "accent-hover": "#06235e",
+     "accent-ink": "#fefdfb",
+     "accent-text": "#183773",
+     "accent-soft": "#deeaff",
+     "accent-2": "#e1bd46",
+     "accent-2-ink": "#19160b",
+     "focus": "#183773"
+    },
+    "dark": {
+     "bg": "#131926",
+     "surface": "#1e2533",
+     "surface-2": "#090f1b",
+     "border": "#313948",
+     "border-strong": "#666f7e",
+     "text": "#e5ecf8",
+     "text-muted": "#8b93a0",
+     "accent": "#e1bd46",
+     "accent-hover": "#f9d460",
+     "accent-ink": "#0d121b",
+     "accent-text": "#e1bd46",
+     "accent-soft": "#352b0c",
+     "accent-2": "#799ee3",
+     "accent-2-ink": "#0d121b",
+     "focus": "#e1bd46"
+    }
+   },
+   "checks": {
+    "color": {
+     "text min": 9.98,
+     "text ok": true,
+     "text-muted min": 5.76,
+     "text-muted ok": true,
+     "accent-text min": 6.31,
+     "accent-text ok": true,
+     "accent/bg": 6.31,
+     "accent/bg ok": true,
+     "accent-ink/accent": 10.97,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.03,
+     "border-strong ok": true,
+     "text on accent-soft": 7.53,
+     "apca text/bg": 68.9,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 14.04,
+     "text ok": true,
+     "text-muted min": 5.12,
+     "text-muted ok": true,
+     "accent-text min": 9.78,
+     "accent-text ok": true,
+     "accent/bg": 10.98,
+     "accent/bg ok": true,
+     "accent-ink/accent": 11.27,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.3,
+     "border-strong ok": true,
+     "text on accent-soft": 13.56,
+     "apca text/bg": 100.4,
+     "accent-2-ink/accent-2": 9.97,
+     "accent-2/bg": 1.74,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.93,
+     "text ok": true,
+     "text-muted min": 4.96,
+     "text-muted ok": true,
+     "accent-text min": 8.46,
+     "accent-text ok": true,
+     "accent/bg": 9.68,
+     "accent/bg ok": true,
+     "accent-ink/accent": 10.33,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.47,
+     "border-strong ok": true,
+     "text on accent-soft": 11.77,
+     "apca text/bg": -93.9,
+     "accent-2-ink/accent-2": 6.98,
+     "accent-2/bg": 6.54,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "pink-ultramarine",
+   "name": "Pink Riot",
+   "primary_mode": "color",
+   "moods": [
+    "playful",
+    "loud",
+    "bold",
+    "vivid"
+   ],
+   "strategy": "complementary",
+   "story": "Bubblegum ground, ultramarine type and blocks.",
+   "seed": {
+    "mode": "color",
+    "accent": [
+     0.34,
+     0.19,
+     266
+    ],
+    "bg": [
+     0.78,
+     0.15,
+     355
+    ],
+    "neutral": [
+     0.15,
+     355
+    ]
+   },
+   "primary": "color",
+   "variants": {
+    "color": {
+     "bg": "#ff8dbc",
+     "surface": "#ffa7c9",
+     "surface-2": "#ffbfd7",
+     "text": "#240e17",
+     "text-muted": "#5c2c40",
+     "border": "#c86f94",
+     "border-strong": "#894a64",
+     "accent": "#0c2098",
+     "accent-hover": "#06007e",
+     "accent-ink": "#fff8fa",
+     "accent-text": "#0c2098",
+     "accent-soft": "#d481a2",
+     "focus": "#0c2098"
+    },
+    "light": {
+     "bg": "#fff8fa",
+     "surface": "#fffefe",
+     "surface-2": "#f5e9ed",
+     "border": "#ddced3",
+     "border-strong": "#98848b",
+     "text": "#2b1920",
+     "text-muted": "#705d64",
+     "accent": "#0c2098",
+     "accent-hover": "#06007e",
+     "accent-ink": "#fffdfd",
+     "accent-text": "#0c2098",
+     "accent-soft": "#e0eaff",
+     "accent-2": "#ff8dbc",
+     "accent-2-ink": "#1d1216",
+     "focus": "#0c2098"
+    },
+    "dark": {
+     "bg": "#141926",
+     "surface": "#1f2533",
+     "surface-2": "#0a0f1b",
+     "border": "#323948",
+     "border-strong": "#686f7e",
+     "text": "#e5ebf8",
+     "text-muted": "#8c92a0",
+     "accent": "#ff8dbc",
+     "accent-hover": "#ffb5d1",
+     "accent-ink": "#0d111b",
+     "accent-text": "#ff8dbc",
+     "accent-soft": "#40212e",
+     "accent-2": "#7099ff",
+     "accent-2-ink": "#0d111b",
+     "focus": "#ff8dbc"
+    }
+   },
+   "checks": {
+    "color": {
+     "text min": 8.51,
+     "text ok": true,
+     "text-muted min": 5.18,
+     "text-muted ok": true,
+     "accent-text min": 5.84,
+     "accent-text ok": true,
+     "accent/bg": 5.84,
+     "accent/bg ok": true,
+     "accent-ink/accent": 11.97,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.03,
+     "border-strong ok": true,
+     "text on accent-soft": 6.49,
+     "apca text/bg": 60.9,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 14.07,
+     "text ok": true,
+     "text-muted min": 5.17,
+     "text-muted ok": true,
+     "accent-text min": 10.6,
+     "accent-text ok": true,
+     "accent/bg": 11.97,
+     "accent/bg ok": true,
+     "accent-ink/accent": 12.37,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.34,
+     "border-strong ok": true,
+     "text on accent-soft": 13.77,
+     "apca text/bg": 100.3,
+     "accent-2-ink/accent-2": 8.51,
+     "accent-2/bg": 2.05,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.82,
+     "text ok": true,
+     "text-muted min": 4.91,
+     "text-muted ok": true,
+     "accent-text min": 7.14,
+     "accent-text ok": true,
+     "accent/bg": 8.18,
+     "accent/bg ok": true,
+     "accent-ink/accent": 8.79,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.48,
+     "border-strong ok": true,
+     "text on accent-soft": 11.91,
+     "apca text/bg": -93.4,
+     "accent-2-ink/accent-2": 6.91,
+     "accent-2/bg": 6.43,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "butter-navy",
+   "name": "Butter & Navy",
+   "primary_mode": "color",
+   "moods": [
+    "friendly",
+    "retro",
+    "warm",
+    "calm"
+   ],
+   "strategy": "complementary",
+   "story": "Butter-yellow ground, navy, a tomato detail.",
+   "seed": {
+    "mode": "color",
+    "accent": [
+     0.35,
+     0.12,
+     262
+    ],
+    "bg": [
+     0.93,
+     0.08,
+     95
+    ],
+    "neutral": [
+     0.08,
+     95
+    ],
+    "accent2": [
+     0.6,
+     0.2,
+     28
+    ]
+   },
+   "primary": "color",
+   "variants": {
+    "color": {
+     "bg": "#f8e8ab",
+     "surface": "#fff7d9",
+     "surface-2": "#fffcf0",
+     "text": "#1c1600",
+     "text-muted": "#504930",
+     "border": "#c1b486",
+     "border-strong": "#8d8464",
+     "accent": "#143678",
+     "accent-hover": "#032262",
+     "accent-ink": "#fcfaf3",
+     "accent-text": "#143678",
+     "accent-soft": "#d9cea2",
+     "accent-2": "#de3d34",
+     "accent-2-ink": "#fcfaf3",
+     "focus": "#143678"
+    },
+    "light": {
+     "bg": "#fcfaf4",
+     "surface": "#fffefb",
+     "surface-2": "#efede3",
+     "border": "#d6d3c6",
+     "border-strong": "#8f8b79",
+     "text": "#241f0e",
+     "text-muted": "#686353",
+     "accent": "#143678",
+     "accent-hover": "#032262",
+     "accent-ink": "#fefdfb",
+     "accent-text": "#143678",
+     "accent-soft": "#deeaff",
+     "accent-2": "#f8e8ab",
+     "accent-2-ink": "#19160b",
+     "focus": "#143678"
+    },
+    "dark": {
+     "bg": "#131926",
+     "surface": "#1e2533",
+     "surface-2": "#090f1b",
+     "border": "#313948",
+     "border-strong": "#666f7e",
+     "text": "#e5ecf8",
+     "text-muted": "#8b93a0",
+     "accent": "#f8e8ab",
+     "accent-hover": "#ffffff",
+     "accent-ink": "#0d121b",
+     "accent-text": "#f8e8ab",
+     "accent-soft": "#312c1c",
+     "accent-2": "#759ee9",
+     "accent-2-ink": "#0d121b",
+     "focus": "#f8e8ab"
+    }
+   },
+   "checks": {
+    "color": {
+     "text min": 14.71,
+     "text ok": true,
+     "text-muted min": 7.33,
+     "text-muted ok": true,
+     "accent-text min": 9.36,
+     "accent-text ok": true,
+     "accent/bg": 9.36,
+     "accent/bg ok": true,
+     "accent-ink/accent": 11.0,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.05,
+     "border-strong ok": true,
+     "text on accent-soft": 11.43,
+     "apca text/bg": 91.1,
+     "accent-2-ink/accent-2": 4.17,
+     "accent-2/bg": 3.55,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 14.01,
+     "text ok": true,
+     "text-muted min": 5.11,
+     "text-muted ok": true,
+     "accent-text min": 9.78,
+     "accent-text ok": true,
+     "accent/bg": 11.0,
+     "accent/bg ok": true,
+     "accent-ink/accent": 11.3,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.28,
+     "border-strong ok": true,
+     "text on accent-soft": 13.56,
+     "apca text/bg": 100.4,
+     "accent-2-ink/accent-2": 14.75,
+     "accent-2/bg": 1.18,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.93,
+     "text ok": true,
+     "text-muted min": 4.96,
+     "text-muted ok": true,
+     "accent-text min": 12.52,
+     "accent-text ok": true,
+     "accent/bg": 14.33,
+     "accent/bg ok": true,
+     "accent-ink/accent": 15.29,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.47,
+     "border-strong ok": true,
+     "text on accent-soft": 11.73,
+     "apca text/bg": -93.9,
+     "accent-2-ink/accent-2": 6.99,
+     "accent-2/bg": 6.55,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "electric-grape",
+   "name": "Electric Grape",
+   "primary_mode": "color",
+   "moods": [
+    "bold",
+    "vivid",
+    "nightlife",
+    "playful"
+   ],
+   "strategy": "complementary",
+   "story": "Grape-violet ground with electric lime \u2014 loud and short.",
+   "seed": {
+    "mode": "color",
+    "accent": [
+     0.92,
+     0.19,
+     125
+    ],
+    "bg": [
+     0.4,
+     0.2,
+     300
+    ],
+    "neutral": [
+     0.2,
+     300
+    ]
+   },
+   "primary": "color",
+   "variants": {
+    "color": {
+     "bg": "#5c11a0",
+     "surface": "#4e068b",
+     "surface-2": "#400075",
+     "text": "#fbf9ff",
+     "text-muted": "#ceb6fc",
+     "border": "#7b50b9",
+     "border-strong": "#9a7dcd",
+     "accent": "#c8fa5c",
+     "accent-hover": "#f8ffee",
+     "accent-ink": "#181322",
+     "accent-text": "#c8fa5c",
+     "accent-soft": "#6c44a4",
+     "focus": "#c8fa5c"
+    },
+    "light": {
+     "bg": "#fbf9ff",
+     "surface": "#fefeff",
+     "surface-2": "#eeebf5",
+     "border": "#d4d0dd",
+     "border-strong": "#8d8798",
+     "text": "#211c2b",
+     "text-muted": "#656070",
+     "accent": "#5c11a0",
+     "accent-hover": "#47007f",
+     "accent-ink": "#fefdff",
+     "accent-text": "#5c11a0",
+     "accent-soft": "#ede5ff",
+     "accent-2": "#c8fa5c",
+     "accent-2-ink": "#17141e",
+     "focus": "#5c11a0"
+    },
+    "dark": {
+     "bg": "#1b1724",
+     "surface": "#272231",
+     "surface-2": "#110d19",
+     "border": "#3b3646",
+     "border-strong": "#716c7c",
+     "text": "#ede9f6",
+     "text-muted": "#948f9e",
+     "accent": "#b17eff",
+     "accent-hover": "#c29fff",
+     "accent-ink": "#131019",
+     "accent-text": "#b17eff",
+     "accent-soft": "#322448",
+     "accent-2": "#c8fa5c",
+     "accent-2-ink": "#131019",
+     "focus": "#b17eff"
+    }
+   },
+   "checks": {
+    "color": {
+     "text min": 9.84,
+     "text ok": true,
+     "text-muted min": 5.74,
+     "text-muted ok": true,
+     "accent-text min": 8.46,
+     "accent-text ok": true,
+     "accent/bg": 8.46,
+     "accent/bg ok": true,
+     "accent-ink/accent": 14.96,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.03,
+     "border-strong ok": true,
+     "text on accent-soft": 6.7,
+     "apca text/bg": -93.1,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 14.09,
+     "text ok": true,
+     "text-muted min": 5.15,
+     "text-muted ok": true,
+     "accent-text min": 8.73,
+     "accent-text ok": true,
+     "accent/bg": 9.84,
+     "accent/bg ok": true,
+     "accent-ink/accent": 10.14,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.32,
+     "border-strong ok": true,
+     "text on accent-soft": 13.63,
+     "apca text/bg": 100.5,
+     "accent-2-ink/accent-2": 14.96,
+     "accent-2/bg": 1.16,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.94,
+     "text ok": true,
+     "text-muted min": 4.92,
+     "text-muted ok": true,
+     "accent-text min": 5.37,
+     "accent-text ok": true,
+     "accent/bg": 6.11,
+     "accent/bg ok": true,
+     "accent-ink/accent": 6.54,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.46,
+     "border-strong ok": true,
+     "text on accent-soft": 11.87,
+     "apca text/bg": -93.5,
+     "accent-2-ink/accent-2": 15.49,
+     "accent-2/bg": 14.47,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "forest-poster",
+   "name": "Forest Poster",
+   "primary_mode": "color",
+   "moods": [
+    "natural",
+    "bold",
+    "earthy",
+    "confident"
+   ],
+   "strategy": "complementary",
+   "story": "Deep forest-green ground, cream-yellow type, persimmon accent \u2014 national-park poster.",
+   "seed": {
+    "mode": "color",
+    "accent": [
+     0.9,
+     0.1,
+     90
+    ],
+    "bg": [
+     0.4,
+     0.08,
+     155
+    ],
+    "neutral": [
+     0.08,
+     155
+    ],
+    "accent2": [
+     0.72,
+     0.15,
+     35
+    ]
+   },
+   "primary": "color",
+   "variants": {
+    "color": {
+     "bg": "#1c5434",
+     "surface": "#14472a",
+     "surface-2": "#013b1e",
+     "text": "#f4fdf7",
+     "text-muted": "#b1cdb9",
+     "border": "#4d775b",
+     "border-strong": "#7e9e88",
+     "accent": "#f8dc90",
+     "accent-hover": "#fff5d9",
+     "accent-ink": "#0a1a10",
+     "accent-text": "#f8dc90",
+     "accent-soft": "#41684f",
+     "accent-2": "#fb7666",
+     "accent-2-ink": "#0a1a10",
+     "focus": "#f8dc90"
+    },
+    "light": {
+     "bg": "#f6fcf8",
+     "surface": "#fcfffd",
+     "surface-2": "#e6f0e9",
+     "border": "#cad6cd",
+     "border-strong": "#7f9084",
+     "text": "#132419",
+     "text-muted": "#58685d",
+     "accent": "#1c5434",
+     "accent-hover": "#024122",
+     "accent-ink": "#fcfefc",
+     "accent-text": "#1c5434",
+     "accent-soft": "#dcf0e2",
+     "accent-2": "#f8dc90",
+     "accent-2-ink": "#0f1912",
+     "focus": "#1c5434"
+    },
+    "dark": {
+     "bg": "#0f1d14",
+     "surface": "#1a291f",
+     "surface-2": "#06130a",
+     "border": "#2d3e33",
+     "border-strong": "#637368",
+     "text": "#e2efe6",
+     "text-muted": "#88968c",
+     "accent": "#75ae89",
+     "accent-hover": "#8bc49e",
+     "accent-ink": "#0a140e",
+     "accent-text": "#75ae89",
+     "accent-soft": "#213126",
+     "accent-2": "#f8dc90",
+     "accent-2-ink": "#0a140e",
+     "focus": "#75ae89"
+    }
+   },
+   "checks": {
+    "color": {
+     "text min": 8.55,
+     "text ok": true,
+     "text-muted min": 5.2,
+     "text-muted ok": true,
+     "accent-text min": 6.6,
+     "accent-text ok": true,
+     "accent/bg": 6.6,
+     "accent/bg ok": true,
+     "accent-ink/accent": 13.38,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.01,
+     "border-strong ok": true,
+     "text on accent-soft": 6.1,
+     "apca text/bg": -91.7,
+     "accent-2-ink/accent-2": 6.75,
+     "accent-2/bg": 3.33,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 13.91,
+     "text ok": true,
+     "text-muted min": 5.07,
+     "text-muted ok": true,
+     "accent-text min": 7.61,
+     "accent-text ok": true,
+     "accent/bg": 8.53,
+     "accent/bg ok": true,
+     "accent-ink/accent": 8.75,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.24,
+     "border-strong ok": true,
+     "text on accent-soft": 13.6,
+     "apca text/bg": 100.4,
+     "accent-2-ink/accent-2": 13.38,
+     "accent-2/bg": 1.29,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.83,
+     "text ok": true,
+     "text-muted min": 4.92,
+     "text-muted ok": true,
+     "accent-text min": 5.92,
+     "accent-text ok": true,
+     "accent/bg": 6.78,
+     "accent/bg ok": true,
+     "accent-ink/accent": 7.3,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.47,
+     "border-strong ok": true,
+     "text on accent-soft": 11.57,
+     "apca text/bg": -93.9,
+     "accent-2-ink/accent-2": 13.97,
+     "accent-2/bg": 12.96,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  },
+  {
+   "id": "brick-red",
+   "name": "Brick Wall",
+   "primary_mode": "color",
+   "moods": [
+    "bold",
+    "warm",
+    "urban",
+    "confident"
+   ],
+   "strategy": "monochrome",
+   "story": "Brick-red ground, bone-white type. Muscle and warmth.",
+   "seed": {
+    "mode": "color",
+    "accent": [
+     0.92,
+     0.05,
+     90
+    ],
+    "bg": [
+     0.42,
+     0.15,
+     28
+    ],
+    "neutral": [
+     0.15,
+     28
+    ]
+   },
+   "primary": "color",
+   "variants": {
+    "color": {
+     "bg": "#8d1b17",
+     "surface": "#7a1210",
+     "surface-2": "#6a0003",
+     "text": "#fff8f7",
+     "text-muted": "#f3b4ab",
+     "border": "#ab5147",
+     "border-strong": "#ca8379",
+     "accent": "#f1e4bf",
+     "accent-hover": "#fffcf2",
+     "accent-ink": "#22110e",
+     "accent-text": "#f1e4bf",
+     "accent-soft": "#99473e",
+     "focus": "#f1e4bf"
+    },
+    "light": {
+     "bg": "#fff8f7",
+     "surface": "#fffefd",
+     "surface-2": "#f6eae8",
+     "border": "#dececc",
+     "border-strong": "#9a8582",
+     "text": "#2c1a17",
+     "text-muted": "#715e5b",
+     "accent": "#8d1b17",
+     "accent-hover": "#730004",
+     "accent-ink": "#fffdfc",
+     "accent-text": "#8d1b17",
+     "accent-soft": "#ffe2dd",
+     "accent-2": "#f1e4bf",
+     "accent-2-ink": "#1e1311",
+     "focus": "#8d1b17"
+    },
+    "dark": {
+     "bg": "#241513",
+     "surface": "#31201e",
+     "surface-2": "#190b09",
+     "border": "#473431",
+     "border-strong": "#7d6966",
+     "text": "#f7e7e4",
+     "text-muted": "#9f8d8b",
+     "accent": "#f46e6e",
+     "accent-hover": "#ff8f8d",
+     "accent-ink": "#1a0e0d",
+     "accent-text": "#f46e6e",
+     "accent-soft": "#45201f",
+     "accent-2": "#f1e4bf",
+     "accent-2-ink": "#1a0e0d",
+     "focus": "#f46e6e"
+    }
+   },
+   "checks": {
+    "color": {
+     "text min": 8.7,
+     "text ok": true,
+     "text-muted min": 5.18,
+     "text-muted ok": true,
+     "accent-text min": 7.21,
+     "accent-text ok": true,
+     "accent/bg": 7.21,
+     "accent/bg ok": true,
+     "accent-ink/accent": 14.37,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.06,
+     "border-strong ok": true,
+     "text on accent-soft": 6.02,
+     "apca text/bg": -90.4,
+     "all_ok": true
+    },
+    "light": {
+     "text min": 14.09,
+     "text ok": true,
+     "text-muted min": 5.17,
+     "text-muted ok": true,
+     "accent-text min": 7.76,
+     "accent-text ok": true,
+     "accent/bg": 8.7,
+     "accent/bg ok": true,
+     "accent-ink/accent": 9.0,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.31,
+     "border-strong ok": true,
+     "text on accent-soft": 13.55,
+     "apca text/bg": 100.1,
+     "accent-2-ink/accent-2": 14.35,
+     "accent-2/bg": 1.21,
+     "all_ok": true
+    },
+    "dark": {
+     "text min": 12.91,
+     "text ok": true,
+     "text-muted min": 4.91,
+     "text-muted ok": true,
+     "accent-text min": 5.39,
+     "accent-text ok": true,
+     "accent/bg": 6.13,
+     "accent/bg ok": true,
+     "accent-ink/accent": 6.56,
+     "accent-ink ok": true,
+     "border-strong/bg": 3.43,
+     "border-strong ok": true,
+     "text on accent-soft": 11.83,
+     "apca text/bg": -93.2,
+     "accent-2-ink/accent-2": 14.91,
+     "accent-2/bg": 13.92,
+     "all_ok": true
+    }
+   },
+   "flags": {}
+  }
+ ]
+}
