@@ -74,20 +74,20 @@ from anthropic.lib import files_from_dir
 client = anthropic.Anthropic()
 skill = client.skills.create(files=files_from_dir("unclawdesign"))   # keep skill.id
 
-with client.beta.messages.stream(
+with client.messages.stream(
     model="claude-opus-5-5",
     max_tokens=64000,
     output_config={"effort": "high"},
-    betas=["code-execution-2025-08-25"],
     container={"skills": [{"type": "custom", "skill_id": skill.id, "version": "latest"}]},
-    tools=[{"type": "code_execution_20260521", "name": "code_execution"}],
+    tools=[{"type": "code_execution_20250825", "name": "code_execution"}],
     messages=[{"role": "user", "content": "Design the homepage for a coffee roastery. Use unclawdesign."}],
 ) as stream:
     message = stream.get_final_message()
 ```
 
 Files the skill writes in the container (the page, `tokens.css`) come back as file IDs; download them
-with the Files API. Limits: 30 MB per skill (this one has 1.5 MB), up to 20 skills per request.
+with the Files API. The Skills API needs no beta header. Pin a version ID instead of `"latest"` in
+production. Limits: 30 MB per skill (this one has 1.5 MB), up to 20 skills per request.
 Reference: [Skills guide](https://platform.claude.com/docs/en/build-with-claude/skills-guide).
 </details>
 
@@ -140,19 +140,18 @@ times, it returns the same few looks:
 - **The skeleton underneath both:** hero, features, social proof, pricing, FAQ, footer, each with the
   same weight. Even a perfect palette reads as a template on this structure.
 
-Here is the jurasongs.de brief given to a model as one prompt, with no skill:
+Here is the jurasongs.de brief given to a model as one prompt, without unclawdesign:
 
 <p align="center">
   <img src="docs/readme/before-baseline.webp" alt="Homepage generated from the jurasongs.de brief without the skill" width="60%">
 </p>
 
-Codex with its default model, one prompt, no skill, 11 October 2026 (the page is in
+Codex (model version not reported by our runner), one prompt, no skill invoked, 11 October 2026 (the page is in
 [`docs/readme/baseline-codex.html`](docs/readme/baseline-codex.html)). It is polished, and it is
 assembled entirely from the defaults: cream paper with an orange accent, one italic word in the
 headline ("hängen."), tracked monospace eyebrows, an arrow on every button, steps numbered 01 / 02 / 03,
 and the hero, cards, feature, steps, call-to-action skeleton. `lint_design.py` gives it 72/100 with six
-findings. A different vendor's model landed on the Claude look described above: the default has spread
-across vendors.
+findings. A model from another vendor landed on the Claude look described above.
 
 <details>
 <summary>The prompt</summary>
