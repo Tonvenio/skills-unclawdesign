@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f3eb">
+<meta name="description" content="Jura im Ohr. Wissen im Kopf. Entdecke Songs zu einzelnen Rechtsnormen, mit Lyrics, Merksätzen und Quiz. Jeden Dienstag und Donnerstag um 18 Uhr.">
+<title>jurasongs — Jura bleibt hängen.</title>
+<style>
+:root{--paper:#f6f3eb;--ink:#282523;--muted:#706c65;--line:#dcd8ce;--orange:#f05a36;--purple:#d8ccf1;--green:#dce8b6;--white:#fffdf7;--radius:22px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+button,a,input{touch-action:manipulation}
+button{font:inherit;color:inherit;cursor:pointer}
+a{color:inherit}
+button:focus-visible,a:focus-visible{outline:3px solid #6946ab;outline-offset:5px}
+button:disabled{cursor:default;opacity:.5}
+button{border:0}
+svg{display:block}
+.wrap{max-width:1320px;margin:auto;padding:0 48px}
+.skip{position:fixed;top:-100px;left:16px;z-index:10;background:var(--ink);color:white;padding:14px}
+.skip:focus{top:16px}
+.header{height:102px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:28px}
+.logo{text-decoration:none;display:flex;align-items:center;gap:9px;font-size:29px;font-weight:850;letter-spacing:-1.7px}
+.logo-mark{width:31px;height:35px;display:flex;align-items:center;gap:4px;transform:rotate(-9deg)}
+.logo-mark i{width:6px;background:var(--orange);border-radius:4px;height:17px}
+.logo-mark i:nth-child(2){height:32px}.logo-mark i:nth-child(3){height:24px}
+.logo span:last-child{color:var(--orange)}
+.nav{display:flex;gap:32px;align-items:center;font-size:13px;font-weight:700}
+.nav a{text-decoration:none}.nav a:hover{text-decoration:underline;text-underline-offset:5px}
+.outline-link{border:1px solid var(--ink);border-radius:100px;padding:12px 18px;display:inline-flex;gap:14px;align-items:center;text-decoration:none;font-size:12px;font-weight:700}
+.hero{display:grid;grid-template-columns:1.12fr 1fr;gap:40px;padding:68px 0 54px;align-items:center}
+.eyebrow{font:700 10px/1.5 monospace;letter-spacing:1.6px;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.dot{width:7px;height:7px;background:var(--orange);border-radius:50%;display:inline-block;flex-shrink:0}
+h1{font-size:clamp(60px,6.9vw,94px);line-height:.99;letter-spacing:-6px;font-weight:800;margin:27px 0 24px}
+h1 em{font-family:Georgia,serif;font-weight:400;letter-spacing:-5px;color:var(--orange)}
+.hero-copy{font-size:16px;line-height:1.75;color:var(--muted);max-width:385px}
+.hero-actions{display:flex;align-items:center;gap:22px;margin-top:29px;flex-wrap:wrap}
+.primary{display:inline-flex;align-items:center;justify-content:center;gap:22px;background:var(--ink);color:var(--white);border-radius:100px;padding:17px 23px;text-decoration:none;font-size:13px;font-weight:700;transition:background .2s,transform .2s}
+.primary:hover{background:var(--orange);transform:translateY(-2px)}
+.small-note{font-size:11px;color:var(--muted);line-height:1.6}
+.hero-art{height:438px;position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center}
+.art-grid{position:absolute;inset:20px 0;background-image:radial-gradient(#cbc5b7 1px,transparent 1px);background-size:18px 18px;mask-image:radial-gradient(ellipse,#000 30%,transparent 72%);z-index:-2}
+.vinyl{position:absolute;width:315px;height:315px;border-radius:50%;background:repeating-radial-gradient(circle,#242323 0px,#242323 2px,#343331 3px,#242323 4px);right:-5px;top:47px;box-shadow:9px 12px 20px #28252316;transform:rotate(15deg)}
+.vinyl:before{content:"§";position:absolute;inset:105px;background:var(--purple);border-radius:50%;display:grid;place-items:center;font:italic 61px Georgia}
+.vinyl:after{content:"";width:9px;height:9px;background:var(--paper);border-radius:50%;position:absolute;inset:0;margin:auto}
+.album{width:300px;height:322px;padding:22px;background:var(--orange);transform:rotate(-8deg);position:relative;margin-right:102px;box-shadow:0 17px 25px #312b251a;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.album-top,.album-bottom{display:flex;justify-content:space-between;gap:10px;font:700 9px monospace;letter-spacing:1px;position:relative;z-index:2}
+.album-title{font-size:52px;font-weight:850;line-height:.95;letter-spacing:-3px;position:relative;z-index:2}
+.album-title span{font:italic 63px/.85 Georgia;letter-spacing:-4px}
+.album-figure{position:absolute;right:11px;bottom:23px;font:190px Georgia;opacity:.18;transform:rotate(18deg)}
+.sticker{position:absolute;right:8px;bottom:48px;background:var(--green);border:1px solid var(--ink);border-radius:50%;width:120px;height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:rotate(12deg);font:700 11px/1.45 monospace;box-shadow:4px 5px 0 var(--ink)}
+.sticker strong{font-size:25px;line-height:1.3;letter-spacing:-1px}
+.art-note{position:absolute;left:42px;bottom:5px;font:italic 17px Georgia;transform:rotate(-5deg)}
+.art-note span{display:inline-block;transform:rotate(-25deg);font-size:28px;margin-left:12px}
+.release-bar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:12px}
+.release-bar strong{font-weight:700}.release-info{display:flex;align-items:center;gap:10px}.release-bar a{font:700 10px monospace;letter-spacing:1px;text-decoration:none;white-space:nowrap}
+.section{padding:60px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:26px}
+h2{font-size:37px;letter-spacing:-1.7px;margin:8px 0 0;line-height:1.1}
+.section-head p{color:var(--muted);font-size:12px;margin:0;line-height:1.5}
+.song-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.song-card{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--white)}
+.song-art{height:228px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:25px}
+.song-art.orange{background:var(--orange)}.song-art.purple{background:var(--purple)}
+.art-caption{display:flex;justify-content:space-between;position:relative;z-index:1;font:700 9px monospace;letter-spacing:1.4px}
+.song-art h3{font-size:46px;line-height:.95;letter-spacing:-2.5px;margin:0;z-index:1;position:relative;max-width:80%}
+.song-art h3 em{font-family:Georgia,serif;font-weight:400}
+.card-symbol{position:absolute;font:230px Georgia;right:65px;bottom:-45px;transform:rotate(14deg);opacity:.16}
+.rainbow{position:absolute;right:-48px;bottom:-113px;width:300px;height:300px;border:22px solid #756094;border-radius:50%;opacity:.3}
+.rainbow:before{content:"";position:absolute;inset:15px;border:20px solid #756094;border-radius:50%}
+.rainbow:after{content:"";position:absolute;inset:51px;border:19px solid #756094;border-radius:50%}
+.round-button{height:49px;width:49px;display:grid;place-items:center;border-radius:50%;background:var(--ink);color:white;transition:transform .2s,background .2s;flex-shrink:0}
+.round-button:hover{transform:scale(1.07);background:#49433d}
+.card-open{position:absolute;right:23px;bottom:23px;z-index:2}
+.card-bottom{padding:19px 23px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.card-bottom strong{font-size:13px}.card-bottom p{margin:6px 0 0;font-size:11px;color:var(--muted)}
+.pill{display:inline-block;border:1px solid #c9c4b9;padding:7px 10px;border-radius:100px;font:10px monospace;white-space:nowrap}
+.study{padding-top:10px}
+.study-shell{border:1px solid var(--ink);border-radius:var(--radius);overflow:hidden;display:grid;grid-template-columns:340px 1fr}
+.player{background:var(--ink);color:var(--paper);padding:29px;display:flex;flex-direction:column}
+.player .eyebrow{color:#c3beb5}
+.mini-cover{height:200px;margin:24px 0;background:var(--orange);border-radius:8px;display:grid;place-items:center;position:relative;overflow:hidden}
+.mini-cover .giant{font:160px Georgia;opacity:.85;transform:rotate(-13deg)}
+.mini-cover .cover-label{position:absolute;left:14px;top:14px;font:700 9px monospace;letter-spacing:1.5px;color:var(--ink)}
+.player h3{font-size:24px;letter-spacing:-.8px;line-height:1.15;margin:0 0 8px}
+.player-meta{color:#c3beb5;font-size:11px;margin:0}
+.audio-note{font-size:11px;color:#c3beb5;line-height:1.6;margin:22px 0 14px}
+.speech-button{background:var(--paper);color:var(--ink);display:flex;gap:10px;justify-content:center;align-items:center;width:100%;padding:14px;border-radius:100px;font-size:12px;font-weight:bold}
+.speech-button:hover{background:var(--green)}
+.player-foot{margin-top:auto;padding-top:24px;font:10px/1.6 monospace;color:#c3beb5}
+.study-content{min-width:0;background:var(--white)}
+.tabs{display:flex;gap:26px;padding:0 29px;border-bottom:1px solid var(--line);overflow-x:auto}
+.tab{background:transparent;padding:22px 0 19px;font-size:12px;color:var(--muted);border-bottom:3px solid transparent;white-space:nowrap}
+.tab[aria-selected="true"]{color:var(--ink);border-color:var(--orange);font-weight:700}
+.panel{padding:29px;min-height:407px}
+.panel[hidden]{display:none}
+.panel-kicker{font:10px/1.6 monospace;letter-spacing:.7px;color:var(--muted);margin:0 0 24px;text-transform:uppercase}
+.lyrics{font-size:24px;font-weight:700;line-height:1.65;letter-spacing:-.7px}
+.lyric-line{margin:0;color:#aaa59a;transition:color .2s}
+.lyric-line.active{color:var(--orange)}
+.lyric-line:first-child:not(.active){color:var(--ink)}
+.lyrics-foot{margin:24px 0 0;font-size:11px;line-height:1.6;color:var(--muted)}
+.norm-title{font-size:22px;margin:0 0 20px;letter-spacing:-.5px}
+.norm-text{font:17px/1.8 Georgia,serif;margin:0 0 16px;max-width:620px}
+.source{font-size:11px;color:var(--muted);text-underline-offset:4px}
+.mnemonic{background:var(--green);border-radius:12px;padding:25px;font:26px/1.35 Georgia;margin:0 0 23px}
+.explanation{font-size:13px;line-height:1.8;color:var(--muted)}
+.grade-table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:22px}
+.grade-table td{padding:9px 0;border-bottom:1px solid var(--line)}
+.grade-table td:last-child{text-align:right;font-family:monospace}
+.grade-table .highlight{font-weight:bold;color:#7851a2}
+.quiz-count{font:10px monospace;color:var(--muted);letter-spacing:1px}
+.quiz-question{font-size:21px;line-height:1.4;letter-spacing:-.4px;margin:17px 0 21px}
+.options{display:grid;gap:9px}
+.answer{text-align:left;border:1px solid var(--line);border-radius:9px;background:var(--paper);padding:13px 16px;font-size:12px;line-height:1.5}
+.answer:hover:not(:disabled){border-color:var(--ink)}
+.answer:disabled{opacity:1}
+.answer.correct{background:var(--green);border-color:#80914f}
+.answer.wrong{background:#f8d9cf;border-color:var(--orange)}
+.feedback{font-size:12px;line-height:1.7;margin:16px 0;color:var(--muted)}
+.next{padding:11px 17px;background:var(--ink);color:white;border-radius:100px;font-size:11px}
+.how{padding:68px 0 64px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:33px}
+.step{border-top:1px solid var(--line);padding-top:20px}
+.step-number{font:11px monospace;color:var(--orange)}
+.step h3{font-size:20px;letter-spacing:-.7px;margin:17px 0 10px}
+.step p{font-size:13px;color:var(--muted);line-height:1.75;max-width:310px;margin:0}
+.follow{background:var(--purple);border-radius:var(--radius);padding:38px 41px;display:flex;align-items:center;justify-content:space-between;gap:30px;position:relative;overflow:hidden}
+.follow h2{font-size:34px;margin:0 0 10px}.follow p{font-size:13px;line-height:1.7;margin:0}
+.follow .primary{flex-shrink:0}
+.footer{padding:35px 0 24px;display:flex;justify-content:space-between;align-items:center;gap:22px}
+.footer .logo{font-size:22px}.footer p{font:10px/1.7 monospace;color:var(--muted);text-align:right}
+.legal-note{padding:0 0 25px;color:var(--muted);font-size:10px;line-height:1.7;margin:0}
+@media(min-width:1450px){.hero{gap:80px}}
+@media(max-width:1050px){.wrap{padding:0 30px}h1{font-size:76px}.hero{gap:15px}.hero-art{transform:scale(.88);transform-origin:center right}.study-shell{grid-template-columns:290px 1fr}.tabs{gap:19px;padding:0 23px}.panel{padding:25px}.lyrics{font-size:21px}.song-art h3{font-size:40px}}
+@media(max-width:760px){.wrap{padding:0 22px}.header{height:80px}.nav{gap:18px}.nav .desktop{display:none}.logo{font-size:25px}.hero{grid-template-columns:1fr;padding:41px 0 30px;gap:0}h1{font-size:74px;letter-spacing:-4px;margin-top:23px}h1 em{letter-spacing:-4px}.hero-copy{max-width:440px;font-size:15px}.hero-art{transform:none;height:385px;max-width:435px;width:100%;margin:18px auto 0}.vinyl{width:285px;height:285px;right:0;top:38px}.vinyl:before{inset:94px}.album{width:265px;height:283px;margin-right:87px}.album-title{font-size:46px}.album-title span{font-size:57px}.sticker{width:104px;height:104px;bottom:40px;right:9px;font-size:10px}.sticker strong{font-size:22px}.art-note{left:27px}.release-bar{font-size:11px;align-items:start}.release-info{align-items:start;line-height:1.6}.release-info svg{margin-top:2px;flex-shrink:0}.release-bar a{font-size:9px;margin-top:4px}.section{padding:42px 0}.section-head{align-items:start}h2{font-size:31px}.section-head p{max-width:115px;font-size:11px}.song-grid{grid-template-columns:1fr;gap:17px}.song-art{height:220px}.song-art h3{font-size:44px}.study{padding-top:0}.study-shell{grid-template-columns:1fr}.player{padding:24px;display:grid;grid-template-columns:85px 1fr;column-gap:18px;align-items:center}.player>.eyebrow{grid-column:1/-1;margin-bottom:18px}.mini-cover{width:85px;height:85px;grid-column:1;grid-row:2/4;margin:0}.mini-cover .giant{font-size:68px}.mini-cover .cover-label{display:none}.player h3{grid-column:2;font-size:21px;align-self:end}.player-meta{grid-column:2;align-self:start;line-height:1.6}.audio-note,.speech-button,.player-foot{grid-column:1/-1}.audio-note{margin:19px 0 13px}.player-foot{padding-top:13px;font-size:9px}.tabs{justify-content:space-between;gap:14px;padding:0 22px}.tab{font-size:11px;padding-top:19px}.panel{padding:24px 22px;min-height:365px}.lyrics{font-size:clamp(18px,4.8vw,24px)}.how{padding:12px 0 42px}.steps{grid-template-columns:1fr;gap:23px;margin-top:25px}.step{display:grid;grid-template-columns:30px 1fr;gap:0 10px;padding-top:18px}.step-number{grid-row:1/3;padding-top:4px}.step h3{margin:0 0 8px}.step p{max-width:none}.follow{padding:28px 24px;align-items:start;flex-direction:column;gap:22px}.follow h2{font-size:29px}.footer{align-items:start}.footer p{margin:0;max-width:190px;font-size:9px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#songs">Direkt zu den Songs</a>
+<div class="wrap">
+<header class="header">
+<a class="logo" href="#" aria-label="jurasongs Startseite"><span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i></span>jurasongs<span>.</span></a>
+<nav class="nav" aria-label="Hauptnavigation">
+<a href="#songs">Die Songs</a>
+<a class="desktop" href="#prinzip">Das Prinzip</a>
+<a class="outline-link desktop" href="https://www.instagram.com/jurasongs/" target="_blank" rel="noopener noreferrer">Auf Instagram <span aria-hidden="true">↗</span></a>
+</nav>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="hero-title">
+<div>
+<div class="eyebrow"><span class="dot"></span> Für deinen Kopf. Und deine Playlist.</div>
+<h1 id="hero-title">Jura bleibt<br><em>hängen.</em></h1>
+<p class="hero-copy">Eine Norm. Ein Song. Ein Ohrwurm.<br>Wir machen aus Paragrafen Musik — damit du sie nicht nur liest, sondern behältst.</p>
+<div class="hero-actions">
+<a class="primary" href="#songs">Entdecke die Songs <span aria-hidden="true">↗</span></a>
+<span class="small-note">Neue Songs jeden<br><strong>Di &amp; Do · 18 Uhr</strong></span>
+</div>
+</div>
+<div class="hero-art" role="img" aria-label="Orangefarbenes Notwehr-Tango-Plattencover vor einer Schallplatte. Eine Norm, ein Song.">
+<div class="art-grid"></div>
+<div class="vinyl"></div>
+<div class="album">
+<div class="album-top"><span>JURASONGS / 001</span><span>STGB</span></div>
+<div class="album-title">Notwehr<br><span>Tango</span></div>
+<div class="album-figure">§</div>
+<div class="album-bottom"><span>§ 32 · NOTWEHR</span><span>SEITE A ↗</span></div>
+</div>
+<div class="sticker">IM TAKT MIT<strong>DEINEM</strong>GESETZ.</div>
+<div class="art-note">Lernen darf so klingen. <span>⤴</span></div>
+</div>
+</section>
+
+<div class="release-bar">
+<div class="release-info">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="3"/><path d="M8 3v5m8-5v5M4 11h16"/></svg>
+<span><strong>Zweimal pro Woche ein neuer Ohrwurm.</strong> Dienstag &amp; Donnerstag, 18 Uhr.</span>
+</div>
+<a href="https://www.instagram.com/jurasongs/" target="_blank" rel="noopener noreferrer">ALS INSTAGRAM REEL ↗</a>
+</div>
+
+<section class="section" id="songs" aria-labelledby="songs-title">
+<div class="section-head">
+<div><div class="eyebrow">Die ersten Tracks</div><h2 id="songs-title">Dein neuer Lernstoff.</h2></div>
+<p>Kein Shuffle durchs Gesetz.<br>Jeder Song: genau eine Norm.</p>
+</div>
+<div class="song-grid">
+<article class="song-card">
+<div class="song-art orange">
+<div class="art-caption"><span>TRACK 001</span><span>JURASONGS ORIGINAL</span></div>
+<span class="card-symbol" aria-hidden="true">§</span>
+<h3>Notwehr<br><em>Tango.</em></h3>
+<button class="round-button card-open" data-song="notwehr" aria-label="Notwehr-Tango öffnen">
+<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg>
+</button>
+</div>
+<div class="card-bottom"><div><strong>§ 32 StGB</strong><p>Wenn Verteidigung den Ton angibt.</p></div><span class="pill">Strafrecht</span></div>
+</article>
+<article class="song-card">
+<div class="song-art purple">
+<div class="art-caption"><span>TRACK 002</span><span>JURASONGS ORIGINAL</span></div>
+<div class="rainbow" aria-hidden="true"></div>
+<h3>Somewhere Over<br><em>Nine Points.</em></h3>
+<button class="round-button card-open" data-song="points" aria-label="Somewhere Over Nine Points öffnen">
+<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg>
+</button>
+</div>
+<div class="card-bottom"><div><strong>§ 2 JurPrNotSkV</strong><p>Große Gefühle. Klare Notengrenzen.</p></div><span class="pill">Prüfungsrecht</span></div>
+</article>
+</div>
+</section>
+
+<section class="section study" id="lernen" aria-labelledby="study-title">
+<div class="section-head">
+<div><div class="eyebrow">Vom Ohrwurm zum Aha-Moment</div><h2 id="study-title">Ein Song. Alles dabei.</h2></div>
+<p>Hören. Verstehen.<br>Wissen, was hängen bleibt.</p>
+</div>
+<div class="study-shell">
+<aside class="player" aria-label="Ausgewählter Song">
+<div class="eyebrow"><span class="dot"></span> Dein Lerntrack</div>
+<div class="mini-cover" id="mini-cover"><span class="cover-label">JURASONGS / 001</span><span class="giant" id="cover-symbol" aria-hidden="true">§</span></div>
+<h3 id="player-title">Notwehr-Tango</h3>
+<p class="player-meta" id="player-meta">§ 32 StGB · Strafrecht</p>
+<p class="audio-note" id="audio-note">Die Songaufnahme ist hier noch nicht hinterlegt. Du kannst dir den Beispieltext vorlesen lassen und dabei mitlesen.</p>
+<button class="speech-button" id="speech-button" aria-pressed="false">
+<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m11 4-6 5H2v6h3l6 5zM15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></svg>
+<span id="speech-label">Beispieltext vorlesen</span>
+</button>
+<div class="player-foot">EINE NORM PRO TRACK.<br>MEHR PLATZ IM KOPF FÜR DEN REST.</div>
+</aside>
+<div class="study-content">
+<div class="tabs" role="tablist" aria-label="Lernmaterial">
+<button class="tab" id="tab-lyrics" role="tab" aria-selected="true" aria-controls="panel-lyrics" tabindex="0" data-tab="lyrics">Lyrics</button>
+<button class="tab" id="tab-norm" role="tab" aria-selected="false" aria-controls="panel-norm" tabindex="-1" data-tab="norm">Die Norm</button>
+<button class="tab" id="tab-memory" role="tab" aria-selected="false" aria-controls="panel-memory" tabindex="-1" data-tab="memory">Merksatz</button>
+<button class="tab" id="tab-quiz" role="tab" aria-selected="false" aria-controls="panel-quiz" tabindex="-1" data-tab="quiz">Quiz <span aria-hidden="true">↗</span></button>
+</div>
+<section class="panel" id="panel-lyrics" role="tabpanel" aria-labelledby="tab-lyrics" tabindex="0">
+<p class="panel-kicker">Textvorschau · Beispielstrophe</p>
+<div class="lyrics" id="lyrics"></div>
+<p class="lyrics-foot">Redaktioneller Beispieltext, keine finalen Songlyrics.<br>Beim Vorlesen wird die aktuelle Zeile hervorgehoben.</p>
+</section>
+<section class="panel" id="panel-norm" role="tabpanel" aria-labelledby="tab-norm" tabindex="0" hidden></section>
+<section class="panel" id="panel-memory" role="tabpanel" aria-labelledby="tab-memory" tabindex="0" hidden></section>
+<section class="panel" id="panel-quiz" role="tabpanel" aria-labelledby="tab-quiz" tabindex="0" hidden>
+<div id="quiz-content"></div>
+</section>
+</div>
+</div>
+</section>
+
+<section class="how" id="prinzip" aria-labelledby="how-title">
+<div class="eyebrow">Weniger trocken. Mehr drin.</div>
+<h2 id="how-title">So wird aus „gelesen“ ein „gecheckt“.</h2>
+<div class="steps">
+<div class="step"><span class="step-number">01 /</span><h3>Norm auf die Ohren.</h3><p>Jeder Song dreht sich um genau eine Rechtsnorm. Ein klarer Fokus, verpackt in Musik.</p></div>
+<div class="step"><span class="step-number">02 /</span><h3>Mitlesen. Mitdenken.</h3><p>Lyrics, Gesetzeswortlaut und ein Merksatz verbinden den Ohrwurm mit dem juristischen Inhalt.</p></div>
+<div class="step"><span class="step-number">03 /</span><h3>Einmal kurz abprüfen.</h3><p>Drei Fragen pro Song. Teste direkt, was sitzt — und welche Stelle noch eine Wiederholung verdient.</p></div>
+</div>
+</section>
+
+<section class="follow" aria-labelledby="follow-title">
+<div><h2 id="follow-title">Dein Feed kann auch Jura.</h2><p>Neue Songs als Reel. Jeden Dienstag &amp; Donnerstag um 18 Uhr.<br>Für die Pause zwischen zwei Fällen.</p></div>
+<a class="primary" href="https://www.instagram.com/jurasongs/" target="_blank" rel="noopener noreferrer">Zu Instagram <span aria-hidden="true">↗</span></a>
+</section>
+</main>
+
+<footer>
+<div class="footer"><a class="logo" href="#">jurasongs<span>.</span></a><p>MIT TAKTGEFÜHL FÜRS GESETZ.<br>© <span id="year">2026</span> jurasongs</p></div>
+<p class="legal-note">Lernimpulse fürs Jurastudium. Maßgeblich sind der aktuelle Gesetzestext und die vertiefte juristische Prüfung.</p>
+</footer>
+</div>
+
+<script>
+(() => {
+"use strict";
+const songs = {
+  notwehr: {
+    title: "Notwehr-Tango",
+    meta: "§ 32 StGB · Strafrecht",
+    color: "#f05a36",
+    symbol: "§",
+    number: "001",
+    lyrics: [
+      "Ein Angriff, rechtswidrig, jetzt und hier,",
+      "Notwehr schützt mich — und auch dir",
+      "darf ich helfen, Gefahr abzuwehren.",
+      "Erforderlich muss die Abwehr sein,",
+      "geboten auch — das prägt sich ein."
+    ],
+    norm: '<p class="panel-kicker">Gesetzeswortlaut</p><h3 class="norm-title">§ 32 StGB · Notwehr</h3><p class="norm-text">(1) Wer eine Tat begeht, die durch Notwehr geboten ist, handelt nicht rechtswidrig.</p><p class="norm-text">(2) Notwehr ist die Verteidigung, die erforderlich ist, um einen gegenwärtigen rechtswidrigen Angriff von sich oder einem anderen abzuwenden.</p><a class="source" href="https://www.gesetze-im-internet.de/stgb/__32.html" target="_blank" rel="noopener noreferrer">Aktuelle Fassung bei Gesetze im Internet ↗</a>',
+    memory: '<p class="panel-kicker">Der Gedanke zum Mitnehmen</p><blockquote class="mnemonic">„Jetzt ein rechtswidriger Angriff? Erforderlich und geboten abwehren.“</blockquote><p class="explanation">Prüfe <strong>Notwehrlage</strong> (gegenwärtiger rechtswidriger Angriff), <strong>Notwehrhandlung</strong> (erforderliche und gebotene Verteidigung) und das <strong>subjektive Rechtfertigungselement</strong>. Wer einen anderen verteidigt, leistet Nothilfe.</p><p class="explanation">Der Merksatz ist eine Lernstütze. Die Voraussetzungen und ihre Grenzen prüfst du am konkreten Fall.</p>',
+    quiz: [
+      {q:"Welchen Angriff setzt § 32 StGB voraus?",a:["Einen möglichen Angriff irgendwann in der Zukunft.","Einen gegenwärtigen rechtswidrigen Angriff.","Jede als unfair empfundene Handlung."],correct:1,why:"§ 32 Abs. 2 StGB nennt ausdrücklich den gegenwärtigen rechtswidrigen Angriff."},
+      {q:"Darfst du nach § 32 StGB auch einen anderen Menschen verteidigen?",a:["Ja, das ist Nothilfe.","Nein, nur dich selbst.","Nur, wenn ihr miteinander verwandt seid."],correct:0,why:"Der Wortlaut erfasst die Abwehr eines Angriffs „von sich oder einem anderen“."},
+      {q:"Welche Aussage zur Verteidigung stimmt?",a:["Jede erfolgreiche Abwehr ist erlaubt.","Es gilt stets eine allgemeine Güterabwägung wie beim rechtfertigenden Notstand.","Die Verteidigung muss erforderlich und geboten sein."],correct:2,why:"Erforderlichkeit und Gebotenheit begrenzen die Notwehrhandlung. Eine allgemeine Güterabwägung wie bei § 34 StGB ist nicht vorgesehen."}
+    ]
+  },
+  points: {
+    title: "Somewhere Over Nine Points",
+    meta: "§ 2 JurPrNotSkV · Prüfungsrecht",
+    color: "#d8ccf1",
+    symbol: "9",
+    number: "002",
+    lyrics: [
+      "Neun Punkte — die Grenze ist erreicht,",
+      "vollbefriedigend, ein Wort, das bleibt.",
+      "Die Gesamtnote hat ihren Plan,",
+      "bei neun fängt diese Stufe an.",
+      "Nicht erst darüber: Denk daran."
+    ],
+    norm: '<p class="panel-kicker">Notenübersicht · kein vollständiger Normtext</p><h3 class="norm-title">§ 2 JurPrNotSkV · Gesamtnoten</h3><table class="grade-table"><caption style="text-align:left;color:var(--muted);font-size:11px;padding-bottom:12px">Zuordnung der Gesamtpunktzahl nach § 2 Abs. 2</caption><tbody><tr><td>Sehr gut</td><td>14,00–18,00</td></tr><tr><td>Gut</td><td>11,50–13,99</td></tr><tr class="highlight"><td>Vollbefriedigend</td><td>9,00–11,49</td></tr><tr><td>Befriedigend</td><td>6,50–8,99</td></tr><tr><td>Ausreichend</td><td>4,00–6,49</td></tr><tr><td>Mangelhaft</td><td>1,50–3,99</td></tr><tr><td>Ungenügend</td><td>0–1,49</td></tr></tbody></table><a class="source" href="https://www.gesetze-im-internet.de/jurprnotskv/__2.html" target="_blank" rel="noopener noreferrer">Vollständigen Gesetzeswortlaut lesen ↗</a>',
+    memory: '<p class="panel-kicker">Der Gedanke zum Mitnehmen</p><blockquote class="mnemonic">„Ab neun vollbefriedigend — nicht erst über neun.“</blockquote><p class="explanation">Bei der <strong>Gesamtnote</strong> beginnt „vollbefriedigend“ bei <strong>9,00 Punkten</strong> und reicht bis 11,49 Punkte. „Gut“ beginnt bei 11,50 Punkten.</p><p class="explanation">Achte auf den Unterschied: § 2 regelt Gesamtnoten. Für die Bewertung einzelner Prüfungsleistungen gilt die Skala des § 1.</p>',
+    quiz: [
+      {q:"Welche Gesamtnote sind genau 9,00 Punkte?",a:["Befriedigend.","Vollbefriedigend.","Gut."],correct:1,why:"Die Gesamtnote „vollbefriedigend“ beginnt bereits bei 9,00 Punkten."},
+      {q:"Was regelt § 2 JurPrNotSkV?",a:["Die Bildung von Gesamtnoten.","Die Dauer der mündlichen Prüfung.","Die Zahl der Examensklausuren."],correct:0,why:"§ 2 betrifft die Bildung der Gesamtnote und die Zuordnung der Gesamtpunktzahl zu den Notenstufen."},
+      {q:"Ab welcher Gesamtpunktzahl beginnt „gut“?",a:["10,00 Punkten.","11,00 Punkten.","11,50 Punkten."],correct:2,why:"„Gut“ umfasst bei den Gesamtnoten 11,50 bis 13,99 Punkte."}
+    ]
+  }
+};
+let current = "notwehr";
+let speaking = false;
+let speechSession = 0;
+let utterance = null;
+let questionIndex = 0;
+let score = 0;
+let answered = false;
+const $ = id => document.getElementById(id);
+const tabs = [...document.querySelectorAll('[role="tab"]')];
+const canSpeak = "speechSynthesis" in window && "SpeechSynthesisUtterance" in window;
+
+function setTab(name, focus = false) {
+  tabs.forEach(tab => {
+    const active = tab.dataset.tab === name;
+    tab.setAttribute("aria-selected", String(active));
+    tab.tabIndex = active ? 0 : -1;
+    $("panel-" + tab.dataset.tab).hidden = !active;
+    if (active && focus) tab.focus();
+  });
+}
+tabs.forEach((tab, index) => {
+  tab.addEventListener("click", () => setTab(tab.dataset.tab));
+  tab.addEventListener("keydown", event => {
+    let next;
+    if (event.key === "ArrowRight") next = (index + 1) % tabs.length;
+    else if (event.key === "ArrowLeft") next = (index + tabs.length - 1) % tabs.length;
+    else if (event.key === "Home") next = 0;
+    else if (event.key === "End") next = tabs.length - 1;
+    else return;
+    event.preventDefault();
+    setTab(tabs[next].dataset.tab, true);
+  });
+});
+function stopSpeech() {
+  speechSession++;
+  speaking = false;
+  if (canSpeak) window.speechSynthesis.cancel();
+  utterance = null;
+  $("speech-label").textContent = "Beispieltext vorlesen";
+  $("speech-button").setAttribute("aria-pressed", "false");
+  document.querySelectorAll(".lyric-line").forEach(line => line.classList.remove("active"));
+}
+function speakLine(index, session) {
+  if (!speaking || session !== speechSession) return;
+  const lines = songs[current].lyrics;
+  if (index >= lines.length) { stopSpeech(); return; }
+  document.querySelectorAll(".lyric-line").forEach((line, i) => line.classList.toggle("active", i === index));
+  utterance = new SpeechSynthesisUtterance(lines[index]);
+  utterance.lang = "de-DE";
+  utterance.rate = .9;
+  const voice = window.speechSynthesis.getVoices().find(v => v.lang.startsWith("de"));
+  if (voice) utterance.voice = voice;
+  utterance.onend = () => speakLine(index + 1, session);
+  utterance.onerror = () => {
+    if (session !== speechSession) return;
+    stopSpeech();
+    $("audio-note").textContent = "Das Vorlesen ist in diesem Browser gerade nicht verfügbar. Den Beispieltext kannst du weiterhin hier mitlesen.";
+  };
+  window.speechSynthesis.speak(utterance);
+}
+$("speech-button").addEventListener("click", () => {
+  if (!canSpeak) return;
+  if (speaking) { stopSpeech(); return; }
+  stopSpeech();
+  speaking = true;
+  $("speech-label").textContent = "Vorlesen stoppen";
+  $("speech-button").setAttribute("aria-pressed", "true");
+  setTab("lyrics");
+  speakLine(0, speechSession);
+});
+function renderQuiz(moveFocus = false) {
+  answered = false;
+  const host = $("quiz-content");
+  host.replaceChildren();
+  if (questionIndex === 3) {
+    const count = document.createElement("p");
+    count.className = "quiz-count";
+    count.textContent = "QUIZ ABGESCHLOSSEN";
+    const title = document.createElement("h3");
+    title.className = "quiz-question";
+    title.tabIndex = -1;
+    title.textContent = score + " von 3 richtig. " + (score === 3 ? "Das sitzt." : "Eine Runde geht noch.");
+    const copy = document.createElement("p");
+    copy.className = "feedback";
+    copy.textContent = score === 3 ? "Nimm den Merksatz mit — und wende dein Wissen als Nächstes auf einen Fall an." : "Schau noch einmal in die Norm und den Merksatz. Danach kannst du direkt neu starten.";
+    const restart = document.createElement("button");
+    restart.className = "next";
+    restart.textContent = "Noch einmal testen ↻";
+    restart.onclick = () => { questionIndex = 0; score = 0; renderQuiz(true); };
+    host.append(count, title, copy, restart);
+    if (moveFocus) title.focus();
+    return;
+  }
+  const question = songs[current].quiz[questionIndex];
+  const count = document.createElement("div");
+  count.className = "quiz-count";
+  count.textContent = "FRAGE " + (questionIndex + 1) + " / 3";
+  const heading = document.createElement("h3");
+  heading.className = "quiz-question";
+  heading.id = "current-question";
+  heading.tabIndex = -1;
+  heading.textContent = question.q;
+  const options = document.createElement("div");
+  options.className = "options";
+  options.setAttribute("role", "group");
+  options.setAttribute("aria-labelledby", heading.id);
+  const feedback = document.createElement("p");
+  feedback.className = "feedback";
+  feedback.setAttribute("role", "status");
+  question.a.forEach((answer, index) => {
+    const button = document.createElement("button");
+    button.className = "answer";
+    button.textContent = answer;
+    button.onclick = () => {
+      if (answered) return;
+      answered = true;
+      const correct = index === question.correct;
+      if (correct) score++;
+      [...options.children].forEach((option, i) => {
+        option.disabled = true;
+        if (i === question.correct) {
+          option.classList.add("correct");
+          option.textContent = "✓ " + question.a[i];
+        } else if (i === index) {
+          option.classList.add("wrong");
+          option.textContent = "✕ " + question.a[i];
+        }
+      });
+      feedback.textContent = (correct ? "Richtig! " : "Noch nicht ganz. ") + question.why;
+      const next = document.createElement("button");
+      next.className = "next";
+      next.textContent = questionIndex === 2 ? "Ergebnis ansehen →" : "Nächste Frage →";
+      next.onclick = () => { questionIndex++; renderQuiz(true); };
+      host.append(next);
+    };
+    options.append(button);
+  });
+  host.append(count, heading, options, feedback);
+  if (moveFocus) heading.focus();
+}
+function selectSong(key, scroll = false) {
+  stopSpeech();
+  current = key;
+  const song = songs[key];
+  $("player-title").textContent = song.title;
+  $("player-meta").textContent = song.meta;
+  $("mini-cover").style.background = song.color;
+  $("cover-symbol").textContent = song.symbol;
+  document.querySelector(".cover-label").textContent = "JURASONGS / " + song.number;
+  $("lyrics").replaceChildren(...song.lyrics.map(text => {
+    const p = document.createElement("p");
+    p.className = "lyric-line";
+    p.textContent = text;
+    return p;
+  }));
+  $("panel-norm").innerHTML = song.norm;
+  $("panel-memory").innerHTML = song.memory;
+  questionIndex = 0;
+  score = 0;
+  renderQuiz();
+  setTab("lyrics");
+  if (scroll) {
+    $("lernen").scrollIntoView({behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth"});
+    $("tab-lyrics").focus({preventScroll:true});
+  }
+}
+document.querySelectorAll("[data-song]").forEach(button => button.addEventListener("click", () => selectSong(button.dataset.song, true)));
+document.addEventListener("visibilitychange", () => { if (document.hidden) stopSpeech(); });
+window.addEventListener("pagehide", stopSpeech);
+$("year").textContent = new Date().getFullYear();
+selectSong("notwehr");
+if (!canSpeak) {
+  $("speech-button").disabled = true;
+  $("speech-label").textContent = "Vorlesen nicht verfügbar";
+  $("audio-note").textContent = "Die Songaufnahme ist hier noch nicht hinterlegt. Dein Browser unterstützt die Textvorlesefunktion nicht. Den Beispieltext findest du unter Lyrics.";
+}
+})();
+</script>
+</body>
+</html>
